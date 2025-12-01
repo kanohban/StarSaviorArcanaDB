@@ -217,7 +217,7 @@ function CardModal({ card, onClose }) {
                                 <div className="bonus-grid">
                                     {card['여정'].map((item, idx) => (
                                         <div key={idx} className="bonus-box">
-                                            <div><strong>{item['타입']}</strong> +{item['수치']}</div>
+                                            <div><strong>{item['타입']}</strong> <span className="bonus-value">{item['수치']}</span></div>
                                         </div>
                                     ))}
                                 </div>
@@ -233,7 +233,7 @@ function CardModal({ card, onClose }) {
                                         <h4>훈련 보너스</h4>
                                         <ul>
                                             {card['훈련'].map((t, idx) => (
-                                                <li key={idx}>{t['타입']} +{t['수치']}</li>
+                                                <li key={idx}>{t['타입']} <span className="bonus-value">{t['수치']}</span></li>
                                             ))}
                                         </ul>
                                     </div>
@@ -243,7 +243,7 @@ function CardModal({ card, onClose }) {
                                         <h4>감응 훈련</h4>
                                         <ul>
                                             {card['감응'].map((t, idx) => (
-                                                <li key={idx}>{t['타입']} +{t['수치']}</li>
+                                                <li key={idx}>{t['타입']} <span className="bonus-value">{t['수치']}</span></li>
                                             ))}
                                         </ul>
                                     </div>
@@ -251,7 +251,7 @@ function CardModal({ card, onClose }) {
                                 {card['지원']['타입'] && (
                                     <div className="bonus-box">
                                         <h4>지원 의뢰</h4>
-                                        <div>{card['지원']['타입']} +{card['지원']['수치']}</div>
+                                        <div>{card['지원']['타입']} <span className="bonus-value">{card['지원']['수치']}</span></div>
                                     </div>
                                 )}
                             </div>
