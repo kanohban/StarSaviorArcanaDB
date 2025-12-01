@@ -202,7 +202,7 @@ function CardModal({ card, onClose }) {
                                 {Object.entries(card['이벤트']).map(([stage, events], idx) => (
                                     <div key={stage} className="journey-stage-card">
                                         <div className="stage-header">
-                                            <h4>{stage}</h4>
+                                            <h4>{events['이름'] || stage}</h4>
                                         </div>
                                         {renderEvents(events)}
                                     </div>
