@@ -296,6 +296,201 @@
     color: #1565c0;
 }
 
+overflow: hidden;
+/* Body doesn't scroll, sections do */
+}
+
+.modal-image-section {
+    flex: 1;
+    min-height: 300px;
+    padding: 0;
+}
+
+.modal-image-section img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+.modal-info-section {
+    max-height: 90vh;
+}
+}
+
+/* Force Mobile Mode (Overrides Desktop) */
+.mobile-mode .modal-body {
+    flex-direction: column !important;
+    overflow-y: auto !important;
+}
+
+.mobile-mode .modal-image-section {
+    flex: 0 0 auto !important;
+    padding: 1rem 0 !important;
+}
+
+.mobile-mode .modal-image-section img {
+    max-width: 50% !important;
+    max-height: 35vh !important;
+}
+
+.mobile-mode .modal-info-section {
+    overflow-y: visible !important;
+    max-height: none !important;
+}
+
+
+/* Common Styles */
+.modal-header h2 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.info-group {
+    margin-bottom: 2rem;
+}
+
+.info-group h3 {
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.tag.training {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.tag.support {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.ability-box {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--input-border);
+}
+
+.ability-box strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--primary-color);
+}
+
+/* Journey Styles */
+.journey-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.journey-stage-card {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--input-border);
+}
+
+.stage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--input-border);
+    padding-bottom: 0.5rem;
+}
+
+.stage-header h4 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.event-num {
+    font-weight: bold;
+    color: #888;
+    width: 30px;
+}
+
+.choices-wrapper {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Choice Box Styling */
+.choice-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    word-break: break-all;
+    white-space: normal;
+}
+
+.choice-placeholder {
+    width: 100%;
+}
+
+[data-theme='dark'] .choice-box {
+    background: #2c2c2c;
+    border-color: #444;
+}
+
+.choice-label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    min-width: 24px;
+    text-align: center;
+    margin-top: 2px;
+    /* Align with text top */
+}
+
+.choice-a .choice-label {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
 .choice-b .choice-label {
     background-color: #fce4ec;
     color: #c2185b;
@@ -305,7 +500,7 @@
 .effect-row {
     display: flex;
     flex-direction: column;
-    /* Stack Type and Value */
+    /* Default to column (Mobile) as requested */
     align-items: flex-start;
     width: 100%;
 }
@@ -324,25 +519,201 @@
 /* Force Mobile Mode for Choices */
 .mobile-mode .choice-content-single,
 .mobile-mode .effect-row {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0 !important;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
 }
 
-.choice-type {
-    font-weight: bold;
-    font-size: 0.9rem;
+.bonus-box {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    max-height: 35vh !important;
 }
 
-.choice-value {
+.mobile-mode .modal-info-section {
+    overflow-y: visible !important;
+    max-height: none !important;
+}
+
+
+/* Common Styles */
+.modal-header h2 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.info-group {
+    margin-bottom: 2rem;
+}
+
+.info-group h3 {
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 20px;
     font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.tag.training {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.tag.support {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.ability-box {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--input-border);
+}
+
+.ability-box strong {
+    display: block;
+    margin-bottom: 0.4rem;
     color: var(--primary-color);
 }
 
+/* Journey Styles */
+.journey-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-/* Bonus Grid */
-.bonus-grid {
+.journey-stage-card {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--input-border);
+}
+
+.stage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--input-border);
+    padding-bottom: 0.5rem;
+}
+
+.stage-header h4 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.event-num {
+    font-weight: bold;
+    color: #888;
+    width: 30px;
+}
+
+.choices-wrapper {
+    flex: 1;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Choice Box Styling */
+.choice-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    word-break: break-all;
+    white-space: normal;
+}
+
+.choice-placeholder {
+    width: 100%;
+}
+
+[data-theme='dark'] .choice-box {
+    background: #2c2c2c;
+    border-color: #444;
+}
+
+.choice-label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    min-width: 24px;
+    text-align: center;
+    margin-top: 2px;
+    /* Align with text top */
+}
+
+.choice-a .choice-label {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.choice-b .choice-label {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.choice-content-single,
+.effect-row {
+    display: flex;
+    flex-direction: column;
+    /* Default to column (Mobile) as requested */
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Desktop: Row layout for choices */
+@media (min-width: 768px) {
+
+    .choice-content-single,
+    .effect-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Force Mobile Mode for Choices */
+.mobile-mode .choice-content-single,
+.mobile-mode .effect-row {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
 }
@@ -358,6 +729,19 @@
     margin: 0 0 0.5rem 0;
     font-size: 0.95rem;
     color: var(--text-color);
+}
+
+.choice-type {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.choice-value {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: normal;
+    /* Explicitly set to normal */
 }
 
 .bonus-box ul {

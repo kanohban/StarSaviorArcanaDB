@@ -98,12 +98,16 @@ function CardModal({ card, onClose }) {
                                             <div className="multi-effect-box">
                                                 {event.선택지A.map((effect, idx) => (
                                                     <div key={idx} className="effect-row">
-                                                        {effect.타입} {effect.수치}
+                                                        <span className="choice-type">{effect.타입}</span>
+                                                        <span className="choice-value">{effect.수치}</span>
                                                     </div>
                                                 ))}
                                             </div>
                                         ) : (
-                                            <span>{event.선택지A.타입} {event.선택지A.수치}</span>
+                                            <div className="choice-content-single">
+                                                <span className="choice-type">{event.선택지A.타입}</span>
+                                                <span className="choice-value">{event.선택지A.수치}</span>
+                                            </div>
                                         )}
                                     </div>
                                 ) : (
@@ -116,12 +120,16 @@ function CardModal({ card, onClose }) {
                                             <div className="multi-effect-box">
                                                 {event.선택지B.map((effect, idx) => (
                                                     <div key={idx} className="effect-row">
-                                                        {effect.타입} {effect.수치}
+                                                        <span className="choice-type">{effect.타입}</span>
+                                                        <span className="choice-value">{effect.수치}</span>
                                                     </div>
                                                 ))}
                                             </div>
                                         ) : (
-                                            <span>{event.선택지B.타입} {event.선택지B.수치}</span>
+                                            <div className="choice-content-single">
+                                                <span className="choice-type">{event.선택지B.타입}</span>
+                                                <span className="choice-value">{event.선택지B.수치}</span>
+                                            </div>
                                         )}
                                     </div>
                                 ) : (
