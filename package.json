@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
