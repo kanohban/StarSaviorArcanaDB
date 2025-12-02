@@ -1,0 +1,136 @@
+/* Unified Header Styles */
+:root {
+    /* Default values, will be overridden by JS */
+    --header-height: 60px;
+    --header-padding: 0 1rem;
+    --header-max-width: 1200px;
+
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --header-border-color: #e0e0e0;
+    --header-text-color: #333;
+    --btn-size: 40px;
+    --btn-font-size: 1.2rem;
+    --btn-hover-bg: rgba(0, 0, 0, 0.05);
+    --btn-border-color: #ddd;
+}
+
+/* Global Reset for Consistency */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Force scrollbar to prevent layout shift between pages */
+html {
+    overflow-y: scroll;
+}
+
+[data-theme="dark"] {
+    --header-bg: rgba(30, 30, 30, 0.9);
+    --header-border-color: #444;
+    --header-text-color: #fff;
+    --btn-hover-bg: rgba(255, 255, 255, 0.1);
+    --btn-border-color: #555;
+}
+
+/* Force parent padding/gap reset to ensure consistency */
+.app-header {
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+.custom-header-wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    background: transparent;
+    border-bottom: none;
+}
+
+.custom-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: var(--header-max-width);
+    margin: 0 auto;
+    height: var(--header-height);
+    padding: var(--header-padding);
+    box-sizing: border-box;
+}
+
+.custom-header-top h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--header-text-color);
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.header-btn {
+    background: transparent;
+    border: 1px solid var(--btn-border-color);
+    color: var(--header-text-color);
+    width: var(--btn-size);
+    height: var(--btn-size);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: var(--btn-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.header-btn:hover {
+    background-color: var(--btn-hover-bg);
+    transform: scale(1.05);
+    border-color: var(--primary-color, #4a90e2);
+}
+
+.header-btn:active {
+    transform: scale(0.95);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 50px;
+        --btn-size: 36px;
+        --btn-font-size: 1.1rem;
+    }
+
+    .custom-header-top h1 {
+        font-size: 1rem;
+        max-width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

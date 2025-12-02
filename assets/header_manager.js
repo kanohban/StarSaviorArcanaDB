@@ -1,0 +1,108 @@
+const HeaderManager = {
+    async init(container, pageId) {
+        try {
+            // 1. Load Config
+            const response = await fetch('./data/layout_config.json');
+            if (!response.ok) throw new Error('Failed to load config');
+            const config = await response.json();
+
+            // 2. Apply Global Config
+            if (config.global) {
+                this.applyGlobalConfig(config.global);
+            }
+
+            const pageConfig = config.pages[pageId];
+
+            if (!pageConfig) {
+                console.error(`Configuration for page "${pageId}" not found.`);
+                return;
+            }
+
+            // 3. Render Header
+            this.render(container, pageConfig);
+        } catch (error) {
+            console.error('Error initializing header:', error);
+        }
+    },
+
+    applyGlobalConfig(globalConfig) {
+        const root = document.documentElement;
+        if (globalConfig.headerHeight) root.style.setProperty('--header-height', globalConfig.headerHeight);
+        if (globalConfig.headerPadding) root.style.setProperty('--header-padding', globalConfig.headerPadding);
+        if (globalConfig.maxWidth) root.style.setProperty('--header-max-width', globalConfig.maxWidth);
+    },
+
+    render(container, config) {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedView = localStorage.getItem('viewMode') || 'pc';
+
+        const headerHTML = `
+            <div class="custom-header-top">
+                <div class="header-left">
+                    ${this.renderButtons(config.left)}
+                </div>
+                <h1>${config.title}</h1>
+                <div class="header-right">
+                    <div class="toggle-group">
+                        ${this.renderButtons(config.right, savedTheme, savedView)}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = headerHTML;
+        const headerElement = tempDiv.firstElementChild;
+
+        this.attachEvents(headerElement);
+
+        if (container) {
+            container.innerHTML = ''; // Clear container before appending
+            container.appendChild(headerElement);
+        }
+
+        return headerElement;
+    },
+
+    renderButtons(buttons, savedTheme, savedView) {
+        if (!buttons) return '';
+        return buttons.map(btn => {
+            if (btn.type === 'button') {
+                return `<button class="header-btn" title="${btn.title}" onclick="${btn.action === 'navigate' ? `location.href='${btn.target}'` : btn.action}">${btn.icon}</button>`;
+            } else if (btn.type === 'theme-toggle') {
+                return `<button class="header-btn theme-toggle" title="테마 변경">${savedTheme === 'dark' ? '🌙' : '☀️'}</button>`;
+            } else if (btn.type === 'view-toggle') {
+                return `<button class="header-btn mobile-toggle" title="뷰 전환">${savedView === 'mobile' ? '📱' : '🖥️'}</button>`;
+            }
+            return '';
+        }).join('');
+    },
+
+    attachEvents(element) {
+        const html = document.documentElement;
+        const body = document.body;
+        const themeBtn = element.querySelector('.theme-toggle');
+        const mobileBtn = element.querySelector('.mobile-toggle');
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                themeBtn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+            });
+        }
+
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', () => {
+                body.classList.toggle('mobile-mode');
+                const isMobile = body.classList.contains('mobile-mode');
+                localStorage.setItem('viewMode', isMobile ? 'mobile' : 'pc');
+                mobileBtn.textContent = isMobile ? '📱' : '🖥️';
+            });
+        }
+    }
+};
+
+window.HeaderManager = HeaderManager;

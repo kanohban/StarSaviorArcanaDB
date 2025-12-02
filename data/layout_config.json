@@ -1,0 +1,49 @@
+{
+    "global": {
+        "headerHeight": "90px",
+        "headerPadding": "0 1rem",
+        "maxWidth": "1200px"
+    },
+    "pages": {
+        "index": {
+            "title": "스타 세이비어 아르카나 DB",
+            "left": [
+                {
+                    "type": "button",
+                    "icon": "📖",
+                    "title": "여정",
+                    "action": "navigate",
+                    "target": "journey.html"
+                }
+            ],
+            "right": [
+                {
+                    "type": "theme-toggle"
+                },
+                {
+                    "type": "view-toggle"
+                }
+            ]
+        },
+        "journey": {
+            "title": "여정 이벤트 선택지",
+            "left": [
+                {
+                    "type": "button",
+                    "icon": "⬅",
+                    "title": "뒤로가기",
+                    "action": "navigate",
+                    "target": "index.html"
+                }
+            ],
+            "right": [
+                {
+                    "type": "theme-toggle"
+                },
+                {
+                    "type": "view-toggle"
+                }
+            ]
+        }
+    }
+}
