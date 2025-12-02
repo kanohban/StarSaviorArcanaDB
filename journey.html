@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타 세이비어 아르카나 DB - 여정/이벤트</title>
+    <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
+    <style>
+        :root {
+            --result-bg: #f9f9f9;
+        }
+
+        [data-theme="dark"] {
+            --result-bg: #2c2c2c;
+        }
+
+        .journey-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            transition: max-width 0.3s ease;
+        }
+
+        .app-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            gap: 1rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .header-controls-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .header-controls {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .header-bottom {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+        }
+
+        .tab-nav {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 8px 16px;
+            background: var(--card-bg);
+            border: 1px solid var(--primary-color);
+            color: var(--text-color);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            background: rgba(var(--primary-color-rgb), 0.1);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Metadata Pills Styles */
+        .event-meta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .meta-row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .meta-pill {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            white-space: nowrap;
+        }
+
+        /* Timing Styles (Blue Theme) */
+        .meta-pill.value-timing {
+            background-color: #ffffff;
+            color: #1565c0;
+            border: 1px solid #bbdefb;
+        }
+
+        [data-theme="dark"] .meta-pill.value-timing {
+            background-color: #2c2c2c;
+            color: #90caf9;
+            border-color: #1565c0;
+        }
+
+        /* Condition Styles (Soft Red Theme - Outlined) */
+        .meta-pill.value-condition {
+            background-color: #ffffff;
+            color: #e57373;
+            /* Soft Red Text */
+            border: 1px solid #e57373;
+            /* Soft Red Border */
+        }
+
+        [data-theme="dark"] .meta-pill.value-condition {
+            background-color: #2c2c2c;
+            color: #ef9a9a;
+            /* Lighter Red for Dark Mode */
+            border-color: #ef9a9a;
+        }
+
+        .choice-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+
+        .choice-item {
+            padding: 5px 0;
+            margin-bottom: 8px;
+        }
+
+        .choice-text {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0;
+            /* Reset margin as it's handled by flex container */
+        }
+
+        .choice-results {
+            margin-top: 5px;
+            padding: 10px;
+            background-color: var(--result-bg);
+            border-radius: 8px;
+            border: 1px solid var(--input-border);
+        }
+
+        .result-positive {
+            color: #4caf50;
+            margin-bottom: 2px;
+            white-space: pre-wrap;
+        }
+
+        .result-negative {
+            color: #ff5252;
+            margin-bottom: 2px;
+            white-space: pre-wrap;
+        }
+
+        .result-common {
+            color: var(--text-color);
+            white-space: pre-wrap;
+        }
+
+        .result-label {
+            font-weight: bold;
+            margin-right: 5px;
+            opacity: 0.8;
+        }
+
+        .back-btn {
+            /* Center aligned in its row */
+            background: transparent;
+            border: 1px solid var(--input-border);
+            /* Match toggle border */
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background-color: var(--input-bg);
+            border-color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        /* Mobile Mode Styles */
+        body.mobile-mode .journey-container {
+            max-width: 480px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header class="app-header">
+            <div class="header-top">
+                <h1>여정 / 이벤트 족보</h1>
+            </div>
+            <div class="header-controls-row">
+                <button class="back-btn" onclick="location.href='index.html'">←</button>
+                <div class="header-controls">
+                    <button class="theme-toggle" title="테마 변경">🌙</button>
+                    <button class="mobile-toggle" title="뷰 전환">🖥️</button>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="tab-nav">
+                    <button class="tab-btn active" onclick="switchTab('journey')">여정</button>
+                    <button class="tab-btn" onclick="switchTab('resette')">리세트</button>
+                    <button class="tab-btn" onclick="switchTab('subjugation')">토벌</button>
+                    <button class="tab-btn" onclick="switchTab('aganon')">아가논</button>
+                    <button class="tab-btn" onclick="switchTab('flora')">플로라</button>
+                    <button class="tab-btn" onclick="switchTab('kalide')">칼라이드</button>
+                    <button class="tab-btn" onclick="switchTab('weather')">날씨</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="journey-container">
+            <div id="content-area">
+                <div style="text-align: center; padding: 20px;">Loading...</div>
+            </div>
+        </div>
+
+        <footer class="app-footer">
+            <p>이 페이지는 게임 '스타 세이비어'의 비영리 팬 프로젝트입니다.</p>
+            <p>프로젝트에 사용된 모든 자산, 데이터, 이미지 및 텍스트의 소유권은 STUDIOBSIDE 에 있습니다.</p>
+            <p>© STUDIOBSIDE Co. Ltd All Rights Reserved.</p>
+            <div class="hits-counter" style="margin-top: 10px;">
+                <a href="https://myhits.vercel.app">
+                    <img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fkanohban.github.io%2FStarSaviorArcanaDB%2F?color=blue&label=hits&size=small"
+                        alt="hits">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let allData = {};
+        let currentTab = 'journey';
+
+        // Theme & Mobile Toggle Logic
+        const themeBtn = document.querySelector('.theme-toggle');
+        const mobileBtn = document.querySelector('.mobile-toggle');
+        const html = document.documentElement;
+        const body = document.body;
+
+        // Initialize Theme
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+        themeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+        // Initialize Mobile View
+        const savedView = localStorage.getItem('viewMode') || 'pc';
+        if (savedView === 'mobile') {
+            body.classList.add('mobile-mode');
+            mobileBtn.textContent = '📱';
+        } else {
+            mobileBtn.textContent = '🖥️';
+        }
+
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeBtn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        mobileBtn.addEventListener('click', () => {
+            body.classList.toggle('mobile-mode');
+            const isMobile = body.classList.contains('mobile-mode');
+            localStorage.setItem('viewMode', isMobile ? 'mobile' : 'pc');
+            mobileBtn.textContent = isMobile ? '📱' : '🖥️';
+        });
+
+        async function loadData() {
+            try {
+                const response = await fetch('./data/journey_data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                allData = await response.json();
+                console.log('Data loaded:', allData);
+                render();
+            } catch (error) {
+                console.error('Failed to load data:', error);
+                document.getElementById('content-area').innerHTML = `<div style="color:red; text-align:center; padding:20px;">
+                    <h3>데이터 로드 실패</h3>
+                    <p>${error.message}</p>
+                    <p>잠시 후 다시 시도하거나 관리자에게 문의하세요.</p>
+                </div>`;
+            }
+        }
+
+        function switchTab(tab) {
+            currentTab = tab;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                const onClickAttr = btn.getAttribute('onclick');
+                if (onClickAttr && onClickAttr.includes(`'${tab}'`)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            render();
+        }
+
+        function render() {
+            const container = document.getElementById('content-area');
+            const data = allData[currentTab] || [];
+
+            if (data.length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding:20px;">데이터가 없습니다. (JSON 파일 확인 필요)</div>';
+                return;
+            }
+
+            let html = `<div style="text-align:center; margin-bottom:10px; color:#aaa;">총 ${data.length}개의 이벤트가 있습니다.</div>`;
+            data.forEach(event => {
+                // Parse Timing and Condition
+                const timings = event.timing ? event.timing.split(',').map(t => t.trim()).filter(t => t) : [];
+                const conditions = event.condition ? event.condition.split(',').map(c => c.trim()).filter(c => c) : [];
+
+                html += `
+                <div class="event-card">
+                    <div class="event-name">${event.name}</div>
+                    
+                    <div class="event-meta-container">
+                        ${timings.length > 0 ? `
+                        <div class="meta-row">
+                            ${timings.map(t => `<span class="meta-pill value-timing">${t}</span>`).join('')}
+                        </div>` : ''}
+                        
+                        ${conditions.length > 0 ? `
+                        <div class="meta-row">
+                            ${conditions.map(c => `<span class="meta-pill value-condition">${c}</span>`).join('')}
+                        </div>` : ''}
+                    </div>
+
+                    <ul class="choice-list">
+                        ${event.choices.map(choice => `
+                            <li class="choice-item">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                                    <span class="choice-text" style="margin-bottom: 0;">${choice.text}</span>
+                                    ${choice.condition ? `<span class="meta-pill value-condition" style="font-size:0.8rem; padding:2px 10px; margin-left: 10px; flex-shrink: 0;">${choice.condition}</span>` : ''}
+                                </div>
+                                <div class="choice-results">
+                                    ${choice.result_positive ? `<div class="result-positive"><span class="result-label">성공:</span> ${choice.result_positive}</div>` : ''}
+                                    ${choice.result_negative ? `<div class="result-negative"><span class="result-label">실패:</span> ${choice.result_negative}</div>` : ''}
+                                    ${choice.result ? `<div class="result-common">${choice.result}</div>` : ''}
+                                </div>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            });
+            container.innerHTML = html;
+        }
+
+        loadData();
+    </script>
+</body>
+
+</html>

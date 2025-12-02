@@ -4,13 +4,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>스타 세이비어 아르카나 DB</title>
-  <script type="module" crossorigin src="./assets/index-DrY0adZU.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-</head>
+  <!DOCTYPE html>
+  <html lang="ko">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타 세이비어 아르카나 DB</title>
+    <script type="module" crossorigin src="./assets/index-DrY0adZU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
+  </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root"></div>
+  <script>
+    (function () {
+      // 1. Initialize State from LocalStorage
+      const html = document.documentElement;
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      html.setAttribute('data-theme', savedTheme);
+
+      const savedView = localStorage.getItem('viewMode') || 'pc';
+      if (savedView === 'mobile') {
+        body.classList.add('mobile-mode');
+      }
+
+      // 2. DOM Manipulation Observer
+      const observer = new MutationObserver((mutations, obs) => {
+        const headerTop = document.querySelector('.header-top');
+        if (headerTop && !document.querySelector('.custom-header-top')) {
+          initCustomHeader(headerTop);
+          modifyFilters();
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      function initCustomHeader(originalHeaderTop) {
+        // Hide original content but keep layout for spacing if needed, 
+        // but here we want to replace the top part entirely.
+        originalHeaderTop.style.display = 'none';
+
+        const appHeader = document.querySelector('.app-header');
+
+        // Create Custom Header
+        const customHeader = document.createElement('div');
+        customHeader.className = 'custom-header-top';
+        customHeader.innerHTML = `
+          <h1>스타 세이비어 아르카나 DB</h1>
+          <div class="custom-controls">
+            <button class="jokbo-btn" title="족보" onclick="location.href='journey.html'">📖</button>
+            <div class="toggle-group">
+              <button class="theme-toggle" title="테마 변경">${savedTheme === 'dark' ? '🌙' : '☀️'}</button>
+              <button class="mobile-toggle" title="뷰 전환">${savedView === 'mobile' ? '📱' : '🖥️'}</button>
+            </div>
+          </div>
+        `;
+
+        appHeader.insertBefore(customHeader, appHeader.firstChild);
+
+        // Event Listeners
+        const themeBtn = customHeader.querySelector('.theme-toggle');
+        const mobileBtn = customHeader.querySelector('.mobile-toggle');
+
+        themeBtn.addEventListener('click', () => {
+          const currentTheme = html.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+          themeBtn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        mobileBtn.addEventListener('click', () => {
+          body.classList.toggle('mobile-mode');
+          const isMobile = body.classList.contains('mobile-mode');
+          localStorage.setItem('viewMode', isMobile ? 'mobile' : 'pc');
+          mobileBtn.textContent = isMobile ? '📱' : '🖥️';
+        });
+      }
+
+      function modifyFilters() {
+        const options = document.querySelectorAll('option');
+        options.forEach(opt => {
+          if (opt.textContent === '모든 등급') opt.textContent = '등급';
+          if (opt.textContent === '모든 타입') opt.textContent = '타입';
+        });
+      }
+    })();
+  </script>
+  <style>
+    /* Custom Header Styles */
+    .custom-header-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .custom-header-top h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--text-color);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .custom-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .jokbo-btn {
+      background: transparent;
+      border: 1px solid var(--input-border);
+      padding: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .jokbo-btn:hover {
+      background-color: var(--input-bg);
+      border-color: var(--primary-color);
+      transform: scale(1.1);
+    }
+
+    .toggle-group {
+      display: flex;
+      gap: 0.5rem;
+      position: absolute;
+      right: 0;
+    }
+
+    /* Mobile Optimization for Header Bottom */
+    @media (max-width: 768px) {
+      .app-header {
+        padding: 1rem !important;
+      }
+
+      .header-bottom {
+        flex-direction: row !important;
+        /* Force row */
+        flex-wrap: nowrap !important;
+        gap: 0.5rem !important;
+      }
+
+      .filter-group {
+        width: auto !important;
+        flex: 0 0 auto;
+      }
+
+      .search-input {
+        width: 100% !important;
+        flex: 1 !important;
+        max-width: none !important;
+      }
+
+      .filter-select {
+        padding: 8px 12px !important;
+        /* Smaller padding */
+        font-size: 0.9rem !important;
+      }
+
+      .custom-header-top h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </body>
 
 </html>

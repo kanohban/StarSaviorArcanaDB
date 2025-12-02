@@ -1,0 +1,1001 @@
+{
+  "journey": [
+    {
+      "category": "여정 이벤트",
+      "name": "여가 시간",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 한정 디저트를 먹으러 가자!",
+          "condition": "주화-50",
+          "result": "컨디션+1, 잠재력+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 새로 나온 영화를 보러 가자!",
+          "condition": "주화-30",
+          "result": "특전 포스터(속도 증가, 이벤트템), 잠재력 +15 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 샌드위치를 들고 소풍하러 갈까?",
+          "condition": "스태미나-20",
+          "result": "힘+10 or 체력+10 or 인내+10, 보호+5 or 집중+5",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "4. 오늘은 이대로 푹 쉬자.",
+          "result": "인내+20",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "수집가가 온다",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 교환을 승낙한다.",
+          "condition": "특전 포스터",
+          "result": "아담한 오아시스",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 거래하고 싶은 마음은 없다.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "구원단 보급",
+      "timing": "3월 중순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 영양제를 고르자.",
+          "result": "만족도 설문지(턴 시작 속도증가 10중첩), 힘+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 푹신한 베개를 고르자.",
+          "result": "만족도 설문지(턴 시작 속도증가 10중첩), 체력+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 매운 음식을 고르자.",
+          "result": "만족도 설문지(턴 시작 속도증가 10중첩), 인내+10",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "우연한 발견",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 힘은 들겠지만 파보자!",
+          "condition": "스태미나-10",
+          "result": "",
+          "result_positive": "수상한 상자(효과적중,저항 증가/이벤트템), 잠재+15",
+          "result_negative": "없음"
+        },
+        {
+          "text": "2. 아무것도 안하기.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "교단의 분실물",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 어서 열어보자.",
+          "condition": "수상한 상자",
+          "result": "힘+10, 체력+10, 인내+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 다음에 열어보자.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "공업소의 홍보 전략",
+      "timing": "5월 중순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 돈을 내고 구입한다.",
+          "condition": "주화-50",
+          "result": "스태미나+10, 전설의 검 모조품(궁극기 사용시 효과적중 증가) / 힘인증특훈서(공증)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 취약부를 찾아서 공략한다.",
+          "condition": "집중 30/50",
+          "result": "컨디션+1, 전설의 검 모조품",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 힘으로 뽑아낸다.",
+          "condition": "스태미나-20",
+          "result": "'전설의 구원자' 상태(훈련잠재↑), 전설의 검 모조품",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "4. 지나쳐 간다.",
+          "result": "",
+          "result_positive": "스태미나+5",
+          "result_negative": "없음"
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "비밀의 지옥 특훈",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 펀치 기계 잘 치는 법",
+          "condition": "주화-20",
+          "result": "힘 특훈 인증서(공증), '제약을 이겨내고' 상태 (훈련 힘 증가)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 지치지 않고 달리는 법",
+          "condition": "주화-20",
+          "result": "체력 인증 특훈서(체력증), 훈련중 체력 증가 버프",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 지금은 괜찮다.",
+          "result": "힘+10, 체력+10, 인내+10",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "신설 부서는 노력 중!",
+      "timing": "1월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 설문 평가 : 좋음",
+          "result": "컨디션+1, 주화+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 설문 평가 : 보통",
+          "result": "스태미나-10, 체력+10, 주화+30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 설문 평가 : 나쁨",
+          "result": "컨디션-1, 주화+20, 잠재+20 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "4. 오늘은 좀…",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "시작형 강화제",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 섬뜩하게 붉은빛의 물약.",
+          "condition": "주화-20",
+          "result": "",
+          "result_positive": "올스탯+20 or 스태미나+20,",
+          "result_negative": "올스탯-10, '마력탈진' 상태 5턴(훈련 실패율↑), 빈 약병(무작위강화효과)"
+        },
+        {
+          "text": "2. 차갑도록 푸른빛의 물약.",
+          "condition": "주화-20",
+          "result": "",
+          "result_positive": "스태미나+10, '고르디우스의 검' 상태 (훈련 성공률↑)",
+          "result_negative": "컨디션-1, 빈 약병"
+        },
+        {
+          "text": "3. 눈부시게 노란빛의 물약.",
+          "condition": "주화-20",
+          "result": "",
+          "result_positive": "스태미나+10, 주화+30, 잠재력 +20 or 30, 빈 약병 /",
+          "result_negative": "'급성 슬럼프'상태(훈련 실패율↑), 빈 약병"
+        },
+        {
+          "text": "4. 옆에 놓여 있는 평범한 음료수.",
+          "result": "",
+          "result_positive": "힘+10, 체력+10, 인내+10",
+          "result_negative": "컨디션-1, 힘-10, 체력-10, 인내-10"
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "완성형 강화제",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 이렇게 된 거 마셔보자!",
+          "condition": "주화-20",
+          "result": "",
+          "result_positive": "컨디션+1, 힘+10, 체력+10, 인내+10",
+          "result_negative": "컨디션-1 힘-10 체력-10 인내-10"
+        },
+        {
+          "text": "2. 음료수가 좋겠어",
+          "result": "스태미너+10",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "교단의 제안",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 교단에 유물을 매매한다.",
+          "condition": "정체불명의 유물",
+          "result": "주화+80",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 가지고 있어 보자.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "간단한 테스트",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 적당한 힘으로 충격을 가한다.",
+          "condition": "정체불명의 유물",
+          "result": "",
+          "result_positive": "컨디션+1, 인내+20, 보호+20",
+          "result_negative": "컨디션-1"
+        },
+        {
+          "text": "2. 강력한 힘으로 충격을 가한다.",
+          "condition": "정체불명의 유물",
+          "result": "",
+          "result_positive": "힘+10, 보호+10 or 체력+10, 보호+10",
+          "result_negative": "없음"
+        },
+        {
+          "text": "3. 유물은 소중히 간직해야 한다.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "신비한 석상",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 칼을 든 석상에 기도한다.",
+          "result": "체력-20, 힘+20, 석상의 칼(이벤트템)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 꽃을 든 석상에 기도한다.",
+          "result": "힘-20, 체력+20, 석상의 꽃(이벤트템)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 기도하지 않는다.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "예상 못한 격려",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 하는 만큼 성과.",
+          "condition": "스태미나-10",
+          "result": "",
+          "result_positive": "체력+10 or 인내+10, '데드라인'(훈련 잠재↑) 상태",
+          "result_negative": "'과욕'(훈련실패율↑) 상태"
+        },
+        {
+          "text": "2. 조금만 더 해보자.",
+          "condition": "스태미나-10",
+          "result": "힘+5 or 인내+5",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 무리하지 말고 대피하자.",
+          "result": "",
+          "result_positive": "스태미나+10",
+          "result_negative": "컨디션-1"
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "훈련 실패",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 아니, 훈련은 회복하고 나서 하자.",
+          "result": "",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 좋아, 열심히 해보자!",
+          "condition": "스태미나-20",
+          "result": "잠재력+18, '총명한 여정 단원'(훈련 획득 집중 증가) 상태",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 활력 포션을 건넨다.",
+          "condition": "활력 포션",
+          "result": "스태미나+15, 잠재력+10",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "칼에 숨겨진 힘",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 석상의 칼을 집어든다.",
+          "condition": "석상의 칼",
+          "result": "힘+20, 체력+10, '힘의 자양분' 상태 (훈련체력↓) 3턴",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 그대로 놔둔다.",
+          "result": "",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    }
+  ],
+  "resette": [
+    {
+      "category": "리세트 이벤트",
+      "name": "리세트의 일과",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 도와주자.",
+          "condition": "스태미나-20",
+          "result": "컨디션+1(확률), 주화+30, '일일 아르바이트생' 상태 (상점 할인)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 잠시 기다리자.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "리세트 이벤트",
+      "name": "리세트의 휴가",
+      "timing": "10월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 파는 곳을 같이 찾아준다.",
+          "condition": "스태미나-20",
+          "result": "보호+15, 집중+30 or 보호+30, 집중+15 , 고풍스러운 열쇠(속도증가, 이벤트템), '달콤함' 상태(훈련 실패율↓)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 파는 곳의 위치를 알려준다.",
+          "result": "집중+8",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "리세트 이벤트",
+      "name": "리세트의 우울",
+      "timing": "1월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 혹시 이거 아니야?",
+          "condition": "고풍스러운 열쇠",
+          "result": "잠재+22, 리세트의 저금통(턴시작 속도증가 5중첩)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 기술자를 부르자.",
+          "result": "잠재+15",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "리세트 이벤트",
+      "name": "리세트의 행운",
+      "timing": "9월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 추첨권을 왼쪽 상자에 넣는다.",
+          "condition": "리세트의 추첨권",
+          "result": "",
+          "result_positive": "스태미나+10 or 잠재+36 or 주화+50 or 100",
+          "result_negative": "없음"
+        },
+        {
+          "text": "2. 추첨권을 오른쪽 상자에 넣는다.",
+          "condition": "리세트의 추첨권",
+          "result": "",
+          "result_positive": "컨디션+1, 주화+100",
+          "result_negative": "없음"
+        },
+        {
+          "text": "3. 다음 기회를 노린다.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "리세트 이벤트",
+      "name": "리세트의 유혹",
+      "timing": "6월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 대신 구입해 준다.",
+          "condition": "주화-30",
+          "result": "집중+5 or 10, 보호+5 or 10, 달빛 에센스 샘플(궁극기 사용시 효과적중,저항 증가)\nor 달빛 향수 샘플(궁극기 사용시 효과저항 증가) or 달빛 립밤 샘플(궁극기 사용시 효과적중 증가)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 여정을 위해 아낀다.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    }
+  ],
+  "aganon": [
+    {
+      "category": "원정 평가전 - 아가논",
+      "name": "미궁 탐사",
+      "timing": "7월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 돈으로 해결하자.",
+          "condition": "주화-50",
+          "result": "스태미나+5, 정체불명의 유물(턴시작 효과저항 증가 3중첩, 이벤트템)",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 크레인을 직접 몰면 어떨까?",
+          "condition": "보호 50/70",
+          "result": "인내+15 or 20, 잠재력+15 or 22",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 우회해서 가자.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "원정 평가전 - 아가논",
+      "name": "습격",
+      "timing": "8월 초순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 지형지물을 활용해 따돌리자.",
+          "condition": "스태미나-20",
+          "result": "집중+10, 보호+10, 잠재력+20 or 30, 속도의감각 20% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 침착하게 방어를 굳히자.",
+          "condition": "인내 125/150",
+          "result": "컨디션+1, 집중+10, 보호+10, 잠재+20 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 상층부로 도망치자.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "조우 이벤트",
+      "name": "갑작스러운 조우 – 슬라임",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 슬라임을 몰아내자.",
+          "condition": "보호 60/80",
+          "result": "힘+5, 체력+5, 인내+5, 잠재+10 or 15",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 대피를 돕자.",
+          "condition": "스태미나-10",
+          "result": "주화+30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 얽히지 말자.",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    }
+  ],
+  "flora": [
+    {
+      "category": "합숙 훈련 - 플로라",
+      "name": "비치발리볼 대회 예선전",
+      "timing": "11월 초순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 상대팀의 약점을 공략하자.",
+          "condition": "힘 200/300",
+          "result": "컨디션+1, 체력+10, 집중+10, 잠재+20 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 우리 팀의 강점을 활용한다.",
+          "condition": "집중 100/125",
+          "result": "체력+20 or 30, 잠재+20 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 기세로 밀어붙인다.",
+          "condition": "스태미나-20",
+          "result": "집중+20, 잠재+20",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "4. …어떻게든 되겠지!",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "합숙 훈련 - 플로라",
+      "name": "비치발리볼 대회 준결승전",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 일단 배부터 채울까?",
+          "condition": "주화-80",
+          "result": "스태미나+15, 잠재+20",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 심호흡으로 긴장을 풀자.",
+          "condition": "집중 125/150",
+          "result": "컨디션+1, 힘+30, 잠재+20 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 언제나 그렇듯이 최선을 다하자.",
+          "result": "잠재+10 or 15",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "조우 이벤트",
+      "name": "갑작스러운 조우 – 약탈자",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 혼쭐을 내 주자!",
+          "condition": "힘 300/400",
+          "result": "체력+10, 잠재+10 or 15",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 말로 타이르자.",
+          "condition": "잠재력-10",
+          "result": "스태미나-10, 집중+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 평범한 시체입니다.",
+          "result": "",
+          "result_positive": "컨디션+1, 힘+10, 보호+10, 잠재+20",
+          "result_negative": "없음"
+        }
+      ]
+    }
+  ],
+  "kalide": [
+    {
+      "category": "합숙 훈련 - 칼라이드",
+      "name": "온천 축제 준비",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 곰을 탈 수 있는 집!",
+          "condition": "체력 200/300",
+          "result": "컨디션+1, 힘+10, 보호+10, 잠재+20 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 맛있는 전통식사가 준비된 집!",
+          "condition": "보호 100/125",
+          "result": "힘+20 or 30, 잠재+20 or 30",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 기존 숙소에서 묵자.",
+          "condition": "스태미나-20",
+          "result": "보호+20, 잠재+20",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "4. 어느 쪽도 싫다.",
+          "result": "스태미나+5",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "합숙 훈련 - 칼라이드",
+      "name": "축제의 불청객",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 금전적인 도움을 준다.",
+          "condition": "주화-80",
+          "result": "스태미나+15, 잠재력+20",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 직접 시도해 본다.",
+          "condition": "보호 125/150",
+          "result": "체력+30 잠재력+20 or 30 컨디션 +1",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 포기한다.",
+          "result": "잠재력+15",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "조우 이벤트",
+      "name": "갑작스러운 조우 – 강도 기사",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 해치워 주지!",
+          "condition": "체력 300/400",
+          "result": "힘+10, 잠재+10 or 15",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 앞으로도 잘 부탁드립니다.",
+          "condition": "주화-20",
+          "result": "랜덤스탯+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "3. 작전상 후퇴!",
+          "result": "없음",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    }
+  ],
+  "weather": [
+    {
+      "category": "날씨 이벤트",
+      "name": "오늘의 날씨 – 쾌청",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 여유로운 시간을 보낸다.",
+          "result": "",
+          "result_positive": "스태미나+10, 집중+5, 보호+10",
+          "result_negative": "컨디션-1, 집중+5 or 보호+5"
+        },
+        {
+          "text": "2. 원래 계획대로 시간을 보낸다.",
+          "result": "잠재력+15 or 랜덤스탯+5",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "날씨 이벤트",
+      "name": "오늘의 날씨 – 폭설",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 손난로를 사용하자.",
+          "condition": "손난로",
+          "result": "",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 추위를 참는 것도 훈련...이 될지도!",
+          "result": "스태미나-10, 보호-10, 이로운 여정 상태 해제",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "날씨 이벤트",
+      "name": "오늘의 날씨 – 낙뢰",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 훈련을 이어 나간다.",
+          "result": "",
+          "result_positive": "컨디션+1, 잠재+20 or 30",
+          "result_negative": "컨디션-1"
+        },
+        {
+          "text": "2. 숙소로 돌아간다.",
+          "result": "",
+          "result_positive": "",
+          "result_negative": "컨디션-1, 스태미나+10"
+        }
+      ]
+    },
+    {
+      "category": "날씨 이벤트",
+      "name": "오늘의 날씨 – 안개",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 훈련을 이어 나간다.",
+          "result": "",
+          "result_positive": "집중+10, 보호+10, 잠재+20 or 30",
+          "result_negative": "스태미나-10, 집중+5, 보호+5"
+        },
+        {
+          "text": "2. 숙소로 돌아간다.",
+          "result": "",
+          "result_positive": "",
+          "result_negative": "컨디션-1, 스태미나+10"
+        }
+      ]
+    },
+    {
+      "category": "합숙 훈련 - 플로라",
+      "name": "오늘의 날씨 – 열대야",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 손선풍기를 사용한다.",
+          "condition": "손선풍기",
+          "result": "힘+10 or 체력+10 or 인내+10",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 어떻게든 버텨본다.",
+          "result": "컨디션-1, 인내-10, '공감' 상태 해제",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    }
+  ],
+  "subjugation": [
+    {
+      "category": "토벌 의뢰",
+      "name": "약탈자 토벌 의뢰",
+      "timing": "4월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "하급 의뢰 성공",
+          "result": "컨디션+1, 카페 스트레가 쿠폰(궁극기 사용 후 노바 2 회복), 랜덤스탯+5, 잠재+7, 방어의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "중급 의뢰 성공",
+          "result": "컨디션+1, 카페 스트레가 쿠폰(궁극기 사용 후 노바 2 회복), 랜덤스탯+5, 잠재+7, 방어의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "상급 의뢰 성공",
+          "result": "컨디션+1, 카페 스트레가 쿠폰(궁극기 사용 후 노바 2 회복), 랜덤스탯+5, 잠재+7, 방어의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "토벌 의뢰",
+      "name": "슬라임 토벌 의뢰",
+      "timing": "6월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "하급 의뢰 성공",
+          "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯+10, 잠재+15, 보호의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "중급 의뢰 성공",
+          "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯+10, 잠재+15, 보호의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "상급 의뢰 성공",
+          "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯+10, 잠재+15, 보호의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "토벌 의뢰",
+      "name": "탈영병 토벌 의뢰",
+      "timing": "10월 하순",
+      "condition": "",
+      "choices": [
+        {
+          "text": "하급 의뢰 성공",
+          "result": "",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "중급 의뢰 성공",
+          "result": "금빛 공훈 휘장(턴 시작 치확 증가 5중첩), 랜덤스탯+15, 잠재+30 통찰의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "상급 의뢰 성공",
+          "result": "별빛 공훈 휘장(궁극기 사용시 효과 적중,저항 증가 5중첩), 랜덤스탯+15, 잠재+30 통찰의 감각 10% 할인",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    }
+  ]
+}
