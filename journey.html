@@ -42,8 +42,8 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            /* Stack tabs and search */
             align-items: center;
+            justify-content: center;
             gap: 10px;
             padding-bottom: 10px;
         }
@@ -53,11 +53,21 @@
             max-width: 600px;
             padding: 0 10px;
             box-sizing: border-box;
+            margin: 0 auto;
+            /* Force centering of the container itself */
+            display: flex;
+            /* Enable flex to center content if needed */
+            justify-content: center;
+            /* Center the input within the container */
         }
 
         /* Re-use .search-input from index-DBwFzK5i.css, but ensure width is correct */
         .search-input {
             width: 100%;
+            max-width: 100% !important;
+            /* Override external CSS max-width: 400px */
+            text-align: left;
+            /* Keep text left aligned */
         }
 
         .tab-nav {

@@ -65,6 +65,161 @@
           if (opt.textContent === '모든 등급') opt.textContent = '등급';
           if (opt.textContent === '모든 타입') opt.textContent = '타입';
         });
+
+        // Inject Star Filter Button if not exists
+        const headerBottom = document.querySelector('.header-bottom');
+        if (headerBottom && !document.querySelector('#fav-filter-btn')) {
+          const starBtn = document.createElement('button');
+          starBtn.id = 'fav-filter-btn';
+          // Use header-btn class for consistent design
+          starBtn.className = 'header-btn fav-filter-btn';
+          starBtn.title = '즐겨찾기 모아보기';
+          starBtn.innerHTML = '★'; // Star Icon
+
+          // Load saved filter state
+          const isFilterActive = localStorage.getItem('fav_filter_active') === 'true';
+          if (isFilterActive) {
+            starBtn.classList.add('active');
+            document.body.classList.add('show-favorites-only');
+          }
+
+          starBtn.addEventListener('click', () => {
+            starBtn.classList.toggle('active');
+            const isActive = starBtn.classList.contains('active');
+            document.body.classList.toggle('show-favorites-only', isActive);
+            localStorage.setItem('fav_filter_active', isActive);
+
+            // Force trigger a scan to update visibility immediately
+            triggerScan();
+          });
+
+          headerBottom.appendChild(starBtn);
+        }
+      }
+
+      // Helper to trigger the logic manually
+      function triggerScan() {
+        const root = document.getElementById('root');
+        if (root) {
+          scanAndApplyFavorites();
+        }
+      }
+
+      function scanAndApplyFavorites() {
+        let favorites = JSON.parse(localStorage.getItem('arcana_favorites')) || [];
+        const cards = document.querySelectorAll('.card-item');
+        const isFilterActive = document.body.classList.contains('show-favorites-only');
+
+        cards.forEach(card => {
+          // 1. Ensure Favorite Button Exists
+          let btn = card.querySelector('.favorite-btn');
+          if (!btn) {
+            btn = createFavoriteButton();
+            card.appendChild(btn);
+            card.classList.add('has-fav-btn');
+          }
+
+          // 2. Update State based on CURRENT content (Handle Element Recycling)
+          const titleEl = card.querySelector('h3');
+          if (titleEl) {
+            const currentCardId = titleEl.textContent.trim();
+            const isFav = favorites.includes(currentCardId);
+
+            if (isFav) {
+              card.classList.add('is-favorite');
+              btn.classList.add('active');
+            } else {
+              card.classList.remove('is-favorite');
+              btn.classList.remove('active');
+            }
+          }
+
+          // 3. Enforce Filter Visibility using CSS Class
+          if (isFilterActive) {
+            if (!card.classList.contains('is-favorite')) {
+              card.classList.add('force-hidden');
+            } else {
+              card.classList.remove('force-hidden');
+            }
+          } else {
+            // Filter is OFF: Always remove the forced hiding
+            card.classList.remove('force-hidden');
+          }
+        });
+      }
+
+      function createFavoriteButton() {
+        const btn = document.createElement('button');
+        btn.className = 'favorite-btn';
+        btn.title = '즐겨찾기';
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+
+        // Dynamic Click Handler
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+
+          // Read CURRENT ID at click time
+          const card = btn.closest('.card-item');
+          const titleEl = card.querySelector('h3');
+          if (!titleEl) return;
+
+          const cardId = titleEl.textContent.trim();
+          let favorites = JSON.parse(localStorage.getItem('arcana_favorites')) || [];
+
+          btn.classList.toggle('active');
+
+          if (btn.classList.contains('active')) {
+            card.classList.add('is-favorite');
+            if (!favorites.includes(cardId)) {
+              favorites.push(cardId);
+            }
+            // If filter is active, we just made it a favorite, so ensure it's shown
+            if (document.body.classList.contains('show-favorites-only')) {
+              card.classList.remove('force-hidden');
+            }
+          } else {
+            card.classList.remove('is-favorite');
+            favorites = favorites.filter(id => id !== cardId);
+
+            // Hide immediately if filter is active
+            if (document.body.classList.contains('show-favorites-only')) {
+              card.classList.add('force-hidden');
+            }
+          }
+          localStorage.setItem('arcana_favorites', JSON.stringify(favorites));
+        });
+
+        return btn;
+      }
+
+      // Observer Setup
+      // Added characterData to catch text changes directly
+      const observerConfig = { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'], characterData: true };
+      const contentObserver = new MutationObserver((mutations) => {
+        let shouldScan = false;
+        mutations.forEach((mutation) => {
+          if (mutation.addedNodes.length > 0) shouldScan = true;
+          if (mutation.type === 'attributes' && mutation.target.classList.contains('card-item')) shouldScan = true;
+          // If text changes inside a card (e.g. h3 text update)
+          if (mutation.type === 'characterData') shouldScan = true;
+          // Also check if childList changed on a descendant (e.g. h3 content replaced)
+          if (mutation.type === 'childList' && mutation.target.closest && mutation.target.closest('.card-item')) shouldScan = true;
+        });
+
+        if (shouldScan) {
+          contentObserver.disconnect();
+          try {
+            scanAndApplyFavorites();
+          } finally {
+            const root = document.getElementById('root');
+            if (root) contentObserver.observe(root, observerConfig);
+          }
+        }
+      });
+
+      const root = document.getElementById('root');
+      if (root) {
+        contentObserver.observe(root, observerConfig);
       }
     })();
   </script>
@@ -96,6 +251,90 @@
         /* Smaller padding */
         font-size: 0.9rem !important;
       }
+    }
+  </style>
+  <style>
+    /* Favorite Button Styles */
+    .card-item {
+      position: relative !important;
+    }
+
+    .favorite-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid #ddd;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] .favorite-btn {
+      background-color: rgba(40, 40, 40, 0.8);
+      border-color: #555;
+    }
+
+    .favorite-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #333;
+      /* Default black/dark */
+      transition: fill 0.2s ease, transform 0.2s ease;
+    }
+
+    [data-theme="dark"] .favorite-btn svg {
+      fill: #aaa;
+    }
+
+    .favorite-btn.active svg {
+      fill: #ff4081;
+      /* Active Red */
+      transform: scale(1.1);
+    }
+
+    .favorite-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Favorites Filter Button - Consistent Design */
+    .fav-filter-btn {
+      /* Inherits .header-btn styles from header.css */
+      /* Additional tweaks if needed */
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      /* Match header buttons */
+      width: 40px;
+      /* Match header buttons */
+      height: 40px;
+      /* Match header buttons */
+      border-radius: 50%;
+      /* Match header buttons */
+    }
+
+    .fav-filter-btn:hover {
+      border-color: #ffca28;
+      color: #ffca28;
+    }
+
+    .fav-filter-btn.active {
+      background-color: #ffca28;
+      color: white;
+      border-color: #ffca28;
+      box-shadow: 0 0 10px rgba(255, 202, 40, 0.5);
+    }
+
+    /* Filtering Logic */
+    /* Use Class instead of inline style to avoid conflicts */
+    .force-hidden {
+      display: none !important;
     }
   </style>
 </body>
