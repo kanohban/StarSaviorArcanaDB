@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>스타 세이비어 아르카나 DB - 여정/이벤트</title>
     <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
+    <link rel="stylesheet" href="./assets/header.css">
     <style>
         :root {
             --result-bg: #f9f9f9;
@@ -32,41 +33,41 @@
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            gap: 1rem;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-        }
-
-        .header-controls-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            margin-top: 0.5rem;
-        }
-
-        .header-controls {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
+            padding: 0;
+            /* Explicitly reset padding */
             gap: 0.5rem;
         }
 
         .header-bottom {
             width: 100%;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            overflow-x: auto;
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            /* Force centering of the container itself */
+            display: flex;
+            /* Enable flex to center content if needed */
+            justify-content: center;
+            /* Center the input within the container */
+        }
+
+        /* Re-use .search-input from index-DBwFzK5i.css, but ensure width is correct */
+        .search-input {
+            width: 100%;
+            max-width: 100% !important;
+            /* Override external CSS max-width: 400px */
+            text-align: left;
+            /* Keep text left aligned */
         }
 
         .tab-nav {
@@ -74,6 +75,12 @@
             gap: 10px;
             flex-wrap: wrap;
             justify-content: center;
+        }
+
+        .tab-nav.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+            filter: grayscale(100%);
         }
 
         .tab-btn {
@@ -217,32 +224,31 @@
             opacity: 0.8;
         }
 
-        .back-btn {
-            /* Center aligned in its row */
-            background: transparent;
-            border: 1px solid var(--input-border);
-            /* Match toggle border */
-            color: var(--text-color);
-            font-size: 1.5rem;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-
-        .back-btn:hover {
-            background-color: var(--input-bg);
-            border-color: var(--primary-color);
-            transform: scale(1.1);
-        }
-
         /* Mobile Mode Styles */
         body.mobile-mode .journey-container {
             max-width: 480px;
+        }
+
+        /* Mobile Optimization for Tabs */
+        @media (max-width: 768px) {
+            .tab-nav {
+                gap: 6px;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                padding: 0 10px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .tab-nav::-webkit-scrollbar {
+                display: none;
+            }
+
+            .tab-btn {
+                padding: 6px 10px;
+                font-size: 0.9rem;
+                flex-shrink: 0;
+            }
         }
     </style>
 </head>
@@ -250,16 +256,7 @@
 <body>
     <div class="app">
         <header class="app-header">
-            <div class="header-top">
-                <h1>여정 / 이벤트 족보</h1>
-            </div>
-            <div class="header-controls-row">
-                <button class="back-btn" onclick="location.href='index.html'">←</button>
-                <div class="header-controls">
-                    <button class="theme-toggle" title="테마 변경">🌙</button>
-                    <button class="mobile-toggle" title="뷰 전환">🖥️</button>
-                </div>
-            </div>
+            <!-- Header content will be injected by HeaderManager -->
             <div class="header-bottom">
                 <div class="tab-nav">
                     <button class="tab-btn active" onclick="switchTab('journey')">여정</button>
@@ -269,6 +266,10 @@
                     <button class="tab-btn" onclick="switchTab('flora')">플로라</button>
                     <button class="tab-btn" onclick="switchTab('kalide')">칼라이드</button>
                     <button class="tab-btn" onclick="switchTab('weather')">날씨</button>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="journey-search" class="search-input" placeholder="이벤트 이름, 내용, 보상 검색..."
+                        autocomplete="off">
                 </div>
             </div>
         </header>
@@ -292,44 +293,39 @@
         </footer>
     </div>
 
+    <script src="./assets/header_manager.js"></script>
     <script>
         let allData = {};
         let currentTab = 'journey';
 
+        // Initialize HeaderManager
+        document.addEventListener('DOMContentLoaded', () => {
+            const appHeader = document.querySelector('.app-header');
+            const wrapper = document.createElement('div');
+            wrapper.className = 'custom-header-wrapper'; // Add class immediately
+            appHeader.insertBefore(wrapper, appHeader.firstChild);
+
+            if (window.HeaderManager) {
+                window.HeaderManager.init(wrapper, 'journey');
+            }
+        });
+
         // Theme & Mobile Toggle Logic
-        const themeBtn = document.querySelector('.theme-toggle');
-        const mobileBtn = document.querySelector('.mobile-toggle');
+        // Note: HeaderManager handles toggle events for its own buttons. 
+        // But we need to initialize page state (theme/viewMode) on load.
+
         const html = document.documentElement;
         const body = document.body;
 
         // Initialize Theme
         const savedTheme = localStorage.getItem('theme') || 'dark';
         html.setAttribute('data-theme', savedTheme);
-        themeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
 
         // Initialize Mobile View
         const savedView = localStorage.getItem('viewMode') || 'pc';
         if (savedView === 'mobile') {
             body.classList.add('mobile-mode');
-            mobileBtn.textContent = '📱';
-        } else {
-            mobileBtn.textContent = '🖥️';
         }
-
-        themeBtn.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeBtn.textContent = newTheme === 'dark' ? '🌙' : '☀️';
-        });
-
-        mobileBtn.addEventListener('click', () => {
-            body.classList.toggle('mobile-mode');
-            const isMobile = body.classList.contains('mobile-mode');
-            localStorage.setItem('viewMode', isMobile ? 'mobile' : 'pc');
-            mobileBtn.textContent = isMobile ? '📱' : '🖥️';
-        });
 
         async function loadData() {
             try {
@@ -363,16 +359,79 @@
             render();
         }
 
-        function render() {
-            const container = document.getElementById('content-area');
-            const data = allData[currentTab] || [];
+        loadData();
 
-            if (data.length === 0) {
-                container.innerHTML = '<div style="text-align:center; padding:20px;">데이터가 없습니다. (JSON 파일 확인 필요)</div>';
+        // Search Logic
+        const searchInput = document.getElementById('journey-search');
+        const tabNav = document.querySelector('.tab-nav');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim().toLowerCase();
+
+            if (query) {
+                tabNav.classList.add('disabled');
+                renderSearch(query);
+            } else {
+                tabNav.classList.remove('disabled');
+                render(); // Render current tab
+            }
+        });
+
+        function renderSearch(query) {
+            const container = document.getElementById('content-area');
+            let results = [];
+
+            // Search across all categories
+            Object.keys(allData).forEach(key => {
+                const categoryData = allData[key];
+                categoryData.forEach(event => {
+                    // Search in Name
+                    if (event.name && event.name.toLowerCase().includes(query)) {
+                        results.push(event);
+                        return;
+                    }
+                    // Search in Choices
+                    if (event.choices) {
+                        const choiceMatch = event.choices.some(choice =>
+                            (choice.text && choice.text.toLowerCase().includes(query)) ||
+                            (choice.result && choice.result.toLowerCase().includes(query)) ||
+                            (choice.result_positive && choice.result_positive.toLowerCase().includes(query)) ||
+                            (choice.result_negative && choice.result_negative.toLowerCase().includes(query))
+                        );
+                        if (choiceMatch) {
+                            results.push(event);
+                            return;
+                        }
+                    }
+                    // Search in Timing/Condition
+                    if ((event.timing && event.timing.toLowerCase().includes(query)) ||
+                        (event.condition && event.condition.toLowerCase().includes(query))) {
+                        results.push(event);
+                    }
+                });
+            });
+
+            if (results.length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding:20px;">검색 결과가 없습니다.</div>';
                 return;
             }
 
-            let html = `<div style="text-align:center; margin-bottom:10px; color:#aaa;">총 ${data.length}개의 이벤트가 있습니다.</div>`;
+            renderEvents(results, `검색 결과: ${results.length}건`);
+        }
+
+        function render() {
+            const data = allData[currentTab] || [];
+            if (data.length === 0) {
+                document.getElementById('content-area').innerHTML = '<div style="text-align:center; padding:20px;">데이터가 없습니다. (JSON 파일 확인 필요)</div>';
+                return;
+            }
+            renderEvents(data, `총 ${data.length}개의 이벤트가 있습니다.`);
+        }
+
+        function renderEvents(data, message) {
+            const container = document.getElementById('content-area');
+            let html = `<div style="text-align:center; margin-bottom:10px; color:#aaa;">${message}</div>`;
+
             data.forEach(event => {
                 // Parse Timing and Condition
                 const timings = event.timing ? event.timing.split(',').map(t => t.trim()).filter(t => t) : [];
@@ -414,8 +473,6 @@
             });
             container.innerHTML = html;
         }
-
-        loadData();
     </script>
 </body>
 
