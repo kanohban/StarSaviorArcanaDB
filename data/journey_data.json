@@ -415,7 +415,28 @@
         {
           "text": "1. 석상의 칼을 집어든다.",
           "condition": "석상의 칼",
-          "result": "힘+20, 체력+10, '힘의 자양분' 상태 (훈련체력↓) 3턴",
+          "result": "힘+20, 체력+20, '힘의 자양분' 상태 (훈련 체력↓) 3턴",
+          "result_positive": "",
+          "result_negative": ""
+        },
+        {
+          "text": "2. 그대로 놔둔다.",
+          "result": "",
+          "result_positive": "",
+          "result_negative": ""
+        }
+      ]
+    },
+    {
+      "category": "여정 이벤트",
+      "name": "꽃에 숨겨진 힘",
+      "timing": "",
+      "condition": "",
+      "choices": [
+        {
+          "text": "1. 석상의 꽃을 집어든다.",
+          "condition": "석상의 꽃",
+          "result": "힘+20, 체력+20, '체력의 자양분' 상태 (훈련 힘↓) 3턴",
           "result_positive": "",
           "result_negative": ""
         },
