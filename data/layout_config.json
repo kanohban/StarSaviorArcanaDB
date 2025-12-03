@@ -14,6 +14,13 @@
                     "title": "여정",
                     "action": "navigate",
                     "target": "journey.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "🔍",
+                    "title": "통합 검색",
+                    "action": "navigate",
+                    "target": "search.html"
                 }
             ],
             "right": [
@@ -27,6 +34,33 @@
         },
         "journey": {
             "title": "여정 이벤트 선택지",
+            "left": [
+                {
+                    "type": "button",
+                    "icon": "⬅",
+                    "title": "뒤로가기",
+                    "action": "navigate",
+                    "target": "index.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "🔍",
+                    "title": "통합 검색",
+                    "action": "navigate",
+                    "target": "search.html"
+                }
+            ],
+            "right": [
+                {
+                    "type": "theme-toggle"
+                },
+                {
+                    "type": "view-toggle"
+                }
+            ]
+        },
+        "search": {
+            "title": "통합 검색",
             "left": [
                 {
                     "type": "button",
