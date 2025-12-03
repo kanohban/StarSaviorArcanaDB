@@ -332,7 +332,7 @@
                 if (isBEmpty) {
                     headerContainer.style.gridTemplateColumns = '1fr';
                     headers[1].style.display = 'none';
-                    headers[0].style.width = '100%';
+                    headers[0].style.display = 'none';
                 } else {
                     headerContainer.style.gridTemplateColumns = '1fr 1fr';
                     headers[1].style.display = 'flex'; // Restore flex display
