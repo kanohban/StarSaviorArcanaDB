@@ -24,6 +24,13 @@
     gap: 15px;
 }
 
+@media (min-width: 1024px) {
+    .deck-slots {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
 .deck-slot {
     aspect-ratio: 2/3;
     background: var(--card-bg);
@@ -857,8 +864,21 @@
 [data-theme="dark"] .nav-btn:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--primary-color);
-}  
-/* Refined UI Styles */  
-.deck-navigation { padding: 10px 0; }  
-.deck-navigation h2 { margin: 0; color: var(--text-highlight); font-size: 1.5rem; }  
-.level-toggle-wrapper { display: flex; justify-content: center; padding-bottom: 10px; } 
+}
+
+/* Refined UI Styles */
+.deck-navigation {
+    padding: 10px 0;
+}
+
+.deck-navigation h2 {
+    margin: 0;
+    color: var(--text-highlight);
+    font-size: 1.5rem;
+}
+
+.level-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
