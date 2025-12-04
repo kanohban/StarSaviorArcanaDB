@@ -17,6 +17,13 @@
                 },
                 {
                     "type": "button",
+                    "icon": "🛠️",
+                    "title": "덱 빌더",
+                    "action": "navigate",
+                    "target": "deck.html"
+                },
+                {
+                    "type": "button",
                     "icon": "🔍",
                     "title": "통합 검색",
                     "action": "navigate",
@@ -41,6 +48,13 @@
                     "title": "아르카나 DB",
                     "action": "navigate",
                     "target": "index.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "🛠️",
+                    "title": "덱 빌더",
+                    "action": "navigate",
+                    "target": "deck.html"
                 },
                 {
                     "type": "button",
@@ -75,6 +89,47 @@
                     "title": "여정",
                     "action": "navigate",
                     "target": "journey.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "🛠️",
+                    "title": "덱 빌더",
+                    "action": "navigate",
+                    "target": "deck.html"
+                }
+            ],
+            "right": [
+                {
+                    "type": "theme-toggle"
+                },
+                {
+                    "type": "view-toggle"
+                }
+            ]
+        },
+        "deck": {
+            "title": "덱 빌더",
+            "left": [
+                {
+                    "type": "button",
+                    "icon": "🃏",
+                    "title": "아르카나 DB",
+                    "action": "navigate",
+                    "target": "index.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "📖",
+                    "title": "여정",
+                    "action": "navigate",
+                    "target": "journey.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "🔍",
+                    "title": "통합 검색",
+                    "action": "navigate",
+                    "target": "search.html"
                 }
             ],
             "right": [

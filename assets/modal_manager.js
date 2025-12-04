@@ -45,11 +45,12 @@
         const modalContent = document.querySelector('.modal-content');
         if (modalContent) {
             updateModalLabels(modalContent);
+            injectLevelToggle(modalContent); // Inject Custom Toggle
             updateSupportStats(modalContent);
 
-            // Add immediate click listener to level toggle button
+            // Add immediate click listener to level toggle button (Legacy fallback)
             const levelBtn = modalContent.querySelector('.theme-toggle');
-            if (levelBtn && !levelBtn.dataset.supportListenerAttached) {
+            if (levelBtn && !levelBtn.dataset.supportListenerAttached && levelBtn.style.display !== 'none') {
                 levelBtn.dataset.supportListenerAttached = 'true';
                 levelBtn.addEventListener('click', () => {
                     // Small delay to allow window.currentLevel to update
@@ -60,6 +61,87 @@
             }
         }
     }, 200);
+
+    // --- INJECT CUSTOM LEVEL TOGGLE ---
+    function injectLevelToggle(modalContent) {
+        const oldBtn = modalContent.querySelector('.theme-toggle');
+
+        // Hide old button if it exists (it acts as state source)
+        if (oldBtn) oldBtn.style.display = 'none';
+
+        // Check if already injected
+        if (modalContent.querySelector('.custom-level-toggle')) return;
+
+        // Create new toggle container
+        const toggleContainer = document.createElement('div');
+        toggleContainer.className = 'level-toggle custom-level-toggle';
+
+        // Position it below the close button
+        toggleContainer.style.position = 'absolute';
+        toggleContainer.style.top = '65px';
+        toggleContainer.style.right = '20px';
+        toggleContainer.style.zIndex = '20';
+
+        // Create Buttons
+        const btn35 = document.createElement('button');
+        btn35.className = 'level-btn';
+        btn35.textContent = 'Lv.35';
+        btn35.dataset.level = '35';
+
+        const btn50 = document.createElement('button');
+        btn50.className = 'level-btn';
+        btn50.textContent = 'Lv.50';
+        btn50.dataset.level = '50';
+
+        // Determine Initial State
+        let currentLevel = '35'; // Default
+        if (typeof window.currentLevel !== 'undefined') {
+            currentLevel = window.currentLevel;
+        } else if (oldBtn && oldBtn.textContent.includes('50')) {
+            currentLevel = '50';
+        } else if (oldBtn && oldBtn.textContent.includes('35')) {
+            currentLevel = '35';
+        }
+
+        if (currentLevel === '35') btn35.classList.add('active');
+        else btn50.classList.add('active');
+
+        // Click Handlers
+        const handleLevelChange = (newLevel) => {
+            if (newLevel === '35') {
+                btn35.classList.add('active');
+                btn50.classList.remove('active');
+
+                // Sync Old Button if needed
+                if (oldBtn && oldBtn.textContent.includes('50')) oldBtn.click();
+            } else {
+                btn35.classList.remove('active');
+                btn50.classList.add('active');
+
+                // Sync Old Button if needed
+                if (oldBtn && oldBtn.textContent.includes('35')) oldBtn.click();
+            }
+
+            window.currentLevel = newLevel;
+            updateSupportStats(modalContent);
+        };
+
+        btn35.onclick = (e) => {
+            e.stopPropagation();
+            handleLevelChange('35');
+        };
+
+        btn50.onclick = (e) => {
+            e.stopPropagation();
+            handleLevelChange('50');
+        };
+
+        toggleContainer.appendChild(btn35);
+        toggleContainer.appendChild(btn50);
+
+        // Append to modal content directly
+        modalContent.appendChild(toggleContainer);
+    }
 
     // --- SUPPORT STATS INJECTION ---
     // --- SUPPORT STATS INJECTION ---
