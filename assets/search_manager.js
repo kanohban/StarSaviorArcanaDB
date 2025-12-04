@@ -70,6 +70,7 @@
 
             // 1. Process Cards
             cards.forEach(card => {
+                if (!card.이름) return;
                 // Fix: Handle Type Object
                 let typeStr = '';
                 if (card.타입) {
@@ -142,6 +143,7 @@
                 const group = journeys[key];
                 if (Array.isArray(group)) {
                     group.forEach(event => {
+                        if (!event.name) return;
                         let searchText = `${event.name} ${event.category} ${event.timing || ''} ${event.condition || ''}`;
 
                         if (event.choices) {

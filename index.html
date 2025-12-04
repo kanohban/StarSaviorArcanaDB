@@ -61,6 +61,8 @@
           const potentials = await potentialsRes.json();
 
           cards.forEach(card => {
+            if (!card.이름) return;
+
             // Build Search Text (Same logic as deck_manager.js)
             let typeStr = '';
             if (card.타입) {
@@ -392,6 +394,9 @@
 
       .header-bottom {
         flex-direction: row !important;
+        /* Force row */
+        flex-wrap: nowrap !important;
+        gap: 0.5rem !important;
         /* Force row */
         flex-wrap: nowrap !important;
         gap: 0.5rem !important;
