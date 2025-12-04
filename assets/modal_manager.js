@@ -45,8 +45,128 @@
         const modalContent = document.querySelector('.modal-content');
         if (modalContent) {
             updateModalLabels(modalContent);
+            updateSupportStats(modalContent);
+
+            // Add immediate click listener to level toggle button
+            const levelBtn = modalContent.querySelector('.theme-toggle');
+            if (levelBtn && !levelBtn.dataset.supportListenerAttached) {
+                levelBtn.dataset.supportListenerAttached = 'true';
+                levelBtn.addEventListener('click', () => {
+                    // Small delay to allow window.currentLevel to update
+                    setTimeout(() => {
+                        updateSupportStats(modalContent);
+                    }, 50);
+                });
+            }
         }
     }, 200);
+
+    // --- SUPPORT STATS INJECTION ---
+    // --- SUPPORT STATS INJECTION ---
+    function updateSupportStats(modalContent) {
+        if (!cardsData) return;
+
+        const titleEl = modalContent.querySelector('.modal-header h2');
+        if (!titleEl) return;
+
+        const cardName = titleEl.textContent.trim();
+        const card = cardsData.find(c => c.이름 === cardName);
+
+        if (!card || !card.지원) {
+            const existing = modalContent.querySelector('.custom-support-box');
+            if (existing) existing.remove();
+            return;
+        }
+
+        // 1. Determine Level (35 vs 50)
+        let currentLevel = '50';
+        if (typeof window.currentLevel !== 'undefined') {
+            currentLevel = window.currentLevel;
+        } else {
+            const levelBtn = modalContent.querySelector('.theme-toggle');
+            if (levelBtn && levelBtn.textContent.includes('35')) {
+                currentLevel = '35';
+            }
+        }
+        const isLevel50 = currentLevel === '50';
+
+        // Filter valid items for the current level
+        const validItems = card.지원.filter(item => {
+            const val = isLevel50 ? item.수치50 : item.수치35;
+            return item.타입 && val && val.trim() !== '';
+        });
+
+        if (validItems.length === 0) {
+            const existing = modalContent.querySelector('.custom-support-box');
+            if (existing) existing.remove();
+            return;
+        }
+
+        // 2. Render Support Section
+        const allHeaders = Array.from(modalContent.querySelectorAll('h4'));
+        let targetHeader = null;
+
+        ['감응', '훈련'].forEach(key => {
+            if (!targetHeader) {
+                targetHeader = allHeaders.find(h => h.textContent.includes(key));
+            }
+        });
+
+        if (!targetHeader) {
+            targetHeader = Array.from(modalContent.querySelectorAll('h3')).find(h => h.textContent.includes('추가 효과'));
+        }
+
+        if (!targetHeader) return;
+
+        let targetGrid = null;
+
+        if (targetHeader.tagName === 'H4') {
+            const box = targetHeader.closest('.bonus-box');
+            if (box) targetGrid = box.parentElement;
+        } else if (targetHeader.tagName === 'H3') {
+            const group = targetHeader.closest('.info-group');
+            if (group) targetGrid = group.querySelector('.bonus-grid');
+        }
+
+        if (!targetGrid) return;
+
+        let supportBox = targetGrid.querySelector('.custom-support-box');
+
+        if (!supportBox) {
+            supportBox = document.createElement('div');
+            supportBox.className = 'bonus-box custom-support-box';
+            targetGrid.appendChild(supportBox);
+        }
+
+        const currentMode = supportBox.dataset.mode;
+        const newMode = isLevel50 ? '50' : '35';
+
+        if (currentMode === newMode && supportBox.dataset.cardName === cardName) return;
+
+        supportBox.dataset.mode = newMode;
+        supportBox.dataset.cardName = cardName;
+        supportBox.innerHTML = '';
+
+        const header = document.createElement('h4');
+        header.textContent = '지원 의뢰';
+        supportBox.appendChild(header);
+
+        const list = document.createElement('ul');
+
+        validItems.forEach(item => {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(item.타입 + ' '));
+
+            const valueSpan = document.createElement('span');
+            valueSpan.className = 'bonus-value';
+            valueSpan.textContent = isLevel50 ? item.수치50 : item.수치35;
+
+            li.appendChild(valueSpan);
+            list.appendChild(li);
+        });
+
+        supportBox.appendChild(list);
+    }
 
     // --- SELF-CONTAINED POPUP FUNCTION ---
     const showPotentialPopup = (n, d, target) => {
@@ -212,7 +332,7 @@
                 if (isBEmpty) {
                     headerContainer.style.gridTemplateColumns = '1fr';
                     headers[1].style.display = 'none';
-                    headers[0].style.width = '100%';
+                    headers[0].style.display = 'none';
                 } else {
                     headerContainer.style.gridTemplateColumns = '1fr 1fr';
                     headers[1].style.display = 'flex'; // Restore flex display

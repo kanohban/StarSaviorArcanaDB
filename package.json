@@ -4,7 +4,7 @@
     "xlsx": "^0.18.5"
   },
   "scripts": {
-    "deploy": "gh-pages -d ."
+    "deploy": "git push origin gh-pages"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
