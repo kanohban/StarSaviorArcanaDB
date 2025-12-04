@@ -63,28 +63,44 @@
                 <div class="card-grid" id="card-list">
                     <!-- Cards will be loaded here -->
                 </div>
-                const savedTheme = localStorage.getItem('theme') || 'dark';
-                html.setAttribute('data-theme', savedTheme);
+            </section>
+        </main>
 
-                const savedView = localStorage.getItem('viewMode') || 'pc';
-                if (savedView === 'mobile') {
+        <footer id="footer-container"></footer>
+    </div>
+
+    <script src="./assets/header_manager.js?v=3.2.1"></script>
+    <script src="./assets/footer_manager.js"></script>
+    <script src="./assets/hangul_utils.js?v=3.2.1"></script>
+    <script src="./assets/deck_manager.js?v=3.2.1"></script>
+    <script>
+        // Initialize State from LocalStorage (Immediate Apply)
+        (function () {
+            const html = document.documentElement;
+            const body = document.body;
+
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+
+            const savedView = localStorage.getItem('viewMode') || 'pc';
+            if (savedView === 'mobile') {
                 body.classList.add('mobile-mode');
-                }
-                })();
+            }
+        })();
 
-                // Initialize Managers
-                document.addEventListener('DOMContentLoaded', () => {
-                if (window.HeaderManager) {
+        // Initialize Managers
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.HeaderManager) {
                 window.HeaderManager.init(document.getElementById('header-container'), 'deck');
-                }
-                if (window.FooterManager) {
+            }
+            if (window.FooterManager) {
                 window.FooterManager.init(document.getElementById('footer-container'));
-                }
-                if (window.DeckManager) {
+            }
+            if (window.DeckManager) {
                 window.DeckManager.init();
-                }
-                });
-                </script>
+            }
+        });
+    </script>
 </body>
 
 </html>
