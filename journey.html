@@ -1,256 +1,242 @@
 <!DOCTYPE html>
-<html lang="ko">
+--result-bg: #2c2c2c;
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>스타 세이비어 아르카나 DB - 여정/이벤트</title>
-    <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-    <link rel="stylesheet" href="./assets/header.css">
-    <style>
-        :root {
-            --result-bg: #f9f9f9;
-        }
+.journey-container {
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+transition: max-width 0.3s ease;
+}
 
-        [data-theme="dark"] {
-            --result-bg: #2c2c2c;
-        }
+.app-header {
+display: flex;
+flex-direction: column;
+align-items: center;
+background: var(--header-bg);
+border-bottom: 1px solid var(--border-color);
+position: sticky;
+top: 0;
+z-index: 100;
+backdrop-filter: blur(10px);
+padding: 0;
+/* Explicitly reset padding */
+gap: 0.5rem;
+}
 
-        .journey-container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            transition: max-width 0.3s ease;
-        }
+.header-bottom {
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding-bottom: 10px;
+}
 
-        .app-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: var(--header-bg);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-            padding: 0;
-            /* Explicitly reset padding */
-            gap: 0.5rem;
-        }
+.search-container {
+width: 100%;
+max-width: 600px;
+padding: 0 10px;
+box-sizing: border-box;
+margin: 0 auto;
+/* Force centering of the container itself */
+display: flex;
+/* Enable flex to center content if needed */
+justify-content: center;
+/* Center the input within the container */
+}
 
-        .header-bottom {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding-bottom: 10px;
-        }
+/* Re-use .search-input from index-DBwFzK5i.css, but ensure width is correct */
+.search-input {
+width: 100%;
+max-width: 100% !important;
+/* Override external CSS max-width: 400px */
+text-align: left;
+/* Keep text left aligned */
+}
 
-        .search-container {
-            width: 100%;
-            max-width: 600px;
-            padding: 0 10px;
-            box-sizing: border-box;
-            margin: 0 auto;
-            /* Force centering of the container itself */
-            display: flex;
-            /* Enable flex to center content if needed */
-            justify-content: center;
-            /* Center the input within the container */
-        }
+.tab-nav {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
+}
 
-        /* Re-use .search-input from index-DBwFzK5i.css, but ensure width is correct */
-        .search-input {
-            width: 100%;
-            max-width: 100% !important;
-            /* Override external CSS max-width: 400px */
-            text-align: left;
-            /* Keep text left aligned */
-        }
+.tab-nav.disabled {
+opacity: 0.5;
+pointer-events: none;
+filter: grayscale(100%);
+}
 
-        .tab-nav {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+.tab-btn {
+padding: 8px 16px;
+background: var(--card-bg);
+border: 1px solid var(--primary-color);
+color: var(--text-color);
+border-radius: 8px;
+cursor: pointer;
+font-weight: bold;
+transition: all 0.2s;
+}
 
-        .tab-nav.disabled {
-            opacity: 0.5;
-            pointer-events: none;
-            filter: grayscale(100%);
-        }
+.tab-btn:hover {
+background: rgba(var(--primary-color-rgb), 0.1);
+}
 
-        .tab-btn {
-            padding: 8px 16px;
-            background: var(--card-bg);
-            border: 1px solid var(--primary-color);
-            color: var(--text-color);
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
+.tab-btn.active {
+background: var(--primary-color);
+color: #fff;
+}
 
-        .tab-btn:hover {
-            background: rgba(var(--primary-color-rgb), 0.1);
-        }
+.event-card {
+background: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 12px;
+padding: 15px;
+margin-bottom: 15px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .tab-btn.active {
-            background: var(--primary-color);
-            color: #fff;
-        }
+.event-name {
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 10px;
+color: var(--primary-color);
+}
 
-        .event-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+/* Metadata Pills Styles */
+.event-meta-container {
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin-bottom: 15px;
+}
 
-        .event-name {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
+.meta-row {
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 6px;
+}
 
-        /* Metadata Pills Styles */
-        .event-meta-container {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
+.meta-pill {
+padding: 4px 12px;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: bold;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+border: 1px solid transparent;
+white-space: nowrap;
+}
 
-        .meta-row {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
+/* Timing Styles (Blue Theme) */
+.meta-pill.value-timing {
+background-color: #ffffff;
+color: #1565c0;
+border: 1px solid #bbdefb;
+}
 
-        .meta-pill {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid transparent;
-            white-space: nowrap;
-        }
+[data-theme="dark"] .meta-pill.value-timing {
+background-color: #2c2c2c;
+color: #90caf9;
+border-color: #1565c0;
+}
 
-        /* Timing Styles (Blue Theme) */
-        .meta-pill.value-timing {
-            background-color: #ffffff;
-            color: #1565c0;
-            border: 1px solid #bbdefb;
-        }
+/* Condition Styles (Soft Red Theme - Outlined) */
+.meta-pill.value-condition {
+background-color: #ffffff;
+color: #e57373;
+/* Soft Red Text */
+border: 1px solid #e57373;
+/* Soft Red Border */
+}
 
-        [data-theme="dark"] .meta-pill.value-timing {
-            background-color: #2c2c2c;
-            color: #90caf9;
-            border-color: #1565c0;
-        }
+[data-theme="dark"] .meta-pill.value-condition {
+background-color: #2c2c2c;
+color: #ef9a9a;
+/* Lighter Red for Dark Mode */
+border-color: #ef9a9a;
+}
 
-        /* Condition Styles (Soft Red Theme - Outlined) */
-        .meta-pill.value-condition {
-            background-color: #ffffff;
-            color: #e57373;
-            /* Soft Red Text */
-            border: 1px solid #e57373;
-            /* Soft Red Border */
-        }
+.choice-list {
+list-style: none;
+padding: 0;
+margin: 10px 0 0 0;
+}
 
-        [data-theme="dark"] .meta-pill.value-condition {
-            background-color: #2c2c2c;
-            color: #ef9a9a;
-            /* Lighter Red for Dark Mode */
-            border-color: #ef9a9a;
-        }
+.choice-item {
+padding: 5px 0;
+margin-bottom: 8px;
+}
 
-        .choice-list {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0 0;
-        }
+.choice-text {
+font-weight: bold;
+display: block;
+margin-bottom: 0;
+/* Reset margin as it's handled by flex container */
+}
 
-        .choice-item {
-            padding: 5px 0;
-            margin-bottom: 8px;
-        }
+.choice-results {
+margin-top: 5px;
+padding: 10px;
+background-color: var(--result-bg);
+border-radius: 8px;
+border: 1px solid var(--input-border);
+}
 
-        .choice-text {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 0;
-            /* Reset margin as it's handled by flex container */
-        }
+.result-positive {
+color: #4caf50;
+margin-bottom: 2px;
+white-space: pre-wrap;
+}
 
-        .choice-results {
-            margin-top: 5px;
-            padding: 10px;
-            background-color: var(--result-bg);
-            border-radius: 8px;
-            border: 1px solid var(--input-border);
-        }
+.result-negative {
+color: #ff5252;
+margin-bottom: 2px;
+white-space: pre-wrap;
+}
 
-        .result-positive {
-            color: #4caf50;
-            margin-bottom: 2px;
-            white-space: pre-wrap;
-        }
+.result-common {
+color: var(--text-color);
+white-space: pre-wrap;
+}
 
-        .result-negative {
-            color: #ff5252;
-            margin-bottom: 2px;
-            white-space: pre-wrap;
-        }
+.result-label {
+font-weight: bold;
+margin-right: 5px;
+opacity: 0.8;
+}
 
-        .result-common {
-            color: var(--text-color);
-            white-space: pre-wrap;
-        }
+/* Mobile Mode Styles */
+body.mobile-mode .journey-container {
+max-width: 480px;
+}
 
-        .result-label {
-            font-weight: bold;
-            margin-right: 5px;
-            opacity: 0.8;
-        }
+/* Mobile Optimization for Tabs */
+@media (max-width: 768px) {
+.tab-nav {
+gap: 6px;
+flex-wrap: nowrap;
+justify-content: flex-start;
+padding: 0 10px;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
 
-        /* Mobile Mode Styles */
-        body.mobile-mode .journey-container {
-            max-width: 480px;
-        }
+.tab-nav::-webkit-scrollbar {
+display: none;
+}
 
-        /* Mobile Optimization for Tabs */
-        @media (max-width: 768px) {
-            .tab-nav {
-                gap: 6px;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                padding: 0 10px;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .tab-nav::-webkit-scrollbar {
-                display: none;
-            }
-
-            .tab-btn {
-                padding: 6px 10px;
-                font-size: 0.9rem;
-                flex-shrink: 0;
-            }
-        }
-    </style>
+.tab-btn {
+padding: 6px 10px;
+font-size: 0.9rem;
+flex-shrink: 0;
+}
+}
+</style>
 </head>
 
 <body>
