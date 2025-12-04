@@ -43,7 +43,12 @@ const HeaderManager = {
         const headerHTML = `
             <div class="custom-header-top">
                 <div class="header-left">
-                    ${this.renderButtons(config.left)}
+                    <div class="hamburger-wrapper">
+                        <button class="header-btn hamburger-btn" title="메뉴">☰</button>
+                        <div class="nav-dropdown">
+                            ${this.renderNavItems(config.left)}
+                        </div>
+                    </div>
                 </div>
                 <h1>${config.title}</h1>
                 <div class="header-right">
@@ -68,15 +73,25 @@ const HeaderManager = {
         return headerElement;
     },
 
+    renderNavItems(items) {
+        if (!items) return '';
+        return items.map(item => {
+            if (item.type === 'button') {
+                return `
+                    <div class="nav-item" onclick="${item.action === 'navigate' ? `location.href='${item.target}'` : item.action}">
+                        <span class="icon">${item.icon}</span>
+                        <span>${item.title}</span>
+                    </div>
+                `;
+            }
+            return '';
+        }).join('');
+    },
+
     renderButtons(buttons, savedTheme, savedView) {
         if (!buttons) return '';
         return buttons.map(btn => {
-            if (btn.type === 'button') {
-                if (btn.action === 'history-back') {
-                    return `<button class="header-btn" title="${btn.title}" onclick="history.back()">${btn.icon}</button>`;
-                }
-                return `<button class="header-btn" title="${btn.title}" onclick="${btn.action === 'navigate' ? `location.href='${btn.target}'` : btn.action}">${btn.icon}</button>`;
-            } else if (btn.type === 'theme-toggle') {
+            if (btn.type === 'theme-toggle') {
                 return `<button class="header-btn theme-toggle" title="테마 변경">${savedTheme === 'dark' ? '🌙' : '☀️'}</button>`;
             } else if (btn.type === 'view-toggle') {
                 return `<button class="header-btn mobile-toggle" title="뷰 전환">${savedView === 'mobile' ? '📱' : '🖥️'}</button>`;
@@ -90,6 +105,21 @@ const HeaderManager = {
         const body = document.body;
         const themeBtn = element.querySelector('.theme-toggle');
         const mobileBtn = element.querySelector('.mobile-toggle');
+        const hamburgerBtn = element.querySelector('.hamburger-btn');
+        const dropdown = element.querySelector('.nav-dropdown');
+
+        if (hamburgerBtn && dropdown) {
+            hamburgerBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!element.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        }
 
         if (themeBtn) {
             themeBtn.addEventListener('click', () => {

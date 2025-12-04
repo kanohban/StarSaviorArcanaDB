@@ -134,3 +134,50 @@ html {
         text-overflow: ellipsis;
     }
 }
+
+/* Hamburger Menu Styles */
+.hamburger-wrapper {
+    position: relative;
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--header-bg);
+    border: 1px solid var(--header-border-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.nav-dropdown.active {
+    display: flex;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--header-text-color);
+    border-radius: 4px;
+    transition: background 0.2s;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: var(--btn-hover-bg);
+}
+
+.nav-item .icon {
+    font-size: 1.2rem;
+}
