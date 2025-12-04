@@ -44,7 +44,10 @@
         </div>
     </div>
 
+    <footer id="footer-container"></footer>
+
     <script src="./assets/header_manager.js"></script>
+    <script src="./assets/footer_manager.js"></script>
     <script src="./assets/search_manager.js"></script>
     <script>
         // Initialize State from LocalStorage (Immediate Apply)
@@ -61,10 +64,13 @@
             }
         })();
 
-        // Initialize Header
+        // Initialize Header & Footer
         document.addEventListener('DOMContentLoaded', () => {
             if (window.HeaderManager) {
                 window.HeaderManager.init(document.getElementById('header-container'), 'search');
+            }
+            if (window.FooterManager) {
+                window.FooterManager.init(document.getElementById('footer-container'));
             }
         });
     </script>

@@ -37,8 +37,8 @@
             "left": [
                 {
                     "type": "button",
-                    "icon": "⬅",
-                    "title": "뒤로가기",
+                    "icon": "🃏",
+                    "title": "아르카나 DB",
                     "action": "navigate",
                     "target": "index.html"
                 },
@@ -64,9 +64,17 @@
             "left": [
                 {
                     "type": "button",
-                    "icon": "⬅",
-                    "title": "뒤로가기",
-                    "action": "history-back"
+                    "icon": "🃏",
+                    "title": "아르카나 DB",
+                    "action": "navigate",
+                    "target": "index.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "📖",
+                    "title": "여정",
+                    "action": "navigate",
+                    "target": "journey.html"
                 }
             ],
             "right": [

@@ -280,25 +280,16 @@
             </div>
         </div>
 
-        <footer class="app-footer">
-            <p>이 페이지는 게임 '스타 세이비어'의 비영리 팬 프로젝트입니다.</p>
-            <p>프로젝트에 사용된 모든 자산, 데이터, 이미지 및 텍스트의 소유권은 STUDIOBSIDE 에 있습니다.</p>
-            <p>© STUDIOBSIDE Co. Ltd All Rights Reserved.</p>
-            <div class="hits-counter" style="margin-top: 10px;">
-                <a href="https://myhits.vercel.app">
-                    <img src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fkanohban.github.io%2FStarSaviorArcanaDB%2F?color=blue&label=hits&size=small"
-                        alt="hits">
-                </a>
-            </div>
-        </footer>
+        <footer id="footer-container"></footer>
     </div>
 
     <script src="./assets/header_manager.js"></script>
+    <script src="./assets/footer_manager.js"></script>
     <script>
         let allData = {};
         let currentTab = 'journey';
 
-        // Initialize HeaderManager
+        // Initialize HeaderManager & FooterManager
         document.addEventListener('DOMContentLoaded', () => {
             const appHeader = document.querySelector('.app-header');
             const wrapper = document.createElement('div');
@@ -307,6 +298,9 @@
 
             if (window.HeaderManager) {
                 window.HeaderManager.init(wrapper, 'journey');
+            }
+            if (window.FooterManager) {
+                window.FooterManager.init(document.getElementById('footer-container'));
             }
         });
 
