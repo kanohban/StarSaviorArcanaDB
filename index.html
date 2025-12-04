@@ -12,9 +12,9 @@
 
 <body>
   <div id="root"></div>
-  <script src="./assets/header_manager.js?v=3.1.0"></script>
-  <script src="./assets/modal_manager.js?v=3.1.0"></script>
-  <script src="./assets/hangul_utils.js?v=3.1.0"></script>
+  <script src="./assets/header_manager.js?v=3.1.1"></script>
+  <script src="./assets/modal_manager.js?v=3.1.1"></script>
+  <script src="./assets/hangul_utils.js?v=3.1.1"></script>
   <script>
     (function () {
       // 1. Initialize State from LocalStorage
@@ -76,7 +76,7 @@
               potentialDesc = potentials[card.고유잠재.이름] || '';
             }
 
-            let searchText = `${card.이름} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
+            let searchText = `${card.이름} ${card.캐릭터 || ''} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
 
             // Event Info
             if (card.이벤트) {

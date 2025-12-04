@@ -196,7 +196,7 @@ const DeckManager = {
                 potentialDesc = this.data.potentials[card.고유잠재.이름] || '';
             }
 
-            let searchText = `${card.이름} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
+            let searchText = `${card.이름} ${card.캐릭터 || ''} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
 
             // Event Info
             if (card.이벤트) {

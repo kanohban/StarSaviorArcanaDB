@@ -85,7 +85,7 @@
                 if (card.고유잠재 && card.고유잠재.이름 && potentials) {
                     potentialDesc = potentials[card.고유잠재.이름] || '';
                 }
-                let searchText = `${card.이름} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
+                let searchText = `${card.이름} ${card.캐릭터 || ''} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
 
                 // Add Event info to search text (Deep Indexing)
                 if (card.이벤트) {
