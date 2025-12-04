@@ -278,197 +278,197 @@
             <div id="content-area">
                 <div style="text-align: center; padding: 20px;">Loading...</div>
             </div>
-        </div>
-
-        <footer id="footer-container"></footer>
-    </div>
-
-    <script src="./assets/header_manager.js?v=3.3.0"></script>
-    <script src="./assets/footer_manager.js"></script>
-    <script src="./assets/hangul_utils.js?v=3.3.0"></script>
-    <script>
-        let allData = {};
-        let currentTab = 'journey';
-
-        // Initialize HeaderManager & FooterManager
-        document.addEventListener('DOMContentLoaded', () => {
             const appHeader = document.querySelector('.app-header');
             const wrapper = document.createElement('div');
             wrapper.className = 'custom-header-wrapper'; // Add class immediately
             appHeader.insertBefore(wrapper, appHeader.firstChild);
 
             if (window.HeaderManager) {
-                window.HeaderManager.init(wrapper, 'journey');
+            window.HeaderManager.init(wrapper, 'journey');
             }
             if (window.FooterManager) {
-                window.FooterManager.init(document.getElementById('footer-container'));
+            window.FooterManager.init(document.getElementById('footer-container'));
             }
-        });
+            });
 
-        // Theme & Mobile Toggle Logic
-        // Note: HeaderManager handles toggle events for its own buttons. 
-        // But we need to initialize page state (theme/viewMode) on load.
+            // Theme & Mobile Toggle Logic
+            // Note: HeaderManager handles toggle events for its own buttons.
+            // But we need to initialize page state (theme/viewMode) on load.
 
-        const html = document.documentElement;
-        const body = document.body;
+            const html = document.documentElement;
+            const body = document.body;
 
-        // Initialize Theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        html.setAttribute('data-theme', savedTheme);
+            // Initialize Theme
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
 
-        // Initialize Mobile View
-        const savedView = localStorage.getItem('viewMode') || 'pc';
-        if (savedView === 'mobile') {
+            // Initialize Mobile View
+            const savedView = localStorage.getItem('viewMode') || 'pc';
+            if (savedView === 'mobile') {
             body.classList.add('mobile-mode');
-        }
-
-        async function loadData() {
-            try {
-                const response = await fetch('./data/journey_data.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                allData = await response.json();
-                console.log('Data loaded:', allData);
-                render();
-            } catch (error) {
-                console.error('Failed to load data:', error);
-                document.getElementById('content-area').innerHTML = `<div style="color:red; text-align:center; padding:20px;">
-                    <h3>데이터 로드 실패</h3>
-                    <p>${error.message}</p>
-                    <p>잠시 후 다시 시도하거나 관리자에게 문의하세요.</p>
-                </div>`;
             }
-        }
 
-        function switchTab(tab) {
+            async function loadData() {
+            try {
+            const response = await fetch('./data/journey_data.json');
+            if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            allData = await response.json();
+            console.log('Data loaded:', allData);
+            render();
+            } catch (error) {
+            console.error('Failed to load data:', error);
+            document.getElementById('content-area').innerHTML = `<div
+                style="color:red; text-align:center; padding:20px;">
+                <h3>데이터 로드 실패</h3>
+                <p>${error.message}</p>
+                <p>잠시 후 다시 시도하거나 관리자에게 문의하세요.</p>
+            </div>`;
+            }
+            }
+
+            function switchTab(tab) {
             currentTab = tab;
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                const onClickAttr = btn.getAttribute('onclick');
-                if (onClickAttr && onClickAttr.includes(`'${tab}'`)) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+            const onClickAttr = btn.getAttribute('onclick');
+            if (onClickAttr && onClickAttr.includes(`'${tab}'`)) {
+            btn.classList.add('active');
+            } else {
+            btn.classList.remove('active');
+            }
             });
             render();
-        }
+            }
 
-        loadData();
+            loadData();
 
-        // Search Logic
-        const searchInput = document.getElementById('journey-search');
-        const tabNav = document.querySelector('.tab-nav');
+            // Search Logic
+            const searchInput = document.getElementById('journey-search');
+            const tabNav = document.querySelector('.tab-nav');
 
-        searchInput.addEventListener('input', (e) => {
+            searchInput.addEventListener('input', (e) => {
             const query = e.target.value.trim().toLowerCase();
 
             if (query) {
-                tabNav.classList.add('disabled');
-                renderSearch(query);
+            tabNav.classList.add('disabled');
+            renderSearch(query);
             } else {
-                tabNav.classList.remove('disabled');
-                render(); // Render current tab
+            tabNav.classList.remove('disabled');
+            render(); // Render current tab
             }
-        });
+            });
 
-        function renderSearch(query) {
+            function renderSearch(query) {
             const container = document.getElementById('content-area');
             let results = [];
 
             // Search across all categories
             Object.keys(allData).forEach(key => {
-                const categoryData = allData[key];
-                categoryData.forEach(event => {
-                    // Search in Name
-                    if (event.name && (window.HangulUtils ? window.HangulUtils.isMatch(event.name, query) : event.name.toLowerCase().includes(query))) {
-                        results.push(event);
-                        return;
-                    }
-                    // Search in Choices
-                    if (event.choices) {
-                        const choiceMatch = event.choices.some(choice =>
-                            (choice.text && (window.HangulUtils ? window.HangulUtils.isMatch(choice.text, query) : choice.text.toLowerCase().includes(query))) ||
-                            (choice.result && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result, query) : choice.result.toLowerCase().includes(query))) ||
-                            (choice.result_positive && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result_positive, query) : choice.result_positive.toLowerCase().includes(query))) ||
-                            (choice.result_negative && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result_negative, query) : choice.result_negative.toLowerCase().includes(query)))
-                        );
-                        if (choiceMatch) {
-                            results.push(event);
-                            return;
-                        }
-                    }
-                    // Search in Timing/Condition
-                    if ((event.timing && (window.HangulUtils ? window.HangulUtils.isMatch(event.timing, query) : event.timing.toLowerCase().includes(query))) ||
-                        (event.condition && (window.HangulUtils ? window.HangulUtils.isMatch(event.condition, query) : event.condition.toLowerCase().includes(query)))) {
-                        results.push(event);
-                    }
-                });
+            const categoryData = allData[key];
+            categoryData.forEach(event => {
+            // Search in Name
+            if (event.name && (window.HangulUtils ? window.HangulUtils.isMatch(event.name, query) :
+            event.name.toLowerCase().includes(query))) {
+            results.push(event);
+            return;
+            }
+            // Search in Choices
+            if (event.choices) {
+            const choiceMatch = event.choices.some(choice =>
+            (choice.text && (window.HangulUtils ? window.HangulUtils.isMatch(choice.text, query) :
+            choice.text.toLowerCase().includes(query))) ||
+            (choice.result && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result, query) :
+            choice.result.toLowerCase().includes(query))) ||
+            (choice.result_positive && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result_positive, query) :
+            choice.result_positive.toLowerCase().includes(query))) ||
+            (choice.result_negative && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result_negative, query) :
+            choice.result_negative.toLowerCase().includes(query)))
+            );
+            if (choiceMatch) {
+            results.push(event);
+            return;
+            }
+            }
+            // Search in Timing/Condition
+            if ((event.timing && (window.HangulUtils ? window.HangulUtils.isMatch(event.timing, query) :
+            event.timing.toLowerCase().includes(query))) ||
+            (event.condition && (window.HangulUtils ? window.HangulUtils.isMatch(event.condition, query) :
+            event.condition.toLowerCase().includes(query)))) {
+            results.push(event);
+            }
+            });
             });
 
             if (results.length === 0) {
-                container.innerHTML = '<div style="text-align:center; padding:20px;">검색 결과가 없습니다.</div>';
-                return;
+            container.innerHTML = '<div style="text-align:center; padding:20px;">검색 결과가 없습니다.</div>';
+            return;
             }
 
             renderEvents(results, `검색 결과: ${results.length}건`);
-        }
+            }
 
-        function render() {
+            function render() {
             const data = allData[currentTab] || [];
             if (data.length === 0) {
-                document.getElementById('content-area').innerHTML = '<div style="text-align:center; padding:20px;">데이터가 없습니다. (JSON 파일 확인 필요)</div>';
-                return;
+            document.getElementById('content-area').innerHTML = '<div style="text-align:center; padding:20px;">데이터가
+                없습니다. (JSON 파일 확인 필요)</div>';
+            return;
             }
             renderEvents(data, `총 ${data.length}개의 이벤트가 있습니다.`);
-        }
+            }
 
-        function renderEvents(data, message) {
+            function renderEvents(data, message) {
             const container = document.getElementById('content-area');
             let html = `<div style="text-align:center; margin-bottom:10px; color:#aaa;">${message}</div>`;
 
             data.forEach(event => {
-                // Parse Timing and Condition
-                const timings = event.timing ? event.timing.split(',').map(t => t.trim()).filter(t => t) : [];
-                const conditions = event.condition ? event.condition.split(',').map(c => c.trim()).filter(c => c) : [];
+            // Parse Timing and Condition
+            const timings = event.timing ? event.timing.split(',').map(t => t.trim()).filter(t => t) : [];
+            const conditions = event.condition ? event.condition.split(',').map(c => c.trim()).filter(c => c) : [];
 
-                html += `
-                <div class="event-card">
-                    <div class="event-name">${event.name}</div>
-                    
-                    <div class="event-meta-container">
-                        ${timings.length > 0 ? `
-                        <div class="meta-row">
-                            ${timings.map(t => `<span class="meta-pill value-timing">${t}</span>`).join('')}
-                        </div>` : ''}
-                        
-                        ${conditions.length > 0 ? `
-                        <div class="meta-row">
-                            ${conditions.map(c => `<span class="meta-pill value-condition">${c}</span>`).join('')}
-                        </div>` : ''}
-                    </div>
+            html += `
+            <div class="event-card">
+                <div class="event-name">${event.name}</div>
 
-                    <ul class="choice-list">
-                        ${event.choices.map(choice => `
-                            <li class="choice-item">
-                                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
-                                    <span class="choice-text" style="margin-bottom: 0;">${choice.text}</span>
-                                    ${choice.condition ? `<span class="meta-pill value-condition" style="font-size:0.8rem; padding:2px 10px; margin-left: 10px; flex-shrink: 0;">${choice.condition}</span>` : ''}
-                                </div>
-                                <div class="choice-results">
-                                    ${choice.result_positive ? `<div class="result-positive"><span class="result-label">성공:</span> ${choice.result_positive}</div>` : ''}
-                                    ${choice.result_negative ? `<div class="result-negative"><span class="result-label">실패:</span> ${choice.result_negative}</div>` : ''}
-                                    ${choice.result ? `<div class="result-common">${choice.result}</div>` : ''}
-                                </div>
-                            </li>
-                        `).join('')}
-                    </ul>
+                <div class="event-meta-container">
+                    ${timings.length > 0 ? `
+                    <div class="meta-row">
+                        ${timings.map(t => `<span class="meta-pill value-timing">${t}</span>`).join('')}
+                    </div>` : ''}
+
+                    ${conditions.length > 0 ? `
+                    <div class="meta-row">
+                        ${conditions.map(c => `<span class="meta-pill value-condition">${c}</span>`).join('')}
+                    </div>` : ''}
                 </div>
+
+                <ul class="choice-list">
+                    ${event.choices.map(choice => `
+                    <li class="choice-item">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                            <span class="choice-text" style="margin-bottom: 0;">${choice.text}</span>
+                            ${choice.condition ? `<span class="meta-pill value-condition"
+                                style="font-size:0.8rem; padding:2px 10px; margin-left: 10px; flex-shrink: 0;">${choice.condition}</span>`
+                            : ''}
+                        </div>
+                        <div class="choice-results">
+                            ${choice.result_positive ? `<div class="result-positive"><span
+                                    class="result-label">성공:</span> ${choice.result_positive}</div>` : ''}
+                            ${choice.result_negative ? `<div class="result-negative"><span
+                                    class="result-label">실패:</span> ${choice.result_negative}</div>` : ''}
+                            ${choice.result ? `<div class="result-common">${choice.result}</div>` : ''}
+                        </div>
+                    </li>
+                    `).join('')}
+                </ul>
+            </div>
             `;
             });
             container.innerHTML = html;
-        }
-    </script>
+            }
+            </script>
 </body>
 
 </html>

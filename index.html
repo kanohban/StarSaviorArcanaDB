@@ -6,386 +6,311 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>스타 세이비어 아르카나 DB</title>
   <script type="module" crossorigin src="./assets/index-DrY0adZU.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-  <link rel="stylesheet" href="./assets/header.css?v=2.0.5">
-</head>
 
-<body>
-  <div id="root"></div>
-  <script src="./assets/header_manager.js?v=3.3.0"></script>
-  <script src="./assets/modal_manager.js?v=3.3.0"></script>
-  <script src="./assets/hangul_utils.js?v=3.3.0"></script>
-  <script>
-    (function () {
-      // 1. Initialize State from LocalStorage
-      const html = document.documentElement;
-      const body = document.body;
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  html.setAttribute('data-theme', savedTheme);
 
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      html.setAttribute('data-theme', savedTheme);
+  const savedView = localStorage.getItem('viewMode') || 'pc';
+  if (savedView === 'mobile') {
+  body.classList.add('mobile-mode');
+  }
 
-      const savedView = localStorage.getItem('viewMode') || 'pc';
-      if (savedView === 'mobile') {
-        body.classList.add('mobile-mode');
-      }
+  // 2. DOM Manipulation Observer
+  const observer = new MutationObserver((mutations, obs) => {
+  const headerTop = document.querySelector('.header-top');
+  // Check for wrapper to prevent infinite loop
+  if (headerTop && !document.querySelector('.custom-header-wrapper')) {
+  initCustomHeader(headerTop);
+  modifyFilters();
+  }
 
-      // 2. DOM Manipulation Observer
-      const observer = new MutationObserver((mutations, obs) => {
-        const headerTop = document.querySelector('.header-top');
-        // Check for wrapper to prevent infinite loop
-        if (headerTop && !document.querySelector('.custom-header-wrapper')) {
-          initCustomHeader(headerTop);
-          modifyFilters();
-        }
+  // Initialize Custom Search if search input exists and hasn't been handled
+  const searchInput = document.querySelector('.search-input');
+  if (searchInput && !searchInput.classList.contains('handled-custom-search')) {
+  initCustomSearch(searchInput);
+  }
+  });
 
-        // Initialize Custom Search if search input exists and hasn't been handled
-        const searchInput = document.querySelector('.search-input');
-        if (searchInput && !searchInput.classList.contains('handled-custom-search')) {
-          initCustomSearch(searchInput);
-        }
-      });
+  observer.observe(document.body, { childList: true, subtree: true });
 
-      observer.observe(document.body, { childList: true, subtree: true });
+  // Custom Search Logic
+  async function loadSearchData() {
+  try {
+  const [cardsRes, potentialsRes] = await Promise.all([
+  fetch('./data/cards.json'),
+  fetch('./data/potentials.json')
+  ]);
+  const cards = await cardsRes.json();
+  const potentials = await potentialsRes.json();
 
-      // Custom Search Logic
-      let searchIndex = {};
-      let isDataLoaded = false;
+  // Initialize SearchService
+  if (window.SearchService) {
+  window.SearchService.buildIndex(cards, null, potentials);
+  console.log('Search Index Loaded via Service');
+  }
 
-      async function loadSearchData() {
-        try {
-          const [cardsRes, potentialsRes] = await Promise.all([
-            fetch('./data/cards.json'),
-            fetch('./data/potentials.json')
-          ]);
-          const cards = await cardsRes.json();
-          const potentials = await potentialsRes.json();
+  // Re-run filter if input has value
+  const customInput = document.getElementById('custom-search-input');
+  if (customInput && customInput.value) {
+  filterCards(customInput.value);
+  }
 
-          cards.forEach(card => {
-            if (!card.이름) return;
+  } catch (e) {
+  console.error('Failed to load search data', e);
+  }
+  }
 
-            // Build Search Text (Same logic as deck_manager.js)
-            let typeStr = '';
-            if (card.타입) {
-              if (card.레어도 === 'SSR') {
-                typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
-              } else {
-                typeStr = card.타입.훈련 || '';
-              }
-            }
+  loadSearchData();
 
-            let potentialDesc = '';
-            if (card.고유잠재 && card.고유잠재.이름 && potentials) {
-              potentialDesc = potentials[card.고유잠재.이름] || '';
-            }
+  function initCustomSearch(originalInput) {
+  if (originalInput.id === 'custom-search-input') return; // Avoid self-reference
 
-            let searchText = `${card.이름} ${card.캐릭터 || ''} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
+  // Mark as handled
+  originalInput.classList.add('handled-custom-search');
 
-            // Event Info
-            if (card.이벤트) {
-              if (card.이벤트.이름 && Array.isArray(card.이벤트.이름)) {
-                searchText += ` ${card.이벤트.이름.join(' ')}`;
-              }
-              ['1단계', '2단계', '3단계'].forEach(stageKey => {
-                const stage = card.이벤트[stageKey];
-                if (stage) {
-                  if (stage.이름_선택지) {
-                    searchText += ` ${stage.이름_선택지.선택지A || ''} ${stage.이름_선택지.선택지B || ''}`;
-                  }
-                  ['선택지A', '선택지B'].forEach(choiceKey => {
-                    const choices = stage[choiceKey];
-                    if (Array.isArray(choices)) {
-                      choices.forEach(choice => {
-                        if (choice.획득) {
-                          choice.획득.forEach(reward => {
-                            searchText += ` ${reward.타입} ${reward.수치}`;
-                          });
-                        }
-                      });
-                    }
-                  });
-                }
-              });
-            }
+  // Create Custom Input
+  const customInput = originalInput.cloneNode(true);
+  customInput.id = 'custom-search-input';
+  customInput.classList.remove('handled-custom-search');
+  customInput.value = '';
+  customInput.placeholder = '카드 이름, 속성, 효과 검색...';
 
-            // Support Info
-            if (card.지원) {
-              card.지원.forEach(sup => {
-                searchText += ` ${sup.타입} ${sup.수치35} ${sup.수치50}`;
-              });
-            }
+  // Hide Original (Keep it in DOM for React)
+  originalInput.style.display = 'none';
 
-            searchIndex[card.이름] = searchText;
-          });
+  // Insert Custom Input
+  originalInput.parentNode.insertBefore(customInput, originalInput);
 
-          isDataLoaded = true;
-          console.log('Search Index Loaded');
+  // Event Listener with Debounce
+  const debouncedFilter = window.SearchService ? window.SearchService.debounce((query) => {
+  filterCards(query);
+  }, 300) : (query) => filterCards(query);
 
-          // Re-run filter if input has value
-          const customInput = document.getElementById('custom-search-input');
-          if (customInput && customInput.value) {
-            filterCards(customInput.value);
-          }
+  customInput.addEventListener('input', (e) => {
+  debouncedFilter(e.target.value.trim());
+  });
 
-        } catch (e) {
-          console.error('Failed to load search data', e);
-        }
-      }
+  // Sync initial state if needed
+  filterCards('');
+  }
 
-      loadSearchData();
+  function filterCards(query) {
+  const cards = document.querySelectorAll('.card-item');
+  const q = query.toLowerCase();
 
-      function initCustomSearch(originalInput) {
-        if (originalInput.id === 'custom-search-input') return; // Avoid self-reference
+  // If empty query, show all (except if filtered by other means, but here we just remove search-hidden)
+  if (!q) {
+  cards.forEach(card => card.classList.remove('search-hidden'));
+  return;
+  }
 
-        // Mark as handled
-        originalInput.classList.add('handled-custom-search');
+  // Use SearchService to find matching titles
+  let matchingTitles = new Set();
+  if (window.SearchService) {
+  const results = window.SearchService.search(q, { showCards: true, showJourneys: false });
+  results.forEach(r => matchingTitles.add(r.title));
+  }
 
-        // Create Custom Input
-        const customInput = originalInput.cloneNode(true);
-        customInput.id = 'custom-search-input';
-        customInput.classList.remove('handled-custom-search');
-        customInput.value = '';
-        customInput.placeholder = '카드 이름, 속성, 효과 검색...';
+  cards.forEach(card => {
+  const titleEl = card.querySelector('h3');
+  const title = titleEl ? titleEl.textContent.trim() : '';
 
-        // Hide Original (Keep it in DOM for React)
-        originalInput.style.display = 'none';
+  if (matchingTitles.has(title)) {
+  card.classList.remove('search-hidden');
+  } else {
+  card.classList.add('search-hidden');
+  }
+  });
+  }
 
-        // Insert Custom Input
-        originalInput.parentNode.insertBefore(customInput, originalInput);
+  async function initCustomHeader(originalHeaderTop) {
+  // Hide original content
+  originalHeaderTop.style.display = 'none';
 
-        // Event Listener
-        customInput.addEventListener('input', (e) => {
-          const query = e.target.value.trim();
+  const appHeader = document.querySelector('.app-header');
 
-          // 1. Ensure Original Input is Empty (so React renders all cards)
-          // We only need to do this if it's not empty, but we can't easily change React state from here.
-          // Actually, if we just hide the original, the user can't type in it.
-          // So it should be empty unless pre-filled.
-          // If React has a default value, we might have an issue.
-          // Assuming it starts empty.
+  // Create a wrapper for our custom header
+  const wrapper = document.createElement('div');
+  wrapper.className = 'custom-header-wrapper'; // Add class immediately
+  // Insert it first
+  appHeader.insertBefore(wrapper, appHeader.firstChild);
 
-          // 2. Filter Cards
-          filterCards(query);
-        });
+  // Initialize HeaderManager
+  if (window.HeaderManager) {
+  await window.HeaderManager.init(wrapper, 'index');
+  } else {
+  console.error('HeaderManager not loaded');
+  }
+  }
 
-        // Sync initial state if needed
-        filterCards('');
-      }
+  function modifyFilters() {
+  const options = document.querySelectorAll('option');
+  options.forEach(opt => {
+  if (opt.textContent === '모든 등급') opt.textContent = '등급';
+  if (opt.textContent === '모든 타입') opt.textContent = '타입';
+  });
 
-      function filterCards(query) {
-        const cards = document.querySelectorAll('.card-item');
-        const q = query.toLowerCase();
+  // Inject Star Filter Button if not exists
+  const headerBottom = document.querySelector('.header-bottom');
+  if (headerBottom && !document.querySelector('#fav-filter-btn')) {
+  const starBtn = document.createElement('button');
+  starBtn.id = 'fav-filter-btn';
+  // Use header-btn class for consistent design
+  starBtn.className = 'header-btn fav-filter-btn';
+  starBtn.title = '즐겨찾기 모아보기';
+  starBtn.innerHTML = '★'; // Star Icon
 
-        cards.forEach(card => {
-          // Find searchable text
-          // Title
-          const titleEl = card.querySelector('h3');
-          const title = titleEl ? titleEl.textContent.trim() : '';
+  // Load saved filter state
+  const isFilterActive = localStorage.getItem('fav_filter_active') === 'true';
+  if (isFilterActive) {
+  starBtn.classList.add('active');
+  document.body.classList.add('show-favorites-only');
+  }
 
-          // Use Deep Search Text if available, otherwise fallback to DOM text
-          let text = isDataLoaded && searchIndex[title] ? searchIndex[title] : card.innerText;
+  starBtn.addEventListener('click', () => {
+  starBtn.classList.toggle('active');
+  const isActive = starBtn.classList.contains('active');
+  document.body.classList.toggle('show-favorites-only', isActive);
+  localStorage.setItem('fav_filter_active', isActive);
 
-          let isMatch = true;
-          if (q) {
-            if (window.HangulUtils) {
-              isMatch = window.HangulUtils.isMatch(text, q);
-            } else {
-              isMatch = text.toLowerCase().includes(q);
-            }
-          }
+  // Force trigger a scan to update visibility immediately
+  triggerScan();
+  });
 
-          // Toggle visibility
-          // We use a specific class for search filtering to distinguish from favorites filtering
-          if (isMatch) {
-            card.classList.remove('search-hidden');
-          } else {
-            card.classList.add('search-hidden');
-          }
-        });
-      }
+  headerBottom.appendChild(starBtn);
+  }
+  }
 
-      async function initCustomHeader(originalHeaderTop) {
-        // Hide original content
-        originalHeaderTop.style.display = 'none';
+  // Helper to trigger the logic manually
+  function triggerScan() {
+  const root = document.getElementById('root');
+  if (root) {
+  scanAndApplyFavorites();
+  }
+  }
 
-        const appHeader = document.querySelector('.app-header');
+  function scanAndApplyFavorites() {
+  let favorites = JSON.parse(localStorage.getItem('arcana_favorites')) || [];
+  const cards = document.querySelectorAll('.card-item');
+  const isFilterActive = document.body.classList.contains('show-favorites-only');
 
-        // Create a wrapper for our custom header
-        const wrapper = document.createElement('div');
-        wrapper.className = 'custom-header-wrapper'; // Add class immediately
-        // Insert it first
-        appHeader.insertBefore(wrapper, appHeader.firstChild);
+  cards.forEach(card => {
+  // 1. Ensure Favorite Button Exists
+  let btn = card.querySelector('.favorite-btn');
+  if (!btn) {
+  btn = createFavoriteButton();
+  card.appendChild(btn);
+  card.classList.add('has-fav-btn');
+  }
 
-        // Initialize HeaderManager
-        if (window.HeaderManager) {
-          await window.HeaderManager.init(wrapper, 'index');
-        } else {
-          console.error('HeaderManager not loaded');
-        }
-      }
+  // 2. Update State based on CURRENT content (Handle Element Recycling)
+  const titleEl = card.querySelector('h3');
+  if (titleEl) {
+  const currentCardId = titleEl.textContent.trim();
+  const isFav = favorites.includes(currentCardId);
 
-      function modifyFilters() {
-        const options = document.querySelectorAll('option');
-        options.forEach(opt => {
-          if (opt.textContent === '모든 등급') opt.textContent = '등급';
-          if (opt.textContent === '모든 타입') opt.textContent = '타입';
-        });
+  if (isFav) {
+  card.classList.add('is-favorite');
+  btn.classList.add('active');
+  } else {
+  card.classList.remove('is-favorite');
+  btn.classList.remove('active');
+  }
+  }
 
-        // Inject Star Filter Button if not exists
-        const headerBottom = document.querySelector('.header-bottom');
-        if (headerBottom && !document.querySelector('#fav-filter-btn')) {
-          const starBtn = document.createElement('button');
-          starBtn.id = 'fav-filter-btn';
-          // Use header-btn class for consistent design
-          starBtn.className = 'header-btn fav-filter-btn';
-          starBtn.title = '즐겨찾기 모아보기';
-          starBtn.innerHTML = '★'; // Star Icon
+  // 3. Enforce Filter Visibility using CSS Class
+  if (isFilterActive) {
+  if (!card.classList.contains('is-favorite')) {
+  card.classList.add('force-hidden');
+  } else {
+  card.classList.remove('force-hidden');
+  }
+  } else {
+  // Filter is OFF: Always remove the forced hiding
+  card.classList.remove('force-hidden');
+  }
+  });
+  }
 
-          // Load saved filter state
-          const isFilterActive = localStorage.getItem('fav_filter_active') === 'true';
-          if (isFilterActive) {
-            starBtn.classList.add('active');
-            document.body.classList.add('show-favorites-only');
-          }
+  function createFavoriteButton() {
+  const btn = document.createElement('button');
+  btn.className = 'favorite-btn';
+  btn.title = '즐겨찾기';
+  btn.innerHTML = '<svg viewBox="0 0 24 24">
+    <path
+      d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+  </svg>';
 
-          starBtn.addEventListener('click', () => {
-            starBtn.classList.toggle('active');
-            const isActive = starBtn.classList.contains('active');
-            document.body.classList.toggle('show-favorites-only', isActive);
-            localStorage.setItem('fav_filter_active', isActive);
+  // Dynamic Click Handler
+  btn.addEventListener('click', (e) => {
+  e.stopPropagation();
 
-            // Force trigger a scan to update visibility immediately
-            triggerScan();
-          });
+  // Read CURRENT ID at click time
+  const card = btn.closest('.card-item');
+  const titleEl = card.querySelector('h3');
+  if (!titleEl) return;
 
-          headerBottom.appendChild(starBtn);
-        }
-      }
+  const cardId = titleEl.textContent.trim();
+  let favorites = JSON.parse(localStorage.getItem('arcana_favorites')) || [];
 
-      // Helper to trigger the logic manually
-      function triggerScan() {
-        const root = document.getElementById('root');
-        if (root) {
-          scanAndApplyFavorites();
-        }
-      }
+  btn.classList.toggle('active');
 
-      function scanAndApplyFavorites() {
-        let favorites = JSON.parse(localStorage.getItem('arcana_favorites')) || [];
-        const cards = document.querySelectorAll('.card-item');
-        const isFilterActive = document.body.classList.contains('show-favorites-only');
+  if (btn.classList.contains('active')) {
+  card.classList.add('is-favorite');
+  if (!favorites.includes(cardId)) {
+  favorites.push(cardId);
+  }
+  // If filter is active, we just made it a favorite, so ensure it's shown
+  if (document.body.classList.contains('show-favorites-only')) {
+  card.classList.remove('force-hidden');
+  }
+  } else {
+  card.classList.remove('is-favorite');
+  favorites = favorites.filter(id => id !== cardId);
 
-        cards.forEach(card => {
-          // 1. Ensure Favorite Button Exists
-          let btn = card.querySelector('.favorite-btn');
-          if (!btn) {
-            btn = createFavoriteButton();
-            card.appendChild(btn);
-            card.classList.add('has-fav-btn');
-          }
+  // Hide immediately if filter is active
+  if (document.body.classList.contains('show-favorites-only')) {
+  card.classList.add('force-hidden');
+  }
+  }
+  localStorage.setItem('arcana_favorites', JSON.stringify(favorites));
+  });
 
-          // 2. Update State based on CURRENT content (Handle Element Recycling)
-          const titleEl = card.querySelector('h3');
-          if (titleEl) {
-            const currentCardId = titleEl.textContent.trim();
-            const isFav = favorites.includes(currentCardId);
+  return btn;
+  }
 
-            if (isFav) {
-              card.classList.add('is-favorite');
-              btn.classList.add('active');
-            } else {
-              card.classList.remove('is-favorite');
-              btn.classList.remove('active');
-            }
-          }
+  // Observer Setup
+  // Added characterData to catch text changes directly
+  const observerConfig = { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'],
+  characterData: true };
+  const contentObserver = new MutationObserver((mutations) => {
+  let shouldScan = false;
+  mutations.forEach((mutation) => {
+  if (mutation.addedNodes.length > 0) shouldScan = true;
+  if (mutation.type === 'attributes' && mutation.target.classList.contains('card-item')) shouldScan = true;
+  // If text changes inside a card (e.g. h3 text update)
+  if (mutation.type === 'characterData') shouldScan = true;
+  // Also check if childList changed on a descendant (e.g. h3 content replaced)
+  if (mutation.type === 'childList' && mutation.target.closest && mutation.target.closest('.card-item')) shouldScan =
+  true;
+  });
 
-          // 3. Enforce Filter Visibility using CSS Class
-          if (isFilterActive) {
-            if (!card.classList.contains('is-favorite')) {
-              card.classList.add('force-hidden');
-            } else {
-              card.classList.remove('force-hidden');
-            }
-          } else {
-            // Filter is OFF: Always remove the forced hiding
-            card.classList.remove('force-hidden');
-          }
-        });
-      }
+  if (shouldScan) {
+  contentObserver.disconnect();
+  try {
+  scanAndApplyFavorites();
+  } finally {
+  const root = document.getElementById('root');
+  if (root) contentObserver.observe(root, observerConfig);
+  }
+  }
+  });
 
-      function createFavoriteButton() {
-        const btn = document.createElement('button');
-        btn.className = 'favorite-btn';
-        btn.title = '즐겨찾기';
-        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
-
-        // Dynamic Click Handler
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-
-          // Read CURRENT ID at click time
-          const card = btn.closest('.card-item');
-          const titleEl = card.querySelector('h3');
-          if (!titleEl) return;
-
-          const cardId = titleEl.textContent.trim();
-          let favorites = JSON.parse(localStorage.getItem('arcana_favorites')) || [];
-
-          btn.classList.toggle('active');
-
-          if (btn.classList.contains('active')) {
-            card.classList.add('is-favorite');
-            if (!favorites.includes(cardId)) {
-              favorites.push(cardId);
-            }
-            // If filter is active, we just made it a favorite, so ensure it's shown
-            if (document.body.classList.contains('show-favorites-only')) {
-              card.classList.remove('force-hidden');
-            }
-          } else {
-            card.classList.remove('is-favorite');
-            favorites = favorites.filter(id => id !== cardId);
-
-            // Hide immediately if filter is active
-            if (document.body.classList.contains('show-favorites-only')) {
-              card.classList.add('force-hidden');
-            }
-          }
-          localStorage.setItem('arcana_favorites', JSON.stringify(favorites));
-        });
-
-        return btn;
-      }
-
-      // Observer Setup
-      // Added characterData to catch text changes directly
-      const observerConfig = { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class'], characterData: true };
-      const contentObserver = new MutationObserver((mutations) => {
-        let shouldScan = false;
-        mutations.forEach((mutation) => {
-          if (mutation.addedNodes.length > 0) shouldScan = true;
-          if (mutation.type === 'attributes' && mutation.target.classList.contains('card-item')) shouldScan = true;
-          // If text changes inside a card (e.g. h3 text update)
-          if (mutation.type === 'characterData') shouldScan = true;
-          // Also check if childList changed on a descendant (e.g. h3 content replaced)
-          if (mutation.type === 'childList' && mutation.target.closest && mutation.target.closest('.card-item')) shouldScan = true;
-        });
-
-        if (shouldScan) {
-          contentObserver.disconnect();
-          try {
-            scanAndApplyFavorites();
-          } finally {
-            const root = document.getElementById('root');
-            if (root) contentObserver.observe(root, observerConfig);
-          }
-        }
-      });
-
-      const root = document.getElementById('root');
-      if (root) {
-        contentObserver.observe(root, observerConfig);
-      }
-    })();
+  const root = document.getElementById('root');
+  if (root) {
+  contentObserver.observe(root, observerConfig);
+  }
+  })();
   </script>
   <style>
     /* Mobile Optimization for Header Bottom */
@@ -505,6 +430,6 @@
       display: none !important;
     }
   </style>
-</body>
+  </body>
 
 </html>

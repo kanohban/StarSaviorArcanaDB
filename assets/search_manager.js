@@ -1,15 +1,9 @@
 (function () {
     const SearchManager = {
-        data: {
-            cards: [],
-            journeys: []
-        },
-        index: [],
-
-        async init() {
+        init() {
             this.cacheDOM();
             this.bindEvents();
-            await this.fetchData();
+            this.loadData();
         },
 
         cacheDOM() {
@@ -25,7 +19,13 @@
         },
 
         bindEvents() {
-            this.input.addEventListener('input', (e) => this.handleSearch(e.target.value));
+            // Use Debounce from SearchService
+            const debouncedSearch = window.SearchService.debounce((query) => {
+                this.handleSearch(query);
+            }, 300);
+
+            this.input.addEventListener('input', (e) => debouncedSearch(e.target.value));
+
             this.filterCard.addEventListener('change', () => this.handleSearch(this.input.value));
             this.filterJourney.addEventListener('change', () => this.handleSearch(this.input.value));
 
@@ -45,7 +45,7 @@
             });
         },
 
-        async fetchData() {
+        async loadData() {
             try {
                 const [cardsRes, journeyRes, potentialsRes] = await Promise.all([
                     fetch('./data/cards.json'),
@@ -57,118 +57,20 @@
                 const journeyData = await journeyRes.json();
                 const potentialsData = await potentialsRes.json();
 
-                this.processData(cardsData, journeyData, potentialsData);
+                // Build Index via Service
+                window.SearchService.buildIndex(cardsData, journeyData, potentialsData);
+
+                // Store Potentials for Modal display
+                this.potentials = potentialsData;
+
             } catch (error) {
                 console.error('Failed to fetch data:', error);
                 this.resultsContainer.innerHTML = '<div class="empty-state">데이터를 불러오는 중 오류가 발생했습니다.</div>';
             }
         },
 
-        processData(cards, journeys, potentials) {
-            this.data.potentials = potentials;
-            this.index = [];
-
-            // 1. Process Cards
-            cards.forEach(card => {
-                if (!card.이름) return;
-                // Fix: Handle Type Object
-                let typeStr = '';
-                if (card.타입) {
-                    if (card.레어도 === 'SSR') {
-                        typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
-                    } else {
-                        typeStr = card.타입.훈련 || '';
-                    }
-                }
-
-                // Create a massive searchable string
-                let potentialDesc = '';
-                if (card.고유잠재 && card.고유잠재.이름 && potentials) {
-                    potentialDesc = potentials[card.고유잠재.이름] || '';
-                }
-                let searchText = `${card.이름} ${card.캐릭터 || ''} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
-
-                // Add Event info to search text (Deep Indexing)
-                if (card.이벤트) {
-                    // Index Event Names
-                    if (card.이벤트.이름 && Array.isArray(card.이벤트.이름)) {
-                        searchText += ` ${card.이벤트.이름.join(' ')}`;
-                    }
-
-                    // Index Stages
-                    ['1단계', '2단계', '3단계'].forEach(stageKey => {
-                        const stage = card.이벤트[stageKey];
-                        if (stage) {
-                            // Index Choice Names
-                            if (stage.이름_선택지) {
-                                searchText += ` ${stage.이름_선택지.선택지A || ''} ${stage.이름_선택지.선택지B || ''}`;
-                            }
-
-                            // Index Choice Rewards (Deep Dive)
-                            ['선택지A', '선택지B'].forEach(choiceKey => {
-                                const choices = stage[choiceKey];
-                                if (Array.isArray(choices)) {
-                                    choices.forEach(choice => {
-                                        if (choice.획득) {
-                                            choice.획득.forEach(reward => {
-                                                searchText += ` ${reward.타입} ${reward.수치}`;
-                                            });
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    });
-                }
-
-                // Index Support Info
-                if (card.지원) {
-                    card.지원.forEach(sup => {
-                        searchText += ` ${sup.타입} ${sup.수치35} ${sup.수치50}`;
-                    });
-                }
-
-                this.index.push({
-                    type: 'card',
-                    title: card.이름,
-                    subtitle: `${card.레어도} | ${typeStr}`,
-                    content: card.고유효과?.설명 || (card.고유잠재 ? `고유잠재: ${card.고유잠재.이름}` : '설명 없음'),
-                    searchText: searchText.toLowerCase(),
-                    data: card
-                });
-            });
-
-            // 2. Process Journeys
-            Object.keys(journeys).forEach(key => {
-                const group = journeys[key];
-                if (Array.isArray(group)) {
-                    group.forEach(event => {
-                        if (!event.name) return;
-                        let searchText = `${event.name} ${event.category} ${event.timing || ''} ${event.condition || ''}`;
-
-                        if (event.choices) {
-                            event.choices.forEach(choice => {
-                                searchText += ` ${choice.text} ${choice.result || ''} ${choice.result_positive || ''} ${choice.result_negative || ''}`;
-                            });
-                        }
-
-                        this.index.push({
-                            type: 'journey',
-                            title: event.name,
-                            subtitle: `${event.category} ${event.timing ? `(${event.timing})` : ''}`,
-                            content: event.choices ? event.choices.map(c => c.text).join(', ') : '',
-                            searchText: searchText.toLowerCase(),
-                            data: event
-                        });
-                    });
-                }
-            });
-
-            console.log(`Indexed ${this.index.length} items.`);
-        },
-
         handleSearch(query) {
-            const q = query.trim().toLowerCase();
+            const q = query.trim();
             const showCards = this.filterCard.checked;
             const showJourneys = this.filterJourney.checked;
 
@@ -177,18 +79,8 @@
                 return;
             }
 
-            const results = this.index.filter(item => {
-                // Filter by Type
-                if (item.type === 'card' && !showCards) return false;
-                if (item.type === 'journey' && !showJourneys) return false;
-
-                // Filter by Query
-                if (window.HangulUtils) {
-                    return window.HangulUtils.isMatch(item.searchText, q);
-                }
-                return item.searchText.includes(q);
-            });
-
+            // Use SearchService
+            const results = window.SearchService.search(q, { showCards, showJourneys });
             this.renderResults(results, q);
         },
 
@@ -199,6 +91,9 @@
                 this.resultsContainer.innerHTML = '<div class="empty-state">검색 결과가 없습니다.</div>';
                 return;
             }
+
+            // Use DocumentFragment for performance
+            const fragment = document.createDocumentFragment();
 
             results.forEach(item => {
                 const card = document.createElement('div');
@@ -213,7 +108,6 @@
                     <div class="result-content">${this.highlightText(item.content, query)}</div>
                 `;
 
-                // Only add expand logic for Journeys, Cards use Modal
                 if (item.type === 'journey') {
                     const detailsId = `details-${Math.random().toString(36).substr(2, 9)}`;
                     html += `
@@ -235,14 +129,27 @@
                     }
                 });
 
-                this.resultsContainer.appendChild(card);
+                fragment.appendChild(card);
             });
+
+            this.resultsContainer.appendChild(fragment);
         },
 
         highlightText(text, query) {
             if (!query || !text) return text;
-            const regex = new RegExp(`(${query})`, 'gi');
-            return text.replace(regex, '<span class="highlight">$1</span>');
+            // Use Regex from HangulUtils for highlighting? 
+            // Highlighting complex regex matches is tricky. 
+            // For now, let's stick to simple query highlighting or try to use the matcher.
+            // Actually, if we use regex for search, we should use it for highlight too.
+
+            try {
+                const matcher = window.HangulUtils.createFuzzyMatcher(query);
+                // We need global flag for replaceAll
+                const globalMatcher = new RegExp(matcher.source, 'gi');
+                return text.replace(globalMatcher, '<span class="highlight">$&</span>');
+            } catch (e) {
+                return text;
+            }
         },
 
         renderDetails(item) {
@@ -283,8 +190,8 @@
 
             // Get Potential Description
             let potentialDesc = '-';
-            if (card.고유잠재 && card.고유잠재.이름 && this.data.potentials) {
-                potentialDesc = this.data.potentials[card.고유잠재.이름] || '-';
+            if (card.고유잠재 && card.고유잠재.이름 && this.potentials) {
+                potentialDesc = this.potentials[card.고유잠재.이름] || '-';
             }
 
             let html = `
@@ -324,7 +231,6 @@
                                 <div class="stage-choices">
                         `;
 
-                        // Check if B has content
                         const hasB = stage['선택지B'] && stage['선택지B'].length > 0 && stage['선택지B'][0].획득 && stage['선택지B'][0].획득.length > 0;
 
                         ['선택지A', '선택지B'].forEach(choiceKey => {
@@ -334,7 +240,6 @@
                             if (choices && choices.length > 0 && choices[0].획득 && choices[0].획득.length > 0) {
                                 html += `<div class="choice-column">`;
 
-                                // Only show header if it's B, OR if it's A and B also exists
                                 if (choiceKey === '선택지B' || hasB) {
                                     html += `<div class="choice-header">${choiceName}</div>`;
                                 }
@@ -378,6 +283,5 @@
         }
     };
 
-    // Initialize
     SearchManager.init();
 })();

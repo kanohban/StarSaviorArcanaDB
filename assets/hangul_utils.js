@@ -9,14 +9,23 @@ const HangulUtils = (function () {
         'ㅄ': 'ㅂㅅ'
     };
 
-    function getChosung(char) {
-        const code = char.charCodeAt(0);
-        if (code >= 0xAC00 && code <= 0xD7A3) {
-            const charCode = code - 0xAC00;
-            const choIndex = Math.floor(charCode / (21 * 28));
-            return CHOSUNG[choIndex];
-        }
-        return char;
+    // Chosung to Hangul Range Map
+    // ㄱ -> [가-깋] (AC00 ~ AC1F is wrong, need full range for that chosung)
+    // Formula: ((Cho * 21) + Jung) * 28 + Jong + 0xAC00
+    // Range for 'ㄱ' (Cho=0):
+    // Start: ((0 * 21) + 0) * 28 + 0 + 0xAC00 = 0xAC00 ('가')
+    // End:   ((0 * 21) + 20) * 28 + 27 + 0xAC00 = 0xAE4B ('깋')
+    // Wait, Cho index 1 starts at ((1 * 21) + 0) * 28 + 0 + 0xAC00.
+    // So 'ㄱ' range is from Cho=0 start to Cho=1 start - 1.
+
+    function getChosungRange(chosungChar) {
+        const choIndex = CHOSUNG.indexOf(chosungChar);
+        if (choIndex === -1) return null;
+
+        const startCode = 0xAC00 + (choIndex * 21 * 28);
+        const endCode = 0xAC00 + ((choIndex + 1) * 21 * 28) - 1;
+
+        return `[${String.fromCharCode(startCode)}-${String.fromCharCode(endCode)}]`;
     }
 
     function decomposeQuery(query) {
@@ -31,62 +40,49 @@ const HangulUtils = (function () {
         return result;
     }
 
-    function isChosung(char) {
-        const code = char.charCodeAt(0);
-        // Hangul Jamo range (U+3131 ~ U+318E)
-        return code >= 0x3131 && code <= 0x318E;
+    function escapeRegex(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function createFuzzyMatcher(query) {
+        const decomposed = decomposeQuery(query);
+        let pattern = '';
+
+        for (let char of decomposed) {
+            // 1. If it's a Chosung (e.g. 'ㄱ'), convert to range [가-깋] OR match 'ㄱ' itself
+            if (CHOSUNG.includes(char)) {
+                const range = getChosungRange(char);
+                // Match either the full Hangul syllable in that range OR the Chosung itself
+                pattern += `(${range}|${char})`;
+            }
+            // 2. If it's a space, match space
+            else if (char === ' ') {
+                pattern += ' ';
+            }
+            // 3. Otherwise, exact match (escaped)
+            else {
+                pattern += escapeRegex(char);
+            }
+        }
+
+        try {
+            return new RegExp(pattern, 'i'); // Case insensitive
+        } catch (e) {
+            console.error('Invalid Regex:', pattern);
+            return new RegExp(escapeRegex(query), 'i'); // Fallback
+        }
     }
 
     function isMatch(target, query) {
-        // 1. Decompose Query (e.g. "ㄽㅍ" -> "ㄹㅅㅍ")
-        const decomposedQuery = decomposeQuery(query);
-
-        // 2. Remove spaces from target/query for fuzzy search? 
-        // The user didn't explicitly ask for space ignoring, but it's usually good.
-        // However, let's stick to the raw strings for now to avoid matching across word boundaries unexpectedly unless requested.
-        // Actually, standard behavior usually ignores spaces. Let's try to match strictly first.
-
-        // 3. Char-by-Char Matching
-        // We scan the target to see if decomposedQuery appears in it.
-
-        for (let i = 0; i <= target.length - decomposedQuery.length; i++) {
-            let match = true;
-            for (let j = 0; j < decomposedQuery.length; j++) {
-                const tChar = target[i + j];
-                const qChar = decomposedQuery[j];
-
-                if (!checkCharMatch(tChar, qChar)) {
-                    match = false;
-                    break;
-                }
-            }
-            if (match) return true;
-        }
-        return false;
-    }
-
-    function checkCharMatch(tChar, qChar) {
-        // If qChar is a space, it must match a space (or we can skip spaces? Let's require match for now)
-        if (qChar === ' ') return tChar === ' ';
-
-        // If qChar is full Hangul (e.g. '누'), tChar must be exactly '누'
-        const qCode = qChar.charCodeAt(0);
-        if (qCode >= 0xAC00 && qCode <= 0xD7A3) {
-            return tChar === qChar;
-        }
-
-        // If qChar is a Jamo (Chosung), check if tChar's Chosung matches
-        if (isChosung(qChar)) {
-            const tChosung = getChosung(tChar);
-            return tChosung === qChar;
-        }
-
-        // Otherwise (English, numbers, symbols), exact match (case insensitive handled by caller usually, but let's be safe)
-        return tChar.toLowerCase() === qChar.toLowerCase();
+        // Optimization: Cache regex if query hasn't changed? 
+        // For now, just generate it. It's fast enough for short queries.
+        const matcher = createFuzzyMatcher(query);
+        return matcher.test(target);
     }
 
     return {
-        isMatch
+        isMatch,
+        createFuzzyMatcher
     };
 })();
 
