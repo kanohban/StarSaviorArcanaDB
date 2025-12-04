@@ -7,6 +7,13 @@
     let potentialsData = null; // Store potentials locally
     let dataVersion = 0;
 
+    // Helper to highlight negative numbers
+    function highlightNegativeNumbers(text) {
+        if (!text) return '';
+        // Matches negative numbers like -10, -5.5, -10%
+        return text.toString().replace(/(-\d+(?:\.\d+)?%?)/g, '<span style="color: #ef5350;">$1</span>');
+    }
+
     // Poll cards data every 1 second
     function fetchCardsData() {
         fetch('./data/cards.json?v=' + Date.now())
@@ -241,7 +248,8 @@
 
             const valueSpan = document.createElement('span');
             valueSpan.className = 'bonus-value';
-            valueSpan.textContent = isLevel50 ? item.수치50 : item.수치35;
+            const val = isLevel50 ? item.수치50 : item.수치35;
+            valueSpan.innerHTML = highlightNegativeNumbers(val);
 
             li.appendChild(valueSpan);
             list.appendChild(li);
@@ -521,7 +529,7 @@
 
                                         const valueSpan = document.createElement('span');
                                         valueSpan.className = 'choice-value';
-                                        valueSpan.textContent = item.수치;
+                                        valueSpan.innerHTML = highlightNegativeNumbers(item.수치);
 
                                         // --- POTENTIAL POPUP LOGIC ---
                                         if (potentialsData && potentialsData[item.수치]) {
