@@ -40,25 +40,42 @@
             <button class="modal-close">&times;</button>
             <div class="modal-content-body">
                 <!-- Dynamic Content -->
-                const savedTheme = localStorage.getItem('theme') || 'dark';
-                html.setAttribute('data-theme', savedTheme);
+            </div>
+        </div>
+    </div>
 
-                const savedView = localStorage.getItem('viewMode') || 'pc';
-                if (savedView === 'mobile') {
+    <footer id="footer-container"></footer>
+
+    <script src="./assets/header_manager.js?v=3.3.4"></script>
+    <script src="./assets/footer_manager.js"></script>
+    <script src="./assets/hangul_utils.js?v=3.3.4"></script>
+    <script src="./assets/search_service.js?v=3.3.4"></script>
+    <script src="./assets/search_manager.js?v=3.3.4"></script>
+    <script>
+        // Initialize State from LocalStorage (Immediate Apply)
+        (function () {
+            const html = document.documentElement;
+            const body = document.body;
+
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+
+            const savedView = localStorage.getItem('viewMode') || 'pc';
+            if (savedView === 'mobile') {
                 body.classList.add('mobile-mode');
-                }
-                })();
+            }
+        })();
 
-                // Initialize Header & Footer
-                document.addEventListener('DOMContentLoaded', () => {
-                if (window.HeaderManager) {
+        // Initialize Header & Footer
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.HeaderManager) {
                 window.HeaderManager.init(document.getElementById('header-container'), 'search');
-                }
-                if (window.FooterManager) {
+            }
+            if (window.FooterManager) {
                 window.FooterManager.init(document.getElementById('footer-container'));
-                }
-                });
-                </script>
+            }
+        });
+    </script>
 </body>
 
 </html>
