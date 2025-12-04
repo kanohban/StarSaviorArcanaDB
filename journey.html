@@ -283,8 +283,9 @@
         <footer id="footer-container"></footer>
     </div>
 
-    <script src="./assets/header_manager.js"></script>
+    <script src="./assets/header_manager.js?v=3.1.0"></script>
     <script src="./assets/footer_manager.js"></script>
+    <script src="./assets/hangul_utils.js?v=3.1.0"></script>
     <script>
         let allData = {};
         let currentTab = 'journey';
@@ -380,17 +381,17 @@
                 const categoryData = allData[key];
                 categoryData.forEach(event => {
                     // Search in Name
-                    if (event.name && event.name.toLowerCase().includes(query)) {
+                    if (event.name && (window.HangulUtils ? window.HangulUtils.isMatch(event.name, query) : event.name.toLowerCase().includes(query))) {
                         results.push(event);
                         return;
                     }
                     // Search in Choices
                     if (event.choices) {
                         const choiceMatch = event.choices.some(choice =>
-                            (choice.text && choice.text.toLowerCase().includes(query)) ||
-                            (choice.result && choice.result.toLowerCase().includes(query)) ||
-                            (choice.result_positive && choice.result_positive.toLowerCase().includes(query)) ||
-                            (choice.result_negative && choice.result_negative.toLowerCase().includes(query))
+                            (choice.text && (window.HangulUtils ? window.HangulUtils.isMatch(choice.text, query) : choice.text.toLowerCase().includes(query))) ||
+                            (choice.result && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result, query) : choice.result.toLowerCase().includes(query))) ||
+                            (choice.result_positive && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result_positive, query) : choice.result_positive.toLowerCase().includes(query))) ||
+                            (choice.result_negative && (window.HangulUtils ? window.HangulUtils.isMatch(choice.result_negative, query) : choice.result_negative.toLowerCase().includes(query)))
                         );
                         if (choiceMatch) {
                             results.push(event);
@@ -398,8 +399,8 @@
                         }
                     }
                     // Search in Timing/Condition
-                    if ((event.timing && event.timing.toLowerCase().includes(query)) ||
-                        (event.condition && event.condition.toLowerCase().includes(query))) {
+                    if ((event.timing && (window.HangulUtils ? window.HangulUtils.isMatch(event.timing, query) : event.timing.toLowerCase().includes(query))) ||
+                        (event.condition && (window.HangulUtils ? window.HangulUtils.isMatch(event.condition, query) : event.condition.toLowerCase().includes(query)))) {
                         results.push(event);
                     }
                 });

@@ -232,6 +232,10 @@ const DeckManager = {
                 });
             }
 
+            // Use HangulUtils for Chosung Search
+            if (window.HangulUtils) {
+                return window.HangulUtils.isMatch(searchText, q);
+            }
             return searchText.toLowerCase().includes(q);
         });
 

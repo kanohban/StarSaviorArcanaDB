@@ -12,8 +12,9 @@
 
 <body>
   <div id="root"></div>
-  <script src="./assets/header_manager.js?v=3.0.0"></script>
-  <script src="./assets/modal_manager.js?v=3.0.0"></script>
+  <script src="./assets/header_manager.js?v=3.1.0"></script>
+  <script src="./assets/modal_manager.js?v=3.1.0"></script>
+  <script src="./assets/hangul_utils.js?v=3.1.0"></script>
   <script>
     (function () {
       // 1. Initialize State from LocalStorage
@@ -36,9 +37,169 @@
           initCustomHeader(headerTop);
           modifyFilters();
         }
+
+        // Initialize Custom Search if search input exists and hasn't been handled
+        const searchInput = document.querySelector('.search-input');
+        if (searchInput && !searchInput.classList.contains('handled-custom-search')) {
+          initCustomSearch(searchInput);
+        }
       });
 
       observer.observe(document.body, { childList: true, subtree: true });
+
+      // Custom Search Logic
+      let searchIndex = {};
+      let isDataLoaded = false;
+
+      async function loadSearchData() {
+        try {
+          const [cardsRes, potentialsRes] = await Promise.all([
+            fetch('./data/cards.json'),
+            fetch('./data/potentials.json')
+          ]);
+          const cards = await cardsRes.json();
+          const potentials = await potentialsRes.json();
+
+          cards.forEach(card => {
+            // Build Search Text (Same logic as deck_manager.js)
+            let typeStr = '';
+            if (card.타입) {
+              if (card.레어도 === 'SSR') {
+                typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
+              } else {
+                typeStr = card.타입.훈련 || '';
+              }
+            }
+
+            let potentialDesc = '';
+            if (card.고유잠재 && card.고유잠재.이름 && potentials) {
+              potentialDesc = potentials[card.고유잠재.이름] || '';
+            }
+
+            let searchText = `${card.이름} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
+
+            // Event Info
+            if (card.이벤트) {
+              if (card.이벤트.이름 && Array.isArray(card.이벤트.이름)) {
+                searchText += ` ${card.이벤트.이름.join(' ')}`;
+              }
+              ['1단계', '2단계', '3단계'].forEach(stageKey => {
+                const stage = card.이벤트[stageKey];
+                if (stage) {
+                  if (stage.이름_선택지) {
+                    searchText += ` ${stage.이름_선택지.선택지A || ''} ${stage.이름_선택지.선택지B || ''}`;
+                  }
+                  ['선택지A', '선택지B'].forEach(choiceKey => {
+                    const choices = stage[choiceKey];
+                    if (Array.isArray(choices)) {
+                      choices.forEach(choice => {
+                        if (choice.획득) {
+                          choice.획득.forEach(reward => {
+                            searchText += ` ${reward.타입} ${reward.수치}`;
+                          });
+                        }
+                      });
+                    }
+                  });
+                }
+              });
+            }
+
+            // Support Info
+            if (card.지원) {
+              card.지원.forEach(sup => {
+                searchText += ` ${sup.타입} ${sup.수치35} ${sup.수치50}`;
+              });
+            }
+
+            searchIndex[card.이름] = searchText;
+          });
+
+          isDataLoaded = true;
+          console.log('Search Index Loaded');
+
+          // Re-run filter if input has value
+          const customInput = document.getElementById('custom-search-input');
+          if (customInput && customInput.value) {
+            filterCards(customInput.value);
+          }
+
+        } catch (e) {
+          console.error('Failed to load search data', e);
+        }
+      }
+
+      loadSearchData();
+
+      function initCustomSearch(originalInput) {
+        if (originalInput.id === 'custom-search-input') return; // Avoid self-reference
+
+        // Mark as handled
+        originalInput.classList.add('handled-custom-search');
+
+        // Create Custom Input
+        const customInput = originalInput.cloneNode(true);
+        customInput.id = 'custom-search-input';
+        customInput.classList.remove('handled-custom-search');
+        customInput.value = '';
+        customInput.placeholder = '카드 이름, 속성, 효과 검색...';
+
+        // Hide Original (Keep it in DOM for React)
+        originalInput.style.display = 'none';
+
+        // Insert Custom Input
+        originalInput.parentNode.insertBefore(customInput, originalInput);
+
+        // Event Listener
+        customInput.addEventListener('input', (e) => {
+          const query = e.target.value.trim();
+
+          // 1. Ensure Original Input is Empty (so React renders all cards)
+          // We only need to do this if it's not empty, but we can't easily change React state from here.
+          // Actually, if we just hide the original, the user can't type in it.
+          // So it should be empty unless pre-filled.
+          // If React has a default value, we might have an issue.
+          // Assuming it starts empty.
+
+          // 2. Filter Cards
+          filterCards(query);
+        });
+
+        // Sync initial state if needed
+        filterCards('');
+      }
+
+      function filterCards(query) {
+        const cards = document.querySelectorAll('.card-item');
+        const q = query.toLowerCase();
+
+        cards.forEach(card => {
+          // Find searchable text
+          // Title
+          const titleEl = card.querySelector('h3');
+          const title = titleEl ? titleEl.textContent.trim() : '';
+
+          // Use Deep Search Text if available, otherwise fallback to DOM text
+          let text = isDataLoaded && searchIndex[title] ? searchIndex[title] : card.innerText;
+
+          let isMatch = true;
+          if (q) {
+            if (window.HangulUtils) {
+              isMatch = window.HangulUtils.isMatch(text, q);
+            } else {
+              isMatch = text.toLowerCase().includes(q);
+            }
+          }
+
+          // Toggle visibility
+          // We use a specific class for search filtering to distinguish from favorites filtering
+          if (isMatch) {
+            card.classList.remove('search-hidden');
+          } else {
+            card.classList.add('search-hidden');
+          }
+        });
+      }
 
       async function initCustomHeader(originalHeaderTop) {
         // Hide original content
@@ -334,7 +495,8 @@
 
     /* Filtering Logic */
     /* Use Class instead of inline style to avoid conflicts */
-    .force-hidden {
+    .force-hidden,
+    .search-hidden {
       display: none !important;
     }
   </style>

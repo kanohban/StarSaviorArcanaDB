@@ -181,6 +181,9 @@
                 if (item.type === 'journey' && !showJourneys) return false;
 
                 // Filter by Query
+                if (window.HangulUtils) {
+                    return window.HangulUtils.isMatch(item.searchText, q);
+                }
                 return item.searchText.includes(q);
             });
 
