@@ -47,31 +47,45 @@
 
         async fetchData() {
             try {
-                const [cardsRes, journeyRes] = await Promise.all([
+                const [cardsRes, journeyRes, potentialsRes] = await Promise.all([
                     fetch('./data/cards.json'),
-                    fetch('./data/journey_data.json')
+                    fetch('./data/journey_data.json'),
+                    fetch('./data/potentials.json')
                 ]);
 
                 const cardsData = await cardsRes.json();
                 const journeyData = await journeyRes.json();
+                const potentialsData = await potentialsRes.json();
 
-                this.processData(cardsData, journeyData);
+                this.processData(cardsData, journeyData, potentialsData);
             } catch (error) {
                 console.error('Failed to fetch data:', error);
                 this.resultsContainer.innerHTML = '<div class="empty-state">데이터를 불러오는 중 오류가 발생했습니다.</div>';
             }
         },
 
-        processData(cards, journeys) {
+        processData(cards, journeys, potentials) {
+            this.data.potentials = potentials;
             this.index = [];
 
             // 1. Process Cards
             cards.forEach(card => {
                 // Fix: Handle Type Object
-                const typeStr = card.타입 ? `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''}` : '';
+                let typeStr = '';
+                if (card.타입) {
+                    if (card.레어도 === 'SSR') {
+                        typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
+                    } else {
+                        typeStr = card.타입.훈련 || '';
+                    }
+                }
 
                 // Create a massive searchable string
-                let searchText = `${card.이름} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''}`;
+                let potentialDesc = '';
+                if (card.고유잠재 && card.고유잠재.이름 && potentials) {
+                    potentialDesc = potentials[card.고유잠재.이름] || '';
+                }
+                let searchText = `${card.이름} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
 
                 // Add Event info to search text (Deep Indexing)
                 if (card.이벤트) {
@@ -253,7 +267,20 @@
             if (!this.modal) return;
 
             // Build Modal Content
-            const typeStr = card.타입 ? `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''}` : '';
+            let typeStr = '';
+            if (card.타입) {
+                if (card.레어도 === 'SSR') {
+                    typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
+                } else {
+                    typeStr = card.타입.훈련 || '';
+                }
+            }
+
+            // Get Potential Description
+            let potentialDesc = '-';
+            if (card.고유잠재 && card.고유잠재.이름 && this.data.potentials) {
+                potentialDesc = this.data.potentials[card.고유잠재.이름] || '-';
+            }
 
             let html = `
                 <div class="modal-card-header">
@@ -274,6 +301,7 @@
 
                 <div class="modal-section">
                     <h3>고유 잠재: ${card.고유잠재?.이름 || '-'}</h3>
+                    <p>${potentialDesc}</p>
                 </div>
             `;
 
@@ -281,23 +309,32 @@
             if (card.이벤트) {
                 html += `<div class="modal-section"><h3>여정 이벤트</h3>`;
 
-                ['1단계', '2단계', '3단계'].forEach(stageKey => {
+                ['1단계', '2단계', '3단계'].forEach((stageKey, index) => {
                     const stage = card.이벤트[stageKey];
                     if (stage) {
+                        const eventName = (card.이벤트.이름 && card.이벤트.이름[index]) ? card.이벤트.이름[index] : stageKey;
                         html += `
                             <div class="stage-block">
-                                <h4>${stageKey}</h4>
+                                <h4>${eventName}</h4>
                                 <div class="stage-choices">
                         `;
+
+                        // Check if B has content
+                        const hasB = stage['선택지B'] && stage['선택지B'].length > 0 && stage['선택지B'][0].획득 && stage['선택지B'][0].획득.length > 0;
 
                         ['선택지A', '선택지B'].forEach(choiceKey => {
                             const choiceName = stage.이름_선택지?.[choiceKey] || (choiceKey === '선택지A' ? 'A' : 'B');
                             const choices = stage[choiceKey];
 
                             if (choices && choices.length > 0 && choices[0].획득 && choices[0].획득.length > 0) {
-                                html += `<div class="choice-column">
-                                    <div class="choice-header">${choiceName}</div>
-                                    <div class="choice-rewards">`;
+                                html += `<div class="choice-column">`;
+
+                                // Only show header if it's B, OR if it's A and B also exists
+                                if (choiceKey === '선택지B' || hasB) {
+                                    html += `<div class="choice-header">${choiceName}</div>`;
+                                }
+
+                                html += `<div class="choice-rewards">`;
 
                                 choices.forEach(group => {
                                     if (group.획득 && group.획득.length > 0) {

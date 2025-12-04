@@ -66,8 +66,7 @@
                     "type": "button",
                     "icon": "⬅",
                     "title": "뒤로가기",
-                    "action": "navigate",
-                    "target": "index.html"
+                    "action": "history-back"
                 }
             ],
             "right": [

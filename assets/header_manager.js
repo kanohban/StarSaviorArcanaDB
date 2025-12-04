@@ -20,6 +20,10 @@ const HeaderManager = {
 
             // 3. Render Header
             this.render(container, pageConfig);
+
+            // 4. Sync State on Navigation/Tab Switch
+            window.addEventListener('pageshow', () => this.syncState());
+            window.addEventListener('storage', () => this.syncState());
         } catch (error) {
             console.error('Error initializing header:', error);
         }
@@ -68,6 +72,9 @@ const HeaderManager = {
         if (!buttons) return '';
         return buttons.map(btn => {
             if (btn.type === 'button') {
+                if (btn.action === 'history-back') {
+                    return `<button class="header-btn" title="${btn.title}" onclick="history.back()">${btn.icon}</button>`;
+                }
                 return `<button class="header-btn" title="${btn.title}" onclick="${btn.action === 'navigate' ? `location.href='${btn.target}'` : btn.action}">${btn.icon}</button>`;
             } else if (btn.type === 'theme-toggle') {
                 return `<button class="header-btn theme-toggle" title="테마 변경">${savedTheme === 'dark' ? '🌙' : '☀️'}</button>`;
@@ -101,6 +108,30 @@ const HeaderManager = {
                 localStorage.setItem('viewMode', isMobile ? 'mobile' : 'pc');
                 mobileBtn.textContent = isMobile ? '📱' : '🖥️';
             });
+        }
+    },
+
+    syncState() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedView = localStorage.getItem('viewMode') || 'pc';
+
+        // Update Root/Body
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedView === 'mobile') {
+            document.body.classList.add('mobile-mode');
+        } else {
+            document.body.classList.remove('mobile-mode');
+        }
+
+        // Update Buttons
+        const themeBtn = document.querySelector('.theme-toggle');
+        if (themeBtn) {
+            themeBtn.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+        }
+
+        const mobileBtn = document.querySelector('.mobile-toggle');
+        if (mobileBtn) {
+            mobileBtn.textContent = savedView === 'mobile' ? '📱' : '🖥️';
         }
     }
 };
