@@ -1,20 +1,15 @@
 const XLSX = require('xlsx');
+const path = require('path');
 
-try {
-    const workbook = XLSX.readFile('cards_data.xlsx');
-    console.log('Sheet Names:', workbook.SheetNames);
+const filePath = path.join(__dirname, '../구원자DB.xlsx');
+const workbook = XLSX.readFile(filePath);
 
-    workbook.SheetNames.forEach(sheetName => {
-        const sheet = workbook.Sheets[sheetName];
-        const data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
-        console.log(`\n--- Sheet: ${sheetName} ---`);
-        if (data.length > 0) {
-            console.log('Header:', data[0]);
-            console.log('First Row:', data[1]);
-        } else {
-            console.log('Empty Sheet');
-        }
-    });
-} catch (error) {
-    console.error('Error reading Excel file:', error.message);
+console.log('Sheet Names:', workbook.SheetNames);
+
+if (workbook.SheetNames.includes('플레이버 텍스트')) {
+    const sheet = workbook.Sheets['플레이버 텍스트'];
+    const data = XLSX.utils.sheet_to_json(sheet);
+    console.log('Flavor Text Data Sample:', data.slice(0, 3));
+} else {
+    console.log('Sheet "플레이버 텍스트" not found.');
 }

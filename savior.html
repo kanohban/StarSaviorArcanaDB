@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타 세이비어 아르카나 DB - 구원자 도감</title>
+    <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
+    <link rel="stylesheet" href="./assets/header.css?v=3.3.0">
+    <link rel="stylesheet" href="./assets/savior.css?v=fix_layout_v5">
+</head>
+
+<body>
+    <div class="app">
+        <header id="header-container"></header>
+
+        <main class="savior-container">
+            <!-- Savior List (Grid) -->
+            <section class="savior-list-section">
+                <div class="search-bar">
+                    <input type="text" id="savior-search" placeholder="구원자 이름 검색..." autocomplete="off">
+                </div>
+
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <select id="filter-grade" class="filter-select">
+                            <option value="all">등급: 전체</option>
+                            <option value="SSR">SSR</option>
+                            <option value="SR">SR</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="filter-attribute" class="filter-select">
+                            <option value="all">속성: 전체</option>
+                            <option value="태양">태양</option>
+                            <option value="달">달</option>
+                            <option value="별">별</option>
+                            <option value="질서">질서</option>
+                            <option value="혼돈">혼돈</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="filter-class" class="filter-select">
+                            <option value="all">클래스: 전체</option>
+                            <option value="스트라이커">스트라이커</option>
+                            <option value="어쌔신">어쌔신</option>
+                            <option value="레인저">레인저</option>
+                            <option value="캐스터">캐스터</option>
+                            <option value="디펜더">디펜더</option>
+                            <option value="서포터">서포터</option>
+                        </select>
+                    </div>
+                    <div class="sort-group">
+                        <select id="sort-select" class="filter-select">
+                            <option value="default">기본 정렬</option>
+                            <option value="name-asc">이름순 (가나다)</option>
+                            <option value="name-desc">이름순 (역순)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="savior-grid" id="savior-grid">
+                    <!-- Savior Icons will be rendered here -->
+                </div>
+            </section>
+
+            <!-- Savior Detail Modal -->
+            <div id="savior-modal" class="savior-modal hidden">
+                <div class="modal-content">
+                    <button class="close-button">&times;</button>
+                    <button class="nav-btn prev-btn">&lt;</button>
+                    <button class="nav-btn next-btn">&gt;</button>
+
+                    <div class="savior-detail-layout">
+                        <!-- Left Column: Illust & Arc Point -->
+                        <div class="detail-left">
+                            <div class="illust-container">
+                                <img id="savior-illust" src="" alt="Savior Illustration" class="savior-illust">
+                            </div>
+                            <div class="arcpoint-container">
+                                <h3>아크 포인트 <span class="spoiler-warning">(스포일러 주의)</span></h3>
+                                <div class="arcpoint-wrapper spoiler-active" id="arcpoint-wrapper">
+                                    <img id="savior-arcpoint" src="" alt="Arc Point" class="savior-arcpoint">
+                                    <div class="spoiler-overlay">
+                                        <span>터치하여 확인</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Profile, Stats, Skills -->
+                        <div class="detail-right">
+                            <!-- Profile Header -->
+                            <div class="profile-header">
+                                <img id="savior-icon" src="" alt="Icon" class="profile-icon">
+                                <div class="profile-info">
+                                    <h2 id="savior-name">이름</h2>
+                                    <div class="profile-tags">
+                                        <span id="savior-element" class="tag">속성</span>
+                                        <span id="savior-class" class="tag">클래스</span>
+                                        <span id="savior-role" class="tag">공격타입</span>
+                                    </div>
+                                    <p id="savior-desc" class="profile-desc">캐릭터 소개...</p>
+                                </div>
+                            </div>
+
+                            <!-- Tabs -->
+                            <div class="detail-tabs">
+                                <button class="tab-btn active" data-tab="stats">스테이터스</button>
+                                <button class="tab-btn" data-tab="skills">스킬 정보</button>
+                                <button class="tab-btn" data-tab="profile">상세 프로필</button>
+                            </div>
+
+                            <!-- Tab Content: Stats -->
+                            <div id="tab-stats" class="tab-content active">
+                                <div class="stat-group">
+                                    <h3>기본 스테이터스 (Lv.<span id="stat-max-level">200</span>)</h3>
+                                    <div class="stat-bars" id="basic-stats">
+                                        <!-- Gauge Bars Rendered Here -->
+                                    </div>
+                                    <div class="stat-grid-text" id="sub-stats">
+                                        <!-- Hit/Res/CritDmg Text Stats -->
+                                    </div>
+                                </div>
+                                <div class="stat-group">
+                                    <h3>여정 스테이터스</h3>
+                                    <div class="journey-stat-grid" id="journey-stats">
+                                        <!-- Journey Stats -->
+                                    </div>
+                                </div>
+                                <div class="stat-group">
+                                    <h3>공명 잠재력</h3>
+                                    <ul class="potential-list" id="potential-list">
+                                        <!-- Potentials -->
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Tab Content: Skills -->
+                            <div id="tab-skills" class="tab-content">
+                                <div class="skill-list" id="skill-list">
+                                    <!-- Skills Rendered Here -->
+                                </div>
+                            </div>
+
+                            <!-- Tab Content: Detailed Profile -->
+                            <div id="tab-profile" class="tab-content">
+                                <div class="profile-details" id="profile-details">
+                                    <!-- Detailed Profile Info -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer-container"></footer>
+    </div>
+
+    <!-- Tooltip for Flavor Text -->
+    <div id="flavor-tooltip" class="flavor-tooltip hidden"></div>
+
+    <script src="./assets/header_manager.js?v=3.3.0"></script>
+    <script src="./assets/footer_manager.js"></script>
+    <script src="./assets/hangul_utils.js?v=3.3.0"></script>
+    <script src="./assets/savior_manager.js?v=fix_nav_v2"></script>
+    <script>
+        // Initialize State
+        (function () {
+            const html = document.documentElement;
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+        })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.HeaderManager) window.HeaderManager.init(document.getElementById('header-container'), 'savior');
+            if (window.FooterManager) window.FooterManager.init(document.getElementById('footer-container'));
+
+            if (window.SaviorManager) {
+                window.SaviorManager.init();
+            } else {
+                console.error('SaviorManager not found!');
+            }
+        });
+    </script>
+</body>
+
+</html>
