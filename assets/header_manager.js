@@ -1,6 +1,18 @@
 const HeaderManager = {
     async init(container, pageId) {
         try {
+            // 0. Inject Background for Sub-pages
+            if (!document.querySelector('.stars-container')) {
+                const starsHTML = `
+                    <div class="stars-container">
+                        <div class="stars"></div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="nebula-glow"></div>
+                `;
+                document.body.insertAdjacentHTML('afterbegin', starsHTML);
+            }
+
             // 1. Load Config
             const response = await fetch('./data/layout_config.json');
             if (!response.ok) throw new Error('Failed to load config');
