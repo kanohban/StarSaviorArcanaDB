@@ -141,6 +141,34 @@ html {
     box-shadow: none !important;
 }
 
+/* --- Dark Mode Glassmorphism --- */
+[data-theme="dark"] .card-item,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .journey-stage-card,
+[data-theme="dark"] .bonus-box,
+[data-theme="dark"] .ability-box,
+[data-theme="dark"] .choice-box,
+[data-theme="dark"] .app-header,
+[data-theme="dark"] .input-group,
+[data-theme="dark"] .filter-select,
+[data-theme="dark"] .search-input,
+[data-theme="dark"] .savior-item,
+[data-theme="dark"] .event-card,
+[data-theme="dark"] .choice-results,
+[data-theme="dark"] .tab-btn {
+    background-color: rgba(30, 30, 30, 0.6) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #e0e0e0;
+}
+
+/* Ensure text remains readable inside glass containers */
+[data-theme="dark"] .card-item:hover {
+    background-color: rgba(50, 50, 50, 0.7) !important;
+    border-color: var(--primary-color) !important;
+}
+
 /* Force parent padding/gap reset to ensure consistency */
 .app-header {
     padding: 0 !important;

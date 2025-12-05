@@ -16,6 +16,7 @@ const SaviorManager = {
     filteredList: [], // Store currently rendered list for navigation
     currentSavior: null,
     activeTab: 'stats', // Default active tab
+    searchTerm: '',
 
     init: async function () {
         console.log('SaviorManager init started');
@@ -96,7 +97,40 @@ const SaviorManager = {
             const gradeMatch = this.filterGrade === 'all' || s.profile.등급 === this.filterGrade;
             const attrMatch = this.filterAttribute === 'all' || s.profile.속성 === this.filterAttribute;
             const classMatch = this.filterClass === 'all' || s.profile.클래스 === this.filterClass;
-            return gradeMatch && attrMatch && classMatch;
+
+            let searchMatch = true;
+            if (this.searchTerm) {
+                const term = this.searchTerm.toLowerCase();
+                const p = s.profile;
+
+                // 1. Basic Profile Search
+                if (p.이름.toLowerCase().includes(term) ||
+                    (window.HangulUtils && window.HangulUtils.isMatch(p.이름, term))) {
+                    searchMatch = true;
+                } else if (p.속성.includes(term) || p.클래스.includes(term) || p.소속.includes(term)) {
+                    searchMatch = true;
+                } else if (p['캐릭터 소개'] && p['캐릭터 소개'].toLowerCase().includes(term)) {
+                    searchMatch = true;
+                } else {
+                    // 2. Deep Skill Search
+                    let skillMatch = false;
+                    if (s.skills) {
+                        const skillTypes = ['패시브', '기본기', '특수기', '궁극기'];
+                        for (const type of skillTypes) {
+                            const name = s.skills[type];
+                            const desc = s.skills[`${type}_설명`];
+                            if ((name && name.toLowerCase().includes(term)) ||
+                                (desc && desc.toLowerCase().includes(term))) {
+                                skillMatch = true;
+                                break;
+                            }
+                        }
+                    }
+                    searchMatch = skillMatch;
+                }
+            }
+
+            return gradeMatch && attrMatch && classMatch && searchMatch;
         });
     },
 
@@ -463,18 +497,8 @@ const SaviorManager = {
 
         // Search
         document.getElementById('savior-search').addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            const items = document.querySelectorAll('.savior-item');
-            items.forEach(item => {
-                const name = item.querySelector('.name').textContent.toLowerCase();
-                if (window.HangulUtils && window.HangulUtils.isMatch(name, term)) {
-                    item.style.display = 'flex';
-                } else if (name.includes(term)) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+            this.searchTerm = e.target.value.trim();
+            this.renderGrid();
         });
 
         // Filter Selects
