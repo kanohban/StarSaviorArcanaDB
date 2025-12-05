@@ -119,17 +119,21 @@
         }
 
         /* --- Header / Logo --- */
-        .logo-icon {
+        .logo-link {
             position: absolute;
             top: 40px;
             left: 50px;
+            z-index: 20;
+            text-decoration: none;
+            display: block;
+        }
+
+        .logo-icon {
             width: 280px;
-            /* Increased size significantly */
             height: auto;
             opacity: 1;
             transition: 0.3s;
             filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
-            z-index: 20;
         }
 
         .logo-icon:hover {
@@ -154,7 +158,6 @@
         .hero-section {
             text-align: center;
             margin-bottom: 5rem;
-            /* TITLE POSITION: Adjust margin-top to move title up/down */
             margin-top: 3rem;
             animation: fadeUp 1s ease-out;
             position: relative;
@@ -163,9 +166,7 @@
 
         .main-title-img {
             display: block;
-            /* Force block to prevent inline flow */
             margin: 0 auto;
-            /* Center block element */
             max-width: 100%;
             width: auto;
             height: auto;
@@ -189,7 +190,6 @@
 
         .subtitle {
             display: table;
-            /* Use table or block with fit-content behavior but ensuring new line */
             margin: 1.5rem auto 0;
             font-size: 1.8rem;
             color: #ffffff;
@@ -205,10 +205,12 @@
 
         /* --- Card Grid --- */
         .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
             width: 100%;
+            max-width: 900px;
             perspective: 1000px;
             margin-bottom: 2rem;
         }
@@ -216,7 +218,7 @@
         .menu-card {
             background: transparent;
             border: none;
-            padding: 2rem;
+            padding: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -228,8 +230,9 @@
             overflow: visible;
             box-shadow: none;
             height: auto;
-            min-height: 320px;
-            justify-content: center;
+            flex: 0 0 30%;
+            /* Force 3 items per row on PC */
+            max-width: 30%;
         }
 
         .menu-card::before {
@@ -237,19 +240,15 @@
         }
 
         .menu-card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-10px) scale(1.05);
             border-color: transparent;
             box-shadow: none;
-        }
-
-        .menu-card:hover::before {
-            opacity: 1;
         }
 
         .card-icon {
             font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             transition: 0.4s;
             filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) brightness(1.3);
             background: rgba(255, 255, 255, 0.2);
@@ -260,7 +259,6 @@
             align-items: center;
             justify-content: center;
             border-radius: 20px;
-            /* Rounded square for text/image placeholder */
             letter-spacing: 0.1em;
             object-fit: contain;
             padding: 15px;
@@ -272,47 +270,13 @@
             background: var(--primary-glow);
         }
 
-
-
-        .card-desc {
-            font-size: 0.95rem;
-            color: var(--text-sub);
-            line-height: 1.6;
-            font-weight: 400;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: 0.3s;
-        }
-
-        .menu-card:hover .card-desc {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         .card-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin: 0.5rem 0 0.5rem;
+            margin-top: 0.5rem;
             color: var(--text-main);
             letter-spacing: 0.05em;
         }
-
-        .card-arrow {
-            margin-top: auto;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: 0.3s;
-            color: var(--accent);
-            font-weight: 700;
-            padding-top: 1rem;
-        }
-
-        .menu-card:hover .card-arrow {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-
 
         /* --- Animations --- */
         @keyframes fadeUp {
@@ -343,13 +307,12 @@
             animation: fadeUp 0.6s ease-out 0.5s backwards;
         }
 
+        .menu-card:nth-child(5) {
+            animation: fadeUp 0.6s ease-out 0.6s backwards;
+        }
+
         /* --- Responsive --- */
         @media (max-width: 1024px) {
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-                max-width: 800px;
-            }
-
             .logo-icon {
                 width: 200px;
             }
@@ -357,43 +320,73 @@
 
         @media (max-width: 600px) {
             .container {
-                padding: 1rem;
+                padding: 0.5rem;
+                justify-content: center;
+                height: 100vh;
+                display: flex;
             }
 
             .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.8rem;
+                gap: 0.5rem;
+                margin-bottom: 0.5rem;
+                max-width: 100%;
             }
 
             .menu-card {
-                padding: 1rem;
-                height: auto;
-                min-height: 220px;
+                padding: 1rem 0.2rem;
+                flex: 0 0 32%;
+                max-width: 32%;
             }
 
             .card-icon {
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
                 margin-bottom: 0.5rem;
+                padding: 10px;
+                border-radius: 16px;
+                background: rgba(255, 255, 255, 0.1);
+                border-width: 1px;
             }
 
             .card-title {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                margin: 0;
             }
 
             .main-title-img {
-                width: 85%;
+                width: 90%;
+                max-width: 350px;
+            }
+
+            .logo-link {
+                top: 15px;
+                left: 15px;
             }
 
             .logo-icon {
-                width: 150px;
-                top: 20px;
-                left: 20px;
+                width: 180px;
             }
 
             .hero-section {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 1rem;
+                margin-top: 4rem;
+                margin-bottom: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+                padding: 0.4rem 1.2rem;
+                margin: 0.4rem auto 0;
+                background: rgba(15, 23, 42, 0.4);
+                border-width: 0.5px;
+            }
+
+            #footer-container {
+                margin-top: 2rem;
+                padding: 1rem !important;
+                transform: none;
+                width: 100%;
             }
         }
 
@@ -411,6 +404,7 @@
         .app-footer-content p {
             color: var(--text-sub) !important;
             opacity: 0.8;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -423,8 +417,10 @@
     </div>
     <div class="nebula-glow"></div>
 
-    <!-- Top Left Logo - Larger now -->
-    <img src="images/index/logo.png" alt="Logo" class="logo-icon">
+    <!-- Top Left Logo Link -->
+    <a href="https://starsavior.com/kr" target="_blank" class="logo-link">
+        <img src="images/index/logo.png" alt="Logo" class="logo-icon">
+    </a>
 
     <div class="container">
 
@@ -437,41 +433,26 @@
             <a href="arcana.html" class="menu-card">
                 <img src="images/index/arcana.png" alt="ARCANA" class="card-icon">
                 <h3 class="card-title">ARCANA</h3>
-
-                <p class="card-desc">모든 아르카나의 정보를 확인하고 상세 데이터를 열람하세요.</p>
-                <div class="card-arrow">확인하기 →</div>
             </a>
 
             <a href="savior.html" class="menu-card">
                 <img src="images/index/savior.png" alt="SAVIOR" class="card-icon">
                 <h3 class="card-title">SAVIOR</h3>
-
-                <p class="card-desc">구원자들의 정보와 능력을 알아보세요.</p>
-                <div class="card-arrow">확인하기 →</div>
             </a>
 
             <a href="journey.html" class="menu-card">
                 <img src="images/index/journey.png" alt="JOURNEY" class="card-icon">
                 <h3 class="card-title">JOURNEY</h3>
-
-                <p class="card-desc">여정 선택지의 정보를 확인하고 선택하세요.</p>
-                <div class="card-arrow">확인하기 →</div>
             </a>
 
             <a href="deck.html" class="menu-card">
                 <img src="images/index/deck.png" alt="DECK" class="card-icon">
                 <h3 class="card-title">DECK</h3>
-
-                <p class="card-desc">아르카나의 정보를 바탕으로 최적의 덱을 구성하세요.</p>
-                <div class="card-arrow">확인하기 →</div>
             </a>
 
             <a href="search.html" class="menu-card">
                 <img src="images/index/search.png" alt="SEARCH" class="card-icon">
                 <h3 class="card-title">SEARCH</h3>
-
-                <p class="card-desc">통합검색으로 아르카나와 여정의 이벤트를 한 눈에 확인하세요.</p>
-                <div class="card-arrow">확인하기 →</div>
             </a>
         </nav>
 
@@ -486,7 +467,6 @@
             }
         });
     </script>
-
 </body>
 
 </html>
