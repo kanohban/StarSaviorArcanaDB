@@ -6,33 +6,33 @@
     },
     "pages": {
         "index": {
-            "title": "스타 세이비어 아르카나 DB",
+            "title": "아르카나",
             "left": [
                 {
                     "type": "button",
-                    "icon": "⚔️",
-                    "title": "구원자 DB",
+                    "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "구원자",
                     "action": "navigate",
                     "target": "savior.html"
                 },
                 {
                     "type": "button",
-                    "icon": "📖",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "여정",
                     "action": "navigate",
                     "target": "journey.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🛠️",
-                    "title": "덱 빌더",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
                     "action": "navigate",
                     "target": "deck.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🔍",
-                    "title": "통합 검색",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "검색",
                     "action": "navigate",
                     "target": "search.html"
                 }
@@ -47,33 +47,33 @@
             ]
         },
         "journey": {
-            "title": "여정 이벤트 선택지",
+            "title": "여정",
             "left": [
                 {
                     "type": "button",
-                    "icon": "🃏",
-                    "title": "아르카나 DB",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
                     "action": "navigate",
-                    "target": "index.html"
+                    "target": "arcana.html"
                 },
                 {
                     "type": "button",
-                    "icon": "⚔️",
-                    "title": "구원자 DB",
+                    "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "구원자",
                     "action": "navigate",
                     "target": "savior.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🛠️",
-                    "title": "덱 빌더",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
                     "action": "navigate",
                     "target": "deck.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🔍",
-                    "title": "통합 검색",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "검색",
                     "action": "navigate",
                     "target": "search.html"
                 }
@@ -88,33 +88,33 @@
             ]
         },
         "search": {
-            "title": "통합 검색",
+            "title": "검색",
             "left": [
                 {
                     "type": "button",
-                    "icon": "🃏",
-                    "title": "아르카나 DB",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
                     "action": "navigate",
-                    "target": "index.html"
+                    "target": "arcana.html"
                 },
                 {
                     "type": "button",
-                    "icon": "⚔️",
-                    "title": "구원자 DB",
+                    "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "구원자",
                     "action": "navigate",
                     "target": "savior.html"
                 },
                 {
                     "type": "button",
-                    "icon": "📖",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "여정",
                     "action": "navigate",
                     "target": "journey.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🛠️",
-                    "title": "덱 빌더",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
                     "action": "navigate",
                     "target": "deck.html"
                 }
@@ -129,33 +129,33 @@
             ]
         },
         "deck": {
-            "title": "덱 빌더",
+            "title": "덱 구성",
             "left": [
                 {
                     "type": "button",
-                    "icon": "🃏",
-                    "title": "아르카나 DB",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
                     "action": "navigate",
-                    "target": "index.html"
+                    "target": "arcana.html"
                 },
                 {
                     "type": "button",
-                    "icon": "⚔️",
-                    "title": "구원자 DB",
+                    "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "구원자",
                     "action": "navigate",
                     "target": "savior.html"
                 },
                 {
                     "type": "button",
-                    "icon": "📖",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "여정",
                     "action": "navigate",
                     "target": "journey.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🔍",
-                    "title": "통합 검색",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "검색",
                     "action": "navigate",
                     "target": "search.html"
                 }
@@ -170,33 +170,33 @@
             ]
         },
         "savior": {
-            "title": "구원자 도감",
+            "title": "구원자",
             "left": [
                 {
                     "type": "button",
-                    "icon": "🃏",
-                    "title": "아르카나 DB",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
                     "action": "navigate",
-                    "target": "index.html"
+                    "target": "arcana.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🛠️",
-                    "title": "덱 빌더",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
                     "action": "navigate",
                     "target": "deck.html"
                 },
                 {
                     "type": "button",
-                    "icon": "📖",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "여정",
                     "action": "navigate",
                     "target": "journey.html"
                 },
                 {
                     "type": "button",
-                    "icon": "🔍",
-                    "title": "통합 검색",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "검색",
                     "action": "navigate",
                     "target": "search.html"
                 }
