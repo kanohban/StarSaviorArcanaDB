@@ -1,10 +1,12 @@
 {
-  "version": "4.2.1",
+  "version": "4.2.0",
   "dependencies": {
     "xlsx": "^0.18.5"
   },
   "scripts": {
-    "deploy": "git push origin gh-pages"
+    "deploy": "git push origin gh-pages",
+    "data:export": "node scripts/data_manager.js export",
+    "data:import": "node scripts/data_manager.js import"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"

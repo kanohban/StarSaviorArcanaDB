@@ -185,7 +185,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    color: transparent;
+    color: var(--text-color);
     border: none;
     font-size: 4rem;
     padding: 0;
@@ -359,10 +359,11 @@
 }
 
 .tab-btn.active {
-    opacity: 1;
-    background: var(--primary-color);
-    color: white;
+    opacity: 1 !important;
+    background: var(--primary-color) !important;
+    color: white !important;
     font-weight: bold;
+    border: 1px solid var(--primary-color) !important;
 }
 
 .tab-content {
@@ -486,6 +487,12 @@
 }
 
 /* Potentials */
+.potential-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .potential-list li {
     margin-bottom: 8px;
     padding: 8px;
@@ -953,4 +960,172 @@
 
 [data-theme="light"] .skill-nova-desc {
     color: #555;
+}
+
+/* Skill Level Info */
+.skill-level-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-highlight);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.skill-level-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-level-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.skill-level-btn.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.skill-level-data {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.skill-level-data.active {
+    max-height: 500px;
+    /* Arbitrary large height */
+    opacity: 1;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.skill-level-data table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    /* Gap between rows */
+}
+
+.skill-level-data tr {
+    background: rgba(30, 100, 200, 0.3);
+    /* Blueish tint */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Specific styling to match the reference image's blue look */
+.skill-level-data td {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #eee;
+}
+
+.skill-level-data .sl-num {
+    width: 40px;
+    text-align: center;
+    background: rgba(0, 80, 200, 0.6);
+    /* Darker blue for number */
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: #fff;
+}
+
+/* Wrapper for Side-by-Side Layout */
+.journey-potential-wrapper {
+    display: flex;
+    gap: 15px;
+    /* Adjust gap as needed */
+    margin-bottom: 25px;
+}
+
+.journey-potential-wrapper .stat-group {
+    margin-bottom: 0;
+    /* Remove bottom margin from inner groups */
+    flex: 1;
+    /* Distribute space equally */
+}
+
+/* Optional: Make Journey Grid 2 columns if it gets too squeezed, or keep 3 */
+
+
+.skill-level-data .sl-desc {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid rgba(0, 80, 200, 0.3);
+    border-left: none;
+}
+
+/* Light Mode Overrides for Skill Level Info */
+[data-theme="light"] .skill-level-data tr {
+    background: #e7f5ff;
+    /* Very light blue */
+    border: 1px solid #a5d8ff;
+}
+
+[data-theme="light"] .skill-level-data td {
+    color: #333;
+}
+
+[data-theme="light"] .skill-level-data .sl-num {
+    background: #d0ebff;
+    color: #1864ab;
+    border-right: 1px solid #a5d8ff;
+}
+
+[data-theme="light"] .skill-level-data .sl-desc {
+    border-color: #a5d8ff;
+}
+
+/* Image Popup */
+.image-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.image-popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.image-popup img {
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    object-fit: contain;
+}
+
+.popup-close-hint {
+    color: #aaa;
+    margin-top: 15px;
+    font-size: 0.9rem;
 }

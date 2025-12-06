@@ -3,8 +3,6 @@
     {
       "category": "여정 이벤트",
       "name": "여가 시간",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 한정 디저트를 먹으러 가자!",
@@ -29,6 +27,7 @@
         },
         {
           "text": "4. 오늘은 이대로 푹 쉬자.",
+          "condition": "",
           "result": "스태미나 +5",
           "result_positive": "",
           "result_negative": ""
@@ -38,8 +37,6 @@
     {
       "category": "여정 이벤트",
       "name": "수집가가 온다",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 교환을 승낙한다.",
@@ -50,6 +47,7 @@
         },
         {
           "text": "2. 거래하고 싶은 마음은 없다.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -60,22 +58,24 @@
       "category": "여정 이벤트",
       "name": "구원단 보급",
       "timing": "3월 중순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 영양제를 고르자.",
+          "condition": "",
           "result": "만족도 설문지(턴 시작 속도증가 10중첩), 힘 +10",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "2. 푹신한 베개를 고르자.",
+          "condition": "",
           "result": "만족도 설문지(턴 시작 속도증가 10중첩), 체력 +10",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "3. 매운 음식을 고르자.",
+          "condition": "",
           "result": "만족도 설문지(턴 시작 속도증가 10중첩), 인내 +10",
           "result_positive": "",
           "result_negative": ""
@@ -85,8 +85,6 @@
     {
       "category": "여정 이벤트",
       "name": "우연한 발견",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 힘은 들겠지만 파보자!",
@@ -97,6 +95,7 @@
         },
         {
           "text": "2. 아무것도 안하기.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -106,8 +105,6 @@
     {
       "category": "여정 이벤트",
       "name": "교단의 분실물",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 어서 열어보자.",
@@ -118,6 +115,7 @@
         },
         {
           "text": "2. 다음에 열어보자.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -128,12 +126,11 @@
       "category": "여정 이벤트",
       "name": "공업소의 홍보 전략",
       "timing": "5월 중순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 돈을 내고 구입한다.",
           "condition": "주화 -50",
-          "result": "스태미나 +10, 전설의 검 모조품(궁극기 사용시 효과적중 증가) / 힘인증특훈서(공증)",
+          "result": "스태미나 +5, 전설의 검 모조품(궁극기 사용시 효과적중 증가) / 힘인증특훈서(공증)",
           "result_positive": "",
           "result_negative": ""
         },
@@ -153,6 +150,7 @@
         },
         {
           "text": "4. 지나쳐 간다.",
+          "condition": "",
           "result": "",
           "result_positive": "스태미나 +5",
           "result_negative": "없음"
@@ -162,8 +160,6 @@
     {
       "category": "여정 이벤트",
       "name": "비밀의 지옥 특훈",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 펀치 기계 잘 치는 법",
@@ -181,6 +177,7 @@
         },
         {
           "text": "3. 지금은 괜찮다.",
+          "condition": "",
           "result": "힘 +10, 체력 +10, 인내 +10",
           "result_positive": "",
           "result_negative": ""
@@ -191,28 +188,31 @@
       "category": "여정 이벤트",
       "name": "신설 부서는 노력 중!",
       "timing": "1월 하순",
-      "condition": "",
       "choices": [
         {
-          "text": "1. 설문 평가 : 좋음",
+          "text": "1. 설문 평가 : 좋음",
+          "condition": "",
           "result": "컨디션 +1, 주화 +10",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "2. 설문 평가 : 보통",
+          "text": "2. 설문 평가 : 보통",
+          "condition": "",
           "result": "스태미나 -10, 체력 +10, 주화 +30",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "3. 설문 평가 : 나쁨",
+          "condition": "",
           "result": "컨디션 -1, 주화 +20, 잠재 +20 or 30",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "4. 오늘은 좀…",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -222,8 +222,6 @@
     {
       "category": "여정 이벤트",
       "name": "시작형 강화제",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 섬뜩하게 붉은빛의 물약.",
@@ -248,6 +246,7 @@
         },
         {
           "text": "4. 옆에 놓여 있는 평범한 음료수.",
+          "condition": "",
           "result": "",
           "result_positive": "힘 +10, 체력 +10, 인내 +10",
           "result_negative": "컨디션 -1, 힘 -10, 체력 -10, 인내 -10"
@@ -257,8 +256,6 @@
     {
       "category": "여정 이벤트",
       "name": "완성형 강화제",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 이렇게 된 거 마셔보자!",
@@ -269,6 +266,7 @@
         },
         {
           "text": "2. 음료수가 좋겠어",
+          "condition": "",
           "result": "스태미나 +10",
           "result_positive": "",
           "result_negative": ""
@@ -278,18 +276,17 @@
     {
       "category": "여정 이벤트",
       "name": "교단의 제안",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
-          "text": "1. 교단에 유물을 매매한다.",
+          "text": "1. 교단에 유물을 매매한다.",
           "condition": "정체불명의 유물",
           "result": "주화 +80",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "2. 가지고 있어 보자.",
+          "text": "2. 가지고 있어 보자.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -299,8 +296,6 @@
     {
       "category": "여정 이벤트",
       "name": "간단한 테스트",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 적당한 힘으로 충격을 가한다.",
@@ -318,6 +313,7 @@
         },
         {
           "text": "3. 유물은 소중히 간직해야 한다.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -327,23 +323,24 @@
     {
       "category": "여정 이벤트",
       "name": "신비한 석상",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 칼을 든 석상에 기도한다.",
+          "condition": "",
           "result": "체력 -20, 힘 +20, 석상의 칼(이벤트템)",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "2. 꽃을 든 석상에 기도한다.",
+          "condition": "",
           "result": "힘 -20, 체력 +20, 석상의 꽃(이벤트템)",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "3. 기도하지 않는다.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -353,8 +350,6 @@
     {
       "category": "여정 이벤트",
       "name": "예상 못한 격려",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 하는 만큼 성과.",
@@ -372,6 +367,7 @@
         },
         {
           "text": "3. 무리하지 말고 대피하자.",
+          "condition": "",
           "result": "",
           "result_positive": "스태미나 +10",
           "result_negative": "컨디션 -1"
@@ -381,11 +377,10 @@
     {
       "category": "여정 이벤트",
       "name": "훈련 실패",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 아니, 훈련은 회복하고 나서 하자.",
+          "condition": "",
           "result": "",
           "result_positive": "",
           "result_negative": ""
@@ -398,7 +393,7 @@
           "result_negative": ""
         },
         {
-          "text": "3. 활력 포션을 건넨다.",
+          "text": "3. 활력 포션을 건넨다.",
           "condition": "활력 포션",
           "result": "스태미나 +15, 잠재력 +10",
           "result_positive": "",
@@ -409,8 +404,6 @@
     {
       "category": "여정 이벤트",
       "name": "칼에 숨겨진 힘",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 석상의 칼을 집어든다.",
@@ -421,6 +414,7 @@
         },
         {
           "text": "2. 그대로 놔둔다.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -430,8 +424,6 @@
     {
       "category": "여정 이벤트",
       "name": "꽃에 숨겨진 힘",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 석상의 꽃을 집어든다.",
@@ -442,6 +434,7 @@
         },
         {
           "text": "2. 그대로 놔둔다.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -453,8 +446,6 @@
     {
       "category": "리세트 이벤트",
       "name": "리세트의 일과",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 도와주자.",
@@ -465,6 +456,7 @@
         },
         {
           "text": "2. 잠시 기다리자.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -475,7 +467,6 @@
       "category": "리세트 이벤트",
       "name": "리세트의 휴가",
       "timing": "10월 하순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 파는 곳을 같이 찾아준다.",
@@ -486,6 +477,7 @@
         },
         {
           "text": "2. 파는 곳의 위치를 알려준다.",
+          "condition": "",
           "result": "집중 +8",
           "result_positive": "",
           "result_negative": ""
@@ -496,10 +488,9 @@
       "category": "리세트 이벤트",
       "name": "리세트의 우울",
       "timing": "1월 하순",
-      "condition": "",
       "choices": [
         {
-          "text": "1. 혹시 이거 아니야?",
+          "text": "1. 혹시 이거 아니야?",
           "condition": "고풍스러운 열쇠",
           "result": "잠재 +22, 리세트의 저금통(턴시작 속도증가 5중첩)",
           "result_positive": "",
@@ -507,6 +498,7 @@
         },
         {
           "text": "2. 기술자를 부르자.",
+          "condition": "",
           "result": "잠재 +15",
           "result_positive": "",
           "result_negative": ""
@@ -517,7 +509,6 @@
       "category": "리세트 이벤트",
       "name": "리세트의 행운",
       "timing": "9월 하순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 추첨권을 왼쪽 상자에 넣는다.",
@@ -535,6 +526,7 @@
         },
         {
           "text": "3. 다음 기회를 노린다.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -545,17 +537,17 @@
       "category": "리세트 이벤트",
       "name": "리세트의 유혹",
       "timing": "6월 하순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 대신 구입해 준다.",
           "condition": "주화 -30",
-          "result": "집중 +5 or 10, 보호 +5 or 10, 달빛 에센스 샘플(궁극기 사용시 효과적중,저항 증가)\nor 달빛 향수 샘플(궁극기 사용시 효과저항 증가) or 달빛 립밤 샘플(궁극기 사용시 효과적중 증가)",
+          "result": "집중 +5 or 10, 보호 +5 or 10, 달빛 에센스 샘플(궁극기 사용시 효과적중,저항 증가)\r\nor 달빛 향수 샘플(궁극기 사용시 효과저항 증가) or 달빛 립밤 샘플(궁극기 사용시 효과적중 증가)",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "2. 여정을 위해 아낀다.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -568,7 +560,6 @@
       "category": "원정 평가전 - 아가논",
       "name": "미궁 탐사",
       "timing": "7월 하순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 돈으로 해결하자.",
@@ -586,6 +577,7 @@
         },
         {
           "text": "3. 우회해서 가자.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -596,7 +588,6 @@
       "category": "원정 평가전 - 아가논",
       "name": "습격",
       "timing": "8월 초순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 지형지물을 활용해 따돌리자.",
@@ -614,6 +605,7 @@
         },
         {
           "text": "3. 상층부로 도망치자.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -623,8 +615,6 @@
     {
       "category": "조우 이벤트",
       "name": "갑작스러운 조우 – 슬라임",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 슬라임을 몰아내자.",
@@ -642,6 +632,7 @@
         },
         {
           "text": "3. 얽히지 말자.",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -654,7 +645,6 @@
       "category": "합숙 훈련 - 플로라",
       "name": "비치발리볼 대회 예선전",
       "timing": "11월 초순",
-      "condition": "",
       "choices": [
         {
           "text": "1. 상대팀의 약점을 공략하자.",
@@ -679,6 +669,7 @@
         },
         {
           "text": "4. …어떻게든 되겠지!",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -688,8 +679,6 @@
     {
       "category": "합숙 훈련 - 플로라",
       "name": "비치발리볼 대회 준결승전",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 일단 배부터 채울까?",
@@ -707,6 +696,7 @@
         },
         {
           "text": "3. 언제나 그렇듯이 최선을 다하자.",
+          "condition": "",
           "result": "잠재 +10 or 15",
           "result_positive": "",
           "result_negative": ""
@@ -716,8 +706,6 @@
     {
       "category": "조우 이벤트",
       "name": "갑작스러운 조우 – 약탈자",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 혼쭐을 내 주자!",
@@ -735,6 +723,7 @@
         },
         {
           "text": "3. 평범한 시체입니다.",
+          "condition": "",
           "result": "",
           "result_positive": "컨디션 +1, 힘 +10, 보호 +10, 잠재 +20",
           "result_negative": "없음"
@@ -746,8 +735,6 @@
     {
       "category": "합숙 훈련 - 칼라이드",
       "name": "온천 축제 준비",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 곰을 탈 수 있는 집!",
@@ -771,7 +758,8 @@
           "result_negative": ""
         },
         {
-          "text": "4. 어느 쪽도 싫다.",
+          "text": "4. 어느 쪽도 싫다.",
+          "condition": "",
           "result": "스태미나 +5",
           "result_positive": "",
           "result_negative": ""
@@ -781,8 +769,6 @@
     {
       "category": "합숙 훈련 - 칼라이드",
       "name": "축제의 불청객",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 금전적인 도움을 준다.",
@@ -800,6 +786,7 @@
         },
         {
           "text": "3. 포기한다.",
+          "condition": "",
           "result": "잠재력 +15",
           "result_positive": "",
           "result_negative": ""
@@ -809,8 +796,6 @@
     {
       "category": "조우 이벤트",
       "name": "갑작스러운 조우 – 강도 기사",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 해치워 주지!",
@@ -828,6 +813,7 @@
         },
         {
           "text": "3. 작전상 후퇴!",
+          "condition": "",
           "result": "없음",
           "result_positive": "",
           "result_negative": ""
@@ -839,17 +825,17 @@
     {
       "category": "날씨 이벤트",
       "name": "오늘의 날씨 – 쾌청",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 여유로운 시간을 보낸다.",
+          "condition": "",
           "result": "",
           "result_positive": "스태미나 +10, 집중 +5, 보호 +10",
           "result_negative": "컨디션 -1, 집중 +5 or 보호 +5"
         },
         {
           "text": "2. 원래 계획대로 시간을 보낸다.",
+          "condition": "",
           "result": "잠재력 +15 or 랜덤스탯 +5",
           "result_positive": "",
           "result_negative": ""
@@ -859,8 +845,6 @@
     {
       "category": "날씨 이벤트",
       "name": "오늘의 날씨 – 폭설",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 손난로를 사용하자.",
@@ -871,6 +855,7 @@
         },
         {
           "text": "2. 추위를 참는 것도 훈련...이 될지도!",
+          "condition": "",
           "result": "스태미나 -10, 보호 -10, 이로운 여정 상태 해제",
           "result_positive": "",
           "result_negative": ""
@@ -880,17 +865,17 @@
     {
       "category": "날씨 이벤트",
       "name": "오늘의 날씨 – 낙뢰",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 훈련을 이어 나간다.",
+          "condition": "",
           "result": "",
           "result_positive": "컨디션 +1, 잠재 +20 or 30",
           "result_negative": "컨디션 -1"
         },
         {
           "text": "2. 숙소로 돌아간다.",
+          "condition": "",
           "result": "",
           "result_positive": "",
           "result_negative": "컨디션 -1, 스태미나 +10"
@@ -900,17 +885,17 @@
     {
       "category": "날씨 이벤트",
       "name": "오늘의 날씨 – 안개",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 훈련을 이어 나간다.",
+          "condition": "",
           "result": "",
           "result_positive": "집중 +10, 보호 +10, 잠재 +20 or 30",
           "result_negative": "스태미나 -10, 집중 +5, 보호 +5"
         },
         {
           "text": "2. 숙소로 돌아간다.",
+          "condition": "",
           "result": "",
           "result_positive": "",
           "result_negative": "컨디션 -1, 스태미나 +10"
@@ -920,8 +905,6 @@
     {
       "category": "합숙 훈련 - 플로라",
       "name": "오늘의 날씨 – 열대야",
-      "timing": "",
-      "condition": "",
       "choices": [
         {
           "text": "1. 손선풍기를 사용한다.",
@@ -932,6 +915,7 @@
         },
         {
           "text": "2. 어떻게든 버텨본다.",
+          "condition": "",
           "result": "컨디션 -1, 인내 -10, '공감' 상태 해제",
           "result_positive": "",
           "result_negative": ""
@@ -944,22 +928,24 @@
       "category": "토벌 의뢰",
       "name": "약탈자 토벌 의뢰",
       "timing": "4월 하순",
-      "condition": "",
       "choices": [
         {
-          "text": "하급 의뢰 성공",
+          "text": "1. 하급 의뢰 성공",
+          "condition": "",
           "result": "컨디션 +1, 카페 스트레가 쿠폰(궁극기 사용 후 노바 2 회복), 랜덤스탯 +5, 잠재 +7, 방어의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "중급 의뢰 성공",
+          "text": "2. 중급 의뢰 성공",
+          "condition": "",
           "result": "컨디션 +1, 카페 스트레가 쿠폰(궁극기 사용 후 노바 2 회복), 랜덤스탯 +5, 잠재 +7, 방어의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "상급 의뢰 성공",
+          "text": "3. 상급 의뢰 성공",
+          "condition": "",
           "result": "컨디션 +1, 카페 스트레가 쿠폰(궁극기 사용 후 노바 2 회복), 랜덤스탯 +5, 잠재 +7, 방어의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
@@ -970,22 +956,24 @@
       "category": "토벌 의뢰",
       "name": "슬라임 토벌 의뢰",
       "timing": "6월 하순",
-      "condition": "",
       "choices": [
         {
-          "text": "하급 의뢰 성공",
+          "text": "1. 하급 의뢰 성공",
+          "condition": "",
           "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯 +10, 잠재 +15, 보호의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "중급 의뢰 성공",
+          "text": "2. 중급 의뢰 성공",
+          "condition": "",
           "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯 +10, 잠재 +15, 보호의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "상급 의뢰 성공",
+          "text": "3. 상급 의뢰 성공",
+          "condition": "",
           "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯 +10, 잠재 +15, 보호의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
@@ -996,22 +984,24 @@
       "category": "토벌 의뢰",
       "name": "탈영병 토벌 의뢰",
       "timing": "10월 하순",
-      "condition": "",
       "choices": [
         {
-          "text": "하급 의뢰 성공",
+          "text": "1. 하급 의뢰 성공",
+          "condition": "",
           "result": "",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "중급 의뢰 성공",
+          "text": "2. 중급 의뢰 성공",
+          "condition": "",
           "result": "금빛 공훈 휘장(턴 시작 치확 증가 5중첩), 랜덤스탯 +15, 잠재 +30 통찰의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
         },
         {
-          "text": "상급 의뢰 성공",
+          "text": "3. 상급 의뢰 성공",
+          "condition": "",
           "result": "별빛 공훈 휘장(궁극기 사용시 효과 적중,저항 증가 5중첩), 랜덤스탯 +15, 잠재 +30 통찰의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""

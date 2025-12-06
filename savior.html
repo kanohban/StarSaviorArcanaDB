@@ -64,12 +64,18 @@
                 </div>
             </section>
 
+            <!-- Image Popup (Full Screen) -->
+            <div id="image-popup" class="image-popup hidden" onclick="SaviorManager.closeImagePopup()">
+                <img id="popup-img" src="" alt="Popup Image">
+                <div class="popup-close-hint">터치하여 닫기</div>
+            </div>
+
             <!-- Savior Detail Modal -->
             <div id="savior-modal" class="savior-modal hidden">
                 <div class="modal-content">
                     <button class="close-button">&times;</button>
-                    <button class="nav-btn prev-btn">&lt;</button>
-                    <button class="nav-btn next-btn">&gt;</button>
+                    <button class="nav-btn prev-btn"></button>
+                    <button class="nav-btn next-btn"></button>
 
                     <div class="savior-detail-layout">
                         <!-- Left Column: Illust & Arc Point -->
@@ -122,19 +128,22 @@
                                         <!-- Hit/Res/CritDmg Text Stats -->
                                     </div>
                                 </div>
-                                <div class="stat-group">
-                                    <h3>여정 스테이터스</h3>
-                                    <div class="journey-stat-grid" id="journey-stats">
-                                        <!-- Journey Stats -->
+                                <div class="journey-potential-wrapper">
+                                    <div class="stat-group journey-group">
+                                        <h3>여정 스테이터스</h3>
+                                        <div class="journey-stat-grid" id="journey-stats">
+                                            <!-- Journey Stats -->
+                                        </div>
+                                    </div>
+                                    <div class="stat-group potential-group">
+                                        <h3>공명 잠재력</h3>
+                                        <ul class="potential-list" id="potential-list">
+                                            <!-- Potentials -->
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="stat-group">
-                                    <h3>공명 잠재력</h3>
-                                    <ul class="potential-list" id="potential-list">
-                                        <!-- Potentials -->
-                                    </ul>
-                                </div>
                             </div>
+
 
                             <!-- Tab Content: Skills -->
                             <div id="tab-skills" class="tab-content">

@@ -1,0 +1,4836 @@
+[
+  {
+    "id": 1,
+    "events": {
+      "stage_1": {
+        "event_name": "동상이몽",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "하고 싶은 이야기",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+5"
+              },
+              {
+                "type": "집중",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "어두운 과거",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "날카로운 공세"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
+    "events": {
+      "stage_1": {
+        "event_name": "부끄럽지 않아요!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+5"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              },
+              {
+                "type": "잠재",
+                "value": "공격의 감각"
+              },
+              {
+                "type": "여정 버프",
+                "value": "공감"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "만물이 지닌 가치",
+        "name": {
+          "choice_A": "잠깐, 내가 먼저 확인해 볼게.",
+          "choice_B": "...이상한 게 들어있지 않을까?"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+25"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "건강이 제일이에요",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "보호",
+                "value": "+12"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "공격의 성흔"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "events": {
+      "stage_1": {
+        "event_name": "드루이드의 재테크",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "다나의 개인 농장",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+12"
+              },
+              {
+                "type": "체력",
+                "value": "+8"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "타파파",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+12"
+              },
+              {
+                "type": "체력",
+                "value": "+8"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "긴급 주문 영창법"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 4,
+    "events": {
+      "stage_1": {
+        "event_name": "반짝 네컷",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              },
+              {
+                "type": "체력",
+                "value": "+5"
+              },
+              {
+                "type": "집중",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "용족은 튼튼하니까!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+20"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "들어올 땐 마음대로였겠지만...",
+        "name": {
+          "choice_A": "도망친다.",
+          "choice_B": "운명을 받아들인다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "특수 잠재",
+                "value": "탄력 가속"
+              }
+            ]
+          },
+          {
+            "cond": "Suc",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+12"
+              },
+              {
+                "type": "집중",
+                "value": "+8"
+              }
+            ]
+          },
+          {
+            "cond": "Fail",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+5"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "탄력 가속"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 5,
+    "events": {
+      "stage_1": {
+        "event_name": "방종의 대가",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "훼방 공작",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              },
+              {
+                "type": "체력",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "신도 영입",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              },
+              {
+                "type": "체력",
+                "value": "+5"
+              },
+              {
+                "type": "인내",
+                "value": "+5"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "표적 정렬 마법진"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 6,
+    "events": {
+      "stage_1": {
+        "event_name": "정의",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+3"
+              },
+              {
+                "type": "잠재력",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "무엇이든 물어보세요",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+12"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "미래는 우리 손 안에",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+18"
+              },
+              {
+                "type": "잠재력",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 7,
+    "events": {
+      "stage_1": {
+        "event_name": "심판",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+3"
+              },
+              {
+                "type": "체력",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "구하러 온 거 아닙니다",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "공격의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "프리쉬 특급 심부름센터",
+        "name": {
+          "choice_A": "프레이의 의견에 동조한다.",
+          "choice_B": "트리쉬의 의견에 동조한다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+18"
+              },
+              {
+                "type": "잠재력",
+                "value": "+20"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "공격의 재능"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 8,
+    "events": {
+      "stage_1": {
+        "event_name": "힘",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+3"
+              },
+              {
+                "type": "스태미나",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "깜짝 생일 파티",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "바이크 호그는 말이죠...",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+5"
+              },
+              {
+                "type": "잠재",
+                "value": "통찰의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 9,
+    "events": {
+      "stage_1": {
+        "event_name": "악마",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "사냥꾼의 자존심",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "허니 트랩",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "-15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "속도의 재능"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 10,
+    "events": {
+      "stage_1": {
+        "event_name": "머리사냥",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+10"
+              },
+              {
+                "type": "인내",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "프레스마",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+10"
+              },
+              {
+                "type": "인내",
+                "value": "+5"
+              },
+              {
+                "type": "집중",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "그 물은 좋은 물이다",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+12"
+              },
+              {
+                "type": "인내",
+                "value": "+8"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "별빛 은총"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 11,
+    "events": {
+      "stage_1": {
+        "event_name": "파이어와 불나방",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "베라실드 21",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "전부 경험담입니다.",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+12"
+              },
+              {
+                "type": "인내",
+                "value": "+8"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "별빛 은총"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 12,
+    "events": {
+      "stage_1": {
+        "event_name": "눈 감으면 코 베이는",
+        "name": {
+          "choice_A": "뛰어가는 샤를을 부른다.",
+          "choice_B": "샤를이 돌아오기를 기다린다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "모나스티르의 검",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+12"
+              },
+              {
+                "type": "인내",
+                "value": "+8"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "용감히 도전하라",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+12"
+              },
+              {
+                "type": "인내",
+                "value": "+8"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "속도의 성흔"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 13,
+    "events": {
+      "stage_1": {
+        "event_name": "비상 사태?!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+5"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "보호의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "아무도 모르게...?",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+15"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "생명의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "암호문",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+15"
+              },
+              {
+                "type": "잠재력",
+                "value": "+15"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "신중한 전술"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 14,
+    "events": {
+      "stage_1": {
+        "event_name": "전차",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+3"
+              },
+              {
+                "type": "보호",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "연극 관람",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+3"
+              },
+              {
+                "type": "잠재력",
+                "value": "+20"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "요리 교실",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+12"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "생명의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 15,
+    "events": {
+      "stage_1": {
+        "event_name": "운명",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+3"
+              },
+              {
+                "type": "잠재력",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "날개를 활짝 펴고",
+        "name": {
+          "choice_A": "응원할게 스칼렛! 기대하고 있어!",
+          "choice_B": "위험해 스칼렛...!"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+8"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+3"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "생명의 감각"
+              },
+              {
+                "type": "체력",
+                "value": "-5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "먹을 줄 아는 사람",
+        "name": {
+          "choice_A": "스칼렛을 응원한다.",
+          "choice_B": "샤를을 응원한다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+12"
+              },
+              {
+                "type": "잠재력",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "컨디션",
+                "value": "-1"
+              },
+              {
+                "type": "체력",
+                "value": "+3"
+              },
+              {
+                "type": "여정 버프",
+                "value": "공감"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 16,
+    "events": {
+      "stage_1": {
+        "event_name": "여제",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+3"
+              },
+              {
+                "type": "잠재력",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "가위",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "꿈보다 해몽",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "생명의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 17,
+    "events": {
+      "stage_1": {
+        "event_name": "사나이의 승부!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+5"
+              },
+              {
+                "type": "잠재력",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "사나이의 배포?",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "방어의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "사나이의 안목",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+20"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "두 번째 심장"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 18,
+    "events": {
+      "stage_1": {
+        "event_name": "블루 앤 바이커",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "블루 앤 부띠끄",
+        "name": {
+          "choice_A": "원하는대로 해준다.",
+          "choice_B": "존엄을 지킨다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+15"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "잠재력",
+                "value": "+20"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "블루 버서스 버니",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+15"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "두 번째 심장"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 19,
+    "events": {
+      "stage_1": {
+        "event_name": "첫사랑 얘기 해주세요",
+        "name": {
+          "choice_A": "아이들이 좋아하는 이야기를 해줘.",
+          "choice_B": "단호하게 수업을 해봐."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+25"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "방어의 감각"
+              },
+              {
+                "type": "여정 디버프",
+                "value": "번아웃"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "도를 아십니까",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+5"
+              },
+              {
+                "type": "인내",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "볼트 헌터",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+5"
+              },
+              {
+                "type": "체력",
+                "value": "+5"
+              },
+              {
+                "type": "인내",
+                "value": "+10"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "감각적인 수비"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 20,
+    "events": {
+      "stage_1": {
+        "event_name": "교황",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+3"
+              },
+              {
+                "type": "잠재력",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "필요 없어!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+12"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "포상입니다",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+18"
+              },
+              {
+                "type": "스태미나",
+                "value": "-15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "방어의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 21,
+    "events": {
+      "stage_1": {
+        "event_name": "절제",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "변종 토끼 덫",
+        "name": {
+          "choice_A": "멈춰, 클라리사...!",
+          "choice_B": "토끼 흉내를 내는 마수가 돌아다닌대!"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+5"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "글러먹게 만드는 공허체",
+        "name": {
+          "choice_A": "그런게 있을 리 없어.",
+          "choice_B": "무, 무시무시한 이야기네..."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "일반 잠재",
+                "value": "방어의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 22,
+    "events": {
+      "stage_1": {
+        "event_name": "비 오는 날",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              },
+              {
+                "type": "체력",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "집중의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "대표의 고충",
+        "name": {
+          "choice_A": "이슬을 머금은 장미빛...?",
+          "choice_B": "탱글탱글한 자몽의 오렌지빛?"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+5"
+              },
+              {
+                "type": "체력",
+                "value": "+5"
+              },
+              {
+                "type": "집중",
+                "value": "+12"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "공격의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "페트라의 사이즈 이론",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "체력",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+15"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "통찰의 성흔"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 23,
+    "events": {
+      "stage_1": {
+        "event_name": "하지만 빨랐어요!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "엘리트 페이스예요!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+10"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "한수 가르쳐 드리죠!",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+10"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "통찰의 성흔"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 24,
+    "events": {
+      "stage_1": {
+        "event_name": "힘을 원하는가",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "기준의 차이",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "집중의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "심각한 훈련 중독입니다",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+20"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "응급 처치"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 25,
+    "events": {
+      "stage_1": {
+        "event_name": "성물 도난 사건",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+12"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "도넛 추리",
+        "name": {
+          "choice_A": "릴리는 잘못한 거 없어.",
+          "choice_B": "역시 조금 짖궂었어."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "여정 버프",
+                "value": "눈썰미"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "-15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "집중의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "람파디스의 일상",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+15"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "결연한 각오"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 26,
+    "events": {
+      "stage_1": {
+        "event_name": "마술사",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "종의 진화",
+        "name": {
+          "choice_A": "조심스럽게 머리를 쓰다듬어봐.",
+          "choice_B": "지금이야! 아세라처럼 배를 만져!"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+8"
+              },
+              {
+                "type": "보호",
+                "value": "+5"
+              },
+              {
+                "type": "or 집중",
+                "value": "+8"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              },
+              {
+                "type": "or 스태미나",
+                "value": "-10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "웃음 조사",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+12"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 27,
+    "events": {
+      "stage_1": {
+        "event_name": "운명",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+3"
+              },
+              {
+                "type": "스태미나",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "합동 안전 캠페인",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+8"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "체중은 숫자",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+12"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "집중의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 28,
+    "events": {
+      "stage_1": {
+        "event_name": "별",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+3"
+              },
+              {
+                "type": "힘",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "동족의 냄새",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+8"
+              },
+              {
+                "type": "스태미나",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "망상의 자격 조건",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+12"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 29,
+    "events": {
+      "stage_1": {
+        "event_name": "눈높이가 다르다",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "집중",
+                "value": "+5"
+              },
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "보호의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "이 업계에서는 보물입니다",
+        "name": {
+          "choice_A": "책을 열어본다.",
+          "choice_B": "베스타에게 양보한다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+8"
+              },
+              {
+                "type": "보호",
+                "value": "+12"
+              }
+            ]
+          },
+          {
+            "cond": "Fail",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+15"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "베스타의 전술 시간",
+        "name": {
+          "choice_A": "베스타를 막는다.",
+          "choice_B": "그냥 지켜본다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "특수 잠재",
+                "value": "강인한 의지"
+              }
+            ]
+          },
+          {
+            "cond": "Suc",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+8"
+              },
+              {
+                "type": "집중",
+                "value": "+8"
+              },
+              {
+                "type": "보호",
+                "value": "+15"
+              }
+            ]
+          },
+          {
+            "cond": "Fail",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "-20"
+              }
+            ]
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+15"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "강인한 의지"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 30,
+    "events": {
+      "stage_1": {
+        "event_name": "누구를 위해 수프는 끓는가",
+        "name": {
+          "choice_A": "그럼 한 그릇 줄래?",
+          "choice_B": "민간인용으로 충분한 것 같아..."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+5"
+              },
+              {
+                "type": "여정 버프",
+                "value": "자신감"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+5"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "새우의 처세술",
+        "name": {
+          "choice_A": "알았어, 최대한 이상하게 써볼게",
+          "choice_B": "더 좋은 생각이 있는데..."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+8"
+              },
+              {
+                "type": "보호",
+                "value": "+12"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+10"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "동료의 흔적",
+        "name": {
+          "choice_A": "의미가 있는 물건이라면, 내가 사줄게",
+          "choice_B": "뒤늦게 후회하기 보다는 마음이 가는대로 하는게 좋아"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+5"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "여유로운 응수"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+8"
+              },
+              {
+                "type": "보호",
+                "value": "+12"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "여유로운 응수"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 31,
+    "events": {
+      "stage_1": {
+        "event_name": "선로 공사. 응.",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "보호의 감각"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "심야 튀김. 응.",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+10"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "보호의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "채소 싫어. 응.",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "인내",
+                "value": "+8"
+              },
+              {
+                "type": "보호",
+                "value": "+12"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "튀김 파티"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 32,
+    "events": {
+      "stage_1": {
+        "event_name": "태양",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "완벽한 배게",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "태생의 비밀",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+12"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "보호의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 33,
+    "events": {
+      "stage_1": {
+        "event_name": "연인",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+3"
+              },
+              {
+                "type": "스태미나",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "그 사건의 뒷이야기",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+8"
+              },
+              {
+                "type": "잠재력",
+                "value": "+5"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "전설의 검",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+15"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 34,
+    "events": {
+      "stage_1": {
+        "event_name": "황제",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+3"
+              },
+              {
+                "type": "인내",
+                "value": "+3"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "교양의 증명",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+3"
+              },
+              {
+                "type": "스태미나",
+                "value": "+5"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "개와 매의 상관관계",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "보호",
+                "value": "+3"
+              },
+              {
+                "type": "스태미나",
+                "value": "+5"
+              },
+              {
+                "type": "잠재력",
+                "value": "+15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "보호의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 35,
+    "events": {
+      "stage_1": {
+        "event_name": "날개를 활짝 펴고",
+        "name": {
+          "choice_A": "응원할게 스칼렛! 기대하고 있어!",
+          "choice_B": "위험해 스칼렛...!"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+15"
+              },
+              {
+                "type": "여정 디버프",
+                "value": "근육 부상"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "먹을 줄 아는 사람",
+        "name": {
+          "choice_A": "스칼렛을 응원한다.",
+          "choice_B": "샤를을 응원한다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "공격의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+20"
+              },
+              {
+                "type": "여정 디버프",
+                "value": "과식"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "인기가 많아지는 옷",
+        "name": {
+          "choice_A": "같이 설득해보러 갈까?",
+          "choice_B": "혼자가 편할 수도 있지 않나?"
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "특수 잠재",
+                "value": "준비됐노라!"
+              }
+            ]
+          },
+          {
+            "cond": "Suc",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+20"
+              }
+            ]
+          },
+          {
+            "cond": "Fail",
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+10"
+              },
+              {
+                "type": "스태미나",
+                "value": "-10"
+              }
+            ]
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "공격의 재능"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 36,
+    "events": {
+      "stage_1": {
+        "event_name": "깜짝 생일 파티",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "체력",
+                "value": "+15"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "생명의 솜씨"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "바이크 호그는 말이죠...",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX"
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "토끼 옆에 토끼 옆에 토끼",
+        "name": {
+          "choice_A": "솔직히 털어놓는다.",
+          "choice_B": "적당히 얼버무린다."
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "-10"
+              },
+              {
+                "type": "힘",
+                "value": "+5 or +10"
+              },
+              {
+                "type": "체력",
+                "value": "+5 or +10"
+              },
+              {
+                "type": "잠재",
+                "value": "+15"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "날카로운 성장"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "잠재력",
+                "value": "+10"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "생명의 재능"
+              }
+            ]
+          },
+          {
+            "cond": "Suc"
+          },
+          {
+            "cond": "Fail"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": 966,
+    "events": {}
+  }
+]

@@ -84,11 +84,33 @@ const DeckManager = {
     async fetchData() {
         try {
             const [cardsRes, potentialsRes, configRes] = await Promise.all([
-                fetch('./data/cards.json'),
+                fetch('./data/cards_stats.json'), // Changed from cards.json to cards_stats.json? Or cards.json?
+                // Wait, script separates them into cards_stats.json and cards_event.json.
+                // But DeckManager usually needs ONE merged object if possible, 
+                // OR we need to load cards_event.json too if we want event search.
+                // Let's assume we load both and merge for search logic.
                 fetch('./data/potentials.json'),
                 fetch('./data/stat_config.json')
             ]);
-            this.data.cards = await cardsRes.json();
+
+            // cards_stats.json
+            const stats = await cardsRes.json();
+
+            // We need event data for search text generation
+            // Try loading events
+            let events = [];
+            try {
+                const evRes = await fetch('./data/cards_event.json');
+                if (evRes.ok) events = await evRes.json();
+            } catch (e) { console.warn('Events load failed', e); }
+
+            // Merge events into stats
+            this.data.cards = stats.map(c => {
+                const ev = events.find(e => e.id === c.id);
+                if (ev) c.events = ev.events;
+                return c;
+            });
+
             this.data.potentials = await potentialsRes.json();
             this.data.statConfig = await configRes.json();
         } catch (error) {
@@ -149,15 +171,17 @@ const DeckManager = {
             slot.className = 'deck-slot';
 
             if (cardId) {
-                const card = this.data.cards.find(c => c.아이디 === cardId);
-                slot.classList.add('filled');
-                slot.innerHTML = `
-                    <div class="rarity-badge ${card.레어도}">${card.레어도}</div>
-                    <div class="type-badge">${card.타입.훈련}</div>
-                    <img src="${card.이미지}" alt="${card.이름}">
-                    <div class="remove-overlay">제거</div>
-                `;
-                slot.onclick = () => this.removeFromDeck(cardId);
+                const card = this.data.cards.find(c => c.id === cardId);
+                if (card) {
+                    slot.classList.add('filled');
+                    slot.innerHTML = `
+                        <div class="rarity-badge ${card.rare}">${card.rare}</div>
+                        <div class="type-badge">${card.type.t_train}</div>
+                        <img src="${card.img}" alt="${card.name}">
+                        <div class="remove-overlay">제거</div>
+                    `;
+                    slot.onclick = () => this.removeFromDeck(cardId);
+                }
             } else {
                 slot.innerHTML = `<span class="placeholder">+</span>`;
             }
@@ -174,48 +198,49 @@ const DeckManager = {
         // 1. Filter
         const filteredCards = this.data.cards.filter(card => {
             // Filter out cards already in deck
-            if (currentDeck.includes(card.아이디)) return false;
+            if (currentDeck.includes(card.id)) return false;
 
             // Filter out cards with missing or undefined images
-            if (!card.이미지 || card.이미지 === 'undefined' || card.이미지 === '') return false;
+            if (!card.img || card.img === 'undefined' || card.img === '') return false;
 
             if (!q) return true;
 
             // Comprehensive Search Text Generation (Deep Indexing)
             let typeStr = '';
-            if (card.타입) {
-                if (card.레어도 === 'SSR') {
-                    typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
+            if (card.type) {
+                if (card.rare === 'SSR') {
+                    typeStr = `${card.type.t_train || ''} / ${card.type.t_sup_1 || ''} / ${card.type.t_sup_2 || ''}`;
                 } else {
-                    typeStr = card.타입.훈련 || '';
+                    typeStr = card.type.t_train || '';
                 }
             }
 
             let potentialDesc = '';
-            if (card.고유잠재 && card.고유잠재.이름 && this.data.potentials) {
-                potentialDesc = this.data.potentials[card.고유잠재.이름] || '';
+            if (card.u_pot && card.u_pot.name && this.data.potentials) {
+                potentialDesc = this.data.potentials[card.u_pot.name] || '';
             }
 
-            let searchText = `${card.이름} ${card.캐릭터 || ''} ${card.레어도} ${typeStr} ${card.고유효과?.이름 || ''} ${card.고유효과?.설명 || ''} ${card.고유잠재?.이름 || ''} ${potentialDesc}`;
+            let searchText = `${card.name} ${card.char || ''} ${card.rare} ${typeStr} ${card.u_eff?.name || ''} ${card.u_eff?.desc || ''} ${card.u_pot?.name || ''} ${potentialDesc}`;
 
-            // Event Info
-            if (card.이벤트) {
-                if (card.이벤트.이름 && Array.isArray(card.이벤트.이름)) {
-                    searchText += ` ${card.이벤트.이름.join(' ')}`;
-                }
-                ['1단계', '2단계', '3단계'].forEach(stageKey => {
-                    const stage = card.이벤트[stageKey];
+            // Event Info (New Structure)
+            if (card.events) {
+                // Check name map? Wait, logic says 'name' inside stage
+                ['1', '2', '3'].forEach(stageNum => {
+                    const stKey = `stage_${stageNum}`;
+                    const stage = card.events[stKey];
                     if (stage) {
-                        if (stage.이름_선택지) {
-                            searchText += ` ${stage.이름_선택지.선택지A || ''} ${stage.이름_선택지.선택지B || ''}`;
+                        // Stage Names
+                        if (stage.name) {
+                            searchText += ` ${stage.name.choice_A || ''} ${stage.name.choice_B || ''}`;
                         }
-                        ['선택지A', '선택지B'].forEach(choiceKey => {
-                            const choices = stage[choiceKey];
+                        // Choices
+                        ['choice_A', 'choice_B'].forEach(choiceKey => {
+                            const choices = stage[choiceKey]; // Array of {cond, rewards}
                             if (Array.isArray(choices)) {
-                                choices.forEach(choice => {
-                                    if (choice.획득) {
-                                        choice.획득.forEach(reward => {
-                                            searchText += ` ${reward.타입} ${reward.수치}`;
+                                choices.forEach(c => {
+                                    if (c.rewards) {
+                                        c.rewards.forEach(r => {
+                                            searchText += ` ${r.type} ${r.value}`;
                                         });
                                     }
                                 });
@@ -226,9 +251,9 @@ const DeckManager = {
             }
 
             // Support Info
-            if (card.지원) {
-                card.지원.forEach(sup => {
-                    searchText += ` ${sup.타입} ${sup.수치35} ${sup.수치50}`;
+            if (card.support) {
+                card.support.forEach(sup => {
+                    searchText += ` ${sup.type} ${sup.v35} ${sup.v50}`;
                 });
             }
 
@@ -245,28 +270,26 @@ const DeckManager = {
 
         filteredCards.sort((a, b) => {
             // 1. Sort by Rarity (Descending)
-            const weightA = rarityWeight[a.레어도] || 0;
-            const weightB = rarityWeight[b.레어도] || 0;
+            const weightA = rarityWeight[a.rare] || 0;
+            const weightB = rarityWeight[b.rare] || 0;
             if (weightA !== weightB) {
                 return weightB - weightA;
             }
 
             // 2. Sort by Type
-            const typeA = a.타입?.훈련 || '';
-            const typeB = b.타입?.훈련 || '';
+            const typeA = a.type?.t_train || '';
+            const typeB = b.type?.t_train || '';
             const indexA = typeOrder.indexOf(typeA);
             const indexB = typeOrder.indexOf(typeB);
 
-            // If both are in the known list, sort by index
             if (indexA !== -1 && indexB !== -1) {
                 if (indexA !== indexB) return indexA - indexB;
             }
-            // If only one is in the list, put it first
             else if (indexA !== -1) return -1;
             else if (indexB !== -1) return 1;
 
             // 3. Sort by ID
-            return a.아이디 - b.아이디;
+            return a.id - b.id;
         });
 
         // 3. Render
@@ -275,31 +298,31 @@ const DeckManager = {
             el.className = 'card-item';
 
             let typeStr = '';
-            if (card.타입) {
-                if (card.레어도 === 'SSR') {
-                    typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
+            if (card.type) {
+                if (card.rare === 'SSR') {
+                    typeStr = `${card.type.t_train || ''} / ${card.type.t_sup_1 || ''} / ${card.type.t_sup_2 || ''}`;
                 } else {
-                    typeStr = card.타입.훈련 || '';
+                    typeStr = card.type.t_train || '';
                 }
             }
 
             el.innerHTML = `
-                <div class="rarity-badge ${card.레어도}">${card.레어도}</div>
-                <div class="type-badge">${card.타입.훈련}</div>
-                <img src="${card.이미지}" class="card-image" loading="lazy">
+                <div class="rarity-badge ${card.rare}">${card.rare}</div>
+                <div class="type-badge">${card.type.t_train}</div>
+                <img src="${card.img}" class="card-image" loading="lazy">
                 <div class="card-info">
-                    <div class="card-name">${card.이름}</div>
+                    <div class="card-name">${card.name}</div>
                     <div class="card-type">${typeStr}</div>
                 </div>
             `;
-            el.onclick = () => this.addToDeck(card.아이디);
+            el.onclick = () => this.addToDeck(card.id);
             this.dom.cardList.appendChild(el);
         });
     },
 
     renderSummary() {
         const currentDeck = this.data.decks[this.data.currentDeckIndex];
-        const deckCards = currentDeck.map(id => this.data.cards.find(c => c.아이디 === id));
+        const deckCards = currentDeck.map(id => this.data.cards.find(c => c.id === id)).filter(c => c);
 
         // 1. Render Potentials
         if (deckCards.length === 0) {
@@ -309,7 +332,7 @@ const DeckManager = {
         }
 
         this.dom.potentialList.innerHTML = deckCards.map(card => {
-            const potentialName = card.고유잠재?.이름 || '-';
+            const potentialName = card.u_pot?.name || '-';
             const potentialDesc = this.data.potentials[potentialName] || '설명 없음';
             return `
                 <li class="potential-item">
@@ -321,10 +344,9 @@ const DeckManager = {
 
         // 2. Calculate Stats
         const globalStats = {};
-        const categoryStats = {}; // { '힘': { '초감응 효과': 10, ... }, ... }
-        const levelKey = this.data.level === 35 ? '수치35' : '수치50';
+        const categoryStats = {};
+        const levelKey = this.data.level === 35 ? 'v35' : 'v50'; // Changed from 수치35/수치50 to v35/v50
 
-        // Flatten config for easy lookup
         const flattenTypes = (configSection) => {
             const types = new Set();
             if (configSection) {
@@ -338,10 +360,10 @@ const DeckManager = {
         const unclassifiedTypes = flattenTypes(this.data.statConfig.unclassified);
 
         deckCards.forEach(card => {
-            const cardType = card.타입?.훈련 || '기타'; // Primary Type (Strength, etc.)
+            const cardType = card.type?.t_train || '기타';
 
             const processStat = (stat) => {
-                const type = stat.타입;
+                const type = stat.type;
                 const valueStr = stat[levelKey];
 
                 if (!type || !valueStr) return;
@@ -352,15 +374,15 @@ const DeckManager = {
                     if (!categoryStats[cardType]) categoryStats[cardType] = {};
                     this.addStat(categoryStats[cardType], type, valueStr);
                 } else {
-                    // Fallback: Add to Global if unknown
                     this.addStat(globalStats, type, valueStr);
                 }
             };
 
-            if (card.여정) card.여정.forEach(processStat);
-            if (card.훈련) card.훈련.forEach(processStat);
-            if (card.감응) card.감응.forEach(processStat);
-            if (card.지원) card.지원.forEach(processStat);
+            // Using jrn, trn, sns
+            if (card.jrn) card.jrn.forEach(processStat);
+            if (card.trn) card.trn.forEach(processStat);
+            if (card.sns) card.sns.forEach(processStat);
+            if (card.support) card.support.forEach(processStat);
         });
 
         let html = '';
@@ -393,7 +415,6 @@ const DeckManager = {
     },
 
     generateStatHTML(stats, configSection) {
-        // 1. Create an ordered list of types from configSection
         let orderedTypes = [];
         if (configSection) {
             Object.values(configSection).forEach(list => {
@@ -401,22 +422,19 @@ const DeckManager = {
             });
         }
 
-        // 2. Sort entries
         const entries = Object.entries(stats).sort((a, b) => {
             const indexA = orderedTypes.indexOf(a[0]);
             const indexB = orderedTypes.indexOf(b[0]);
 
             if (indexA !== -1 && indexB !== -1) return indexA - indexB;
-            if (indexA !== -1) return -1; // Known types first
+            if (indexA !== -1) return -1;
             if (indexB !== -1) return 1;
-            return a[0].localeCompare(b[0]); // Fallback to alphabetical
+            return a[0].localeCompare(b[0]);
         });
 
         return entries.map(([type, value]) => {
             let displayValue = value;
-
-            // Determine format from config
-            let format = 'Integer'; // Default
+            let format = 'Integer';
 
             const findFormat = (section) => {
                 if (!section) return null;
@@ -431,7 +449,6 @@ const DeckManager = {
                 findFormat(this.data.statConfig.unclassified) ||
                 'Integer';
 
-            // Override for "Type Training" (e.g. "힘 훈련") which are usually percentages
             if (type.endsWith(' 훈련') && !type.includes('감응')) {
                 format = 'Percentage';
             }
@@ -445,7 +462,6 @@ const DeckManager = {
                 displayValue = `${sign}${value}`;
             }
 
-            // Special case for "주화 획득량" if it's percentage
             if (type === '주화 획득량') displayValue = `${sign}${value.toFixed(2)}%`;
 
             return `
@@ -460,11 +476,8 @@ const DeckManager = {
     addStat(stats, type, valueStr) {
         if (!valueStr) return;
 
-        // Parse value
         let value = 0;
         let isPercent = valueStr.includes('%');
-
-        // Remove +, % and parse
         const cleanStr = valueStr.replace(/[+%]/g, '');
         value = parseFloat(cleanStr);
 
