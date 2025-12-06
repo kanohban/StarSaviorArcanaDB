@@ -112,6 +112,7 @@ const HeaderManager = {
         }).join('');
     },
 
+
     attachEvents(element) {
         const html = document.documentElement;
         const body = document.body;

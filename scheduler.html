@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타 세이비어 아르카나 DB - 스케줄러</title>
+    <link rel="icon" type="image/png" href="./images/index/index_icon.png">
+    <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
+    <link rel="stylesheet" href="./assets/header.css?v=4.3.0">
+    <link rel="stylesheet" href="./assets/scheduler.css?v=4.3.0">
+</head>
+
+<body>
+    <div class="app">
+        <div class="scheduler-header-wrapper">
+            <header id="header-container"></header>
+
+            <div class="scheduler-controls-header">
+                <div class="deck-navigation">
+                    <button id="prev-deck-btn" class="nav-btn">&lt;</button>
+                    <h2>프리셋 <span id="deck-index">1</span><span id="deck-stats"
+                            style="font-size: 0.6em; color: #aaa; margin-left:10px;"></span></h2>
+                    <button id="next-deck-btn" class="nav-btn">&gt;</button>
+                </div>
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <button id="reset-check-btn" class="reset-btn">체크 초기화</button>
+                </div>
+            </div>
+        </div>
+
+        <main class="scheduler-container">
+            <div id="scheduler-grid" class="scheduler-grid">
+                <!-- Cards and checklists will be generated here -->
+                <div class="loading-message">데이터 로딩 중...</div>
+            </div>
+        </main>
+
+        <footer id="footer-container"></footer>
+    </div>
+
+    <script src="./assets/header_manager.js?v=4.3.0"></script>
+    <script src="./assets/footer_manager.js"></script>
+    <script src="./assets/scheduler_manager.js?v=4.3.0"></script>
+    <script>
+        (function () {
+            const html = document.documentElement;
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+        })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.HeaderManager) {
+                window.HeaderManager.init(document.getElementById('header-container'), 'scheduler');
+            }
+            if (window.FooterManager) {
+                window.FooterManager.init(document.getElementById('footer-container'));
+            }
+            if (window.SchedulerManager) {
+                window.SchedulerManager.init();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -31,6 +31,13 @@
                 },
                 {
                     "type": "button",
+                    "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "스케줄러",
+                    "action": "navigate",
+                    "target": "scheduler.html"
+                },
+                {
+                    "type": "button",
                     "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "검색",
                     "action": "navigate",
@@ -69,6 +76,109 @@
                     "title": "덱 구성",
                     "action": "navigate",
                     "target": "deck.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "스케줄러",
+                    "action": "navigate",
+                    "target": "scheduler.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "검색",
+                    "action": "navigate",
+                    "target": "search.html"
+                }
+            ],
+            "right": [
+                {
+                    "type": "theme-toggle"
+                },
+                {
+                    "type": "view-toggle"
+                }
+            ]
+        },
+        "deck": {
+            "title": "덱 구성",
+            "left": [
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
+                    "action": "navigate",
+                    "target": "arcana.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "구원자",
+                    "action": "navigate",
+                    "target": "savior.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "여정",
+                    "action": "navigate",
+                    "target": "journey.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "스케줄러",
+                    "action": "navigate",
+                    "target": "scheduler.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "검색",
+                    "action": "navigate",
+                    "target": "search.html"
+                }
+            ],
+            "right": [
+                {
+                    "type": "theme-toggle"
+                },
+                {
+                    "type": "view-toggle"
+                }
+            ]
+        },
+        "savior": {
+            "title": "구원자",
+            "left": [
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
+                    "action": "navigate",
+                    "target": "arcana.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
+                    "action": "navigate",
+                    "target": "deck.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "여정",
+                    "action": "navigate",
+                    "target": "journey.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "스케줄러",
+                    "action": "navigate",
+                    "target": "scheduler.html"
                 },
                 {
                     "type": "button",
@@ -117,6 +227,13 @@
                     "title": "덱 구성",
                     "action": "navigate",
                     "target": "deck.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "스케줄러",
+                    "action": "navigate",
+                    "target": "scheduler.html"
                 }
             ],
             "right": [
@@ -128,8 +245,8 @@
                 }
             ]
         },
-        "deck": {
-            "title": "덱 구성",
+        "scheduler": {
+            "title": "스케줄러",
             "left": [
                 {
                     "type": "button",
@@ -154,44 +271,10 @@
                 },
                 {
                     "type": "button",
-                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "검색",
-                    "action": "navigate",
-                    "target": "search.html"
-                }
-            ],
-            "right": [
-                {
-                    "type": "theme-toggle"
-                },
-                {
-                    "type": "view-toggle"
-                }
-            ]
-        },
-        "savior": {
-            "title": "구원자",
-            "left": [
-                {
-                    "type": "button",
-                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "아르카나",
-                    "action": "navigate",
-                    "target": "arcana.html"
-                },
-                {
-                    "type": "button",
                     "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "덱 구성",
                     "action": "navigate",
                     "target": "deck.html"
-                },
-                {
-                    "type": "button",
-                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "여정",
-                    "action": "navigate",
-                    "target": "journey.html"
                 },
                 {
                     "type": "button",
