@@ -85,22 +85,18 @@
 }
 
 .savior-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     border-radius: 12px;
-    overflow: hidden;
+    overflow: visible;
+    /* Allow transforms to show fully */
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-}
-
-.savior-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
 }
 
 .savior-item img {
@@ -109,7 +105,76 @@
     border-radius: 15px;
     object-fit: cover;
     margin-bottom: 8px;
-    border: 2px solid var(--border-color);
+    border: 3px solid transparent;
+    /* Default border */
+    transition: box-shadow 0.3s;
+}
+
+/* Attribute Border Colors */
+/* Attribute Border Colors & Text Colors & Glows */
+.savior-item.attr-sun img {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+
+
+.savior-item.attr-sun:hover img {
+    box-shadow: 0 0 15px #ff6b6b;
+    transform: scale(1.1);
+}
+
+.savior-item.attr-moon img {
+    border-color: #6b8cff;
+    box-shadow: 0 0 5px rgba(107, 140, 255, 0.5);
+}
+
+
+
+.savior-item.attr-moon:hover img {
+    box-shadow: 0 0 15px #6b8cff;
+    transform: scale(1.1);
+}
+
+.savior-item.attr-star img {
+    border-color: #6bff8c;
+    box-shadow: 0 0 5px rgba(107, 255, 140, 0.5);
+}
+
+
+
+.savior-item.attr-star:hover img {
+    box-shadow: 0 0 15px #6bff8c;
+    transform: scale(1.1);
+}
+
+.savior-item.attr-order img {
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+
+
+.savior-item.attr-order:hover img {
+    box-shadow: 0 0 15px #ffd700;
+    transform: scale(1.1);
+}
+
+.savior-item.attr-chaos img {
+    border-color: #d06bff;
+    box-shadow: 0 0 5px rgba(208, 107, 255, 0.5);
+}
+
+
+
+.savior-item.attr-chaos:hover img {
+    box-shadow: 0 0 15px #d06bff;
+    transform: scale(1.1);
+}
+
+/* Generic Hover fallbacks (should not be needed if all have attrs) */
+.savior-item:hover .name {
+    filter: brightness(1.2);
 }
 
 .savior-item .name {
@@ -307,6 +372,33 @@
     height: 80px;
     border-radius: 15px;
     border: 3px solid var(--primary-color);
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Modal Icon Attribute Styling */
+.profile-icon.attr-sun {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.4);
+}
+
+.profile-icon.attr-moon {
+    border-color: #6b8cff;
+    box-shadow: 0 0 10px rgba(107, 140, 255, 0.4);
+}
+
+.profile-icon.attr-star {
+    border-color: #6bff8c;
+    box-shadow: 0 0 10px rgba(107, 255, 140, 0.4);
+}
+
+.profile-icon.attr-order {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.profile-icon.attr-chaos {
+    border-color: #d06bff;
+    box-shadow: 0 0 10px rgba(208, 107, 255, 0.4);
 }
 
 .profile-info h2 {

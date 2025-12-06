@@ -12,6 +12,7 @@ textarea {
 }
 
 /* --- Dynamic Background (Dark Mode Only) --- */
+/* Optimized for performance: Static gradient only */
 [data-theme="dark"] .stars-container {
     position: fixed;
     top: 0;
@@ -24,66 +25,9 @@ textarea {
     pointer-events: none;
 }
 
-[data-theme="dark"] .stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-        radial-gradient(1.5px 1.5px at 20px 30px, #e0f2fe, rgba(0, 0, 0, 0)),
-        radial-gradient(1.5px 1.5px at 40px 70px, #bae6fd, rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 50px 160px, #7dd3fc, rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0, 0, 0, 0)),
-        radial-gradient(2px 2px at 130px 80px, #e0f2fe, rgba(0, 0, 0, 0));
-    background-repeat: repeat;
-    background-size: 300px 300px;
-    animation: starsMove 60s linear infinite;
-    opacity: 0.8;
-}
-
-[data-theme="dark"] .stars:nth-child(2) {
-    background-size: 500px 500px;
-    animation-duration: 100s;
-    opacity: 0.5;
-    transform: rotate(45deg);
-}
-
-@keyframes starsMove {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-500px);
-    }
-}
-
+[data-theme="dark"] .stars,
 [data-theme="dark"] .nebula-glow {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background:
-        radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.2), transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15), transparent 50%);
-    z-index: -1;
-    filter: blur(80px);
-    animation: nebulaPulse 15s ease-in-out infinite alternate;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-}
-
-@keyframes nebulaPulse {
-    0% {
-        opacity: 0.7;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1.1);
-    }
+    display: none;
 }
 
 /* Ensure content stays readable on dark background */
@@ -152,7 +96,6 @@ html {
 [data-theme="dark"] .input-group,
 [data-theme="dark"] .filter-select,
 [data-theme="dark"] .search-input,
-[data-theme="dark"] .savior-item,
 [data-theme="dark"] .event-card,
 [data-theme="dark"] .choice-results,
 [data-theme="dark"] .tab-btn {

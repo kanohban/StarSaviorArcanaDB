@@ -145,8 +145,11 @@ const SaviorManager = {
 
         saviors.forEach(savior => {
             const p = savior.profile;
+            const attrMap = { '태양': 'sun', '달': 'moon', '별': 'star', '질서': 'order', '혼돈': 'chaos' };
+            const attrClass = attrMap[p.attr] || 'unknown';
+
             const div = document.createElement('div');
-            div.className = 'savior-item';
+            div.className = `savior-item attr-${attrClass}`;
 
             const iconPath = `images/icon/${p.name}.webp`;
 
@@ -254,19 +257,28 @@ const SaviorManager = {
         const arcWrapper = document.getElementById('arcpoint-wrapper');
         if (arcWrapper) arcWrapper.classList.add('spoiler-active');
 
-        document.getElementById('savior-icon').src = `images/icon/${p.name}.webp`;
-        document.getElementById('savior-name').innerText = p.name;
-        document.getElementById('savior-element').innerText = p.attr;
+        // Icon Logic
+        const iconElement = document.getElementById('savior-icon');
+        iconElement.src = `images/icon/${p.name}.webp`;
 
+        // Element/Attribute Logic
         const attrMap = { '태양': 'sun', '달': 'moon', '별': 'star', '질서': 'order', '혼돈': 'chaos' };
         const attrClass = attrMap[p.attr] || 'unknown';
-        document.getElementById('savior-element').className = `tag attr-${attrClass}`;
+        iconElement.className = `profile-icon attr-${attrClass}`;
 
-        document.getElementById('savior-class').innerText = p.cls;
-        document.getElementById('savior-class').className = 'profile-badge badge-common';
+        document.getElementById('savior-name').innerText = p.name;
 
-        document.getElementById('savior-role').innerText = p.atk_t;
-        document.getElementById('savior-role').className = 'profile-badge badge-common';
+        const elSpan = document.getElementById('savior-element');
+        elSpan.innerText = p.attr;
+        elSpan.className = `tag attr-${attrClass}`;
+
+        const classSpan = document.getElementById('savior-class');
+        classSpan.innerText = p.cls;
+        classSpan.className = 'profile-badge badge-common';
+
+        const roleSpan = document.getElementById('savior-role');
+        roleSpan.innerText = p.atk_t;
+        roleSpan.className = 'profile-badge badge-common';
 
         document.getElementById('savior-desc').innerText = p.desc;
 
