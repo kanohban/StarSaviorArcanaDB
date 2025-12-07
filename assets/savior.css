@@ -263,6 +263,7 @@
     justify-content: center;
     width: 100px;
     height: 100px;
+    border: none;
 }
 
 .nav-btn:hover {
@@ -364,7 +365,7 @@
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .profile-icon {
@@ -413,6 +414,7 @@
     margin-bottom: 10px;
 }
 
+/* Base Tag Style */
 .tag {
     background: rgba(var(--primary-color-rgb), 0.15);
     color: var(--primary-color);
@@ -420,7 +422,41 @@
     border-radius: 12px;
     font-size: 0.85rem;
     font-weight: bold;
+    border: 1px solid transparent;
+    /* Added default border */
 }
+
+/* Tag Specific Colors */
+.tag.attr-sun {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.15);
+}
+
+.tag.attr-moon {
+    color: #6b8cff;
+    border-color: #6b8cff;
+    background: rgba(107, 140, 255, 0.15);
+}
+
+.tag.attr-star {
+    color: #6bff8c;
+    border-color: #6bff8c;
+    background: rgba(107, 255, 140, 0.15);
+}
+
+.tag.attr-order {
+    color: #ffd700;
+    border-color: #ffd700;
+    background: rgba(255, 215, 0, 0.15);
+}
+
+.tag.attr-chaos {
+    color: #ca8eff;
+    border-color: #ca8eff;
+    background: rgba(202, 142, 255, 0.15);
+}
+
 
 .profile-desc {
     font-size: 0.95rem;
@@ -440,7 +476,8 @@
 
 .tab-btn {
     background: none;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Base Border */
     padding: 8px 16px;
     color: var(--text-color);
     cursor: pointer;
@@ -646,6 +683,8 @@
     padding: 2px 6px;
     border-radius: 4px;
     color: #ccc;
+    border: 1px solid #777;
+    /* Base Border */
 }
 
 .skill-desc {
@@ -699,9 +738,9 @@
 }
 
 .skill-badge.nova {
-    background: rgba(255, 215, 0, 0.2);
-    color: #ffd700;
-    border: 1px solid rgba(255, 215, 0, 0.4);
+    color: #ff9f43 !important;
+    border-color: #ff9f43 !important;
+    background: rgba(255, 159, 67, 0.1) !important;
     align-self: flex-start;
 }
 
@@ -750,6 +789,179 @@
 
 .flavor-keyword:hover {
     color: #fff;
+}
+
+/* Profile Details Box (Base) */
+.profile-details-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-details-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+.profile-details-box p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.profile-details-box strong {
+    color: var(--primary-color);
+}
+
+/* Skill Level Info (Base) */
+.skill-level-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-highlight);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.skill-level-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-level-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.skill-level-btn.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.skill-level-data {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.skill-level-data.active {
+    max-height: 500px;
+    /* Arbitrary large height */
+    opacity: 1;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.skill-level-data table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 4px;
+    /* Gap between rows */
+}
+
+.skill-level-data tr {
+    background: rgba(30, 100, 200, 0.3);
+    /* Blueish tint */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level-data td {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #eee;
+}
+
+.skill-level-data .sl-num {
+    width: 40px;
+    text-align: center;
+    background: rgba(0, 80, 200, 0.6);
+    /* Darker blue for number */
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: #fff;
+}
+
+.skill-level-data .sl-desc {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid rgba(0, 80, 200, 0.3);
+    border-left: none;
+}
+
+/* Wrapper for Side-by-Side Layout */
+.journey-potential-wrapper {
+    display: flex;
+    gap: 15px;
+    /* Adjust gap as needed */
+    margin-bottom: 25px;
+}
+
+.journey-potential-wrapper .stat-group {
+    margin-bottom: 0;
+    /* Remove bottom margin from inner groups */
+    flex: 1;
+    /* Distribute space equally */
+}
+
+/* Image Popup */
+.image-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.image-popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.image-popup img {
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    object-fit: contain;
+}
+
+.popup-close-hint {
+    color: #aaa;
+    margin-top: 15px;
+    font-size: 0.9rem;
 }
 
 /* Mobile Responsive */
@@ -834,6 +1046,7 @@
         font-size: 3rem;
         background: transparent;
         color: transparent;
+        border: none;
     }
 
     .prev-btn {
@@ -859,383 +1072,254 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Attribute Colors */
-.attr-sun {
-    background: rgba(255, 50, 50, 0.2);
-    color: #ff6b6b;
-    border-color: rgba(255, 50, 50, 0.4);
-}
+/* =========================================
+   LIGHT MODE OVERRIDES (Unified Block)
+   ========================================= */
 
-.attr-moon {
-    background: rgba(50, 100, 255, 0.2);
-    color: #6b8cff;
-    border-color: rgba(50, 100, 255, 0.4);
-}
+[data-theme="light"] {
 
-.attr-star {
-    background: rgba(50, 200, 50, 0.2);
-    color: #6bff8c;
-    border-color: rgba(50, 200, 50, 0.4);
-}
+    /* Modal Components */
+    .savior-modal {
+        background: rgba(255, 255, 255, 0.95);
+    }
 
-.attr-order {
-    background: rgba(255, 215, 0, 0.2);
-    color: #ffd700;
-    border-color: rgba(255, 215, 0, 0.4);
-}
+    .modal-content {
+        background: #f8f9fa;
+        color: #333;
+        border: 1px solid #ddd;
+    }
 
-.attr-chaos {
-    background: rgba(180, 50, 255, 0.2);
-    color: #d06bff;
-    border-color: rgba(180, 50, 255, 0.4);
-}
+    .close-button {
+        color: #333;
+    }
 
-/* Light Mode Overrides */
-[data-theme="light"] .savior-modal {
-    background: rgba(255, 255, 255, 0.95);
-}
+    /* Layout Containers */
+    .detail-left {
+        background: #f1f3f5;
+        border-right: 1px solid #ddd;
+    }
 
-[data-theme="light"] .modal-content {
-    background: #f8f9fa;
-    color: #333;
-    border: 1px solid #ddd;
-}
+    .detail-right {
+        background: #fff;
+    }
 
-[data-theme="light"] .skill-item,
-[data-theme="light"] .text-stat-item,
-[data-theme="light"] .journey-stat-item,
-[data-theme="light"] .potential-list li {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    color: #333;
-}
+    /* Profile Details Box: White Bg + Dark Border */
+    .profile-details-box {
+        background-color: #ffffff;
+        border: 1px solid #bbbbbb;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
 
-[data-theme="light"] .skill-name {
-    color: #007bff;
-}
+    .profile-details-box p {
+        border-bottom: 1px solid #eeeeee;
+        color: #333;
+    }
 
-[data-theme="light"] .skill-type {
-    background: #e9ecef;
-    color: #495057;
-}
+    .profile-details-box strong {
+        /* color: #333333; Removed as per user request */
+    }
 
-[data-theme="light"] .skill-desc,
-[data-theme="light"] .skill-nova-desc {
-    color: #555;
-}
+    .profile-details-box span {
+        color: #555555;
+    }
 
-[data-theme="light"] .stat-bar-container {
-    background: #e9ecef;
-}
+    /* Profile Badges */
+    .profile-badge {
+        border: 1px solid #ddd;
+    }
 
-[data-theme="light"] .stat-val {
-    color: #333;
-}
+    .badge-common {
+        background: #f1f3f5;
+        color: #495057;
+        border-color: #ced4da;
+    }
 
-[data-theme="light"] .stat-name,
-[data-theme="light"] .stat-rank,
-[data-theme="light"] .journey-stat-label {
-    color: #666;
-}
+    /* Status & Stats */
+    .stat-bar-container {
+        background: #e0e0e0;
+        border: 1px solid #cccccc;
+    }
 
-[data-theme="light"] .detail-left {
-    background: #f1f3f5;
-    border-right: 1px solid #ddd;
-}
+    .text-stat-item,
+    .journey-stat-item,
+    .potential-list li {
+        background-color: #f8f9fa;
+        border: 1px solid #cccccc;
+        color: #333333;
+    }
 
-[data-theme="light"] .detail-right {
-    background: #fff;
-}
+    .stat-val,
+    .journey-stat-label,
+    .journey-stat-value,
+    .stat-name,
+    .stat-rank {
+        /* color: #222222; Removed as per user request */
+    }
 
-[data-theme="light"] .close-button {
-    color: #333;
-}
+    /* Skills Area */
+    .skill-item {
+        background-color: #ffffff;
+        border: 1px solid #bbbbbb;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        color: #333;
+    }
 
-[data-theme="light"] .nav-btn {
-    background: transparent;
-    color: transparent;
-}
+    .skill-name {
+        text-shadow: none;
+    }
 
-[data-theme="light"] .nav-btn:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
+    .skill-desc,
+    .skill-nova-desc {
+        color: #444444;
+    }
 
-[data-theme="light"] .profile-badge {
-    border: 1px solid #ddd;
-}
+    .skill-type {
+        background: #eeeeee;
+        border: 1px solid #999999;
+        color: #333333;
+    }
 
-[data-theme="light"] .badge-common {
-    background: #f1f3f5;
-    color: #495057;
-    border-color: #ced4da;
-}
+    .skill-nova {
+        border-top-color: #ddd;
+    }
 
-/* Light Mode Attribute Colors */
-[data-theme="light"] .attr-sun {
-    background: #fff5f5;
-    color: #c92a2a;
-    /* Darker Red */
-    border-color: #ffc9c9;
-}
+    /* Skill Level Info */
+    .skill-level-btn {
+        background-color: #f1f3f5;
+        border: 1px solid #999999;
+        color: #222222;
+        font-weight: bold;
+    }
 
-[data-theme="light"] .attr-moon {
-    background: #e7f5ff;
-    color: #1864ab;
-    /* Darker Blue */
-    border-color: #a5d8ff;
-}
+    .skill-level-btn:hover {
+        background-color: #e9ecef;
+        border-color: #777777;
+    }
 
-[data-theme="light"] .attr-star {
-    background: #ebfbee;
-    color: #2b8a3e;
-    /* Darker Green */
-    border-color: #b2f2bb;
-}
+    .skill-level-data {
+        background-color: #ffffff;
+    }
 
-[data-theme="light"] .attr-order {
-    background: #fff9db;
-    color: #e67700;
-    /* Darker Orange/Yellow */
-    border-color: #ffec99;
-}
+    .skill-level-data tr {
+        background: #e7f5ff;
+        border: 1px solid #a5d8ff;
+    }
 
-[data-theme="light"] .attr-chaos {
-    background: #f3f0ff;
-    color: #862e9c;
-    /* Darker Purple */
-    border-color: #e5dbff;
-}
+    .skill-level-data td {
+        color: #333333;
+        border-bottom: 1px solid #e0e0e0;
+    }
 
-[data-theme="light"] .flavor-keyword {
-    color: #e67700;
-    /* Dark Orange for visibility */
-    text-decoration-color: #e67700;
-}
+    .skill-level-data .sl-num {
+        background: #d0ebff;
+        color: #1864ab;
+        border-right: 1px solid #a5d8ff;
+    }
 
-[data-theme="light"] .flavor-keyword:hover {
-    color: #d9480f;
-}
+    .skill-level-data .sl-desc {
+        border-color: #a5d8ff;
+    }
 
-/* NOVA Badge - Orange */
-.skill-badge.nova {
-    color: #ff9f43 !important;
-    border-color: #ff9f43 !important;
-    background: rgba(255, 159, 67, 0.1) !important;
-}
+    /* Skill Badges & Tags */
+    .skill-badge.cooldown {
+        color: #1864ab;
+        border: 1px solid #a5d8ff;
+        background: #e7f5ff;
+    }
 
-/* Profile Details Box */
-.profile-details-box {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    .skill-badge.target {
+        color: #e03131;
+        border: 1px solid #ffc9c9;
+        background: #ffe3e3;
+    }
 
-.profile-details-box p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--text-color);
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding-bottom: 8px;
-}
+    .skill-badge.target-ally {
+        color: #2b8a3e;
+        border: 1px solid #b2f2bb;
+        background: #d3f9d8;
+    }
 
-.profile-details-box p:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
+    .skill-badge.nova-gain {
+        color: #e67700;
+        border: 1px solid #ffec99;
+        background: #fff3bf;
+    }
 
-.profile-details-box strong {
-    color: var(--primary-color);
-}
+    .skill-badge.nova {
+        color: #d9480f !important;
+        border-color: #ffc078 !important;
+        background: #ffe8cc !important;
+    }
 
-/* Light Mode Overrides for New Elements */
-[data-theme="light"] .profile-details-box {
-    background: #ffffff;
-    border-color: #ddd;
-}
+    .skill-badge.break {
+        background: rgba(100, 100, 100, 0.1);
+        color: #333333;
+        border: 1px solid #cccccc;
+    }
 
-[data-theme="light"] .profile-details-box p {
-    color: #333;
-    border-bottom-color: #eee;
-}
+    .flavor-keyword {
+        color: #e67700;
+        text-decoration-color: #e67700;
+    }
 
-[data-theme="light"] .skill-nova {
-    border-top-color: #ddd;
-}
+    .flavor-keyword:hover {
+        color: #d9480f;
+    }
 
-[data-theme="light"] .skill-nova-desc {
-    color: #555;
-}
+    /* Tab Buttons - Border visible in Light Mode */
+    .tab-btn {
+        border: 1px solid #cccccc;
+        color: #555555;
+    }
 
-/* Skill Level Info */
-.skill-level-btn {
-    width: 100%;
-    margin-top: 15px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: var(--text-highlight);
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s;
-}
+    .tab-btn.active {
+        border-color: var(--primary-color);
+    }
 
-.skill-level-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
+    /* Navigation Buttons */
+    .nav-btn {
+        border-color: transparent;
+        /* Clean look on light mode or keep border? User asked for borders on tabs, likely clean for nav */
+        color: transparent;
+    }
 
-.skill-level-btn.active {
-    background: var(--primary-color);
-    color: #fff;
-    border-color: var(--primary-color);
-}
+    .nav-btn:hover {
+        background: rgba(0, 0, 0, 0.05);
+    }
 
-.toggle-icon {
-    font-size: 0.8rem;
-    transition: transform 0.3s;
-}
+    /* Attribute Colors (Darker for Visibility) */
+    .tag.attr-sun,
+    .attr-sun {
+        color: #d63333;
+        border-color: #d63333;
+        background-color: #ffe6e6;
+    }
 
-.skill-level-btn.active .toggle-icon {
-    transform: rotate(180deg);
-}
+    .tag.attr-moon,
+    .attr-moon {
+        color: #335ccb;
+        border-color: #335ccb;
+        background-color: #e6eaff;
+    }
 
-.skill-level-data {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    opacity: 0;
-    margin-top: 0;
-}
+    .tag.attr-star,
+    .attr-star {
+        color: #009944;
+        border-color: #009944;
+        background-color: #e6ffec;
+    }
 
-.skill-level-data.active {
-    max-height: 500px;
-    /* Arbitrary large height */
-    opacity: 1;
-    margin-top: 10px;
-    overflow-y: auto;
-}
+    .tag.attr-order,
+    .attr-order {
+        color: #b8860b;
+        border-color: #b8860b;
+        background-color: #fff9e6;
+    }
 
-.skill-level-data table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 4px;
-    /* Gap between rows */
-}
-
-.skill-level-data tr {
-    background: rgba(30, 100, 200, 0.3);
-    /* Blueish tint */
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-/* Specific styling to match the reference image's blue look */
-.skill-level-data td {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    color: #eee;
-}
-
-.skill-level-data .sl-num {
-    width: 40px;
-    text-align: center;
-    background: rgba(0, 80, 200, 0.6);
-    /* Darker blue for number */
-    font-weight: bold;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    color: #fff;
-}
-
-/* Wrapper for Side-by-Side Layout */
-.journey-potential-wrapper {
-    display: flex;
-    gap: 15px;
-    /* Adjust gap as needed */
-    margin-bottom: 25px;
-}
-
-.journey-potential-wrapper .stat-group {
-    margin-bottom: 0;
-    /* Remove bottom margin from inner groups */
-    flex: 1;
-    /* Distribute space equally */
-}
-
-/* Optional: Make Journey Grid 2 columns if it gets too squeezed, or keep 3 */
-
-
-.skill-level-data .sl-desc {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border: 1px solid rgba(0, 80, 200, 0.3);
-    border-left: none;
-}
-
-/* Light Mode Overrides for Skill Level Info */
-[data-theme="light"] .skill-level-data tr {
-    background: #e7f5ff;
-    /* Very light blue */
-    border: 1px solid #a5d8ff;
-}
-
-[data-theme="light"] .skill-level-data td {
-    color: #333;
-}
-
-[data-theme="light"] .skill-level-data .sl-num {
-    background: #d0ebff;
-    color: #1864ab;
-    border-right: 1px solid #a5d8ff;
-}
-
-[data-theme="light"] .skill-level-data .sl-desc {
-    border-color: #a5d8ff;
-}
-
-/* Image Popup */
-.image-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 5000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 1;
-    transition: opacity 0.3s;
-    cursor: pointer;
-}
-
-.image-popup.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.image-popup img {
-    max-width: 95%;
-    max-height: 90vh;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    object-fit: contain;
-}
-
-.popup-close-hint {
-    color: #aaa;
-    margin-top: 15px;
-    font-size: 0.9rem;
+    .tag.attr-chaos,
+    .attr-chaos {
+        color: #8a2be2;
+        border-color: #8a2be2;
+        background-color: #f3e6ff;
+    }
 }

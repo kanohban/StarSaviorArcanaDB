@@ -73,8 +73,8 @@ const SearchService = (function () {
             index.push({
                 type: 'card',
                 title: card.이름,
-                subtitle: `${card.레어도} | ${typeStr}`,
-                content: card.고유효과?.설명 || (card.고유잠재 ? `고유잠재: ${card.고유잠재.이름}` : '설명 없음'),
+                subtitle: '',
+                content: `${card.레어도} / ${typeStr}`,
                 searchText: searchText.toLowerCase(),
                 data: card
             });
