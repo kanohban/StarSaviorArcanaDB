@@ -1,0 +1,9332 @@
+[
+  {
+    "id": 1,
+    "name": "나루",
+    "rank": "SR",
+    "attr": "별",
+    "class": "레인저",
+    "atk_type": "원소",
+    "inst": {
+      "birth": 45719,
+      "height": 158,
+      "origin": "NOA",
+      "team": "궤도 수색대",
+      "cv_ko": "이주은",
+      "cv_jp": "후쿠시마 하루나",
+      "desc": "폴라리스 소속 궤도 수색대의 인턴. 스스로 고안해낸 방정식을 통해 완벽한 미래 관측이 가능해지는 미래를 꿈꾸고 있다."
+    },
+    "status": {
+      "atk": 2956,
+      "hp": 16512,
+      "def": 1168,
+      "spd": 100,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 140,
+      "end": 20,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 1,
+        "name": "승진 욕심",
+        "type": 0,
+        "desc": "나루의 공격력이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "여기 보세요!",
+        "type": 1,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "desc": "윤분의에 별의 힘을 모아서 적에게 발사합니다. 자신에게 도약 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "이게 제 실력입니다",
+        "type": 2,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "적에게 떨어질 수 있는 낙하체를 계산합니다. 자신에게 1턴 간 공격력 증가를 발생시킵니다. 타격 시 적이 약화 효과 상태이면 피해량이 10% 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "예상 범위를 벗어났어요!",
+        "type": 3,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "cooltime": 5,
+        "break": 2,
+        "nova": 1,
+        "desc": "넘치는 자신감을 가득 담아 미완성 방정식을 이용한 에너지 발산 계산식을 진행합니다. 적에게 100% 확률로 2턴 간 속도 감소를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 적에게 100% 확률로 2턴 간 효과 저항 감소를 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 14,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 14,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "다나",
+    "rank": "SSR",
+    "attr": "별",
+    "class": "캐스터",
+    "atk_type": "원소",
+    "inst": {
+      "birth": 45792,
+      "height": 160,
+      "origin": "카노푸스 산맥",
+      "team": "카노푸스 경비대",
+      "cv_ko": "이보희",
+      "cv_jp": "미카와 하루나",
+      "desc": "카노푸스 산맥 깊은 곳의 드루이드 마을에서 나고 자란 소녀. 성격이 워낙 긍정적인 탓에 어떤 상황도 긍정적으로 해석한다."
+    },
+    "status": {
+      "atk": 4634,
+      "hp": 22513,
+      "def": 1761,
+      "spd": 90,
+      "crit_rate": 0.14,
+      "crit_dmg": 0.68,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 20,
+      "focus": 130,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "파괴의 감각"
+      },
+      {
+        "level": 10,
+        "value": "통찰의솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 5,
+        "name": "순수한 마음",
+        "type": 0,
+        "desc": "다나의 공격력이 15% 증가합니다. 다나가 급속 개화로 치명타 발생 시 자신에게 100% 확률로 1턴 간 속도 증가를 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 5,
+                "value": 70
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 5,
+                "value": 85
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 5,
+                "value": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "풀잎 쇄도",
+        "type": 1,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "desc": "다나가 자연의 기운을 날려보내서 적을 공격합니다. 자신에게 도약 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "급속 개화",
+        "type": 2,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "자연의 기운으로 식물의 성장을 촉진하여 적을 공격합니다. 자신과 자신을 제외한 공격력이 가장 높은 아군에게 2턴 간 공격력 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 치명타 확률이 30% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "자연의 힘",
+        "type": 3,
+        "atk_type": "원소",
+        "target": "적 전체",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "생명력으로 가득한 대지를 만들고 거목을 일으켜 적 전체를 공격합니다. 적 전체에게 75% 확률로 1턴 간 속도 감소를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 14,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 14,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "레이시",
+    "rank": "SSR",
+    "attr": "혼돈",
+    "class": "레인저",
+    "atk_type": "원소",
+    "inst": {
+      "birth": 45661,
+      "height": 170,
+      "origin": "동대륙",
+      "team": "방랑자",
+      "cv_ko": "허예은",
+      "cv_jp": "마에다 카오리",
+      "desc": "동대륙 출신의 용족. 오랜 시간 작가로 활동해 왔으며 큰 성공을 거뒀었지만 최근에는 슬럼프인 듯."
+    },
+    "status": {
+      "atk": 4436,
+      "hp": 22861,
+      "def": 1768,
+      "spd": 115,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.12,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 160,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "속도의 감각"
+      },
+      {
+        "level": 6,
+        "value": "집중의 감각"
+      },
+      {
+        "level": 10,
+        "value": "속도의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 9,
+        "name": "바람이 담김 글",
+        "type": 0,
+        "desc": "레이시의 공격력이 15% 증가합니다. 레이시가 뒤엉킨 꿈결 상태인 적에게 피격 후 행동 게이지를 10% 증가시키고 자신의 생명력을 회복합니다. 회복량은 자신의 공격력에 비례해 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 6,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 6,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 6,
+                "value": 8
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 6,
+                "value": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "화룡생천",
+        "type": 1,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "desc": "불의 숨결을 날려 적을 공격합니다. 자신에게 격동 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "역류수옥",
+        "type": 2,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "거꾸로 역류하는 물줄기를 만들어 적을 공격합니다. 자신에게 2턴 간 속도 증가를 발생시킵니다. 타격 시 적이 뒤엉킨 꿈결 상태이면 피해량이 20% 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 피해량이 20% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "물과 불의 노래",
+        "type": 3,
+        "atk_type": "원소",
+        "target": "적 전체",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "물과 불의 기운을 실은 검을 휘둘러 적을 공격합니다. 자신에게 2턴 간 공격력 증가를 발생시키고 적 전체에게 100% 확률로 3턴 간 뒤엉킨 꿈결을 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 27,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 27,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "루그",
+    "rank": "SSR",
+    "attr": "달",
+    "class": "레인저",
+    "atk_type": "정신",
+    "inst": {
+      "birth": 46012,
+      "height": 167,
+      "origin": "동대륙",
+      "team": "궤도 수색대",
+      "cv_ko": "장채연",
+      "cv_jp": "와타나베 유리나",
+      "desc": "폴라리스 소속 궤도 수색대의 부팀장. 가문 대대로 내려온 특이체질 때문에 고통을 느끼지 못한다. 주위 사람들에게는 철저히 숨기는 취미를 가지고 있다는 소문이."
+    },
+    "status": {
+      "atk": 4578,
+      "hp": 22699,
+      "def": 1767,
+      "spd": 104,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.16,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 160,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "집중의 감각"
+      },
+      {
+        "level": 6,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 13,
+        "name": "퇴마사의 길",
+        "type": 0,
+        "desc": "루그의 공격력이 15% 증가합니다. 루그가 제압부 사용 후 적에게 100% 확률로 1턴 간 빙결을 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 7,
+                "value": 50
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 7,
+                "value": 50
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 7,
+                "value": 75
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 7,
+                "value": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "제압부",
+        "type": 1,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "desc": "적에게 부적을 날려 공격합니다. 자신에게 냉각 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "설중사우",
+        "type": 2,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "부적으로 냉기를 일으켜 적을 공격합니다. 적에게 100% 확률로 2턴 간 빙결을 발생시키고 자신에게 1턴 간 속도 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 속도 증가의 턴 수가 1턴 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 25,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 25,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "천도불용, 악즉참",
+        "type": 3,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "cooltime": 5,
+        "break": 2,
+        "nova": 1,
+        "desc": "부적으로 만들어낸 검으로 삿된 것을 베어냅니다. 적에게 100% 확률로 2턴 간 방어력 감소를 발생시키고 100% 확률로 궁극기 쿨타임을 1턴 증가시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 10,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 10,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "루나",
+    "rank": "SSR",
+    "attr": "질서",
+    "class": "캐스터",
+    "atk_type": "원소",
+    "inst": {
+      "birth": 45734,
+      "height": 167,
+      "origin": "불명",
+      "team": "보이저 구원단",
+      "cv_ko": "방시우",
+      "cv_jp": "미나토 미야",
+      "desc": "꿈의 대마녀 마기의 수제자이자, 그녀의 '달의 지팡이'를 물려받은 자칭 라비스타 최고의 예언자. 그날 생긴 돈은 그날 카지노에서 모두 써버리는 대책 없는 삶을 살고 있다."
+    },
+    "status": {
+      "atk": 4648,
+      "hp": 22538,
+      "def": 1752,
+      "spd": 93,
+      "crit_rate": 0.14,
+      "crit_dmg": 0.68,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 20,
+      "focus": 130,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "파괴의 감각"
+      },
+      {
+        "level": 10,
+        "value": "통찰의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 17,
+        "name": "미래를 보는 소녀",
+        "type": 0,
+        "desc": "루나의 공격력이 15% 증가합니다. 루나가 내 눈에 비친 세계 사용 시 강화 효과 상태이면 치명타 피해가 20% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 8,
+                "value": 10
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 8,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 8,
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "호신용 마력탄",
+        "type": 1,
+        "atk_type": "원소",
+        "target": "적 전체",
+        "desc": "손가락을 튕겨 만들어 낸 마력 구체를 적들에게 쏘아냅니다. 자실에게 통찰 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "헤카테의 불씨",
+        "type": 2,
+        "atk_type": "원소",
+        "target": "적 전체",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "모자에 달의 마력을 담아 적 한가운데로 날려 터뜨립니다. 자신에게 2턴 간 치명타 확률 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "내 눈에 비친 세계",
+        "type": 3,
+        "atk_type": "원소",
+        "target": "적 전체",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "달의 지팡이의 힘을 끌어내어 적들에게 피할 수 없는 운명을 선고합니다. 적 전체에게 75% 확률로 2턴 간 속박을 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 속박의 발생 확률이 100%로 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 26,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 26,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "리디아",
+    "rank": "SSR",
+    "attr": "혼돈",
+    "class": "레인저",
+    "atk_type": "정신",
+    "inst": {
+      "birth": 45826,
+      "height": 156,
+      "origin": "서부 재난 지대",
+      "team": "서부 탈환대",
+      "cv_ko": "장미",
+      "cv_jp": "아이자와 사야",
+      "desc": "서부 탈환대의 부대장. 언제나 세레스를 옆에서 보좌하고 있다. 언제나 생글생글 웃고 있지만 그 미소의 안쪽에는 어둠이 도사리고 있다."
+    },
+    "status": {
+      "atk": 4164,
+      "hp": 25285,
+      "def": 1768,
+      "spd": 107,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.16,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 160,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "집중의 감각"
+      },
+      {
+        "level": 6,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 21,
+        "name": "공허의 추구자",
+        "type": 0,
+        "desc": "리디아의 최대 생명력이 15% 증가합니다. 리디아가 공허의 손길 사용 후 적이 약화 효과 상태이명 자신의 공격력이 6%씩 증가합니다. 최대 5회 중첩됩니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 9,
+                "value": 4
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              },
+              {
+                "type": 9,
+                "value": 4
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 10
+              },
+              {
+                "type": 9,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 15
+              },
+              {
+                "type": 9,
+                "value": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "공허의 손길",
+        "type": 1,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "desc": "근원을 알 수 없는 힘을 이용하여 적을 공격합니다. 자신에게 격동 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "별자리 너머의 초대",
+        "type": 2,
+        "atk_type": "정신",
+        "target": "적 전체",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "쿠쿠의 촉각을 유인하여 적 전체를 공격하게 합니다. 적 전체에게 75% 확률로 2턴 간 미지의 주문을 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 28,
+            "value": 10
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 28,
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "서책의 공허간",
+        "type": 3,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "cooltime": 5,
+        "break": 2,
+        "nova": 1,
+        "desc": "쿠쿠의 봉인을 잠시 열어 형용할 수 없는 공포를 현실에 방류합니다. 적에게 100% 확률로 2턴 간 속도 감소를 발생시킵니다. 타격 시 적이 약화 효과 상태이명 자신의 행동 게이지를 30% 증가시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 적에게 100%확률로 1턴 간 미지의 주문을 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 14,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 14,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "릴리",
+    "rank": "SSR",
+    "attr": "달",
+    "class": "캐스터",
+    "atk_type": "정신",
+    "inst": {
+      "birth": 45966,
+      "height": 151,
+      "origin": "NOA",
+      "team": "람파디스",
+      "cv_ko": "김윤채",
+      "cv_jp": "이이다 히카루",
+      "desc": "람파디스 수사 컨설팅의 보조 조사원. 토끼씨라고 불리는 커다란 토끼 인형을 언제나 들고 다니고 있다. 가끔 토끼씨와 대화를 나눠서 주변의 걱정을 사고 있다."
+    },
+    "status": {
+      "atk": 4614,
+      "hp": 23004,
+      "def": 1751,
+      "spd": 90,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.16,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 160,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "집중의 감각"
+      },
+      {
+        "level": 6,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 25,
+        "name": "미스터리 콤비",
+        "type": 0,
+        "desc": "릴리의 공격력이 15% 증가합니다. 릴리가 토끼씨의 즉결 심판 사용 후 자신의 행동 게이지를 20% 증가시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 10,
+                "value": 10
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 10,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 10,
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "혼란 속 일격",
+        "type": 1,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "desc": "토끼 씨의 수수께끼 같은 힘을 빌려 적을 공격합니다. 자신에게 냉각 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "릴리의 소중한 시간",
+        "type": 2,
+        "target": "아군 전체",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "즉석에서 토끼 씨를 수선하여 활로를 찾아냅니다. 자신을 제외한 아군 전체에게 2턴 간 보호막을 발생시키고 자신에게 2턴 간 공격력 증가를 발생시킵니다. 보호막은 자신의 공격력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "value": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 3,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 3,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 3,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 3,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 3,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "토끼 씨의 즉결 심판",
+        "type": 3,
+        "atk_type": "정신",
+        "target": "적 전체",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "위기의 순간에 토끼 씨 인형이 직접 나서서 적을 공격합니다. 적 전체에게 75% 확률로 2턴 간 공격력 감소를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 적 전체에게 100% 확률로 2턴 간 공격력 감소를 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "마르실",
+    "rank": "SR",
+    "attr": "태양",
+    "class": "어쌔신",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45919,
+      "height": 148,
+      "origin": "칼라이드",
+      "team": "페트라 조합",
+      "cv_ko": "박시윤",
+      "cv_jp": "안도 나나코",
+      "desc": "페트라 조합의 현장 반장. 가족과 함께 운영할 당근 농장을 사들이기 위해 매일 열심히 일하고 있다."
+    },
+    "status": {
+      "atk": 2748,
+      "hp": 15775,
+      "def": 1158,
+      "spd": 94,
+      "crit_rate": 0.2,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 20,
+      "focus": 130,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "통찰의 감각"
+      },
+      {
+        "level": 6,
+        "value": "공격의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 29,
+        "name": "망치와 모루",
+        "type": 0,
+        "desc": "마르실의 치명타 확률이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 3,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 3,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 3,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 3,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "너트 돌리기",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "온몸으로 렌치를 휘둘러 적을 공격합니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "대못 박기",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "개조한 네일건으로 적을 공격합니다. 적에게 100% 확률로 1턴 간 연소를 발생시킵니다. 치명타 발생 시 자신에게 1턴 간 속도 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 적에게 100% 확률로 1턴 간 회복 감소를 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "나사 부수기",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "렌치를 최대 출력으로 가동해 앞을 가로막는 모든 것을 철거합니다. 자신에게 2턴 간 공격력 증가를 발생시킵니다. 치명타 발생 시 적에게 100% 확률로 1턴 간 회복 감소를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "뮤리엘",
+    "rank": "SSR",
+    "attr": "태양",
+    "class": "캐스터",
+    "atk_type": "원소",
+    "inst": {
+      "birth": 45718,
+      "height": 152,
+      "origin": "카노푸스 산맥",
+      "team": "모노리스 교단",
+      "cv_ko": "박신희",
+      "cv_jp": "키토 아카리",
+      "desc": "모노리스 교단의 성녀. 서열은 116번. 서열을 올려 모든 성녀들의 정점인 대성녀가 되는 것이 목표인 사고뭉치 소녀."
+    },
+    "status": {
+      "atk": 4173,
+      "hp": 23064,
+      "def": 1756,
+      "spd": 90,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.75,
+      "eff_rate": 1.16,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 160,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "집중의 감각"
+      },
+      {
+        "level": 6,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 33,
+        "name": "의기양양",
+        "type": 0,
+        "desc": "뮤리엘의 치명타 피해가 25% 증가합니다. 뮤리엘이 자신을 제외한 태양 속성 아군이 궁극기 사용 후 자신에게 100% 점화 스택을 1개 부여합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 4,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 4,
+                "value": 15
+              },
+              {
+                "type": 11,
+                "value": 50
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 4,
+                "value": 20
+              },
+              {
+                "type": 11,
+                "value": 75
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 4,
+                "value": 25
+              },
+              {
+                "type": 11,
+                "value": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "신의 불꽃",
+        "type": 1,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "desc": "성스러운 불꽃을 날려 보내 적을 공격합니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "성수 폭격",
+        "type": 2,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "훔쳐온 성수를 적에게 아낌없이 던져 공격합니다. 적이 보유한 약화 효과 개수 당 피해량이 3%씩 증가합니다. 100% 확률로 적의 모든 약화 효과를 1턴 연장시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 21,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 21,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "이제 착하게 살게요",
+        "type": 3,
+        "atk_type": "원소",
+        "target": "적 전체",
+        "cooltime": 5,
+        "break": 1,
+        "nova": 1,
+        "desc": "뮤리엘이 받아야할 천벌에 적 전체가 휘말립니다. 적 전체에게 75% 확률로 2턴간 공격력 감소를 발생시킵니다. 자신의 점화가 최대 스택이면 점화 스택을 모두 소거하고 적 전체에게 100% 확률로 2턴 간 연소를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 공격력 감소의 발생 확률이 100% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 8,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 8,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "베라",
+    "rank": "SR",
+    "attr": "달",
+    "class": "서포터",
+    "atk_type": "원소",
+    "inst": {
+      "birth": 45714,
+      "height": 157,
+      "origin": "NOA",
+      "team": "배달부 협회",
+      "cv_ko": "김가령",
+      "cv_jp": "슈토 유키나",
+      "desc": "언제나 부지런한 발걸음으로 NOA를 누비는 배달부 소녀. 돈을 많이 벌어 배달부 전용차 - 크루저를 사는 것이 삶의 목표."
+    },
+    "status": {
+      "atk": 2381,
+      "hp": 18145,
+      "def": 1200,
+      "spd": 95,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.04,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 150,
+      "end": 30,
+      "focus": 10,
+      "prot": 160
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "보호의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 37,
+        "name": "베테랑 집배원",
+        "type": 0,
+        "desc": "베라의 최대 생명력이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "적절한 대응",
+        "type": 1,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "desc": "소포를 지켜야 한다는 일념으로 적을 공격합니다. 자신에게 냉각 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "신속하고 안전한 배송",
+        "type": 2,
+        "target": "아군 단일",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "베라가 기쁜 소식을 가지고 찾아왔습니다. 아군 대상의 생명력을 회복시키고 아군의 약화 효과를 1개 해제합니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "꿈을 향한 한 걸음",
+        "type": 3,
+        "target": "아군 전체",
+        "cooltime": 4,
+        "break": 0,
+        "nova": 1,
+        "desc": "베라가 아군을 위한 특제 소포 배달을 완료합니다. 아군 전체의 생명력을 회복시킵니다. 대상이 강화 효과 상태라면 1턴 간 특급 배송 1개를 발생시킵니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복하고 일시적으로 주는 회복량이 15% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "베스타",
+    "rank": "SR",
+    "attr": "별",
+    "class": "디펜더",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45745,
+      "height": 162,
+      "origin": "서부 재난 지대",
+      "team": "서부 탈환대",
+      "cv_ko": "박하진",
+      "cv_jp": "츠카다 유이",
+      "desc": "서부 탈환대의 돌격대원. 어떤 상황에서도 불평불만없이 임무를 수행하기에 서부 전사들 사이에서는 귀감으로 여겨진다."
+    },
+    "status": {
+      "atk": 2421,
+      "hp": 17965,
+      "def": 1233,
+      "spd": 95,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.08,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 150,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "방어의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 41,
+        "name": "희미한 감정",
+        "type": 0,
+        "desc": "베스타의 최대 생명력이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "흔들림 없는 창",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "랜스로 돌격해서 적을 찌릅니다. 자신에게 도약 스택을 1개 부여합니다. 피해량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "격퇴",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "실드를 전개해 적의 시야를 가린 후 기습 공격합니다. 적에게 100% 확률로 1턴 간 공격력 감소를 발생시킵니다. 피해량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "거침없는 돌격",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "공허의 힘을 랜스에 담아낸 후 전속력으로 낙하해서 적을 공격합니다. 자신에게 2턴 간 방어력 증가를 발생시킵니다. 피해량은 자신의 최대 생명력에 비례해 증가합니다.(방어력 증가 : 방어력이 30% 증가합니다.)",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 방어력 증가의 턴 수가 1턴 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "샤를",
+    "rank": "SSR",
+    "attr": "태양",
+    "class": "스트라이커",
+    "atk_type": "참격",
+    "inst": {
+      "birth": 45950,
+      "height": 166,
+      "origin": "모나스티르 공국",
+      "team": "모나스티르 기사단",
+      "cv_ko": "채림",
+      "cv_jp": "오오키 사에코",
+      "desc": "모나스티르 공국 기사단의 기사단장. 근엄하고 무게있는 기사단장이 되려고 노력하지만 활달하고 소박한 본래의 성격이 언제나 발목을 잡는다."
+    },
+    "status": {
+      "atk": 4637,
+      "hp": 23626,
+      "def": 1767,
+      "spd": 104,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 140,
+      "end": 20,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 10,
+        "value": "공격의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 45,
+        "name": "흔들리지 않는 기사단장",
+        "type": 0,
+        "desc": "샤를의 공격력이 15% 증가합니다. 샤를이 꺾이지 않는 일격 사용 후 정직한 찌르기의 피해량이 10%씩 증가합니다. 최대 3회 중첩됩니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 12,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 12,
+                "value": 8
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 12,
+                "value": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "정직한 찌르기",
+        "type": 1,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "desc": "군더더기 없는 검술로 적을 찌릅니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "승리의 다짐",
+        "type": 2,
+        "target": "아군 단일",
+        "cooltime": 4,
+        "break": 0,
+        "nova": 1,
+        "desc": "승리를 향한 각오를 아군 한 명에게 나누어 줍니다. 아군 대상에게 2턴 간 치명타 확률 증가를 발생시킵니다. 추가로 아군 대상에게 100% 확률로 1턴 간 공격력 증가를 발생시킵니다. 자신에게 추가 턴이 발생합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 5,
+            "value": 2
+          },
+          {
+            "level": 3,
+            "type": 5,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 5,
+            "value": 3
+          },
+          {
+            "level": 5,
+            "type": 5,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 5,
+            "value": 5
+          },
+          {
+            "level": 8,
+            "type": 5,
+            "value": 5
+          },
+          {
+            "level": 9,
+            "type": 5,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "꺾이지 않는 일격",
+        "type": 3,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "cooltime": 5,
+        "break": 2,
+        "nova": 1,
+        "desc": "끊임없이 노력하여 갈고닦은 모나스티르 기사단의 검술을 선보입니다. 적에게 100% 확률로 2턴 간 공격력 감소를 발생시킵니다. 자신의 행동 게이지를 30% 증가시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 피해량이 20% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 17,
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "세르팡",
+    "rank": "SSR",
+    "attr": "태양",
+    "class": "서포터",
+    "atk_type": "정신",
+    "inst": {
+      "birth": 45755,
+      "height": 149,
+      "origin": "동대륙",
+      "team": "풍월당",
+      "cv_ko": "유혜지",
+      "cv_jp": "하라츠카 사에",
+      "desc": "환상족 토토와 함께 동대륙에서 건너온 풍월당 소속의 소녀. 귀찮은 걸 싫어해서 자주 수련을 빼먹으려 한다."
+    },
+    "status": {
+      "atk": 3680,
+      "hp": 26695,
+      "def": 1815,
+      "spd": 95,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.12,
+      "eff_resist": 0.12,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 30,
+      "focus": 10,
+      "prot": 130
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "보호의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 49,
+        "name": "날아오르라 봉황이여",
+        "type": 0,
+        "desc": "세르팡의 최대 생명력이 15% 증가합니다. 세르팡이 너로 정했다! 사용 후 적에게 100% 확률로 1턴 간 연소를 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              },
+              {
+                "type": 13,
+                "value": 50
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 10
+              },
+              {
+                "type": 13,
+                "value": 75
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 15
+              },
+              {
+                "type": 13,
+                "value": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "너로 정했다.",
+        "type": 1,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "desc": "세르팡이 토토를 적에게 던져 공격합니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "너만 믿을게",
+        "type": 2,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "토토가 살의가 담긴 매서운 시선을 쏘아 적의 심리를 압박합니다. 현재 생명력 비율이 가장 낮은 아군의 생명력을 회복시키고 적에게 75% 확률로 1턴 간 공격력 감소를 발생시킵니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 주는 회복량이 15% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 5
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 5
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 2,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "보여주자, 토토!",
+        "type": 3,
+        "target": "아군 전체",
+        "cooltime": 5,
+        "break": 0,
+        "nova": 1,
+        "desc": "세르팡과 토토가 하나로 모은 뜨거운 우정의 힘을 모두에게 나눠줍니다. 아군 전체의 생명력을 회복시키고 자신과 자신을 제외한 현재 생명력 비율이 가장 낮은 아군에게 스킬 피해 무효를 1회 발생시킵니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 2,
+            "value": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "세이라",
+    "rank": "SSR",
+    "attr": "질서",
+    "class": "스트라이커",
+    "atk_type": "정신",
+    "inst": {
+      "birth": 46000,
+      "height": 165,
+      "origin": "불명",
+      "team": "환상종",
+      "cv_ko": "윤은서",
+      "cv_jp": "아이다 리카코",
+      "desc": "오랜 기간 라비스타를 떠돌고 있는 몽마. 사람들에게 좋은 꿈을 보여주는 능력이 있다. 하지만 그 능력은 때로 사람들을 중독시키기에, 한 곳에 오래 머물지 못하고 있다."
+    },
+    "status": {
+      "atk": 4662,
+      "hp": 23738,
+      "def": 1763,
+      "spd": 107,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 140,
+      "end": 20,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 10,
+        "value": "공격의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 53,
+        "name": "예지몽의 가호",
+        "type": 0,
+        "desc": "세이라의 공격력이 15% 증가합니다. 세이라가 타격 시 적의 생명력이 75% 이상이면 피해량이 15% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 14,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 14,
+                "value": 12
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 14,
+                "value": 15
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "덧없는 꿈",
+        "type": 1,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "desc": "적에게 순식간에 접근해 낫을 휘두릅니다. 자신에게 통찰 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "별나비 무리",
+        "type": 2,
+        "target": "아군 단일",
+        "cooltime": 4,
+        "break": 0,
+        "nova": 1,
+        "desc": "별빛으로 빛나는 나비 무리를 불러 아군을 강화합니다. 아군 대상에게 2턴 간 공격력 증가를 발생시키고 행동 게이지를 25% 증가시킵니다. 자신에게 추가 턴이 발생합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복하고 행동 게이지 증가량이 50% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 17,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 17,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 17,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 17,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 17,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 17,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 17,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "name": "환몽으로의 초대",
+        "type": 3,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "cooltime": 5,
+        "break": 2,
+        "nova": 1,
+        "desc": "환몽의 영역 안에 적을 끌어들이고 한번에 베어 가릅니다. 적에게 100% 확률로 2턴 간 속도 감소를 발생 시킵니다. 자신에게 2턴 간 영몽의 빛을 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "스마일",
+    "rank": "SSR",
+    "attr": "별",
+    "class": "레인저",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45971,
+      "height": 148,
+      "origin": "NOA",
+      "team": "보이저 구원단",
+      "cv_ko": "곽규미",
+      "cv_jp": "타무카이 유즈키",
+      "desc": "스스로 인간이 아니라 고도의 과학 기술로 만들어진 존재라고 주장하는 과학 신봉자. 태어나서 한 번도 웃어 본 적이 없기 때문에 웃을 수 있는 연구를 위해 단장을 실험체로 삼고 있다."
+    },
+    "status": {
+      "atk": 4598,
+      "hp": 23746,
+      "def": 1777,
+      "spd": 100,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.12,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 140,
+      "end": 20,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 57,
+        "name": "해피 트리거",
+        "type": 0,
+        "desc": "스마일의 공격력이 15% 증가합니다. 스마일이 사격 좌표 확인 사용 후 적의 생명력이 50% 이상이면 자신의 행동 게이지를 10% 증가시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 15,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 15,
+                "value": 8
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 15,
+                "value": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "사격 좌표 확인",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "자체 제작한 해피 엔드로 적을 포격합니다. 자신에게 도약 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "고양이 탭댄스",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 전체",
+        "cooltime": 1,
+        "break": 0,
+        "nova": 1,
+        "desc": "사격 좌표 확인 사용 후 적의 생명력이 50% 이하이면 고양이 탭댄스를 발동합니다. 적 전체에게 75% 확률로 1턴 간 연소를 발생시킵니다. 1턴에 1번만 발생하며 사격 좌표 확인으로 적 사망 시에는 발동하지 않습니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 22,
+            "value": 10
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 22,
+            "value": 15
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "전대원, 일제 사격!",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "직접 제작한 스마일 캣과 함께 적에게 집중포화를 퍼붓습니다. 적에게 100% 확률로 2턴 간 방어력 감소를 발생시킵니다. ",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 피해량이 20% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "스칼렛",
+    "rank": "SR",
+    "attr": "태양",
+    "class": "스트라이커",
+    "atk_type": "원소",
+    "inst": {
+      "birth": 45782,
+      "height": 155,
+      "origin": "용의 계곡",
+      "team": "캔들 스퀘어",
+      "cv_ko": "서다혜",
+      "cv_jp": "아키야마 미사키",
+      "desc": "대재단사를 꿈꾸는 용족 소녀. 인간 사회의 상식이 부족하기 때문에 사고를 치고 클레어에게 혼나는 일이 잦다."
+    },
+    "status": {
+      "atk": 2700,
+      "hp": 17836,
+      "def": 1158,
+      "spd": 100,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 140,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 61,
+        "name": "이 몸이 상대해주지!",
+        "type": 0,
+        "desc": "스칼렛의 최대 생명력이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "재단해주마!",
+        "type": 1,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "desc": "분리한 테일리온으로 적을 공격합니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "화끈하게 간다!",
+        "type": 2,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "용의 숨결로 달궈진 테일리온을 적에게 투척합니다. 자신에게 1턴 간 공격력 증가를 발생시킵니다. 타격 시 적이 연소 상태이명 피해량이 15% 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "버틸 수 있겠느냐!",
+        "type": 3,
+        "atk_type": "원소",
+        "target": "적 단일",
+        "cooltime": 5,
+        "break": 2,
+        "nova": 1,
+        "desc": "벨라르미니 일족의 권속을 불러내어 초고온의 숨결을 뿜어냅니다. 적에게 100% 확률로 2턴 간 연소를 발생시키고 75% 확률로 1턴 간 연소를 추가 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 연소 추가 발생 확률이 100%로 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 23,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 23,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "스칼렛(바니걸)",
+    "rank": "SSR",
+    "attr": "태양",
+    "class": "레인저",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45782,
+      "height": 155,
+      "origin": "용의 계곡",
+      "team": "캔들 스퀘어",
+      "cv_ko": "서다혜",
+      "cv_jp": "아키야마 미사키",
+      "desc": "대재단사를 꿈꾸는 용족 소녀. 인간 사회의 상식이 부족하기 때문에 사고를 치고 클레어에게 혼나는 일이 잦다."
+    },
+    "status": {
+      "atk": 4144,
+      "hp": 23686,
+      "def": 1772,
+      "spd": 100,
+      "crit_rate": 0.2,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.12,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 140,
+      "end": 20,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 65,
+        "name": "하이 스코어!",
+        "type": 0,
+        "desc": "스칼렛의 치명타 확률이 15% 증가합니다. 스칼렛이 턴 시작 시 자신에게 핀볼 타임!을 3회 발생시키고 타격 후 핀볼 타임! 상태를 모두 해제합니다. 턴 시작 시 자신이 보유한 세븐볼(해제불가) 개수 당 속도가 1씩 증가합니다. 최대 10회 중첩됩니다.\\n노멀볼(해제불가) : 주는 피해량이 1% 증가합니다.\\n세븐볼(해제불가) : 주는 피해량이 7% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 16,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 3,
+                "value": 5
+              },
+              {
+                "type": 16,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 3,
+                "value": 10
+              },
+              {
+                "type": 16,
+                "value": 8
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 3,
+                "value": 15
+              },
+              {
+                "type": 16,
+                "value": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "단숨에 간다!",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "스칼렛이 분리한 테일리온을 이용해 적에게 휘두릅니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "이건 무효야!",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "스칼렛이 들고 있던 접시를 던져 적을 공격합니다. 적에게 100% 확률로 2턴 간 회복 감소를 발생시킵니다. 자신에게 추가 턴이 발생합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "아무튼 이겼노라!",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 전체",
+        "cooltime": 5,
+        "break": 1,
+        "nova": 1,
+        "desc": "스칼렛이 거대한 핀볼을 돌려 적 전체에게 피해를 입힙니다. 적 전체에게 75% 확률로 1턴 간 속도 감소를 발생시킵니다. 자신이 보유한 세븐볼(해제불가) 개수 당 해당 스킬의 쿨타임이 1턴 감소합니다. 세븐볼(해제불가)이 3개이면 해당 스킬의 쿨타임을 초기화합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 피해량이 20% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "아세라",
+    "rank": "SSR",
+    "attr": "달",
+    "class": "스트라이커",
+    "atk_type": "참격",
+    "inst": {
+      "birth": 45769,
+      "height": 166,
+      "origin": "NOA",
+      "team": "보이저 구원단",
+      "cv_ko": "김채린",
+      "cv_jp": "타카모리 나츠미",
+      "desc": "별의 구원자를 동경해서 그와 같은 구원자가 되기 위해 여정에 참가한 귀족 아가씨. 고민하는 것보다는 일단 행동으로 저지르고 보는 추진력이 강점이자 단점."
+    },
+    "status": {
+      "atk": 4568,
+      "hp": 22639,
+      "def": 1762,
+      "spd": 100,
+      "crit_rate": 0.14,
+      "crit_dmg": 0.68,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 20,
+      "focus": 10,
+      "prot": 130
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "통찰의 감각"
+      },
+      {
+        "level": 10,
+        "value": "파괴의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 69,
+        "name": "스트라니스식 호흡법",
+        "type": 0,
+        "desc": "아세라의 공격력이 15% 증가합니다. 아세라가 장막 베기 사용 후 자신의 치명타 피해가 6%씩 증가합니다. 최대 5회 중첩됩니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 17,
+                "value": 4
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 17,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 17,
+                "value": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "스트라니스식 일섬",
+        "type": 1,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "desc": "적에게 달려가 크게 올려 벱니다. 자신에게 냉각 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "장막 베기",
+        "type": 2,
+        "atk_type": "참격",
+        "target": "적 전체",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "마법검의 힘을 일부 개방하여 적 전체에게 참격을 가합니다. 자신에게 2턴 간 속도 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "밤의 서광",
+        "type": 3,
+        "atk_type": "참격",
+        "target": "적 전체",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "마법검의 봉인을 일시적으로 해방하여 적 전체에게 궤멸적인 피해를 입힙니다. 자신에게 2턴 간 치명타 확률 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 치명타 확률이 30% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "안나",
+    "rank": "SR",
+    "attr": "태양",
+    "class": "디펜더",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45907,
+      "height": 157,
+      "origin": "NOA",
+      "team": " NOA 타운가드",
+      "cv_ko": "여윤미",
+      "cv_jp": "하나사키 미유",
+      "desc": "NOA의 치안을 지키는 타운가드. 잘 웃고 누구에게나 쉽게 다가가 수다를 떠는 성격이지만 타운가드 일에는 언제나 진지하게 임하고 있다."
+    },
+    "status": {
+      "atk": 2411,
+      "hp": 17905,
+      "def": 1228,
+      "spd": 95,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.08,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 150,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "방어의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 73,
+        "name": "어디서 맛있는 냄새가",
+        "type": 0,
+        "desc": "안나의 최대 생명력이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "저항을 멈추세요!",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "삼단봉을 휘둘러 적을 혼내 줍니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "먹고 시작하겠습니다!",
+        "type": 2,
+        "target": "자기 자신",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "안나가 가장 좋아하는 스트릿 베이커스의 도넛을 먹어 의욕을 충전합니다. 자신의 생명력을 회복시키고 2턴 간 속도 증가를 발생시킵니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복하고 자신의 행동 게이지를 30% 증가시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "모두 체포해!",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 5,
+        "break": 2,
+        "nova": 1,
+        "desc": "안나가 호루라기를 불어 체포조를 소집해 적에게 달려듭니다. 적에게 100% 확률로 2턴 간 공격력 감소를 발생시킵니다. 타격 후 자신의 생명력이 50% 이하이면 자신의 생명력을 회복합니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 2,
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "에데",
+    "rank": "SSR",
+    "attr": "별",
+    "class": "디펜더",
+    "atk_type": "참격",
+    "inst": {
+      "birth": 45677,
+      "height": 153,
+      "origin": "파렌",
+      "team": "모렐 해운상회",
+      "cv_ko": "방연지",
+      "cv_jp": "츠치야 리오",
+      "desc": "대륙 전체를 대상으로 무역업을 하는 모렐 해운상회의 부대표. 주변 사람들과 늘 거리를 두는 차갑고 쌀쌀한 성격."
+    },
+    "status": {
+      "atk": 3710,
+      "hp": 24276,
+      "def": 2096,
+      "spd": 95,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.12,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 30,
+      "focus": 10,
+      "prot": 130
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "보호의 감각"
+      },
+      {
+        "level": 10,
+        "value": "방어의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 77,
+        "name": "마모된 감정",
+        "type": 0,
+        "desc": "에데의 방어력이 15% 증가합니다. 에데가 최초 전투 시작 시 자신에게 1턴 간 수호를 발생시킵니다. 피격 후 자신에게 100% 확률로 도약 스택을 1개 부여합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 1,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 1,
+                "value": 5
+              },
+              {
+                "type": 18,
+                "value": 50
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 1,
+                "value": 10
+              },
+              {
+                "type": 18,
+                "value": 75
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 1,
+                "value": 15
+              },
+              {
+                "type": 18,
+                "value": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "강철 소나기",
+        "type": 1,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "desc": "에데의 꽃에 응축된 공허의 힘을 적에게 발사하여 공격합니다. 자신에게 도약 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "송곳 갑주",
+        "type": 2,
+        "target": "자기 자신",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "공허의 힘을 휘감아 방어 태세를 취합니다. 자신에게 2턴 간 보호막과 방어력 증가를 발생시킵니다. 자신의 도약이 최대 스택이면 도약 스택을 모두 소거하고 자신에게 추가 턴을 발생시킵니다. 보호막은 자신의 방어력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복하고 방어력 증가의 턴 수가 1턴 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "value": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 3,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 3,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 3,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 3,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 3,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "가시 무덤",
+        "type": 3,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "에데가 한계까지 공허의 힘을 끌어모아 적에게 퍼붓습니다. 자신에게 3턴 간 수호를 발생시킵니다. 자신이 보호막 상태이면 적에게 100% 확률로 2턴간 명중률 감소를 발생시킵니다. 피해량은 자신의 방어력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 20,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "에핀델",
+    "rank": "SSR",
+    "attr": "달",
+    "class": "어쌔신",
+    "atk_type": "참격",
+    "inst": {
+      "birth": 45887,
+      "height": "165",
+      "origin": "NOA",
+      "team": "오를랑 가문",
+      "cv_ko": "윤아영",
+      "cv_jp": "미야시타 사키",
+      "desc": "오를랑 가문의 차기 가주. 아세라와는 소꿉친구 사이이지만 본인은 여러모로 아세라를 의식하며 경쟁심을 불태우는 중."
+    },
+    "status": {
+      "atk": 4634,
+      "hp": 22513,
+      "def": 1761,
+      "spd": 90,
+      "crit_rate": 0.14,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.12,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 10,
+      "prot": 160
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "보호의 감각"
+      },
+      {
+        "level": 10,
+        "value": "통찰의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 81,
+        "name": "귀족의 품격",
+        "type": 0,
+        "desc": "에핀델의 공격력이 15% 증가합니다. 에핀델의 달 속성 아군이 치명타 발생 시 자신에게 냉각 스택을 1개 부여합니다. 에핀델이 오를랑식 검술 사용 시 자신의 냉각이 최대 스택이면 피해량이 20% 증가하고 오를랑식 검술 사용 후 냉각 스택을 모두 소거합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 19,
+                "value": 10
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 19,
+                "value": 10
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 19,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 19,
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "name": "오를랑식 검술",
+        "type": 1,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "desc": "오를랑 가문의 쌍검술로 적을 공격합니다. 자신에게 냉각 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 피해량의 30%만큼 생명력을 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "name": "끈질긴 노력",
+        "type": 2,
+        "target": "자기 자신",
+        "cooltime": 4,
+        "break": 0,
+        "nova": 1,
+        "desc": "오를랑의 긍지를 상기하며 정신을 가다듬습니다. 자신에게 2턴 간 면역을 발생시키고 추가로 각각 100% 확률로 냉각 스택을 3개 부여합니다. 자신에게 추가 턴이 발생합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 24,
+            "value": 2
+          },
+          {
+            "level": 3,
+            "type": 24,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 24,
+            "value": 3
+          },
+          {
+            "level": 5,
+            "type": 24,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 24,
+            "value": 5
+          },
+          {
+            "level": 8,
+            "type": 24,
+            "value": 5
+          },
+          {
+            "level": 9,
+            "type": 24,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "name": "오를랑의 매",
+        "type": 3,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "매의 형태로 검기를 날린 후 추격하여 적을 공격합니다. 자신에게 3턴 간 속도 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 15,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "엘리사",
+    "rank": "SSR",
+    "attr": "혼돈",
+    "class": "서포터",
+    "atk_type": "정신",
+    "inst": {
+      "birth": 45914,
+      "height": "169",
+      "origin": "NOA",
+      "team": "모노리스 교단",
+      "cv_ko": "김서현",
+      "cv_jp": "미즈키 린",
+      "desc": "모노리스 교단의 성녀. 서열은 117번. 유물에 대한 지식은 깊지만 낮은 자존감과 팔랑귀 성향 때문에 기를 펴지 못하고 있다."
+    },
+    "status": {
+      "atk": 3687,
+      "hp": 27258,
+      "def": 1883,
+      "spd": 98,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.08,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 150,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "방어의 감각"
+      },
+      {
+        "level": 10,
+        "value": "생명의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 85,
+        "name": "소심한 기도",
+        "type": 0,
+        "desc": "엘리사의 최대 생명력이 15% 증가합니다. 엘리사가 부질없지만 도움을 사용 시 자신의 생명력이 75% 이상이면 회복량이 25% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              },
+              {
+                "type": 20,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 10
+              },
+              {
+                "type": 20,
+                "value": 20
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 15
+              },
+              {
+                "type": 20,
+                "value": 25
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "돌아가 주세요",
+        "type": 1,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "desc": "엘리사가 각오를 불어넣은 철퇴로 신의 심판을 대행합니다. 자신에게 격동 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "name": "부질없지만 도움을",
+        "type": 2,
+        "target": "아군 단일",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "엘리사가 불안과 걱정을 이겨내기 위해 필사적인 기도를 올립니다. 아군 대상의 생명력을 회복시키고 2턴 간 성스러운 가호를 발생시킵니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복하고 일시적으로 주는 회복량이 15% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "name": "다같이 기도를",
+        "type": 3,
+        "target": "아군 단일",
+        "cooltime": 5,
+        "break": 0,
+        "nova": 1,
+        "desc": "엘리사의 믿음이 절망 속에서 기적을 부릅니다. 사망상태인 아군 대상을 50%의 생명력으로 부활시키고 행동 게이지를 50% 증가시킵니다. 사망 상태가 아닌 아군 대상은 생명력을 회복시키고 100% 확률로 1턴 간 성스러운 가호를 발생시킵니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 29,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 29,
+            "value": 10
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 2,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "카르멘",
+    "rank": "SSR",
+    "attr": "달",
+    "class": "디펜더",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45880,
+      "height": 168,
+      "origin": "모나스티르 공국",
+      "team": "모나스티르 기사단",
+      "cv_ko": "손정민",
+      "cv_jp": "Lynn",
+      "desc": "모나스티르 공국 기사단의 부단장. 어떠한 어려운 상황에서도 언제나 여유로운 웃음을 잃지 않는 기사단의 방패."
+    },
+    "status": {
+      "atk": 3690,
+      "hp": 27117,
+      "def": 1891,
+      "spd": 95,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.08,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 150,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "방어의 감각"
+      },
+      {
+        "level": 10,
+        "value": "생명의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 89,
+        "name": "기사단의 방패",
+        "type": 0,
+        "desc": "카르멘의 최대 생명력이 15% 증가합니다. 카르멘이 피격 시 자신에게 부여된 냉각 스택에 비례하여 방어력이 4%씩 증가하며 최대 5개까지 적용됩니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              },
+              {
+                "type": 21,
+                "value": 2
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 10
+              },
+              {
+                "type": 21,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 15
+              },
+              {
+                "type": 21,
+                "value": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "기사단 제식 검술",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "무게를 실은 회전베기로 적을 공격합니다. 자신에게 냉각 스택을 1개 부여합니다. 피해량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "name": "충격 요법",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "강화된 방패를 앞에 세우고 돌진하여 전방에 있는 적을 향해 힘껏 휘둘러 칩니다. 자신에게 2턴 간 방어력 증가를 발생시키고 적에게 75% 확률로 1턴 간 도발을 발생시킵니다. 피해량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 도발의 발생 확률이 100%로 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 19,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 19,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "name": "모나스티르 기동 장벽",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "모두를 지키고자 하는 카르멘의 의지를 성벽의 형태로 구현합니다. 자신을 제외한 아군 전체에게 2턴 간 방어력 증가를 발생시키고 적에게 100% 확률로 1턴 간 도발을 발생시킵니다. 피해량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 19,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 19,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "클라리사",
+    "rank": "SR",
+    "attr": "별",
+    "class": "레인저",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45970,
+      "height": "166",
+      "origin": "카노푸스 산맥",
+      "team": "카노푸스 경비대",
+      "cv_ko": "원에스더",
+      "cv_jp": "카와세 마키",
+      "desc": "카노푸스 산맥에서 사냥꾼으로 활동했떤 소녀. 초인적인 시력을 타고 났다. 장난을 좋아하는 활기찬 성격이지만 모두와 일정 거리를 두려한다."
+    },
+    "status": {
+      "atk": 2720,
+      "hp": 15973,
+      "def": 1168,
+      "spd": 100,
+      "crit_rate": 0.26,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 20,
+      "focus": 130,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "통찰의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 93,
+        "name": "휘감는 바람길",
+        "type": 0,
+        "desc": "클라리사의 치명타 확률이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 3,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 3,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 3,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 3,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "name": "좀 멀리 떨어져봐",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "흐트러짐 없는 자세로 적을 저격합니다. 자신에게 도약 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 95,
+        "name": "느낌대로 사격",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "적이 방심한 틈을 놓치지 않고 포착해서 저격합니다. 적에게 100% 확률로 1턴 간 속도 감소를 발생 시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 100% 확률로 적의 행동 게이지를 15% 감소시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "name": "총은 이렇게 쏘는거야",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "초인적인 시력으로 적의 숨겨진 약점을 포착한 후 저격합니다. 자신에게 2턴 간 속도 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "클레어",
+    "rank": "SR",
+    "attr": "달",
+    "class": "어쌔신",
+    "atk_type": "참격",
+    "inst": {
+      "birth": 45687,
+      "height": 162,
+      "origin": "NOA",
+      "team": "캔들 스퀘어",
+      "cv_ko": "오로아",
+      "cv_jp": "소노야마 히카리",
+      "desc": "캔들 스퀘어의 최선임 메이드이자 메이드장 대행. 계획과 원칙을 중요시 하는 성격으로 언제나 모든 돌발상황에 대비한 계획을 세워두고 있다."
+    },
+    "status": {
+      "atk": 2979,
+      "hp": 15715,
+      "def": 1153,
+      "spd": 90,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.12,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 20,
+      "focus": 10,
+      "prot": 130
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "보호의 감각"
+      }
+    ],
+    "skills": [
+      {
+        "id": 97,
+        "name": "시간 엄수",
+        "type": 0,
+        "desc": "클레어의 공격력이 12% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 3
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 98,
+        "name": "완벽한 일격",
+        "type": 1,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "desc": "창을 크게 휘둘러 적을 공격합니다. 자신에게 냉각 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "name": "서슬 푸른 가시",
+        "type": 2,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "첨예한 기운을 휘감은 창으로 적을 연달아 찌릅니다. 자신에게 1턴 간 속도 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 자신에게 1턴 간 공격력 증가를 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "name": "마지막 서비스",
+        "type": 3,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "무례한 불청객에게 실력 행사로 자신의 잘못을 깨닫게 해 줍니다. 자신의 행동 게이지를 20% 증가시킵니다. 자신이 강화 효과 상태이명 자신의 행동 게이지를 추가로 10% 증가시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 17,
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "클레어(바니걸)",
+    "rank": "SSR",
+    "attr": "달",
+    "class": "스트라이커",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45687,
+      "height": 162,
+      "origin": "NOA",
+      "team": "캔들 스퀘어",
+      "cv_ko": "오로아",
+      "cv_jp": "소노야마 히카리",
+      "desc": "캔들 스퀘어의 최선임 메이드이자 메이드장 대행. 계획과 원칙을 중요시 하는 성격으로 언제나 모든 돌발상황에 대비한 계획을 세워두고 있다."
+    },
+    "status": {
+      "atk": 4627,
+      "hp": 23566,
+      "def": 1762,
+      "spd": 104,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 140,
+      "end": 20,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 10,
+        "value": "공격의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 101,
+        "name": "승리를 향한 확신",
+        "type": 0,
+        "desc": "클레어의 공격력이 15% 증가합니다. 클레어가 턴 시작 시 자신의 치명타 확률이 10%씩 증가합니다. 최대 3회 중첩됩니다. 눈보다 빠른 움직임을 사용 후 자신의 냉각이 최대 스택이면 모두 소거하고 어딜 보시는거죠?를 발동합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 22,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 22,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 22,
+                "value": 8
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 22,
+                "value": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "name": "눈보다 빠른 움직임",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "빠르게 접근하여 적에게 창을 뒤로 당겼다가 강하게 내찌릅니다. 자신에게 냉각 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "name": "어딜 보시는 거죠?",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 0,
+        "desc": "잭팟을 터트려 적을 공격합니다. 자신에게 2턴 간 공격력 증가를 발생시키고 행동게이지를 30% 증가시킵니다. 치명타 발생 시 자신에게 냉각 스택을 3개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "name": "바니걸 잭팟",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "행운이 깃든 카드를 던지고 폭발시켜 적을 공격합니다. 타격 시 자신의 치명타 확률이 20% 증가합니다. 타격 후 자신에게 3턴 간 잭팟 블룸을 발생시킵니다. 적이 보유한 강화 효과 개수 당 피해량이 10% 증가하며 최대 5개까지 적용됩니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 자신의 행동게이지를 20% 증가시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "키라",
+    "rank": "SSR",
+    "attr": "태양",
+    "class": "어쌔신",
+    "atk_type": "정신",
+    "inst": {
+      "birth": 45751,
+      "height": 155,
+      "origin": "NOA",
+      "team": "키라는 친구같은 거 없어",
+      "cv_ko": "성예원",
+      "cv_jp": "아오노 리코",
+      "desc": "목소리에 힘을 담는 언령이라는 특별한 능력을 가진 소녀. 어렸을 때부터 언령을 잘 조절하지 못했기 때문에 주변 사람들에게 피해를 끼치고, 점점 내성적인 성격이 되었다."
+    },
+    "status": {
+      "atk": 4703,
+      "hp": 22573,
+      "def": 1766,
+      "spd": 90,
+      "crit_rate": 0.14,
+      "crit_dmg": 0.62,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 20,
+      "focus": 130,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "통찰의 감각"
+      },
+      {
+        "level": 10,
+        "value": "공격의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 105,
+        "name": "살을 에는 언령",
+        "type": 0,
+        "desc": "키라의 공격력이 15% 증가합니다. 키라가 스킬 사용시 자신이 은신 상태이명 피해량이 10% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 23,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 23,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 23,
+                "value": 8
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 23,
+                "value": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "name": "비일상적인 인사",
+        "type": 1,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "desc": "우연한 부딪침을 연출하여 적을 공격합니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 자신에게 1턴 간 은신을 발생시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "name": "침묵의 대가",
+        "type": 2,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "언령을 이용해서 섬뜩한 미래를 상상하게 만듭니다. 자신에게 2턴 간 공격력 증가를 발생시킵니다. 자신이 은신 상태이면 적의 행동 게이지를 30% 감소시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 18,
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": 108,
+        "name": "왜곡된 관심",
+        "type": 3,
+        "atk_type": "정신",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "언령의 힘을 해방하여 적에게 불운한 결말을 초래합니다. 자신에게 2턴 간 은신을 발생시킵니다. 적에게 100% 확률로 1턴 간 공격력 감소를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "타냐",
+    "rank": "SSR",
+    "attr": "별",
+    "class": "스트라이커",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45992,
+      "height": 173,
+      "origin": "불명",
+      "team": "페트라 조합",
+      "cv_ko": "최하리",
+      "cv_jp": "나카자와 미나",
+      "desc": "페트라 조합 소속의 인턴. 남들과 다른 괴력의 소유자로 마르실이 봐주지 않으면 모든 일을 힘으로 해결해 버린다. 좋아하는 것은 튀김."
+    },
+    "status": {
+      "atk": 4588,
+      "hp": 23686,
+      "def": 1842,
+      "spd": 100,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 180,
+      "hp": 20,
+      "end": 140,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "방어의 감각"
+      },
+      {
+        "level": 10,
+        "value": "생명의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 109,
+        "name": "철거 작업",
+        "type": 0,
+        "desc": "타냐의 공격력이 15% 증가합니다. 타냐가 적의 강인도 격파 후 자신에게 도약 스택을 3개 부여하고 자신을 제외한 아군 전체의 행동 게이지를 10% 증가시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 24,
+                "value": 6
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 24,
+                "value": 8
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 24,
+                "value": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 110,
+        "name": "펑펑 공구",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "육중한 멀티툴을 휘둘러 적을 공격합니다. 자신에게 도약 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 111,
+        "name": "뱅뱅 전기톱",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "멀티툴에 탑재된 절삭 공구로 적을 절단합니다. 아군 전체에게 1턴 간 치명타 확률 증가를 발생시킵니다. 자신의 행동 게이지를 30% 증가시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 피해량이 20% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 17,
+            "value": 5
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 17,
+            "value": 10
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 112,
+        "name": "쾅쾅 벙커",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "멀티툴의 기능이 총동원된 착암기로 적을 분쇄합니다. 자신에게 2턴 간 공격력 증가를 발생시킵니다. 타격 시 자신의 도약이 최대 스택이면 강인도 피해가 1 증가하고 타격 후 도약 스택을 모두 소거합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 7,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "트리쉬",
+    "rank": "SSR",
+    "attr": "별",
+    "class": "어쌔신",
+    "atk_type": "참격",
+    "inst": {
+      "birth": 45934,
+      "height": "161",
+      "origin": "NOA",
+      "team": "아셀루스 협회",
+      "cv_ko": "김예림",
+      "cv_jp": "츠키시로 히카",
+      "desc": "아셀루스 헌터 협회에 소속되어 활동하는 능력 좋은 헌터. 그만큼 막대한 현상금을 벌지만 언제나 물쓰듯 쉽게 써서 탕진해 버리는 삶을 살고 있다."
+    },
+    "status": {
+      "atk": 4203,
+      "hp": 22633,
+      "def": 1771,
+      "spd": 90,
+      "crit_rate": 0.14,
+      "crit_dmg": 0.75,
+      "eff_rate": 1,
+      "eff_resist": 0.12,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 10,
+      "prot": 160
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 6,
+        "value": "보호의 감각"
+      },
+      {
+        "level": 10,
+        "value": "통찰의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 113,
+        "name": "일류 헌터",
+        "type": 0,
+        "desc": "트리쉬의 치명타 피해가 25% 증가합니다. 트리쉬가 적 처치 시 자신의 행동 게이지가 30% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 4,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 4,
+                "value": 15
+              },
+              {
+                "type": 25,
+                "value": 20
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 4,
+                "value": 20
+              },
+              {
+                "type": 25,
+                "value": 25
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 4,
+                "value": 25
+              },
+              {
+                "type": 25,
+                "value": 30
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 114,
+        "name": "귀신 걸음",
+        "type": 1,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "desc": "화려하게 파고들어 적을 기습합니다. 자신에게 도약 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 115,
+        "name": "가속 강습",
+        "type": 2,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "cooltime": 2,
+        "break": 1,
+        "nova": 1,
+        "desc": "단검을 투척한 뒤 공중에서 폼나게 낚아채서 내려칩니다. 자신에게 2턴 간 치명타 확률 증가를 발생시킵니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "name": "연속 참격",
+        "type": 3,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "일류 헌터만이 가능한 전광석화 같은 연속 공격을 선보입니다. 자신에게 2턴 간 공격력 증가를 발생시킵니다. 적 처치 시 해당 스킬의 쿨타임이 초기화됩니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 피해량이 20% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "페트라",
+    "rank": "SSR",
+    "attr": "태양",
+    "class": "레인저",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45951,
+      "height": 155,
+      "origin": "칼라이드",
+      "team": "페트라 조합",
+      "cv_ko": "김선주",
+      "cv_jp": "미네다 마유",
+      "desc": "철거부터 건설까지, 건축과 관련된 일이라면 뭐든지 수주받는 페트라 조합의 대표. 정확히 목표만 날려버리는 폭탄 개발에 재능이 있다."
+    },
+    "status": {
+      "atk": 4588,
+      "hp": 22759,
+      "def": 1772,
+      "spd": 104,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1.16,
+      "eff_resist": 0,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 150,
+      "hp": 20,
+      "end": 20,
+      "focus": 160,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "집중의 감각"
+      },
+      {
+        "level": 6,
+        "value": "공격의 감각"
+      },
+      {
+        "level": 10,
+        "value": "집중의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 117,
+        "name": "건축설계 사전검토",
+        "type": 0,
+        "desc": "페트라의 공격력이 15% 증가합니다. 페트라는 자신을 제외한 아군이 적의 강인도 격파 후 자신에게 점화 스택을 1개 부여하고 자신의 행동 게이지를 20% 증가시킵니다. 1턴에 1번만 발생합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 0,
+                "value": 5
+              },
+              {
+                "type": 26,
+                "value": 10
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 0,
+                "value": 10
+              },
+              {
+                "type": 26,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 0,
+                "value": 15
+              },
+              {
+                "type": 26,
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 118,
+        "name": "즉석 설계",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "페트라가 설계도를 적에게 내리쳐 공격합니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 119,
+        "name": "시공 착수",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "페트라가 사이드백에서 폭탄을 꺼내 적을 공격합니다. 자신에게 2턴 간 속도 증가를 발생시키고 점화 스택을 2개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 2 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 3
+          }
+        ]
+      },
+      {
+        "id": 120,
+        "name": "건축 협의",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 4,
+        "break": 2,
+        "nova": 1,
+        "desc": "페트라가 다량의 폭탄을 굴려 적을 공격합니다. 적에게 100% 확류로 2턴 간 방어력 감소를 발생시킵니다. 타격 시 자신에게 부여된 점화 스택에 비례하여 피해량이 4%씩 증가하며 최대 5개까지 적용됩니다. 타격 후 점화 스택을 모두 소거합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 10,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 10,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "프레이",
+    "rank": "SSR",
+    "attr": "별",
+    "class": "서포터",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45845,
+      "height": 156,
+      "origin": "모나스티르 공국",
+      "team": "모나스티르 기사단",
+      "cv_ko": "이이로",
+      "cv_jp": "시부야 아야노",
+      "desc": "모나스티르 기사단의 보급관이라고 자칭하는 소녀. 돈 버는 일에 관심이 많기 때문에 언제나 사업 아이템을 구상하고 있지만 대부분 실패로 끝나고 있다."
+    },
+    "status": {
+      "atk": 3690,
+      "hp": 27117,
+      "def": 1891,
+      "spd": 95,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.08,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 150,
+      "focus": 10,
+      "prot": 10
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "방어의 감각"
+      },
+      {
+        "level": 10,
+        "value": "생명의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 121,
+        "name": "손해보지 않는 거래",
+        "type": 0,
+        "desc": "프레이의 최대 생명력이 15% 증가합니다. 피레이가 모나스티르의 전력지원 사용 후 자신의 생명력이 50% 이하이면 아군 전체의 행동 게이지를 15% 증가시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              },
+              {
+                "type": 27,
+                "value": 9
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 10
+              },
+              {
+                "type": 27,
+                "value": 12
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 15
+              },
+              {
+                "type": 27,
+                "value": 15
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 122,
+        "name": "교섭 결렬",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "말도 안 되는 상대방의 제안에 프레이가 있는 힘껏 적의 뺨을 후려칩니다. 자신에게 도약 스택을 1개 부여합니다. ",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 123,
+        "name": "최고 속도로 보급",
+        "type": 2,
+        "target": "아군 단일",
+        "cooltime": 3,
+        "break": 0,
+        "nova": 1,
+        "desc": "모나스티르의 보급관 프레이가 아군에게 생존 물자를 긴급 조달합니다. 아군 대상의 생명력을 회복시키고 약화 효과를 2개 해제합니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복하고 일시적으로 주는 회복량이 15% 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 2,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 124,
+        "name": "모나스티르의 전력지원",
+        "type": 3,
+        "target": "아군 전체",
+        "cooltime": 5,
+        "break": 0,
+        "nova": 1,
+        "desc": "프레이가 모나스티르를 대표하여 전심전력으로 아군을 지원합니다. 아군 전체의 생명력을 회복시키고 2턴 간 보호막을 발생시킵니다. 회복량과 보호막은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 3,
+            "value": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "할리",
+    "rank": "SSR",
+    "attr": "태양",
+    "class": "디펜더",
+    "atk_type": "충격",
+    "inst": {
+      "birth": 45851,
+      "height": 150,
+      "origin": "서부 재난 지대",
+      "team": "헬 세이비어",
+      "cv_ko": "정유정",
+      "cv_jp": "야하기 사유리",
+      "desc": "바이크 호그 폭주단, 헬 세이비어의 리더. 여러 범죄를 저질러 수배중이라는 소문이 있다. 무엇보다 의리를 중시하는 호방한 소녀."
+    },
+    "status": {
+      "atk": 3700,
+      "hp": 27177,
+      "def": 1825,
+      "spd": 99,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0.12,
+      "acc": 1
+    },
+    "journey_status": {
+      "str": 10,
+      "hp": 180,
+      "end": 30,
+      "focus": 10,
+      "prot": 130
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "생명의 감각"
+      },
+      {
+        "level": 6,
+        "value": "보호의 감각"
+      },
+      {
+        "level": 10,
+        "value": "생명의 솜씨"
+      }
+    ],
+    "skills": [
+      {
+        "id": 125,
+        "name": "너가 우리 애들 때렸냐?",
+        "type": 0,
+        "desc": "할리의 최대 생명력이 15% 증가합니다. 할리는 자신을 제외한 아군이 피격 후 100%확률로 자신의 속도가 3%씩 증가합니다. 최대 5회 중첩됩니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              },
+              {
+                "type": 28,
+                "value": 70
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 10
+              },
+              {
+                "type": 28,
+                "value": 85
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 15
+              },
+              {
+                "type": 28,
+                "value": 100
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 126,
+        "name": "가자, 데이브!",
+        "type": 1,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "desc": "데이브와 함께 빠르게 기동하여 적을 공격합니다. 자신에게 점화 스택을 1개 부여합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 127,
+        "name": "해보자는 거냐?",
+        "type": 2,
+        "atk_type": "충격",
+        "target": "적 단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "데이브를 딛고 뛰어올라 적에게 도끼를 투척합니다. 자신에게 2턴 간 속도 증가를 발생시키고 공격력이 가장 높은 태양 속성 아군 한명에게 점화 스택을 2개 부여합니다. 피해량은 자신의 속도에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 100% 확률로 적의 행동 게이지를 15% 감소시킵니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 10,
+            "type": 4,
+            "value": 1
+          }
+        ]
+      },
+      {
+        "id": 128,
+        "name": "치킨 레이스다!",
+        "type": 3,
+        "atk_type": "충격",
+        "target": "적 전체",
+        "cooltime": 4,
+        "break": 1,
+        "nova": 1,
+        "desc": "자신을 따르는 호그 무리를 불러내서 돌격합니다. 아군 전체에게 2턴 간 방어력 증가를 발생시킵니다. 자신의 생명력이 50% 이상이면 자신을 제외한 아군 전체에게 100% 확률로 1턴 간 속도 증가를 발생시킵니다. 피해량은 자신의 속도에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 4,
+            "type": 13,
+            "value": 10
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 13,
+            "value": 15
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 5
+          }
+        ]
+      }
+    ]
+  }
+]
