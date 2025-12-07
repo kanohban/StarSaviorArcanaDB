@@ -496,7 +496,7 @@ const SaviorManager = {
             let t = this.ACTIVE_SKILL_EFFECT_TYPE[lvl.type] || "";
             text = t.replace("{value}", lvl.value);
         }
-        text = text.replace(/\n/g, '<br>');
+        text = text.replace(/\\n|\n/g, '<br>');
         return `<tr><td class="sl-num">${lvl.level}</td><td class="sl-desc">${text}</td></tr>`;
     },
 
