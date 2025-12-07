@@ -446,11 +446,12 @@
     {
       "category": "리세트 이벤트",
       "name": "리세트의 일과",
+      "timing": "4월 하순",
       "choices": [
         {
           "text": "1. 도와주자.",
           "condition": "스태미나 -20",
-          "result": "컨디션 +1(확률), 주화 +30, '일일 아르바이트생' 상태 (상점 할인)",
+          "result": "컨디션 +1(확률), 주화 +30, '일일 아르바이트생' 상태 (상점 20%할인)",
           "result_positive": "",
           "result_negative": ""
         },
@@ -679,6 +680,7 @@
     {
       "category": "합숙 훈련 - 플로라",
       "name": "비치발리볼 대회 준결승전",
+      "timing": "12월 초순",
       "choices": [
         {
           "text": "1. 일단 배부터 채울까?",
@@ -735,6 +737,7 @@
     {
       "category": "합숙 훈련 - 칼라이드",
       "name": "온천 축제 준비",
+      "timing": "11월 초순",
       "choices": [
         {
           "text": "1. 곰을 탈 수 있는 집!",
@@ -769,6 +772,7 @@
     {
       "category": "합숙 훈련 - 칼라이드",
       "name": "축제의 불청객",
+      "timing": "12월 초순",
       "choices": [
         {
           "text": "1. 금전적인 도움을 준다.",
@@ -876,7 +880,7 @@
         {
           "text": "2. 숙소로 돌아간다.",
           "condition": "",
-          "result": "",
+          "result": "스태미나 +10",
           "result_positive": "",
           "result_negative": "컨디션 -1, 스태미나 +10"
         }
@@ -896,7 +900,7 @@
         {
           "text": "2. 숙소로 돌아간다.",
           "condition": "",
-          "result": "",
+          "result": "스태미나 +10",
           "result_positive": "",
           "result_negative": "컨디션 -1, 스태미나 +10"
         }
@@ -967,14 +971,14 @@
         {
           "text": "2. 중급 의뢰 성공",
           "condition": "",
-          "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯 +10, 잠재 +15, 보호의 감각 10% 할인",
+          "result": "스트릿 베이커스 굿즈I,II 중 랜덤, 랜덤스탯 +10, 잠재 +15, 보호의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
         },
         {
           "text": "3. 상급 의뢰 성공",
           "condition": "",
-          "result": "스트릿 베이커스 굿즈I(턴 시작 치확 5% 증가, 3중첩), 랜덤스탯 +10, 잠재 +15, 보호의 감각 10% 할인",
+          "result": "스트릿 베이커스 굿즈I,II,III 중 랜덤, 랜덤스탯 +10, 잠재 +15, 보호의 감각 10% 할인",
           "result_positive": "",
           "result_negative": ""
         }

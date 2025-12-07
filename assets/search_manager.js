@@ -162,8 +162,13 @@
                             <li style="margin-bottom: 0.5rem;">
                                 <strong>${choice.text}</strong><br>
                                 <span style="color: #aaa; font-size: 0.9rem;">
-                                    ${choice.condition ? `조건: ${choice.condition} / ` : ''}
-                                    결과: ${choice.result || choice.result_positive || '-'}
+
+                                    ${choice.condition ? `조건: ${choice.condition}<br>` : ''}
+                                    ${choice.result ? `결과: ${choice.result}<br>` : ''}
+                                    ${choice.result_positive ? `<span style="color: #4cd137;">성공: ${choice.result_positive}</span><br>` : ''}
+                                    ${choice.result_negative ? `<span style="color: #e84118;">실패: ${choice.result_negative}</span>` : ''}
+                                    ${(!choice.result && !choice.result_positive && !choice.result_negative) ? '결과: -' : ''}
+
                                 </span>
                             </li>
                         `;

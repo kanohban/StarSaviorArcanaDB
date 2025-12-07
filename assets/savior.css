@@ -680,6 +680,24 @@
     border: 1px solid rgba(255, 100, 100, 0.4);
 }
 
+.skill-badge.target-ally {
+    background: rgba(100, 255, 120, 0.2);
+    color: #8eff9e;
+    border: 1px solid rgba(100, 255, 120, 0.4);
+}
+
+.skill-badge.break {
+    background: rgba(150, 150, 150, 0.2);
+    color: #e0e0e0;
+    border: 1px solid rgba(200, 200, 200, 0.4);
+}
+
+.skill-badge.nova-gain {
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+    border: 1px solid rgba(255, 165, 0, 0.4);
+}
+
 .skill-badge.nova {
     background: rgba(255, 215, 0, 0.2);
     color: #ffd700;

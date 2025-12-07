@@ -167,6 +167,8 @@ function exportSaviorAndSkills() {
                 spc_tp: getVal(p.skills, 'spc_tp', 'special_type', '특수기_타입'),
                 spc_tgt: getVal(p.skills, 'spc_tgt', 'special_target', '특수기_대상'),
                 spc_cl: getVal(p.skills, 'spc_cl', 'special_cool', '특수기_쿨'),
+                spc_brk: getVal(p.skills, 'spc_brk', 'special_break', '특수기_강인도'),
+                spc_ng: getVal(p.skills, 'spc_ng', 'special_nova_gain', '특수기_노바획득'),
                 spc_dsc: getVal(p.skills, 'spc_dsc', 'special_desc', '특수기_설명'),
                 spc_nva: getVal(p.skills, 'spc_nva', 'special_nova', '특수기_노바'),
                 spc_lv: getVal(sl, 'spc', 'spc_lv', '특수기_레벨'),
@@ -175,6 +177,8 @@ function exportSaviorAndSkills() {
                 ult_tp: getVal(p.skills, 'ult_tp', 'ultimate_type', '궁극기_타입'),
                 ult_tgt: getVal(p.skills, 'ult_tgt', 'ultimate_target', '궁극기_대상'),
                 ult_cl: getVal(p.skills, 'ult_cl', 'ultimate_cool', '궁극기_쿨'),
+                ult_brk: getVal(p.skills, 'ult_brk', 'ultimate_break', '궁극기_강인도'),
+                ult_ng: getVal(p.skills, 'ult_ng', 'ultimate_nova_gain', '궁극기_노바획득'),
                 ult_dsc: getVal(p.skills, 'ult_dsc', 'ultimate_desc', '궁극기_설명'),
                 ult_nva: getVal(p.skills, 'ult_nva', 'ultimate_nova', '궁극기_노바'),
                 ult_lv: getVal(sl, 'ult', 'ult_lv', '궁극기_레벨')
@@ -252,12 +256,16 @@ function importSaviorAndSkills(profileRows, statsRows, skillsRows, lvRows, psvLv
                 spc_tp: row.spc_tp,
                 spc_tgt: row.spc_tgt,
                 spc_cl: row.spc_cl,
+                spc_brk: row.spc_brk || row['spc_b가'], // Handle IME typo (rk -> 가)
+                spc_ng: row.spc_ng,
                 spc_dsc: row.spc_dsc,
                 spc_nva: row.spc_nva,
                 ult_nm: row.ult_nm,
                 ult_tp: row.ult_tp,
                 ult_tgt: row.ult_tgt,
                 ult_cl: row.ult_cl,
+                ult_brk: row.ult_brk || row['ult_b가'], // Handle IME typo (rk -> 가)
+                ult_ng: row.ult_ng,
                 ult_dsc: row.ult_dsc,
                 ult_nva: row.ult_nva
             };

@@ -435,11 +435,30 @@ const SaviorManager = {
             div.className = 'skill-item';
 
             let metaHtml = '';
-            if (cooldown || target) {
-                metaHtml = `<div class="skill-meta">`;
-                if (cooldown) metaHtml += `<span class="skill-badge cooldown">${cooldown}</span>`;
-                if (target) metaHtml += `<span class="skill-badge target">${target}</span>`;
-                metaHtml += `</div>`;
+            const badges = [];
+
+            if (cooldown) badges.push(`<span class="skill-badge cooldown">${cooldown}</span>`);
+            if (target) {
+                const isAlly = target.includes('아군') || target.includes('자신');
+                const badgeClass = isAlly ? 'skill-badge target-ally' : 'skill-badge target';
+                badges.push(`<span class="${badgeClass}">${target}</span>`);
+            }
+
+            // New Fields (Break & Nova Gain)
+            // Use s.lv to identify skill type or check directly against properties
+            const isSpc = s.type === 'special';
+            const isUlt = s.type === 'ultimate';
+
+            if (isSpc) {
+                if (skills.spc_brk) badges.push(`<span class="skill-badge break">강인도 피해 ${skills.spc_brk}</span>`);
+                if (skills.spc_ng) badges.push(`<span class="skill-badge nova-gain">노바 획득 ${skills.spc_ng}</span>`);
+            } else if (isUlt) {
+                if (skills.ult_brk) badges.push(`<span class="skill-badge break">강인도 피해 ${skills.ult_brk}</span>`);
+                if (skills.ult_ng) badges.push(`<span class="skill-badge nova-gain">노바 획득 ${skills.ult_ng}</span>`);
+            }
+
+            if (badges.length > 0) {
+                metaHtml = `<div class="skill-meta">${badges.join('')}</div>`;
             }
 
             let novaHtml = '';

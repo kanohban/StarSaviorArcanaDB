@@ -8,16 +8,18 @@
   <link rel="icon" type="image/png" href="./images/index/index_icon.png">
   <script type="module" crossorigin src="./assets/index-DrY0adZU.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-  <link rel="stylesheet" href="./assets/header.css?v=4.3.0">
-  <link rel="stylesheet" href="./assets/modal.css?v=4.3.0">
+  <link rel="stylesheet" href="./assets/header.css?v=4.3.3">
+  <link rel="stylesheet" href="./assets/modal.css?v=4.3.3">
 </head>
 
 <body>
   <div id="root"></div>
-  <script src="./assets/header_manager.js?v=4.3.0"></script>
-  <script src="./assets/modal_manager.js?v=4.3.0"></script>
-  <script src="./assets/hangul_utils.js?v=4.3.0"></script>
-  <script src="./assets/search_service.js?v=4.3.0"></script>
+  <footer id="footer-container"></footer>
+  <script src="./assets/header_manager.js?v=4.3.3"></script>
+  <script src="./assets/footer_manager.js"></script>
+  <script src="./assets/modal_manager.js?v=4.3.3"></script>
+  <script src="./assets/hangul_utils.js?v=4.3.3"></script>
+  <script src="./assets/search_service.js?v=4.3.3"></script>
   <script>
     (function () {
       // 1. Initialize State from LocalStorage
@@ -322,6 +324,11 @@
       if (root) {
         contentObserver.observe(root, observerConfig);
       }
+
+      // Initialize Footer
+      if (window.FooterManager) {
+        window.FooterManager.init(document.getElementById('footer-container'));
+      }
     })();
   </script>
   <style>
@@ -439,6 +446,12 @@
     /* Use Class instead of inline style to avoid conflicts */
     .force-hidden,
     .search-hidden {
+      display: none !important;
+    }
+
+    /* Hide Legacy Footer inside React Root */
+    #root .app-footer,
+    #root footer {
       display: none !important;
     }
   </style>
