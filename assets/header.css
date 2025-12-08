@@ -43,7 +43,7 @@ textarea {
     --header-padding: 0 1rem;
     --header-max-width: 1200px;
 
-    --header-bg: rgba(255, 255, 255, 0.9);
+    --header-bg: rgba(255, 255, 255, 0.7);
     --header-border-color: #e0e0e0;
     --header-text-color: #333;
     --btn-size: 40px;
@@ -68,7 +68,8 @@ html {
 }
 
 [data-theme="dark"] {
-    --header-bg: rgba(30, 30, 30, 0.9);
+    --header-bg: rgba(15, 23, 42, 0.95);
+    /* More transparent & blue-tinted dark */
     --header-border-color: #444;
     --header-text-color: #fff;
     --btn-hover-bg: rgba(255, 255, 255, 0.1);
@@ -99,7 +100,7 @@ html {
 [data-theme="dark"] .event-card,
 [data-theme="dark"] .choice-results,
 [data-theme="dark"] .tab-btn {
-    background-color: rgba(30, 30, 30, 0.6) !important;
+    background-color: var(--header-bg) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -137,6 +138,20 @@ html {
     height: var(--header-height);
     padding: var(--header-padding);
     box-sizing: border-box;
+}
+
+.shared-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color, #333);
+}
+
+[data-theme="light"] .shared-sticky-header {
+    border-bottom-color: #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .custom-header-top h1 {
@@ -276,4 +291,62 @@ html {
 .nav-item .icon img {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9)) brightness(1.4);
     margin-top: 6px;
+}
+
+/* --- Shared Level Toggle Styles --- */
+.custom-level-toggle {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-radius: 20px;
+    gap: 4px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.level-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 6px 14px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    line-height: 1;
+}
+
+.level-btn:hover {
+    color: #ccc;
+}
+
+.level-btn.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode Overrides for Level Toggle */
+[data-theme="light"] .custom-level-toggle {
+    background: #f1f3f5;
+    border-color: #dee2e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .level-btn {
+    color: #adb5bd;
+}
+
+[data-theme="light"] .level-btn:hover {
+    color: #495057;
+}
+
+[data-theme="light"] .level-btn.active {
+    background: #ffffff;
+    color: #495057;
+    /* Dark Gray Text */
+    border-color: #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }

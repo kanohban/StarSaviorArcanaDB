@@ -1,0 +1,484 @@
+/* Schedule View Styles */
+
+#schedule-view-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: none;
+    /* Hidden by default */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.schedule-period {
+    margin-bottom: 40px;
+    position: relative;
+    /* Removed padding/border from here */
+}
+
+/* New container for turns to handle border positioning */
+.period-turns {
+    border-left: 2px solid var(--border-color, #444);
+    padding-left: 20px;
+    margin-left: 5px;
+    padding-top: 10px;
+}
+
+[data-theme="light"] .period-turns {
+    border-left-color: #ddd;
+}
+
+.schedule-period-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color, #a29bfe);
+    margin-bottom: 20px;
+    position: relative;
+    left: -29px;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 0;
+    width: fit-content;
+    border-radius: 0;
+    border: none;
+}
+
+[data-theme="light"] .schedule-period-title {
+    background: transparent;
+}
+
+.schedule-turn {
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.schedule-turn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+.schedule-turn.completed {
+    opacity: 0.5;
+    filter: grayscale(0.8);
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.turn-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.turn-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #666;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: transparent;
+}
+
+.turn-checkbox::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--primary-color, #a29bfe);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+.schedule-turn.completed .turn-checkbox {
+    border-color: var(--primary-color, #a29bfe);
+}
+
+.schedule-turn.completed .turn-checkbox::after {
+    transform: scale(1);
+}
+
+/* Active Turn */
+.schedule-turn.active-turn {
+    border-color: var(--primary-color, #a29bfe);
+    box-shadow: 0 0 15px rgba(162, 155, 254, 0.2);
+    opacity: 1;
+    filter: none;
+    background: rgba(162, 155, 254, 0.05);
+}
+
+.schedule-turn.active-turn .turn-checkbox {
+    background: var(--primary-color, #a29bfe);
+    box-shadow: 0 0 10px var(--primary-color, #a29bfe);
+}
+
+.schedule-turn.active-turn .turn-checkbox::after {
+    background: white;
+}
+
+.turn-content {
+    flex: 1;
+}
+
+.turn-header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.turn-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #eee;
+}
+
+.turn-events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Event Badges */
+.schedule-event {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #ddd;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.schedule-event.interactive {
+    cursor: pointer;
+    border-color: var(--primary-color, #6c5ce7);
+    color: var(--primary-color, #a29bfe);
+}
+
+.schedule-event.interactive:hover {
+    background: rgba(108, 92, 231, 0.2);
+    transform: translateY(-2px);
+}
+
+.event-type-badge {
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background: #555;
+}
+
+/* Event Types */
+.type-fixed {
+    background: #6c5ce7;
+}
+
+.type-random {
+    background: #01a3a4;
+    color: #fff;
+}
+
+.type-prob {
+    background: #e67e22;
+    color: #fff;
+}
+
+.type-battle {
+    background: #d63031;
+}
+
+.type-goal {
+    background: #e17055;
+}
+
+.type-arcana {
+    background: #e84393;
+}
+
+.type-savior {
+    background: #0984e3;
+}
+
+.type-inherit {
+    background: #00b894;
+}
+
+/* Random Group Box */
+.random-group-box {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.random-group-label {
+    width: 100%;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 4px;
+    font-style: italic;
+}
+
+/* Buttons */
+.schedule-btn {
+    background: rgba(84, 160, 255, 0.2);
+    border: 1px solid #54a0ff;
+    color: #54a0ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.schedule-btn:hover {
+    background: rgba(84, 160, 255, 0.4);
+    color: white;
+}
+
+/* Modal */
+.schedule-modal-content {
+    background: #2d3436;
+    color: #dfe6e9;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.schedule-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #dfe6e9;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.schedule-modal-title {
+    margin-top: 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.schedule-modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-choice-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.modal-choice-title {
+    font-weight: bold;
+    color: #54a0ff;
+    margin-bottom: 5px;
+}
+
+.modal-choice-condition {
+    font-size: 0.85rem;
+    color: #fca5a5;
+    margin-bottom: 3px;
+}
+
+.modal-choice-result {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.modal-choice-success {
+    font-size: 0.9rem;
+    color: #4ade80;
+    margin-top: 3px;
+}
+
+.modal-choice-failure {
+    font-size: 0.9rem;
+    color: #f87171;
+    margin-top: 1px;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] .schedule-period {
+    border-left-color: #ddd;
+}
+
+[data-theme="light"] .schedule-turn {
+    background: #fff;
+    border-color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .turn-name {
+    color: #333;
+}
+
+[data-theme="light"] .schedule-event {
+    background: #f8f9fa;
+    border-color: #ddd;
+    color: #333;
+}
+
+[data-theme="light"] .turn-checkbox {
+    border-color: #aaa;
+}
+
+[data-theme="light"] .schedule-turn.completed {
+    background: #f0f0f0;
+    opacity: 0.6;
+}
+
+[data-theme="light"] .random-group-box {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: #ccc;
+}
+
+[data-theme="light"] .schedule-event.interactive {
+    border-color: #54a0ff;
+    color: #54a0ff;
+    background: rgba(84, 160, 255, 0.05);
+}
+
+[data-theme="light"] .schedule-modal-content {
+    background: #fff;
+    color: #2d3436;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .schedule-modal-close {
+    color: #636e72;
+}
+
+[data-theme="light"] .schedule-modal-title {
+    border-bottom-color: #eee;
+}
+
+[data-theme="light"] .schedule-btn {
+    background: rgba(84, 160, 255, 0.1);
+    border-color: #54a0ff;
+    color: #0984e3;
+}
+
+[data-theme="light"] .schedule-btn:hover {
+    background: rgba(84, 160, 255, 0.2);
+}
+
+[data-theme="light"] .modal-choice-item {
+    background: #f8f9fa;
+    border: 1px solid #eee;
+}
+
+[data-theme="light"] .modal-choice-title {
+    color: #6c5ce7;
+}
+
+[data-theme="light"] .modal-choice-condition {
+    color: #d63031;
+}
+
+[data-theme="light"] .modal-choice-result {
+    color: #333;
+}
+
+[data-theme="light"] .modal-choice-success {
+    color: #00b894;
+}
+
+[data-theme="light"] .modal-choice-failure {
+    color: #c0392b;
+}
+
+/* Counters */
+.scheduler-counters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    transition: opacity 0.3s;
+}
+
+.counter-badge {
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.arcana-counter {
+    background: #e84393;
+    border: 1px solid #d63031;
+}
+
+.goal-counter {
+    background: #e17055;
+    border: 1px solid #d35400;
+}
+
+[data-theme="light"] .arcana-counter {
+    background: #fd79a8;
+    border-color: #e84393;
+    color: #ffffff;
+}
+
+[data-theme="light"] .goal-counter {
+    background: #fab1a0;
+    border-color: #e17055;
+    color: #ffffff;
+}

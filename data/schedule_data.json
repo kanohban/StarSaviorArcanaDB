@@ -1,0 +1,867 @@
+[
+  {
+    "title": "기초 평가전",
+    "turns": [
+      {
+        "turnInfo": "시작",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "인자 계승",
+            "content": "인자 계승",
+            "original": "(인자 계승)인자 계승"
+          },
+          {
+            "type": "구원자",
+            "content": "유물 선택, 잠재력 +7",
+            "original": "(구원자)유물 선택, 잠재력 +7"
+          }
+        ]
+      },
+      {
+        "turnInfo": "1턴",
+        "dateInfo": "3월 초순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "기초 평가전 준비",
+            "original": "(고정)기초 평가전 준비"
+          },
+          {
+            "type": "구원자",
+            "content": "버프 / 디버프 2턴",
+            "original": "(구원자)버프 / 디버프 2턴"
+          },
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "2턴",
+        "dateInfo": "3월 중순",
+        "events": [
+          {
+            "type": "랜덤",
+            "content": "여가 시간",
+            "original": "(랜덤)여가 시간"
+          },
+          {
+            "type": "랜덤",
+            "content": "구원단 보급",
+            "original": "(랜덤)구원단 보급"
+          },
+          {
+            "type": "랜덤",
+            "content": "신비한 석상",
+            "original": "(랜덤)신비한 석상"
+          }
+        ]
+      },
+      {
+        "turnInfo": "3턴",
+        "dateInfo": "3월 하순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "4턴",
+        "dateInfo": "4월 초순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "여정의 선물 - 유물 선택, 잠재력 +7",
+            "original": "(고정)여정의 선물 - 유물 선택, 잠재력 +7"
+          },
+          {
+            "type": "고정",
+            "content": "미편성 아르카나 이벤트",
+            "original": "(고정)미편성 아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "5턴",
+        "dateInfo": "4월 중순",
+        "events": [
+          {
+            "type": "기타",
+            "content": "-",
+            "original": "-"
+          }
+        ]
+      },
+      {
+        "turnInfo": "6턴",
+        "dateInfo": "4월 하순",
+        "events": [
+          {
+            "type": "토벌",
+            "content": "약탈자 토벌 의뢰",
+            "original": "(토벌)약탈자 토벌 의뢰"
+          },
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "고정",
+            "content": "리세트의 일과",
+            "original": "(고정)리세트의 일과"
+          }
+        ]
+      },
+      {
+        "turnInfo": "7턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "목표",
+            "content": "기초 평가전",
+            "original": "(목표)기초 평가전"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "토벌 평가전",
+    "turns": [
+      {
+        "turnInfo": "8턴",
+        "dateInfo": "5월 초순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "구원자",
+            "content": "잠재력 +45",
+            "original": "(구원자)잠재력 +45"
+          }
+        ]
+      },
+      {
+        "turnInfo": "9턴",
+        "dateInfo": "5월 중순",
+        "events": [
+          {
+            "type": "랜덤",
+            "content": "공업소의 홍보 전략",
+            "original": "(랜덤)공업소의 홍보 전략"
+          },
+          {
+            "type": "랜덤",
+            "content": "우연한 발견",
+            "original": "(랜덤)우연한 발견"
+          },
+          {
+            "type": "랜덤",
+            "content": "비밀의 지옥 특훈",
+            "original": "(랜덤)비밀의 지옥 특훈"
+          },
+          {
+            "type": "랜덤",
+            "content": "시작형 강화제",
+            "original": "(랜덤)시작형 강화제"
+          }
+        ]
+      },
+      {
+        "turnInfo": "10턴",
+        "dateInfo": "5월 하순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "랜덤",
+            "content": "날씨",
+            "original": "(랜덤)날씨"
+          },
+          {
+            "type": "랜덤",
+            "content": "예상 못한 격려",
+            "original": "(랜덤)예상 못한 격려"
+          },
+          {
+            "type": "랜덤",
+            "content": "사고는 일어난다",
+            "original": "(랜덤)사고는 일어난다"
+          }
+        ]
+      },
+      {
+        "turnInfo": "11턴",
+        "dateInfo": "6월 초순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "친절의 선물 - 유물 선택, 잠재력 +7",
+            "original": "(고정)친절의 선물 - 유물 선택, 잠재력 +7"
+          },
+          {
+            "type": "구원자",
+            "content": "잠재력 +45",
+            "original": "(구원자)잠재력 +45"
+          }
+        ]
+      },
+      {
+        "turnInfo": "12턴",
+        "dateInfo": "6월 중순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "13턴",
+        "dateInfo": "6월 하순",
+        "events": [
+          {
+            "type": "토벌",
+            "content": "슬라임 토벌 의뢰",
+            "original": "(토벌)슬라임 토벌 의뢰"
+          },
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "고정",
+            "content": "리세트의 유혹",
+            "original": "(고정)리세트의 유혹"
+          }
+        ]
+      },
+      {
+        "turnInfo": "14턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "목표",
+            "content": "토벌 평가전",
+            "original": "(목표)토벌 평가전"
+          },
+          {
+            "type": "인자 계승",
+            "content": "동료 합류 & 인자 계승",
+            "original": "(인자 계승)동료 합류 & 인자 계승"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "아가논",
+    "turns": [
+      {
+        "turnInfo": "15턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "고정",
+            "content": "아가논 이동",
+            "original": "(고정)아가논 이동"
+          }
+        ]
+      },
+      {
+        "turnInfo": "16턴",
+        "dateInfo": "7월 초순",
+        "events": [
+          {
+            "type": "기타",
+            "content": "-",
+            "original": "-"
+          }
+        ]
+      },
+      {
+        "turnInfo": "17턴",
+        "dateInfo": "7월 중순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "미궁 탐사",
+            "original": "(고정)미궁 탐사"
+          },
+          {
+            "type": "고정",
+            "content": "날씨",
+            "original": "(고정)날씨"
+          }
+        ]
+      },
+      {
+        "turnInfo": "18턴",
+        "dateInfo": "7월 하순",
+        "events": [
+          {
+            "type": "기타",
+            "content": "-",
+            "original": "-"
+          }
+        ]
+      },
+      {
+        "turnInfo": "19턴",
+        "dateInfo": "8월 초순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "습격",
+            "original": "(고정)습격"
+          }
+        ]
+      },
+      {
+        "turnInfo": "20턴",
+        "dateInfo": "8월 중순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "구명의 선물 - 유물 선택, 잠재력 +7",
+            "original": "(고정)구명의 선물 - 유물 선택, 잠재력 +7"
+          },
+          {
+            "type": "확률",
+            "content": "갑작스러운 조우 - 슬라임",
+            "original": "(확률)갑작스러운 조우 - 슬라임"
+          }
+        ]
+      },
+      {
+        "turnInfo": "21턴",
+        "dateInfo": "8월 하순",
+        "events": [
+          {
+            "type": "랜덤",
+            "content": "단원과의 식사",
+            "original": "(랜덤)단원과의 식사"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 산책",
+            "original": "(랜덤)단원과의 산책"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 대화",
+            "original": "(랜덤)단원과의 대화"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 관람",
+            "original": "(랜덤)단원과의 관람"
+          }
+        ]
+      },
+      {
+        "turnInfo": "22턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "목표",
+            "content": "원정 평가전",
+            "original": "(목표)원정 평가전"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "경쟁 평가전",
+    "turns": [
+      {
+        "turnInfo": "23턴",
+        "dateInfo": "9월 초순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "구원자",
+            "content": "잠재력 +45",
+            "original": "(구원자) 잠재력 +45"
+          }
+        ]
+      },
+      {
+        "turnInfo": "24턴",
+        "dateInfo": "9월 중순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "25턴",
+        "dateInfo": "9월 하순",
+        "events": [
+          {
+            "type": "랜덤1",
+            "content": "리세트의 행운",
+            "original": "(랜덤1)리세트의 행운"
+          },
+          {
+            "type": "랜덤1",
+            "content": "교단의 제안",
+            "original": "(랜덤1)교단의 제안"
+          },
+          {
+            "type": "랜덤1",
+            "content": "교단의 분실물",
+            "original": "(랜덤1)교단의 분실물"
+          },
+          {
+            "type": "랜덤1",
+            "content": "시작형 강화제",
+            "original": "(랜덤1)시작형 강화제"
+          },
+          {
+            "type": "랜덤2",
+            "content": "날씨",
+            "original": "(랜덤2)날씨"
+          },
+          {
+            "type": "랜덤2,아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(랜덤2)(아르카나)아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "26턴",
+        "dateInfo": "10월 초순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "구원자",
+            "content": "잠재력 +45",
+            "original": "(구원자) 잠재력 +45"
+          }
+        ]
+      },
+      {
+        "turnInfo": "27턴",
+        "dateInfo": "10월 중순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "모범의 선물 - 유물 선택, 잠재력 +7",
+            "original": "(고정)모범의 선물 - 유물 선택, 잠재력 +7"
+          }
+        ]
+      },
+      {
+        "turnInfo": "28턴",
+        "dateInfo": "10월 하순",
+        "events": [
+          {
+            "type": "토벌",
+            "content": "탈영병 토벌 의뢰",
+            "original": "(토벌)탈영병 토벌 의뢰"
+          },
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "고정",
+            "content": "리세트의 휴가",
+            "original": "(고정)리세트의 휴가"
+          }
+        ]
+      },
+      {
+        "turnInfo": "29턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "목표",
+            "content": "경쟁 평가전",
+            "original": "(목표)경쟁 평가전"
+          },
+          {
+            "type": "인자 계승",
+            "content": "동료 합류 & 인자 계승",
+            "original": "(인자 계승)동료 합류 & 인자 계승"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "플로라/칼라이드",
+    "turns": [
+      {
+        "turnInfo": "30턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "고정",
+            "content": "플로라/칼라이드 이동",
+            "original": "(고정)플로라/칼라이드 이동"
+          }
+        ]
+      },
+      {
+        "turnInfo": "31턴",
+        "dateInfo": "11월 초순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "발리볼 예선전",
+            "original": "(고정)발리볼 예선전",
+            "branch": "flora"
+          },
+          {
+            "type": "고정",
+            "content": "온천 축제 준비",
+            "original": "(고정)온천 축제 준비",
+            "branch": "kalide"
+          }
+        ]
+      },
+      {
+        "turnInfo": "32턴",
+        "dateInfo": "11월 중순",
+        "events": [
+          {
+            "type": "랜덤",
+            "content": "오늘의 날씨 – 열대야",
+            "original": "(랜덤)오늘의 날씨 – 열대야",
+            "branch": "flora"
+          },
+          {
+            "type": "랜덤",
+            "content": "오늘의 날씨 – 폭설",
+            "original": "(랜덤)오늘의 날씨 – 폭설",
+            "branch": "kalide"
+          },
+          {
+            "type": "랜덤",
+            "content": "사고는 일어난다",
+            "original": "(랜덤)사고는 일어난다",
+            "branch": "flora"
+          },
+          {
+            "type": "랜덤",
+            "content": "사고는 일어난다",
+            "original": "(랜덤)사고는 일어난다",
+            "branch": "kalide"
+          }
+        ]
+      },
+      {
+        "turnInfo": "33턴",
+        "dateInfo": "11월 하순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "비치발리볼 대회 준결승전",
+            "original": "(고정)비치발리볼 대회 준결승전",
+            "branch": "flora"
+          },
+          {
+            "type": "고정",
+            "content": "축제의 불청객",
+            "original": "(고정)축제의 불청객",
+            "branch": "kalide"
+          }
+        ]
+      },
+      {
+        "turnInfo": "34턴",
+        "dateInfo": "12월 초순",
+        "events": [
+          {
+            "type": "기타",
+            "content": "-",
+            "original": "-",
+            "branch": "flora"
+          },
+          {
+            "type": "기타",
+            "content": "-",
+            "original": "-",
+            "branch": "kalide"
+          }
+        ]
+      },
+      {
+        "turnInfo": "35턴",
+        "dateInfo": "12월 중순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "행복의 선물 - 유물 선택, 잠재력 +7",
+            "original": "(고정)행복의 선물 - 유물 선택, 잠재력 +7",
+            "branch": "flora"
+          },
+          {
+            "type": "고정",
+            "content": "인연의 선물 - 유물 선택, 잠재력 +7",
+            "original": "(고정)인연의 선물 - 유물 선택, 잠재력 +7",
+            "branch": "kalide"
+          },
+          {
+            "type": "확률",
+            "content": "갑작스러운 조우 - 약탈자",
+            "original": "(확률)갑작스러운 조우 - 약탈자",
+            "branch": "flora"
+          },
+          {
+            "type": "확률",
+            "content": "갑작스러운 조우 - 강도 기사",
+            "original": "(확률)갑작스러운 조우 - 강도 기사",
+            "branch": "kalide"
+          }
+        ]
+      },
+      {
+        "turnInfo": "36턴",
+        "dateInfo": "12월 하순",
+        "events": [
+          {
+            "type": "랜덤",
+            "content": "단원과의 식사",
+            "original": "(랜덤)단원과의 식사",
+            "branch": "flora"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 식사",
+            "original": "(랜덤)단원과의 식사",
+            "branch": "kalide"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 산책",
+            "original": "(랜덤)단원과의 산책",
+            "branch": "flora"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 산책",
+            "original": "(랜덤)단원과의 산책",
+            "branch": "kalide"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 대화",
+            "original": "(랜덤)단원과의 대화",
+            "branch": "flora"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 대화",
+            "original": "(랜덤)단원과의 대화",
+            "branch": "kalide"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 관람",
+            "original": "(랜덤)단원과의 관람",
+            "branch": "flora"
+          },
+          {
+            "type": "랜덤",
+            "content": "단원과의 관람",
+            "original": "(랜덤)단원과의 관람",
+            "branch": "kalide"
+          }
+        ]
+      },
+      {
+        "turnInfo": "37턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "목표",
+            "content": "원정 평가전",
+            "original": "(목표)원정 평가전",
+            "branch": "flora"
+          },
+          {
+            "type": "목표",
+            "content": "원정 평가전",
+            "original": "(목표)원정 평가전",
+            "branch": "kalide"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "공허 평가전",
+    "turns": [
+      {
+        "turnInfo": "38턴",
+        "dateInfo": "1월 초순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "구원자",
+            "content": "잠재력 +45",
+            "original": "(구원자) 잠재력 +45"
+          }
+        ]
+      },
+      {
+        "turnInfo": "39턴",
+        "dateInfo": "1월 중순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "40턴",
+        "dateInfo": "1월 하순",
+        "events": [
+          {
+            "type": "확률,랜덤",
+            "content": "신설 부서는 노력 중!",
+            "original": "(확률)(랜덤)신설 부서는 노력 중!"
+          },
+          {
+            "type": "확률,랜덤",
+            "content": "간단한 테스트",
+            "original": "(확률)(랜덤)간단한 테스트"
+          },
+          {
+            "type": "확률,랜덤",
+            "content": "리세트의 행운",
+            "original": "(확률)(랜덤)리세트의 행운"
+          },
+          {
+            "type": "확률,랜덤",
+            "content": "수집가가 온다",
+            "original": "(확률)(랜덤)수집가가 온다"
+          },
+          {
+            "type": "확률,랜덤",
+            "content": "칼에 숨겨진 힘",
+            "original": "(확률)(랜덤)칼에 숨겨진 힘"
+          },
+          {
+            "type": "확률,랜덤",
+            "content": "꽃에 숨겨진 힘",
+            "original": "(확률)(랜덤)꽃에 숨겨진 힘"
+          },
+          {
+            "type": "고정",
+            "content": "리세트의 우울",
+            "original": "(고정)리세트의 우울"
+          }
+        ]
+      },
+      {
+        "turnInfo": "41턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "목표",
+            "content": "공허 평가전",
+            "original": "(목표)공허 평가전"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "최종 평가전",
+    "turns": [
+      {
+        "turnInfo": "42턴",
+        "dateInfo": "2월 초순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          },
+          {
+            "type": "구원자",
+            "content": "잠재력 +45",
+            "original": "(구원자) 잠재력 +45"
+          }
+        ]
+      },
+      {
+        "turnInfo": "43턴",
+        "dateInfo": "2월 중순",
+        "events": [
+          {
+            "type": "아르카나",
+            "content": "아르카나 이벤트",
+            "original": "(아르카나)아르카나 이벤트"
+          }
+        ]
+      },
+      {
+        "turnInfo": "44턴",
+        "dateInfo": "2월 하순",
+        "events": [
+          {
+            "type": "고정",
+            "content": "리세트의 친구",
+            "original": "(고정)리세트의 친구"
+          }
+        ]
+      },
+      {
+        "turnInfo": "45턴",
+        "dateInfo": "",
+        "events": [
+          {
+            "type": "목표",
+            "content": "최종 평가전",
+            "original": "(목표)최종 평가전"
+          },
+          {
+            "type": "구원자",
+            "content": "별빛의 인도, 랜덤 스탯 +10",
+            "original": "(구원자) 별빛의 인도, 랜덤 스탯 +10"
+          }
+        ]
+      }
+    ]
+  }
+]

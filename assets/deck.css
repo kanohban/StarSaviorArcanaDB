@@ -89,12 +89,38 @@
 
 /* Summary Panel */
 .deck-summary {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    /* Glassmorphism */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ... */
+.stat-item {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ... */
+.card-item {
+    background: rgba(255, 255, 255, 0.05);
+    /* Glassmorphism */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
 }
 
 .summary-header {
@@ -188,7 +214,7 @@
 }
 
 .stat-item {
-    background: var(--bg-color);
+    background: rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 8px;
     display: flex;
@@ -243,8 +269,10 @@
 }
 
 .card-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    /* Glassmorphism */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
@@ -443,21 +471,10 @@
         margin-bottom: 0.5rem;
     }
 
-    .level-toggle-wrapper {
-        /* Keep absolute right positioning on mobile */
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: auto;
-        justify-content: flex-end;
-    }
-
     .deck-navigation {
         justify-content: center;
         width: 100%;
-        padding-right: 20px;
-        /* Slight padding to respect button */
+        padding-right: 0;
     }
 }
 

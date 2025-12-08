@@ -15,6 +15,9 @@ const SchedulerManager = {
         this.cacheDOM();
         this.bindEvents();
         this.render();
+        if (window.ScheduleViewManager) {
+            window.ScheduleViewManager.init();
+        }
     },
 
     cacheDOM() {
@@ -24,7 +27,9 @@ const SchedulerManager = {
             deckStats: document.getElementById('deck-stats'),
             prevBtn: document.getElementById('prev-deck-btn'),
             nextBtn: document.getElementById('next-deck-btn'),
-            resetBtn: document.getElementById('reset-check-btn')
+            resetBtn: document.getElementById('reset-check-btn'),
+            scheduleBtn: document.getElementById('schedule-btn'),
+            deckNav: document.querySelector('.deck-navigation')
         };
     },
 
@@ -32,6 +37,9 @@ const SchedulerManager = {
         this.dom.prevBtn.addEventListener('click', () => this.switchDeck(-1));
         this.dom.nextBtn.addEventListener('click', () => this.switchDeck(1));
         this.dom.resetBtn.addEventListener('click', () => this.resetChecks());
+        if (this.dom.scheduleBtn) {
+            this.dom.scheduleBtn.addEventListener('click', () => this.toggleScheduleView());
+        }
     },
 
     loadDecks() {
@@ -64,18 +72,26 @@ const SchedulerManager = {
     },
 
     resetChecks() {
-        if (!confirm('현재 덱의 체크 리스트를 초기화하시겠습니까?')) return;
+        // If button says '카드', we are in Schedule View (checking schedule) and button offers return to Cards
+        const isScheduleMode = this.dom.scheduleBtn.innerText === '카드';
 
-        // Remove keys belonging to current deck
-        // Key format: `${deckIndex}_${cardId}_${stage}`
-        const prefix = `${this.data.currentDeckIndex}_`;
-        for (const key in this.data.checks) {
-            if (key.startsWith(prefix)) {
-                delete this.data.checks[key];
+        if (isScheduleMode) {
+            // Reset Schedule View
+            if (window.ScheduleViewManager) {
+                window.ScheduleViewManager.reset();
             }
+        } else {
+            // Reset Card View (Current Deck)
+            // Key format: `${deckIndex}_${cardId}_${stage}`
+            const prefix = `${this.data.currentDeckIndex}_`;
+            for (const key in this.data.checks) {
+                if (key.startsWith(prefix)) {
+                    delete this.data.checks[key];
+                }
+            }
+            this.saveChecks();
+            this.render();
         }
-        this.saveChecks();
-        this.render();
     },
 
     switchDeck(direction) {
@@ -85,6 +101,24 @@ const SchedulerManager = {
 
         this.data.currentDeckIndex = newIndex;
         this.render();
+    },
+
+    toggleScheduleView() {
+        // If button says '일정' (Schedule), we are in Card View -> clicking it goes to Schedule View
+        // If button says '카드' (Card), we are in Schedule View -> clicking it goes to Card View
+        const isCardView = this.dom.scheduleBtn.innerText === '일정';
+
+        if (isCardView) {
+            // Switch to Schedule View
+            this.dom.scheduleBtn.innerText = '카드';
+            this.dom.deckNav.style.display = 'none';
+            window.ScheduleViewManager.toggleView(true);
+        } else {
+            // Switch back to Card Grid
+            this.dom.scheduleBtn.innerText = '일정';
+            this.dom.deckNav.style.display = 'flex';
+            window.ScheduleViewManager.toggleView(false);
+        }
     },
 
     async fetchData() {
@@ -112,23 +146,18 @@ const SchedulerManager = {
     },
 
     render() {
-        const deck = this.data.decks[this.data.currentDeckIndex];
+        const deck = this.data.decks[this.data.currentDeckIndex] || [];
         this.dom.deckIndex.innerText = this.data.currentDeckIndex + 1;
-
-        // Count total vs checked for this deck
-        let totalEvents = deck.length * 3; // 3 events per card
-        let checkedCount = 0;
 
         // Render Cards
         this.dom.grid.innerHTML = '';
 
         if (deck.length === 0) {
             this.dom.grid.innerHTML = '<div class="empty-deck-message">설정된 카드가 없습니다.<br>덱 빌더에서 카드를 추가해주세요.</div>';
-            this.dom.deckStats.innerText = '(0/0)';
             return;
         }
 
-        deck.forEach(cardId => {
+        deck.forEach((cardId, cardIndex) => {
             const card = this.data.cards.find(c => c.id === cardId);
             if (!card) return;
 
@@ -148,17 +177,17 @@ const SchedulerManager = {
             let eventsHtml = '';
             if (card.events) {
                 eventsHtml = '<div class="event-list">';
-                ['1', '2', '3'].forEach(stage => {
+                ['1', '2', '3'].forEach((stage, idx) => {
                     const stKey = `stage_${stage}`;
                     const eventData = card.events[stKey];
                     const eventName = eventData ? eventData.event_name : `이벤트 ${stage}`;
 
                     const checkKey = `${this.data.currentDeckIndex}_${card.id}_${stage}`;
                     const isChecked = this.data.checks[checkKey];
-                    if (isChecked) checkedCount++;
 
+                    // Call handleCardProgress instead of toggleCheck
                     eventsHtml += `
-                        <div class="event-item ${isChecked ? 'checked' : ''}" onclick="window.SchedulerManager.toggleCheck('${checkKey}')">
+                        <div class="event-item ${isChecked ? 'checked' : ''}" onclick="window.SchedulerManager.handleCardProgress(${cardIndex}, ${idx})">
                             <div class="event-checkbox"></div>
                             <div class="event-text">
                                 <div class="event-stage">${stage}단계</div>
@@ -188,18 +217,53 @@ const SchedulerManager = {
 
             this.dom.grid.appendChild(cardEl);
         });
+    },
 
-        this.dom.deckStats.innerText = `(${checkedCount}/${totalEvents} 완료)`;
+    handleCardProgress(cardIndex, eventIndex) {
+        const deck = this.data.decks[this.data.currentDeckIndex];
+        if (!deck || !deck[cardIndex]) return;
+
+        const cardId = deck[cardIndex];
+        const stages = ['1', '2', '3'];
+
+        // Determine current max checked index for this card
+        let currentMaxIndex = -1;
+        stages.forEach((stage, idx) => {
+            const key = `${this.data.currentDeckIndex}_${cardId}_${stage}`;
+            if (this.data.checks[key]) {
+                currentMaxIndex = idx;
+            }
+        });
+
+        let targetIndex;
+        // Logic:
+        // If clicking the currently max checked item, toggle it OFF (go back one step).
+        // Otherwise, set progress TO the clicked item (check everything up to it).
+        if (eventIndex === currentMaxIndex) {
+            targetIndex = eventIndex - 1;
+        } else {
+            targetIndex = eventIndex;
+        }
+
+        // Apply state
+        stages.forEach((stage, idx) => {
+            const key = `${this.data.currentDeckIndex}_${cardId}_${stage}`;
+            if (idx <= targetIndex) {
+                this.data.checks[key] = true;
+            } else {
+                delete this.data.checks[key];
+            }
+        });
+
+        this.saveChecks();
+        this.render();
     },
 
     renderChoices(eventData) {
         if (!eventData) return '';
 
         const renderSingleChoice = (name, rewardsHTML) => {
-            // Rule: If no name AND no rewards, don't show anything.
             if (!name && !rewardsHTML) return '';
-
-            // Rule: If valid, render vertical stack
             return `
                 <div class="choice-item">
                     ${name ? `<div class="choice-name">${name}</div>` : ''}
@@ -263,16 +327,6 @@ const SchedulerManager = {
 
         if (rewardsHTML.length === 0) return null;
         return rewardsHTML.join('<br>');
-    },
-
-    toggleCheck(key) {
-        if (this.data.checks[key]) {
-            delete this.data.checks[key];
-        } else {
-            this.data.checks[key] = true;
-        }
-        this.saveChecks();
-        this.render();
     }
 };
 

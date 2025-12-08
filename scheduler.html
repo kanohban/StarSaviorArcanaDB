@@ -7,8 +7,9 @@
     <title>스타 세이비어 아르카나 DB - 스케줄러</title>
     <link rel="icon" type="image/png" href="./images/index/index_icon.png">
     <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-    <link rel="stylesheet" href="./assets/header.css?v=5.1.0">
-    <link rel="stylesheet" href="./assets/scheduler.css?v=5.1.0">
+    <link rel="stylesheet" href="./assets/header.css?v=5.2.0">
+    <link rel="stylesheet" href="./assets/scheduler.css?v=5.2.0">
+    <link rel="stylesheet" href="./assets/schedule_view.css?v=1.0.0">
 </head>
 
 <body>
@@ -17,14 +18,22 @@
             <header id="header-container"></header>
 
             <div class="scheduler-controls-header">
+                <!-- Swapped Order: Buttons First -->
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <button id="reset-check-btn" class="reset-btn">초기화</button>
+                    <button id="schedule-btn" class="schedule-btn" style="margin-left: 10px;">일정</button>
+
+                    <div id="scheduler-counters" class="scheduler-counters"
+                        style="display:none; margin-top: 10px; gap: 15px; justify-content: center; font-size: 0.9rem;">
+                        <span class="counter-badge arcana-counter">아르카나: <span id="cnt-arcana">0</span></span>
+                        <span class="counter-badge goal-counter">목표: <span id="cnt-goal">0</span></span>
+                    </div>
+                </div>
+
                 <div class="deck-navigation">
                     <button id="prev-deck-btn" class="nav-btn">&lt;</button>
-                    <h2>프리셋 <span id="deck-index">1</span><span id="deck-stats"
-                            style="font-size: 0.6em; color: #aaa; margin-left:10px;"></span></h2>
+                    <h2>프리셋 <span id="deck-index">1</span></h2>
                     <button id="next-deck-btn" class="nav-btn">&gt;</button>
-                </div>
-                <div style="text-align: center; margin-bottom: 10px;">
-                    <button id="reset-check-btn" class="reset-btn">체크 초기화</button>
                 </div>
             </div>
         </div>
@@ -34,14 +43,16 @@
                 <!-- Cards and checklists will be generated here -->
                 <div class="loading-message">데이터 로딩 중...</div>
             </div>
+            <div id="schedule-view-container"></div>
         </main>
 
         <footer id="footer-container"></footer>
     </div>
 
-    <script src="./assets/header_manager.js?v=4.3.0"></script>
+    <script src="./assets/header_manager.js?v=5.2.0"></script>
     <script src="./assets/footer_manager.js"></script>
-    <script src="./assets/scheduler_manager.js?v=4.3.0"></script>
+    <script src="./assets/scheduler_manager.js?v=5.2.0"></script>
+    <script src="./assets/schedule_view_manager.js"></script>
     <script>
         (function () {
             const html = document.documentElement;

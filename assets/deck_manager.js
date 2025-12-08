@@ -162,7 +162,6 @@ const DeckManager = {
         const currentDeck = this.data.decks[this.data.currentDeckIndex];
 
         this.dom.deckIndex.textContent = this.data.currentDeckIndex + 1;
-        this.dom.deckCount.textContent = `(${currentDeck.length}/5)`;
         this.dom.deckSlots.innerHTML = '';
 
         for (let i = 0; i < 5; i++) {
