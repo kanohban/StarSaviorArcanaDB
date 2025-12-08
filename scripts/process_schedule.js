@@ -174,6 +174,15 @@ try {
 
     // Cleanup: Remove empty periods or turns if any (optional)
 
+    // Cleanup: Remove 'original' field from all events
+    scheduleData.forEach(period => {
+        period.turns.forEach(turn => {
+            turn.events.forEach(ev => {
+                delete ev.original;
+            });
+        });
+    });
+
     fs.writeFileSync(outputPath, JSON.stringify(scheduleData, null, 2), 'utf8');
     console.log(`Successfully generated ${outputPath}`);
     console.log(`Total Periods: ${scheduleData.length}`);

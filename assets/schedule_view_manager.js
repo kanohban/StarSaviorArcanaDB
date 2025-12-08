@@ -4,14 +4,106 @@ class ScheduleViewManager {
         this.journeyData = null;
         this.container = null;
         this.state = {
-            currentTurnIndex: -1 // -1 means nothing checked
+            currentTurnIndex: -1,
+            viewMode: localStorage.getItem('schedule_view_mode') || 'view-grid',
+            activeAccordionIndices: new Set(JSON.parse(localStorage.getItem('schedule_accordion_state') || '[0]'))
         };
         this.storageKey = 'schedule_progress';
-        this.flatTurns = []; // Flattened list of turns for easier index management
-
-        // Counters
+        this.flatTurns = [];
         this.totalArcana = 0;
         this.totalGoal = 0;
+
+        // View Switching Listeners (Delegation)
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('.view-btn')) {
+                const mode = e.target.dataset.view;
+                this.switchView(mode);
+            }
+        });
+
+        // Accordion Delegated Listener
+        document.addEventListener('click', (e) => {
+            if (this.state.viewMode === 'view-accordion') {
+                const title = e.target.closest('.schedule-period-title');
+                if (title) {
+                    const periodEl = title.closest('.schedule-period');
+                    periodEl.classList.toggle('active');
+                    this.saveAccordionState();
+                }
+            }
+        });
+    }
+
+    // ... (switchView, updateViewButtons remain same)
+
+    async init() {
+        // ... (existing init code)
+        this.container = document.getElementById('schedule-view-container');
+        if (!this.container) return; // ...
+
+        this.container.innerHTML = '<div style="text-align:center; padding:50px; color:#aaa;">일정 불러오는 중...</div>';
+
+        const scheduleBtn = document.getElementById('schedule-btn');
+        if (scheduleBtn) {
+            scheduleBtn.onclick = () => {
+                const isHidden = window.getComputedStyle(this.container).display === 'none';
+                this.toggleView(isHidden);
+            };
+        }
+
+        try {
+            await this.loadData();
+            this.loadState();
+            this.render();
+        } catch (e) {
+            // ...
+        }
+    }
+
+    // ... (loadData remains same)
+
+    loadState() {
+        const saved = localStorage.getItem(this.storageKey);
+        if (saved !== null) {
+            this.state.currentTurnIndex = parseInt(saved, 10);
+        }
+        // Accordion state is loaded in constructor, but can be refreshed here if needed
+        const savedAccordion = localStorage.getItem('schedule_accordion_state');
+        if (savedAccordion) {
+            this.state.activeAccordionIndices = new Set(JSON.parse(savedAccordion));
+        }
+    }
+
+    saveState() {
+        localStorage.setItem(this.storageKey, this.state.currentTurnIndex);
+    }
+
+    saveAccordionState() {
+        if (!this.container) return;
+        const activeIndices = [];
+        const periods = this.container.querySelectorAll('.schedule-period');
+        periods.forEach((el, idx) => {
+            if (el.classList.contains('active')) activeIndices.push(idx);
+        });
+        this.state.activeAccordionIndices = new Set(activeIndices);
+        localStorage.setItem('schedule_accordion_state', JSON.stringify(activeIndices));
+    }
+
+    switchView(mode) {
+        this.state.viewMode = mode;
+        localStorage.setItem('schedule_view_mode', mode);
+        this.render(); // Render will update button states too
+    }
+
+    updateViewButtons() {
+        const btns = document.querySelectorAll('.view-btn');
+        btns.forEach(btn => {
+            if (btn.dataset.view === this.state.viewMode) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
     }
 
     async init() {
@@ -21,8 +113,19 @@ class ScheduleViewManager {
             return;
         }
 
-        // Show loading state
+        // Initialize display state (Hidden by default, as per user request)
+        // We rely on CSS display:none or default state.
+
         this.container.innerHTML = '<div style="text-align:center; padding:50px; color:#aaa;">일정 불러오는 중...</div>';
+
+        // Wire up Toggle Button
+        const scheduleBtn = document.getElementById('schedule-btn');
+        if (scheduleBtn) {
+            scheduleBtn.onclick = () => {
+                const isHidden = window.getComputedStyle(this.container).display === 'none';
+                this.toggleView(isHidden);
+            };
+        }
 
         try {
             await this.loadData();
@@ -49,7 +152,6 @@ class ScheduleViewManager {
 
             if (journeyRes.ok) {
                 const rawJourney = await journeyRes.json();
-                // Flatten the object values (arrays) into one single array
                 this.journeyData = [];
                 Object.values(rawJourney).forEach(arr => {
                     if (Array.isArray(arr)) {
@@ -70,8 +172,6 @@ class ScheduleViewManager {
                 this.data.forEach(period => {
                     period.turns.forEach(turn => {
                         this.flatTurns.push(turn);
-
-                        // Count Events
                         turn.events.forEach(ev => {
                             if (ev.type.includes('아르카나')) this.totalArcana++;
                             if (ev.type.includes('목표')) this.totalGoal++;
@@ -101,13 +201,15 @@ class ScheduleViewManager {
 
     toggleView(show) {
         const countersEl = document.getElementById('scheduler-counters');
+        const gridEl = document.getElementById('scheduler-grid');
+
         if (show) {
             this.container.style.display = 'block';
-            document.getElementById('scheduler-grid').style.display = 'none';
+            if (gridEl) gridEl.style.display = 'none';
             if (countersEl) countersEl.style.display = 'flex';
         } else {
             this.container.style.display = 'none';
-            document.getElementById('scheduler-grid').style.display = 'grid'; // or inherited
+            if (gridEl) gridEl.style.display = 'grid'; // Restore grid
             if (countersEl) countersEl.style.display = 'none';
         }
     }
@@ -136,15 +238,49 @@ class ScheduleViewManager {
         if (arcanaEl) arcanaEl.innerText = remArcana;
         if (goalEl) goalEl.innerText = remGoal;
 
-        // Continue rendering...
+        // Snapshot current accordion state (indices of active periods)
+        const activeIndices = new Set();
+        if (this.state.viewMode === 'view-accordion') {
+            const periods = this.container.querySelectorAll('.schedule-period');
+            periods.forEach((el, idx) => {
+                if (el.classList.contains('active')) activeIndices.add(idx);
+            });
+        }
 
         this.container.innerHTML = '';
+        this.container.className = this.state.viewMode;
+
+        // Inject View Mode Controls
+        const controlsWrapper = document.createElement('div');
+        controlsWrapper.style.textAlign = 'center';
+        controlsWrapper.style.marginBottom = '20px';
+
+        const controlsEl = document.createElement('div');
+        controlsEl.className = 'view-mode-controls';
+        // Inline styles removed, relying on CSS for pill appearance
+        controlsEl.innerHTML = `
+            <button class="view-btn ${this.state.viewMode === 'view-grid' ? 'active' : ''}" data-view="view-grid">기본</button>
+            <button class="view-btn ${this.state.viewMode === 'view-modern' ? 'active' : ''}" data-view="view-modern">카드</button>
+            <button class="view-btn ${this.state.viewMode === 'view-accordion' ? 'active' : ''}" data-view="view-accordion">접기</button>
+        `;
+        controlsWrapper.appendChild(controlsEl);
+        this.container.appendChild(controlsWrapper);
+
+        // Update button states immediately after injection
+        this.updateViewButtons();
 
         let globalTurnIndex = 0;
 
-        this.data.forEach(period => {
+        this.data.forEach((period, pIndex) => {
             const periodEl = document.createElement('div');
             periodEl.className = 'schedule-period';
+
+            // Restore accordion state
+            if (this.state.viewMode === 'view-accordion') {
+                if (this.state.activeAccordionIndices.has(pIndex)) {
+                    periodEl.classList.add('active');
+                }
+            }
 
             const titleEl = document.createElement('div');
             titleEl.className = 'schedule-period-title';
@@ -158,30 +294,25 @@ class ScheduleViewManager {
             period.turns.forEach(turn => {
                 const turnIndex = globalTurnIndex++;
                 const isCompleted = turnIndex <= this.state.currentTurnIndex;
-                const isActive = turnIndex === this.state.currentTurnIndex; // The one actually clicked
+                const isActive = turnIndex === this.state.currentTurnIndex;
 
                 const turnEl = document.createElement('div');
                 turnEl.className = `schedule-turn ${isCompleted ? 'completed' : ''} ${isActive ? 'active-turn' : ''}`;
                 turnEl.dataset.index = turnIndex;
 
-                // Click handler for the whole row (except interactive events might capture click)
                 turnEl.addEventListener('click', (e) => {
-                    // Prevent triggering if clicked on an event badge
                     if (e.target.closest('.schedule-event.interactive')) return;
                     this.handleCheck(turnIndex);
                 });
 
-                // Checkbox
                 const checkboxWrapper = document.createElement('div');
                 checkboxWrapper.className = 'turn-checkbox-wrapper';
                 checkboxWrapper.innerHTML = `<div class="turn-checkbox"></div>`;
                 turnEl.appendChild(checkboxWrapper);
 
-                // Content
                 const contentEl = document.createElement('div');
                 contentEl.className = 'turn-content';
 
-                // Header (Turn name)
                 const headerEl = document.createElement('div');
                 headerEl.className = 'turn-header';
 
@@ -193,11 +324,9 @@ class ScheduleViewManager {
                 headerEl.innerHTML = headerHTML;
                 contentEl.appendChild(headerEl);
 
-                // Events
                 const eventsListEl = document.createElement('div');
                 eventsListEl.className = 'turn-events-list';
 
-                // Group Events
                 const events = turn.events || [];
                 const mainEvents = [];
                 const floraEvents = [];
@@ -209,10 +338,8 @@ class ScheduleViewManager {
                     else mainEvents.push(ev);
                 });
 
-                // Render Main
                 this.renderGroupedEvents(eventsListEl, mainEvents);
 
-                // Compare Flora and Kalide events to see if they are identical
                 const areIdentical = (floraEvents.length > 0 && kalideEvents.length > 0) &&
                     (floraEvents.length === kalideEvents.length) &&
                     floraEvents.every((ev, i) => ev.content === kalideEvents[i].content && ev.type === kalideEvents[i].type);
@@ -222,49 +349,25 @@ class ScheduleViewManager {
                 } else if (floraEvents.length > 0 || kalideEvents.length > 0) {
                     const splitContainer = document.createElement('div');
                     splitContainer.className = 'split-container';
-                    splitContainer.style.display = 'flex';
-                    splitContainer.style.flexDirection = 'column';
-                    splitContainer.style.gap = '15px';
-                    splitContainer.style.marginTop = '10px';
+                    splitContainer.style.cssText = 'display:flex; flex-direction:column; gap:15px; margin-top:10px;';
 
-                    // Flora Row
                     if (floraEvents.length > 0) {
                         const floraCol = document.createElement('div');
                         floraCol.className = 'split-row flora-row';
-
-                        floraCol.style.border = '1px solid #4ade80';
-                        floraCol.style.padding = '8px';
-                        floraCol.style.borderRadius = '8px';
-                        // Enable gap between internal items (badges/groups)
-                        floraCol.style.display = 'flex';
-                        floraCol.style.flexWrap = 'wrap';
-                        floraCol.style.gap = '10px';
-                        floraCol.style.alignContent = 'flex-start';
-
+                        floraCol.style.cssText = 'border:1px solid #4ade80; padding:8px; border-radius:8px; display:flex; flex-wrap:wrap; gap:10px; align-content:flex-start;';
                         floraCol.innerHTML = `<div style="color:#4ade80; font-weight:bold; width:100%;">플로라</div>`;
                         this.renderGroupedEvents(floraCol, floraEvents);
                         splitContainer.appendChild(floraCol);
                     }
 
-                    // Kalide Row
                     if (kalideEvents.length > 0) {
                         const kalideCol = document.createElement('div');
                         kalideCol.className = 'split-row kalide-row';
-
-                        kalideCol.style.border = '1px solid #f87171';
-                        kalideCol.style.padding = '8px';
-                        kalideCol.style.borderRadius = '8px';
-                        // Enable gap between internal items
-                        kalideCol.style.display = 'flex';
-                        kalideCol.style.flexWrap = 'wrap';
-                        kalideCol.style.gap = '10px';
-                        kalideCol.style.alignContent = 'flex-start';
-
+                        kalideCol.style.cssText = 'border:1px solid #f87171; padding:8px; border-radius:8px; display:flex; flex-wrap:wrap; gap:10px; align-content:flex-start;';
                         kalideCol.innerHTML = `<div style="color:#f87171; font-weight:bold; width:100%;">칼라이드</div>`;
                         this.renderGroupedEvents(kalideCol, kalideEvents);
                         splitContainer.appendChild(kalideCol);
                     }
-
                     eventsListEl.appendChild(splitContainer);
                 }
 
@@ -272,7 +375,6 @@ class ScheduleViewManager {
                 turnEl.appendChild(contentEl);
                 periodTurns.appendChild(turnEl);
             });
-
             this.container.appendChild(periodEl);
         });
     }
@@ -283,7 +385,6 @@ class ScheduleViewManager {
 
         events.forEach(ev => {
             if (ev.type.includes('랜덤')) {
-                // Extract "랜덤" or "랜덤X" as the primary grouping key
                 const typeParts = ev.type.split(',').map(t => t.trim());
                 const randomTag = typeParts.find(t => t.startsWith('랜덤'));
                 if (randomTag) {
@@ -291,7 +392,6 @@ class ScheduleViewManager {
                     if (!randomGroups[groupKey]) randomGroups[groupKey] = [];
                     randomGroups[groupKey].push(ev);
                 } else {
-                    // Fallback if '랜덤' in name but not found in parts? Should not happen if includes is true
                     normalEvents.push(ev);
                 }
             } else {
@@ -299,18 +399,15 @@ class ScheduleViewManager {
             }
         });
 
-        // Render Normal
         normalEvents.forEach(ev => {
             container.appendChild(this.createEventBadge(ev));
         });
 
-        // Render Groups
         Object.keys(randomGroups).forEach(groupKey => {
             const groupParams = randomGroups[groupKey];
             const groupEl = document.createElement('div');
             groupEl.className = 'random-group-box';
 
-            // Header (supports multiple badges: "확률,랜덤")
             const header = document.createElement('div');
             const types = groupKey.split(',');
             types.forEach(t => {
@@ -319,7 +416,6 @@ class ScheduleViewManager {
             });
             groupEl.appendChild(header);
 
-            // Items
             groupParams.forEach(ev => {
                 groupEl.appendChild(this.createEventBadge(ev, true));
             });
@@ -350,7 +446,6 @@ class ScheduleViewManager {
 
         let typeClass = this.getTypeClass(ev.type);
 
-        // Check if interactive (in journey data)
         const journeyItem = this.findJourneyItem(ev.content);
         if (journeyItem) {
             badge.classList.add('interactive');
@@ -362,12 +457,9 @@ class ScheduleViewManager {
 
         if (simplified) {
             badge.className += ' simplified';
-
-            // Allow displaying extra badges (non-random) inside the group item
             let extraBadgesHtml = '';
             if (ev.type) {
                 const tags = ev.type.split(',').map(t => t.trim());
-                // Filter out '랜덤' tags as they are likely the group header
                 const displayTags = tags.filter(t => !t.startsWith('랜덤') && !t.startsWith('확률'));
 
                 displayTags.forEach(tag => {
@@ -375,7 +467,6 @@ class ScheduleViewManager {
                     extraBadgesHtml += `<span class="event-type-badge ${typeClass}" style="font-size:0.7rem; padding:1px 4px; margin-right:4px;">${tag}</span>`;
                 });
             }
-
             badge.innerHTML = `${extraBadgesHtml}<span class="event-content">${ev.content}</span>`;
         } else {
             badge.innerHTML = `
@@ -392,33 +483,22 @@ class ScheduleViewManager {
 
     findJourneyItem(content) {
         if (!this.journeyData) return null;
-
         const normalize = (str) => {
             if (!str) return '';
-            // Replace en-dash, em-dash with hyphen, and normalize spaces
             return str.replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim();
         };
-
         const target = normalize(content);
-
         return this.journeyData.find(item => {
             return normalize(item.name) === target || normalize(item.event_name) === target;
         });
     }
 
     handleCheck(index) {
-        // Toggle logic:
-        // If clicking the current latest, uncheck it (go back one step)
-        // If clicking a previous one, set that as new latest
-        // If clicking next one, set that as new latest
-
         if (this.state.currentTurnIndex === index) {
-            // Uncheck this one
             this.state.currentTurnIndex = index - 1;
         } else {
             this.state.currentTurnIndex = index;
         }
-
         this.saveState();
         this.render();
     }
@@ -430,7 +510,6 @@ class ScheduleViewManager {
     }
 
     openModal(item, title) {
-        // Use existing modal logic from SchedulerManager if possible, or create simple one
         let modal = document.getElementById('schedule-modal');
         if (!modal) {
             modal = document.createElement('div');
@@ -462,13 +541,10 @@ class ScheduleViewManager {
 
         titleEl.textContent = title;
 
-        // Format journey item content
-        // Assuming item has choices or description
         let contentHtml = '';
         if (item.desc) contentHtml += `<p>${item.desc}</p>`;
 
         if (item.choices) {
-            // Reuse generic choice rendering if possible, or simple list
             contentHtml += `<div class="modal-choices">`;
             item.choices.forEach(choice => {
                 contentHtml += `
@@ -483,7 +559,7 @@ class ScheduleViewManager {
             });
             contentHtml += `</div>`;
         } else {
-            contentHtml += JSON.stringify(item, null, 2); // Fallback
+            contentHtml += JSON.stringify(item, null, 2);
         }
 
         contentEl.innerHTML = contentHtml;

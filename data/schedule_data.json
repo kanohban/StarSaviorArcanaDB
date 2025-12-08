@@ -8,13 +8,11 @@
         "events": [
           {
             "type": "인자 계승",
-            "content": "인자 계승",
-            "original": "(인자 계승)인자 계승"
+            "content": "인자 계승"
           },
           {
             "type": "구원자",
-            "content": "유물 선택, 잠재력 +7",
-            "original": "(구원자)유물 선택, 잠재력 +7"
+            "content": "유물 선택, 잠재력 +7"
           }
         ]
       },
@@ -24,18 +22,15 @@
         "events": [
           {
             "type": "고정",
-            "content": "기초 평가전 준비",
-            "original": "(고정)기초 평가전 준비"
+            "content": "기초 평가전 준비"
           },
           {
             "type": "구원자",
-            "content": "버프 / 디버프 2턴",
-            "original": "(구원자)버프 / 디버프 2턴"
+            "content": "버프 / 디버프 2턴"
           },
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           }
         ]
       },
@@ -45,18 +40,15 @@
         "events": [
           {
             "type": "랜덤",
-            "content": "여가 시간",
-            "original": "(랜덤)여가 시간"
+            "content": "여가 시간"
           },
           {
             "type": "랜덤",
-            "content": "구원단 보급",
-            "original": "(랜덤)구원단 보급"
+            "content": "구원단 보급"
           },
           {
             "type": "랜덤",
-            "content": "신비한 석상",
-            "original": "(랜덤)신비한 석상"
+            "content": "신비한 석상"
           }
         ]
       },
@@ -66,8 +58,7 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           }
         ]
       },
@@ -77,13 +68,11 @@
         "events": [
           {
             "type": "고정",
-            "content": "여정의 선물 - 유물 선택, 잠재력 +7",
-            "original": "(고정)여정의 선물 - 유물 선택, 잠재력 +7"
+            "content": "여정의 선물 - 유물 선택, 잠재력 +7"
           },
           {
-            "type": "고정",
-            "content": "미편성 아르카나 이벤트",
-            "original": "(고정)미편성 아르카나 이벤트"
+            "type": "확률",
+            "content": "미편성 아르카나 이벤트"
           }
         ]
       },
@@ -93,8 +82,7 @@
         "events": [
           {
             "type": "기타",
-            "content": "-",
-            "original": "-"
+            "content": "-"
           }
         ]
       },
@@ -104,18 +92,15 @@
         "events": [
           {
             "type": "토벌",
-            "content": "약탈자 토벌 의뢰",
-            "original": "(토벌)약탈자 토벌 의뢰"
+            "content": "약탈자 토벌 의뢰"
           },
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "고정",
-            "content": "리세트의 일과",
-            "original": "(고정)리세트의 일과"
+            "content": "리세트의 일과"
           }
         ]
       },
@@ -125,8 +110,7 @@
         "events": [
           {
             "type": "목표",
-            "content": "기초 평가전",
-            "original": "(목표)기초 평가전"
+            "content": "기초 평가전"
           }
         ]
       }
@@ -141,13 +125,11 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "구원자",
-            "content": "잠재력 +45",
-            "original": "(구원자)잠재력 +45"
+            "content": "잠재력 +45"
           }
         ]
       },
@@ -157,23 +139,19 @@
         "events": [
           {
             "type": "랜덤",
-            "content": "공업소의 홍보 전략",
-            "original": "(랜덤)공업소의 홍보 전략"
+            "content": "공업소의 홍보 전략"
           },
           {
             "type": "랜덤",
-            "content": "우연한 발견",
-            "original": "(랜덤)우연한 발견"
+            "content": "우연한 발견"
           },
           {
             "type": "랜덤",
-            "content": "비밀의 지옥 특훈",
-            "original": "(랜덤)비밀의 지옥 특훈"
+            "content": "비밀의 지옥 특훈"
           },
           {
             "type": "랜덤",
-            "content": "시작형 강화제",
-            "original": "(랜덤)시작형 강화제"
+            "content": "시작형 강화제"
           }
         ]
       },
@@ -183,23 +161,19 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "랜덤",
-            "content": "날씨",
-            "original": "(랜덤)날씨"
+            "content": "날씨"
           },
           {
             "type": "랜덤",
-            "content": "예상 못한 격려",
-            "original": "(랜덤)예상 못한 격려"
+            "content": "예상 못한 격려"
           },
           {
             "type": "랜덤",
-            "content": "사고는 일어난다",
-            "original": "(랜덤)사고는 일어난다"
+            "content": "사고는 일어난다"
           }
         ]
       },
@@ -209,13 +183,11 @@
         "events": [
           {
             "type": "고정",
-            "content": "친절의 선물 - 유물 선택, 잠재력 +7",
-            "original": "(고정)친절의 선물 - 유물 선택, 잠재력 +7"
+            "content": "친절의 선물 - 유물 선택, 잠재력 +7"
           },
           {
             "type": "구원자",
-            "content": "잠재력 +45",
-            "original": "(구원자)잠재력 +45"
+            "content": "잠재력 +45"
           }
         ]
       },
@@ -225,8 +197,7 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           }
         ]
       },
@@ -236,18 +207,15 @@
         "events": [
           {
             "type": "토벌",
-            "content": "슬라임 토벌 의뢰",
-            "original": "(토벌)슬라임 토벌 의뢰"
+            "content": "슬라임 토벌 의뢰"
           },
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "고정",
-            "content": "리세트의 유혹",
-            "original": "(고정)리세트의 유혹"
+            "content": "리세트의 유혹"
           }
         ]
       },
@@ -257,13 +225,11 @@
         "events": [
           {
             "type": "목표",
-            "content": "토벌 평가전",
-            "original": "(목표)토벌 평가전"
+            "content": "토벌 평가전"
           },
           {
             "type": "인자 계승",
-            "content": "동료 합류 & 인자 계승",
-            "original": "(인자 계승)동료 합류 & 인자 계승"
+            "content": "동료 합류 & 인자 계승"
           }
         ]
       }
@@ -278,8 +244,7 @@
         "events": [
           {
             "type": "고정",
-            "content": "아가논 이동",
-            "original": "(고정)아가논 이동"
+            "content": "아가논 이동"
           }
         ]
       },
@@ -289,8 +254,7 @@
         "events": [
           {
             "type": "기타",
-            "content": "-",
-            "original": "-"
+            "content": "-"
           }
         ]
       },
@@ -300,13 +264,11 @@
         "events": [
           {
             "type": "고정",
-            "content": "미궁 탐사",
-            "original": "(고정)미궁 탐사"
+            "content": "미궁 탐사"
           },
           {
             "type": "고정",
-            "content": "날씨",
-            "original": "(고정)날씨"
+            "content": "날씨"
           }
         ]
       },
@@ -316,8 +278,7 @@
         "events": [
           {
             "type": "기타",
-            "content": "-",
-            "original": "-"
+            "content": "-"
           }
         ]
       },
@@ -327,8 +288,7 @@
         "events": [
           {
             "type": "고정",
-            "content": "습격",
-            "original": "(고정)습격"
+            "content": "습격"
           }
         ]
       },
@@ -338,13 +298,11 @@
         "events": [
           {
             "type": "고정",
-            "content": "구명의 선물 - 유물 선택, 잠재력 +7",
-            "original": "(고정)구명의 선물 - 유물 선택, 잠재력 +7"
+            "content": "구명의 선물 - 유물 선택, 잠재력 +7"
           },
           {
             "type": "확률",
-            "content": "갑작스러운 조우 - 슬라임",
-            "original": "(확률)갑작스러운 조우 - 슬라임"
+            "content": "갑작스러운 조우 - 슬라임"
           }
         ]
       },
@@ -354,23 +312,19 @@
         "events": [
           {
             "type": "랜덤",
-            "content": "단원과의 식사",
-            "original": "(랜덤)단원과의 식사"
+            "content": "단원과의 식사"
           },
           {
             "type": "랜덤",
-            "content": "단원과의 산책",
-            "original": "(랜덤)단원과의 산책"
+            "content": "단원과의 산책"
           },
           {
             "type": "랜덤",
-            "content": "단원과의 대화",
-            "original": "(랜덤)단원과의 대화"
+            "content": "단원과의 대화"
           },
           {
             "type": "랜덤",
-            "content": "단원과의 관람",
-            "original": "(랜덤)단원과의 관람"
+            "content": "단원과의 관람"
           }
         ]
       },
@@ -380,8 +334,7 @@
         "events": [
           {
             "type": "목표",
-            "content": "원정 평가전",
-            "original": "(목표)원정 평가전"
+            "content": "원정 평가전"
           }
         ]
       }
@@ -396,13 +349,11 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "구원자",
-            "content": "잠재력 +45",
-            "original": "(구원자) 잠재력 +45"
+            "content": "잠재력 +45"
           }
         ]
       },
@@ -412,8 +363,7 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           }
         ]
       },
@@ -423,33 +373,27 @@
         "events": [
           {
             "type": "랜덤1",
-            "content": "리세트의 행운",
-            "original": "(랜덤1)리세트의 행운"
+            "content": "리세트의 행운"
           },
           {
             "type": "랜덤1",
-            "content": "교단의 제안",
-            "original": "(랜덤1)교단의 제안"
+            "content": "교단의 제안"
           },
           {
             "type": "랜덤1",
-            "content": "교단의 분실물",
-            "original": "(랜덤1)교단의 분실물"
+            "content": "교단의 분실물"
           },
           {
             "type": "랜덤1",
-            "content": "시작형 강화제",
-            "original": "(랜덤1)시작형 강화제"
+            "content": "시작형 강화제"
           },
           {
             "type": "랜덤2",
-            "content": "날씨",
-            "original": "(랜덤2)날씨"
+            "content": "날씨"
           },
           {
             "type": "랜덤2,아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(랜덤2)(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           }
         ]
       },
@@ -459,13 +403,11 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "구원자",
-            "content": "잠재력 +45",
-            "original": "(구원자) 잠재력 +45"
+            "content": "잠재력 +45"
           }
         ]
       },
@@ -475,8 +417,7 @@
         "events": [
           {
             "type": "고정",
-            "content": "모범의 선물 - 유물 선택, 잠재력 +7",
-            "original": "(고정)모범의 선물 - 유물 선택, 잠재력 +7"
+            "content": "모범의 선물 - 유물 선택, 잠재력 +7"
           }
         ]
       },
@@ -486,18 +427,15 @@
         "events": [
           {
             "type": "토벌",
-            "content": "탈영병 토벌 의뢰",
-            "original": "(토벌)탈영병 토벌 의뢰"
+            "content": "탈영병 토벌 의뢰"
           },
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "고정",
-            "content": "리세트의 휴가",
-            "original": "(고정)리세트의 휴가"
+            "content": "리세트의 휴가"
           }
         ]
       },
@@ -507,13 +445,11 @@
         "events": [
           {
             "type": "목표",
-            "content": "경쟁 평가전",
-            "original": "(목표)경쟁 평가전"
+            "content": "경쟁 평가전"
           },
           {
             "type": "인자 계승",
-            "content": "동료 합류 & 인자 계승",
-            "original": "(인자 계승)동료 합류 & 인자 계승"
+            "content": "동료 합류 & 인자 계승"
           }
         ]
       }
@@ -528,8 +464,7 @@
         "events": [
           {
             "type": "고정",
-            "content": "플로라/칼라이드 이동",
-            "original": "(고정)플로라/칼라이드 이동"
+            "content": "플로라/칼라이드 이동"
           }
         ]
       },
@@ -539,14 +474,12 @@
         "events": [
           {
             "type": "고정",
-            "content": "발리볼 예선전",
-            "original": "(고정)발리볼 예선전",
+            "content": "비치발리볼 대회 예선전",
             "branch": "flora"
           },
           {
             "type": "고정",
             "content": "온천 축제 준비",
-            "original": "(고정)온천 축제 준비",
             "branch": "kalide"
           }
         ]
@@ -558,25 +491,21 @@
           {
             "type": "랜덤",
             "content": "오늘의 날씨 – 열대야",
-            "original": "(랜덤)오늘의 날씨 – 열대야",
             "branch": "flora"
           },
           {
             "type": "랜덤",
             "content": "오늘의 날씨 – 폭설",
-            "original": "(랜덤)오늘의 날씨 – 폭설",
             "branch": "kalide"
           },
           {
             "type": "랜덤",
             "content": "사고는 일어난다",
-            "original": "(랜덤)사고는 일어난다",
             "branch": "flora"
           },
           {
             "type": "랜덤",
             "content": "사고는 일어난다",
-            "original": "(랜덤)사고는 일어난다",
             "branch": "kalide"
           }
         ]
@@ -588,13 +517,11 @@
           {
             "type": "고정",
             "content": "비치발리볼 대회 준결승전",
-            "original": "(고정)비치발리볼 대회 준결승전",
             "branch": "flora"
           },
           {
             "type": "고정",
             "content": "축제의 불청객",
-            "original": "(고정)축제의 불청객",
             "branch": "kalide"
           }
         ]
@@ -606,13 +533,11 @@
           {
             "type": "기타",
             "content": "-",
-            "original": "-",
             "branch": "flora"
           },
           {
             "type": "기타",
             "content": "-",
-            "original": "-",
             "branch": "kalide"
           }
         ]
@@ -624,25 +549,21 @@
           {
             "type": "고정",
             "content": "행복의 선물 - 유물 선택, 잠재력 +7",
-            "original": "(고정)행복의 선물 - 유물 선택, 잠재력 +7",
             "branch": "flora"
           },
           {
             "type": "고정",
             "content": "인연의 선물 - 유물 선택, 잠재력 +7",
-            "original": "(고정)인연의 선물 - 유물 선택, 잠재력 +7",
             "branch": "kalide"
           },
           {
             "type": "확률",
             "content": "갑작스러운 조우 - 약탈자",
-            "original": "(확률)갑작스러운 조우 - 약탈자",
             "branch": "flora"
           },
           {
             "type": "확률",
             "content": "갑작스러운 조우 - 강도 기사",
-            "original": "(확률)갑작스러운 조우 - 강도 기사",
             "branch": "kalide"
           }
         ]
@@ -654,49 +575,41 @@
           {
             "type": "랜덤",
             "content": "단원과의 식사",
-            "original": "(랜덤)단원과의 식사",
             "branch": "flora"
           },
           {
             "type": "랜덤",
             "content": "단원과의 식사",
-            "original": "(랜덤)단원과의 식사",
             "branch": "kalide"
           },
           {
             "type": "랜덤",
             "content": "단원과의 산책",
-            "original": "(랜덤)단원과의 산책",
             "branch": "flora"
           },
           {
             "type": "랜덤",
             "content": "단원과의 산책",
-            "original": "(랜덤)단원과의 산책",
             "branch": "kalide"
           },
           {
             "type": "랜덤",
             "content": "단원과의 대화",
-            "original": "(랜덤)단원과의 대화",
             "branch": "flora"
           },
           {
             "type": "랜덤",
             "content": "단원과의 대화",
-            "original": "(랜덤)단원과의 대화",
             "branch": "kalide"
           },
           {
             "type": "랜덤",
             "content": "단원과의 관람",
-            "original": "(랜덤)단원과의 관람",
             "branch": "flora"
           },
           {
             "type": "랜덤",
             "content": "단원과의 관람",
-            "original": "(랜덤)단원과의 관람",
             "branch": "kalide"
           }
         ]
@@ -708,13 +621,11 @@
           {
             "type": "목표",
             "content": "원정 평가전",
-            "original": "(목표)원정 평가전",
             "branch": "flora"
           },
           {
             "type": "목표",
             "content": "원정 평가전",
-            "original": "(목표)원정 평가전",
             "branch": "kalide"
           }
         ]
@@ -730,13 +641,11 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "구원자",
-            "content": "잠재력 +45",
-            "original": "(구원자) 잠재력 +45"
+            "content": "잠재력 +45"
           }
         ]
       },
@@ -746,8 +655,7 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           }
         ]
       },
@@ -757,38 +665,31 @@
         "events": [
           {
             "type": "확률,랜덤",
-            "content": "신설 부서는 노력 중!",
-            "original": "(확률)(랜덤)신설 부서는 노력 중!"
+            "content": "신설 부서는 노력 중!"
           },
           {
             "type": "확률,랜덤",
-            "content": "간단한 테스트",
-            "original": "(확률)(랜덤)간단한 테스트"
+            "content": "간단한 테스트"
           },
           {
             "type": "확률,랜덤",
-            "content": "리세트의 행운",
-            "original": "(확률)(랜덤)리세트의 행운"
+            "content": "리세트의 행운"
           },
           {
             "type": "확률,랜덤",
-            "content": "수집가가 온다",
-            "original": "(확률)(랜덤)수집가가 온다"
+            "content": "수집가가 온다"
           },
           {
             "type": "확률,랜덤",
-            "content": "칼에 숨겨진 힘",
-            "original": "(확률)(랜덤)칼에 숨겨진 힘"
+            "content": "칼에 숨겨진 힘"
           },
           {
             "type": "확률,랜덤",
-            "content": "꽃에 숨겨진 힘",
-            "original": "(확률)(랜덤)꽃에 숨겨진 힘"
+            "content": "꽃에 숨겨진 힘"
           },
           {
             "type": "고정",
-            "content": "리세트의 우울",
-            "original": "(고정)리세트의 우울"
+            "content": "리세트의 우울"
           }
         ]
       },
@@ -798,8 +699,7 @@
         "events": [
           {
             "type": "목표",
-            "content": "공허 평가전",
-            "original": "(목표)공허 평가전"
+            "content": "공허 평가전"
           }
         ]
       }
@@ -814,13 +714,11 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           },
           {
             "type": "구원자",
-            "content": "잠재력 +45",
-            "original": "(구원자) 잠재력 +45"
+            "content": "잠재력 +45"
           }
         ]
       },
@@ -830,8 +728,7 @@
         "events": [
           {
             "type": "아르카나",
-            "content": "아르카나 이벤트",
-            "original": "(아르카나)아르카나 이벤트"
+            "content": "아르카나 이벤트"
           }
         ]
       },
@@ -841,8 +738,7 @@
         "events": [
           {
             "type": "고정",
-            "content": "리세트의 친구",
-            "original": "(고정)리세트의 친구"
+            "content": "리세트의 친구"
           }
         ]
       },
@@ -852,13 +748,11 @@
         "events": [
           {
             "type": "목표",
-            "content": "최종 평가전",
-            "original": "(목표)최종 평가전"
+            "content": "최종 평가전"
           },
           {
             "type": "구원자",
-            "content": "별빛의 인도, 랜덤 스탯 +10",
-            "original": "(구원자) 별빛의 인도, 랜덤 스탯 +10"
+            "content": "별빛의 인도, 랜덤 스탯 +10"
           }
         ]
       }

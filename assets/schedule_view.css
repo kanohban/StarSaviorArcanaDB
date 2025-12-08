@@ -198,6 +198,8 @@
     color: #fff;
     text-transform: uppercase;
     background: #555;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* Event Types */
@@ -256,7 +258,63 @@
     font-style: italic;
 }
 
-/* Buttons */
+/* View Mode Controls */
+.view-mode-controls {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 25px;
+    display: inline-flex !important;
+    /* Override inline flex if needed to ensure inline behavior for centering */
+    gap: 0 !important;
+    /* Remove gap for segmented look */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.view-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.view-btn.active {
+    background: var(--primary-color, #a29bfe);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(162, 155, 254, 0.4);
+}
+
+[data-theme="light"] .view-mode-controls {
+    background: #f1f3f5;
+    border-color: #dee2e6;
+}
+
+[data-theme="light"] .view-btn {
+    color: #868e96;
+}
+
+[data-theme="light"] .view-btn:hover {
+    color: #495057;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .view-btn.active {
+    background: #fff;
+    color: #6c5ce7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Common Button Styles */
 .schedule-btn {
     background: rgba(84, 160, 255, 0.2);
     border: 1px solid #54a0ff;
@@ -481,4 +539,76 @@
     background: #fab1a0;
     border-color: #e17055;
     color: #ffffff;
+}
+
+/* --- View Modes --- */
+
+/* Modern (Card) View */
+.view-modern .period-turns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    border-left: none;
+    /* Remove border line in grid mode */
+    padding-left: 0;
+}
+
+.view-modern .schedule-turn {
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+}
+
+.view-modern .turn-header {
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Accordion View */
+.view-accordion .period-turns {
+    display: none;
+}
+
+.view-accordion .schedule-period.active .period-turns {
+    display: block;
+    /* Animation removed to prevent bouncing on redraw */
+}
+
+.view-accordion .schedule-period-title {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.view-accordion .schedule-period-title:hover {
+    color: var(--primary-color, #a29bfe);
+    opacity: 0.8;
+}
+
+.view-accordion .schedule-period-title::after {
+    content: '▼';
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-left: 12px;
+    transition: transform 0.3s;
+    color: #666;
+}
+
+.view-accordion .schedule-period.active .schedule-period-title::after {
+    transform: rotate(180deg);
+    color: var(--primary-color, #a29bfe);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
