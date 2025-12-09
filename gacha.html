@@ -8,7 +8,8 @@
     <link rel="icon" type="image/png" href="./images/index/index_icon.png">
     <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
     <link rel="stylesheet" href="./assets/header.css?v=6.0.0">
-    <link rel="stylesheet" href="./assets/gacha.css?v=6.0.0">
+    <link rel="stylesheet" href="./assets/gacha.css?v=6.1.0">
+
 </head>
 
 <body>
@@ -33,6 +34,33 @@
 
             <div id="result-area" class="result-grid">
                 <p class="placeholder-text">원하는 소환을 선택하세요</p>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stats-info">
+                    <div class="stat-item">
+                        <span class="stat-label">총 소환</span>
+                        <span id="stat-total" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">SSR 획득</span>
+                        <span id="stat-ssr" class="stat-value ssr">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">SSR 확률</span>
+                        <span id="stat-ratio" class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">픽업 획득</span>
+                        <span id="stat-pickup" class="stat-value pickup">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">픽업 확률</span>
+                        <span id="stat-pickup-ratio" class="stat-value">0.00%</span>
+                    </div>
+                </div>
+                <button class="btn-reset" onclick="resetStats()">통계 초기화</button>
             </div>
         </main>
 
