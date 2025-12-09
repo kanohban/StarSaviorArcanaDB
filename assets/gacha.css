@@ -253,15 +253,30 @@ html[data-theme="light"] .stat-value {
 /* [CONFIG] PORTRAIT MODE (세로가 더 길 때) */
 @media (orientation: portrait) {
 
+    .gacha-container {
+        padding: 0.5rem;
+    }
+
     .result-grid,
     .stats-section {
         /* 배열: 5행 2열 고정 -> 2행 5열 (5 Columns)로 변경 요청됨 */
         grid-template-columns: repeat(5, 1fr);
 
-        /* 크기: 세로의 40% -> 가로의 90%로 변경 요청됨 */
-        width: 90vw;
-        /* [CONFIG] 위 값을 조절하여 세로 모드 크기 변경 가능 (예: 50vh, 90%) */
-        max-width: 750px;
+        /* 크기: 98vw로 확장하여 화면 꽉 채움 */
+        width: 98vw;
+        max-width: none;
+
+        /* 모바일 최적화: 내부 여백과 간격 축소 */
+        padding: 8px;
+        gap: 4px;
+    }
+
+    .stats-section {
+        gap: 0.5rem;
+    }
+
+    .stats-info {
+        gap: 1rem;
     }
 }
 
