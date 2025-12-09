@@ -66,6 +66,15 @@ html[data-theme="light"] .stat-value {
     /* Allow scroll if screen is tiny */
 }
 
+/* Mobile: Align tabs to start to prevent clipping when centered */
+@media (max-width: 768px) {
+    .banner-tabs {
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 .banner-tab {
     padding: 10px 15px;
     background: transparent;
