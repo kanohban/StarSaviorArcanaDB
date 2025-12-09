@@ -73,6 +73,22 @@
     color: white;
 }
 
+.schedule-btn {
+    background: rgba(162, 155, 254, 0.2);
+    border: 1px solid #a29bfe;
+    color: #a29bfe;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.schedule-btn:hover {
+    background: rgba(162, 155, 254, 0.4);
+    color: white;
+}
+
 .scheduler-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -422,4 +438,28 @@
 [data-theme="light"] .event-item.checked .event-name,
 [data-theme="light"] .event-item.checked .choice-name {
     color: #aaa;
+}
+
+/* Light Mode Button Overrides */
+/* Light Mode Button Overrides with Increased Specificity */
+html[data-theme="light"] .reset-btn {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+}
+
+html[data-theme="light"] .reset-btn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+html[data-theme="light"] .schedule-btn {
+    background: rgba(162, 155, 254, 0.1);
+    border: 1px solid #6c5ce7;
+    color: #6c5ce7;
+}
+
+html[data-theme="light"] .schedule-btn:hover {
+    background: #6c5ce7 !important;
+    color: white !important;
 }

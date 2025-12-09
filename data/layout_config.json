@@ -39,9 +39,9 @@
                 {
                     "type": "button",
                     "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "검색",
+                    "title": "가챠",
                     "action": "navigate",
-                    "target": "search.html"
+                    "target": "gacha.html"
                 }
             ],
             "right": [
@@ -87,9 +87,9 @@
                 {
                     "type": "button",
                     "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "검색",
+                    "title": "가챠",
                     "action": "navigate",
-                    "target": "search.html"
+                    "target": "gacha.html"
                 }
             ],
             "right": [
@@ -135,9 +135,9 @@
                 {
                     "type": "button",
                     "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "검색",
+                    "title": "가챠",
                     "action": "navigate",
-                    "target": "search.html"
+                    "target": "gacha.html"
                 }
             ],
             "right": [
@@ -183,9 +183,9 @@
                 {
                     "type": "button",
                     "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "검색",
+                    "title": "가챠",
                     "action": "navigate",
-                    "target": "search.html"
+                    "target": "gacha.html"
                 }
             ],
             "right": [
@@ -197,8 +197,8 @@
                 }
             ]
         },
-        "search": {
-            "title": "검색",
+        "gacha": {
+            "title": "가챠 시뮬레이터",
             "left": [
                 {
                     "type": "button",
@@ -279,9 +279,9 @@
                 {
                     "type": "button",
                     "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "검색",
+                    "title": "가챠",
                     "action": "navigate",
-                    "target": "search.html"
+                    "target": "gacha.html"
                 }
             ],
             "right": [

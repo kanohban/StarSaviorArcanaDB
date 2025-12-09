@@ -1,0 +1,335 @@
+/* Gacha Page Styles */
+:root {
+    --banner-bg: #2a2a2a;
+    --banner-active: #4a90e2;
+    --card-bg: #1a1a1a;
+    --border-color: #444;
+}
+
+/* Light mode support */
+html[data-theme="light"] {
+    --card-bg: #fff;
+    --border-color: #ddd;
+}
+
+.gacha-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* Reduced gap */
+}
+
+/* Banner Section */
+.banner-section {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    /* Reduced vertical spacing */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.banner-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    /* Tighter gap */
+    margin-bottom: 0;
+    /* No bottom margin */
+    flex-wrap: nowrap;
+    /* Prevent wrapping essentially */
+    width: 100%;
+    overflow-x: auto;
+    /* Allow scroll if screen is tiny */
+}
+
+.banner-tab {
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    /* Prevent text wrap inside button */
+}
+
+.banner-tab:hover {
+    border-color: var(--banner-active);
+    color: var(--banner-active);
+}
+
+.banner-tab.active {
+    background: var(--banner-active);
+    color: white;
+    border-color: var(--banner-active);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+/* Control Section */
+.control-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+}
+
+.gacha-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.3s;
+    /* color: white; Removed default color to let gradients handle it */
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gacha-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gacha-btn:active {
+    transform: translateY(1px);
+}
+
+.btn-single {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.4);
+    color: white;
+}
+
+.btn-multi {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    /* Gold/Orange */
+    box-shadow: 0 4px 10px rgba(253, 160, 133, 0.4);
+    color: #444;
+    /* Dark text for light button */
+}
+
+/* Result Grid */
+.result-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    min-height: 300px;
+    /* Maintains height for vertical centering and default view */
+}
+
+/* Placeholder Alignment */
+.placeholder-text {
+    width: 100%;
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+    /* Remove top margin so it can center via flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Fill available height */
+    flex: 1;
+    /* Take up space */
+}
+
+/* Gacha Card Style */
+.gacha-card {
+    /* FIXED WIDTH enforced */
+    width: 160px;
+    min-width: 160px;
+    max-width: 160px;
+
+    aspect-ratio: 3/8;
+    /* 2x height ratio */
+    border-radius: 12px;
+    position: relative;
+
+    /* Variable for background to support Light Mode */
+    background-color: var(--card-bg);
+
+    overflow: visible;
+    /* Allowing glow to spill out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+/* FORCE DARK BG for Arcana Cards (User Request) */
+.gacha-card.is-arcana {
+    background-color: #1a1a1a !important;
+    color: white !important;
+    /* border-color: #444; REMOVED to allow Rarity border to take precedence */
+}
+
+.gacha-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.gacha-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    /* Slightly less than parent */
+    z-index: 1;
+}
+
+.gacha-card-name {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    /* In standard dark theme or override */
+
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.9rem;
+
+    /* Strict overflow handling */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    backdrop-filter: blur(2px);
+}
+
+.gacha-card.is-arcana .gacha-card-name {
+    color: white !important;
+    /* Ensure name is white in forced dark mode */
+}
+
+/* Dynamic Font Scaling Classes */
+.gacha-card-name.text-long {
+    font-size: 0.75rem;
+    /* ~12-14 chars */
+}
+
+.gacha-card-name.text-xlong {
+    font-size: 0.65rem;
+    /* 15+ chars */
+    white-space: normal;
+    /* Allow wrap if absoluteley necessary */
+    line-height: 1.1;
+}
+
+.gacha-fallback-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #aaa;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    word-break: keep-all;
+    z-index: 0;
+}
+
+/* Rarity Styles (Border + Glow) */
+/* Using increased specificity .gacha-card.rarity-X to override any defaults */
+
+/* SSR: Gold/Rainbow */
+.gacha-card.rarity-SSR {
+    border-color: #ffd700;
+    box-shadow: 0 0 15px #ffd700, inset 0 0 10px #ffd700;
+    animation: pulse-gold 2s infinite;
+}
+
+/* SR: Purple/Silver */
+.gacha-card.rarity-SR {
+    border-color: #a020f0;
+    /* Purple */
+    box-shadow: 0 0 10px #a020f0;
+}
+
+/* R: Blue/Bronze */
+.gacha-card.rarity-R {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px #4a90e2;
+}
+
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 15px #ffd700, inset 0 0 5px #ffd700;
+    }
+
+    50% {
+        box-shadow: 0 0 25px #ffeb3b, inset 0 0 15px #ffeb3b;
+    }
+
+    100% {
+        box-shadow: 0 0 15px #ffd700, inset 0 0 5px #ffd700;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .result-grid {
+        /* Keep Flex for centering consistency on mobile, NOT grid */
+        display: flex;
+        justify-content: center;
+    }
+
+    .control-section {
+        /* Keep row even on mobile */
+        flex-direction: row;
+        width: 100%;
+        padding: 0 10px;
+        gap: 0.5rem;
+        /* Tighter gap for mobile */
+    }
+
+    .gacha-btn {
+        width: 50%;
+        /* Share width */
+        padding: 15px 10px;
+        /* Smaller padding */
+        font-size: 1rem;
+        /* Smaller text */
+    }
+
+    .banner-tabs {
+        /* On mobile, wrapping might be unavoidable OR we use horizontal scroll */
+        flex-wrap: nowrap;
+        justify-content: center;
+        /* Center alignment */
+        padding-bottom: 5px;
+        /* Scrollbar space */
+    }
+}

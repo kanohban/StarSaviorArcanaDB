@@ -43,7 +43,7 @@ textarea {
     --header-padding: 0 1rem;
     --header-max-width: 1200px;
 
-    --header-bg: rgba(255, 255, 255, 0.7);
+    --header-bg: rgba(255, 255, 255, 0.95);
     --header-border-color: #e0e0e0;
     --header-text-color: #333;
     --btn-size: 40px;
