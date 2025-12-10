@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>스타 세이비어 DB - 가챠</title>
+    <title>스타 세이비어 DB - 가챠 시뮬레이터</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGG707QJHS"></script>
     <script>
@@ -16,9 +16,8 @@
     </script>
     <link rel="icon" type="image/png" href="./images/index/index_icon.png">
     <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-    <link rel="stylesheet" href="./assets/header.css?v=6.0.0">
-    <link rel="stylesheet" href="./assets/gacha.css?v=6.1.1">
-
+    <link rel="stylesheet" href="./assets/header.css?v=6.2.0">
+    <link rel="stylesheet" href="./assets/gacha.css?v=6.2.0">
 </head>
 
 <body>
@@ -27,18 +26,54 @@
 
         <main class="gacha-container">
             <div class="banner-section">
-                <!-- Tabs for Banners -->
+                <!-- Main Tabs -->
                 <div class="banner-tabs">
-                    <button class="banner-tab active" data-banner="구원자-통상">구원자-통상</button>
-                    <button class="banner-tab" data-banner="구원자-픽업">구원자-픽업</button>
-                    <button class="banner-tab" data-banner="아르카나-통상">아르카나-통상</button>
-                    <button class="banner-tab" data-banner="아르카나-픽업">아르카나-픽업</button>
+                    <button class="banner-tab active" data-group="savior">구원자</button>
+                    <button class="banner-tab" data-group="arcana">아르카나</button>
+                    <button class="banner-tab" data-group="target">저격</button>
                 </div>
             </div>
 
-            <div class="control-section">
+            <!-- Sub Tabs: Standard/Pickup -->
+            <div class="sub-tabs-container">
+                <div id="sub-tabs" class="sub-tabs">
+                    <button class="sub-tab active" data-type="standard">통상</button>
+                    <button class="sub-tab" data-type="pickup">픽업</button>
+                </div>
+            </div>
+
+            <!-- Standard Gacha Controls -->
+            <div id="gacha-controls" class="control-section">
                 <button class="gacha-btn btn-single" onclick="pullGacha(1)">1회 소환</button>
                 <button class="gacha-btn btn-multi" onclick="pullGacha(10)">10회 소환</button>
+            </div>
+
+            <!-- Targeting Sim Controls -->
+            <div id="target-controls" class="target-controls hidden">
+                <div class="target-selectors">
+                    <div class="target-group">
+                        <label>종류:</label>
+                        <select id="target-select-type" class="target-select">
+                            <option value="savior">구원자</option>
+                            <option value="arcana">아르카나</option>
+                        </select>
+                    </div>
+
+                    <div class="target-group">
+                        <label>대상:</label>
+                        <select id="target-select-item" class="target-select">
+                            <option value="">대상 선택...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="target-actions">
+                    <button id="btn-target-start" class="btn-target">시작</button>
+                    <button id="btn-target-stop" class="btn-target" disabled>정지</button>
+                    <button id="btn-target-reset" class="btn-target">초기화</button>
+                </div>
+
+                <div id="target-status">설정 후 시작하세요.</div>
             </div>
 
             <div id="result-area" class="result-grid">
@@ -69,6 +104,15 @@
                         <span id="stat-pickup-ratio" class="stat-value">0.00%</span>
                     </div>
                 </div>
+
+                <!-- Drop Log Section -->
+                <div class="drop-log-container">
+                    <h3 style="color:#aaa; font-size:0.9rem; margin-bottom:10px;">획득 현황</h3>
+                    <div id="drop-log-list" class="drop-log-list">
+                        <span style="color:#666;">획득한 아이템이 없습니다.</span>
+                    </div>
+                </div>
+
                 <button class="btn-reset" onclick="resetStats()">통계 초기화</button>
             </div>
         </main>
@@ -76,9 +120,9 @@
         <footer id="footer-container"></footer>
     </div>
 
-    <script src="./assets/header_manager.js?v=6.0.0"></script>
+    <script src="./assets/header_manager.js?v=6.2.0"></script>
     <script src="./assets/footer_manager.js"></script>
-    <script src="./assets/gacha_manager.js"></script>
+    <script src="./assets/gacha_manager.js?v=6.2.0"></script>
     <script>
         (function () {
             const html = document.documentElement;

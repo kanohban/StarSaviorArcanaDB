@@ -463,3 +463,64 @@ html[data-theme="light"] .schedule-btn:hover {
     background: #6c5ce7 !important;
     color: white !important;
 }
+
+/* Search Integration Styles */
+.scheduler-counters {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.search-container-mockup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mockup-search-input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 200px;
+}
+
+[data-theme="light"] .mockup-search-input {
+    background: white;
+    border-color: #ccc;
+    color: #333;
+}
+
+/* Search Results Overlay */
+#scheduler-search-results {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.search-active .scheduler-grid,
+.search-active #schedule-view-container {
+    display: none !important;
+}
+
+.search-active #scheduler-search-results {
+    display: grid;
+}
+
+/* Modal Overlay Styles (replicated if missing) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}

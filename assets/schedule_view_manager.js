@@ -118,14 +118,14 @@ class ScheduleViewManager {
 
         this.container.innerHTML = '<div style="text-align:center; padding:50px; color:#aaa;">일정 불러오는 중...</div>';
 
-        // Wire up Toggle Button
-        const scheduleBtn = document.getElementById('schedule-btn');
-        if (scheduleBtn) {
-            scheduleBtn.onclick = () => {
-                const isHidden = window.getComputedStyle(this.container).display === 'none';
-                this.toggleView(isHidden);
-            };
-        }
+        // Wire up Toggle Button - Handled by SchedulerManager now
+        // const scheduleBtn = document.getElementById('schedule-btn');
+        // if (scheduleBtn) {
+        //     scheduleBtn.onclick = () => {
+        //         const isHidden = window.getComputedStyle(this.container).display === 'none';
+        //         this.toggleView(isHidden);
+        //     };
+        // }
 
         try {
             await this.loadData();

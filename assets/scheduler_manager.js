@@ -3,7 +3,8 @@ const SchedulerManager = {
         cards: [], // Stats + Events
         decks: [[], [], [], [], []], // 5 Decks
         currentDeckIndex: 0,
-        checks: {} // { deckIndex_cardId_stage: boolean }
+        checks: {}, // { deckIndex_cardId_stage: boolean }
+        scrollState: { card: 0, schedule: 0 }
     },
 
     storageKey: 'scheduler_state',
@@ -15,9 +16,11 @@ const SchedulerManager = {
         this.cacheDOM();
         this.bindEvents();
         this.render();
-        if (window.ScheduleViewManager) {
-            window.ScheduleViewManager.init();
-        }
+        // Removed explicit ScheduleViewManager.init() call here to avoid double init, 
+        // as it is called in scheduler.html
+        // if (window.ScheduleViewManager) {
+        //     window.ScheduleViewManager.init();
+        // }
     },
 
     cacheDOM() {
@@ -82,8 +85,8 @@ const SchedulerManager = {
             }
         } else {
             // Reset Card View (Current Deck)
-            // Key format: `${deckIndex}_${cardId}_${stage}`
-            const prefix = `${this.data.currentDeckIndex}_`;
+            // Key format: `${ deckIndex }_${ cardId }_${ stage } `
+            const prefix = `${this.data.currentDeckIndex} _`;
             for (const key in this.data.checks) {
                 if (key.startsWith(prefix)) {
                     delete this.data.checks[key];
@@ -110,14 +113,31 @@ const SchedulerManager = {
 
         if (isCardView) {
             // Switch to Schedule View
+            // 1. Save Card Scroll
+            this.data.scrollState.card = window.scrollY;
+
             this.dom.scheduleBtn.innerText = '카드';
             this.dom.deckNav.style.display = 'none';
             window.ScheduleViewManager.toggleView(true);
+
+            // 2. Restore Schedule Scroll
+            setTimeout(() => {
+                window.scrollTo(0, this.data.scrollState.schedule || 0);
+            }, 0);
+
         } else {
             // Switch back to Card Grid
+            // 1. Save Schedule Scroll
+            this.data.scrollState.schedule = window.scrollY;
+
             this.dom.scheduleBtn.innerText = '일정';
             this.dom.deckNav.style.display = 'flex';
             window.ScheduleViewManager.toggleView(false);
+
+            // 2. Restore Card Scroll
+            setTimeout(() => {
+                window.scrollTo(0, this.data.scrollState.card || 0);
+            }, 0);
         }
     },
 
@@ -229,7 +249,7 @@ const SchedulerManager = {
         // Determine current max checked index for this card
         let currentMaxIndex = -1;
         stages.forEach((stage, idx) => {
-            const key = `${this.data.currentDeckIndex}_${cardId}_${stage}`;
+            const key = `${this.data.currentDeckIndex}_${cardId}_${stage} `;
             if (this.data.checks[key]) {
                 currentMaxIndex = idx;
             }
@@ -247,7 +267,7 @@ const SchedulerManager = {
 
         // Apply state
         stages.forEach((stage, idx) => {
-            const key = `${this.data.currentDeckIndex}_${cardId}_${stage}`;
+            const key = `${this.data.currentDeckIndex}_${cardId}_${stage} `;
             if (idx <= targetIndex) {
                 this.data.checks[key] = true;
             } else {

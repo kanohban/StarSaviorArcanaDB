@@ -16,9 +16,11 @@
     </script>
     <link rel="icon" type="image/png" href="./images/index/index_icon.png">
     <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-    <link rel="stylesheet" href="./assets/header.css?v=6.1.1">
-    <link rel="stylesheet" href="./assets/scheduler.css?v=6.1.1">
-    <link rel="stylesheet" href="./assets/schedule_view.css?v=6.1.1">
+    <link rel="stylesheet" href="./assets/header.css?v=6.2.0">
+    <link rel="stylesheet" href="./assets/scheduler.css?v=6.2.0">
+    <link rel="stylesheet" href="./assets/schedule_view.css?v=6.2.0">
+    <!-- Search CSS -->
+    <link rel="stylesheet" href="./assets/search.css">
 </head>
 
 <body>
@@ -36,6 +38,12 @@
                         style="display:none; margin-top: 10px; gap: 15px; justify-content: center; font-size: 0.9rem;">
                         <span class="counter-badge arcana-counter">아르카나: <span id="cnt-arcana">0</span></span>
                         <span class="counter-badge goal-counter">목표: <span id="cnt-goal">0</span></span>
+
+                        <!-- Search Input -->
+                        <div class="search-container-mockup">
+                            <input type="text" id="scheduler-search-input" class="mockup-search-input"
+                                placeholder="검색 (카드, 여정)..." autocomplete="off">
+                        </div>
                     </div>
                 </div>
 
@@ -53,15 +61,35 @@
                 <div class="loading-message">데이터 로딩 중...</div>
             </div>
             <div id="schedule-view-container"></div>
+
+            <!-- Search Results Container -->
+            <div id="scheduler-search-results"></div>
         </main>
+
+        <!-- Modal Structure -->
+        <div id="card-modal" class="modal-overlay" style="display: none;">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-content-body">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
 
         <footer id="footer-container"></footer>
     </div>
 
-    <script src="./assets/header_manager.js?v=6.1.1"></script>
+    <script src="./assets/header_manager.js?v=6.2.0"></script>
     <script src="./assets/footer_manager.js"></script>
-    <script src="./assets/scheduler_manager.js?v=6.1.1"></script>
+    <script src="./assets/scheduler_manager.js?v=6.2.0"></script>
+    <script src="./assets/modal_manager.js"></script>
     <script src="./assets/schedule_view_manager.js"></script>
+
+    <!-- Search Utilities and Manager -->
+    <script src="./assets/hangul_utils.js?v=6.2.0"></script>
+    <script src="./assets/search_service.js?v=6.2.0"></script>
+    <script src="./assets/scheduler_search_manager.js?v=6.2.0"></script>
+
     <script>
         (function () {
             const html = document.documentElement;
@@ -69,7 +97,7 @@
             html.setAttribute('data-theme', savedTheme);
         })();
 
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             if (window.HeaderManager) {
                 window.HeaderManager.init(document.getElementById('header-container'), 'scheduler');
             }
@@ -83,6 +111,9 @@
             if (window.ScheduleViewManager) {
                 window.ScheduleViewManager.init();
             }
+
+            // Init Search
+            if (window.SchedulerSearchManager) await window.SchedulerSearchManager.init();
         });
     </script>
 </body>

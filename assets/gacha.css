@@ -262,8 +262,8 @@ html[data-theme="light"] .stat-value {
         /* 배열: 5행 2열 고정 -> 2행 5열 (5 Columns)로 변경 요청됨 */
         grid-template-columns: repeat(5, 1fr);
 
-        /* 크기: 98vw로 확장하여 화면 꽉 채움 */
-        width: 98vw;
+        /* 크기: 부모 컨테이너 너비에 맞춤 (패딩 고려) */
+        width: 100%;
         max-width: none;
 
         /* 모바일 최적화: 내부 여백과 간격 축소 */
@@ -427,3 +427,197 @@ html[data-theme="light"] .stat-value {
 }
 
 /* Mobile Responsive logic is now handled by Orientation queries above */
+
+/* --- New Styles Migrated from Mockup --- */
+
+/* Tab & Header Spacing Refinements */
+.banner-tabs {
+    justify-content: center !important;
+    margin-bottom: 5px !important;
+}
+
+.gacha-container .banner-section {
+    padding-bottom: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+/* Sub Tabs (Standard/Pickup) */
+.sub-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    width: 100%;
+}
+
+.sub-tabs {
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-radius: 25px;
+    border: 1px solid #444;
+}
+
+.sub-tab {
+    padding: 6px 22px;
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.sub-tab:hover {
+    color: #ddd;
+}
+
+.sub-tab.active {
+    background: var(--primary-color, #a29bfe);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Targeting Controls */
+.target-controls {
+    background: rgba(30, 30, 40, 0.8);
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+    border: 1px solid #555;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.target-selectors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.target-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+}
+
+.target-group label {
+    white-space: nowrap;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.target-select {
+    padding: 8px;
+    background: #222;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+    min-width: 0;
+    text-overflow: ellipsis;
+}
+
+.target-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.btn-target {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn-target:active {
+    transform: scale(0.98);
+}
+
+#btn-target-start {
+    background: #00b894;
+    color: white;
+}
+
+#btn-target-stop {
+    background: #d63031;
+    color: white;
+}
+
+#btn-target-reset {
+    background: #636e72;
+    color: white;
+}
+
+.btn-target:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#target-status {
+    color: #fdcb6e;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 8px;
+    min-height: 1.4em;
+}
+
+/* Drop Log Styles */
+.drop-log-container {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.drop-log-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.drop-item {
+    background: #222;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+}
+
+.drop-item.ssr {
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+.drop-item.pickup {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.hidden {
+    display: none !important;
+}
