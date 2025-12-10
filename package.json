@@ -1,6 +1,7 @@
 {
   "version": "6.2.0",
   "dependencies": {
+    "prettier": "^3.7.4",
     "xlsx": "^0.18.5"
   },
   "scripts": {
