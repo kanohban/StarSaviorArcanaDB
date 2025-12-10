@@ -23,21 +23,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -66,21 +71,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -109,21 +119,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -161,21 +176,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -200,10 +220,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -221,10 +243,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -253,21 +277,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -293,21 +322,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -332,21 +366,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -375,21 +414,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -427,21 +471,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -470,21 +519,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -546,10 +600,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -575,21 +631,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -614,21 +675,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -661,21 +727,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -705,21 +776,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -740,21 +816,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -779,21 +860,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -823,21 +909,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -862,21 +953,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -901,10 +997,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -922,10 +1020,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -955,21 +1055,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -994,21 +1099,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1037,21 +1147,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -1077,21 +1192,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1116,21 +1236,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1163,21 +1288,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -1207,21 +1337,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1250,21 +1385,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1293,21 +1433,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -1333,21 +1478,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1368,21 +1518,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1415,21 +1570,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -1459,10 +1619,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -1476,10 +1638,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1504,21 +1668,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1547,21 +1716,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -1595,21 +1769,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1638,21 +1817,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1681,21 +1865,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -1725,21 +1914,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1764,21 +1958,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1807,21 +2006,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -1851,21 +2055,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1890,10 +2099,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -1919,10 +2130,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -1947,10 +2160,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -1972,10 +2187,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2005,21 +2222,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2044,21 +2266,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2083,21 +2310,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2127,21 +2359,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2170,21 +2407,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2213,21 +2455,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2257,21 +2504,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2296,10 +2548,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -2317,10 +2571,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2349,21 +2605,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2389,10 +2650,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -2418,10 +2681,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2446,21 +2711,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2493,21 +2763,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2537,21 +2812,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2576,21 +2856,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2619,21 +2904,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2659,21 +2949,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2698,10 +2993,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -2719,10 +3016,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2743,10 +3042,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -2764,10 +3065,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2801,21 +3104,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2852,10 +3160,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -2869,10 +3179,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2909,21 +3221,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -2949,21 +3266,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -2988,21 +3310,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3031,21 +3358,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -3071,21 +3403,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3114,21 +3451,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3153,21 +3495,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -3197,21 +3544,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3232,10 +3584,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -3253,10 +3607,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3281,21 +3637,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -3321,21 +3682,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3372,10 +3738,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -3389,10 +3757,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3417,21 +3787,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -3461,21 +3836,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3500,21 +3880,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3539,21 +3924,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -3583,21 +3973,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3622,21 +4017,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3661,21 +4061,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -3713,21 +4118,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3748,15 +4158,18 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
             "cond": "Suc",
@@ -3848,10 +4261,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -3881,10 +4296,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -3902,10 +4319,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3930,10 +4349,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -3951,10 +4372,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -3983,10 +4406,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -4008,10 +4433,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -4041,21 +4468,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4084,21 +4516,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4127,21 +4564,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -4167,21 +4609,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4202,21 +4649,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4245,21 +4697,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -4289,21 +4746,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4328,21 +4790,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4367,21 +4834,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -4411,21 +4883,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4454,21 +4931,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4501,21 +4983,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -4541,10 +5028,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -4562,10 +5051,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4590,10 +5081,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -4611,10 +5104,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4672,10 +5167,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
@@ -4705,21 +5202,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4744,21 +5246,26 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
           {
-            "cond": "FIX"
+            "cond": "FIX",
+            "rewards": []
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       },
@@ -4795,10 +5302,12 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ],
         "choice_B": [
@@ -4820,17 +5329,125 @@
             ]
           },
           {
-            "cond": "Suc"
+            "cond": "Suc",
+            "rewards": []
           },
           {
-            "cond": "Fail"
+            "cond": "Fail",
+            "rewards": []
           }
         ]
       }
     }
   },
   {
-    "id": 966,
-    "events": {}
+    "id": 37,
+    "events": {
+      "stage_1": {
+        "event_name": "별빛의 이름으로",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "하우스 리모델링",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "오메가 손",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ]
+      }
+    }
   }
 ]
