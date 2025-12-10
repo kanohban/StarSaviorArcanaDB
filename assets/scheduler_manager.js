@@ -86,7 +86,7 @@ const SchedulerManager = {
         } else {
             // Reset Card View (Current Deck)
             // Key format: `${ deckIndex }_${ cardId }_${ stage } `
-            const prefix = `${this.data.currentDeckIndex} _`;
+            const prefix = `${this.data.currentDeckIndex}_`;
             for (const key in this.data.checks) {
                 if (key.startsWith(prefix)) {
                     delete this.data.checks[key];
@@ -249,7 +249,7 @@ const SchedulerManager = {
         // Determine current max checked index for this card
         let currentMaxIndex = -1;
         stages.forEach((stage, idx) => {
-            const key = `${this.data.currentDeckIndex}_${cardId}_${stage} `;
+            const key = `${this.data.currentDeckIndex}_${cardId}_${stage}`;
             if (this.data.checks[key]) {
                 currentMaxIndex = idx;
             }
@@ -267,7 +267,7 @@ const SchedulerManager = {
 
         // Apply state
         stages.forEach((stage, idx) => {
-            const key = `${this.data.currentDeckIndex}_${cardId}_${stage} `;
+            const key = `${this.data.currentDeckIndex}_${cardId}_${stage}`;
             if (idx <= targetIndex) {
                 this.data.checks[key] = true;
             } else {
