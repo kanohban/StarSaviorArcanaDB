@@ -258,60 +258,87 @@
         supportBox.appendChild(list);
     }
 
-    // --- SELF-CONTAINED POPUP FUNCTION ---
+    // --- SELF-CONTAINED POPUP FUNCTION (FIXED POSITION) ---
     const showPotentialPopup = (n, d, target) => {
         const id = "pot-popup-manager";
         let el = document.getElementById(id);
         if (el) el.remove();
 
-        const isMobile = !!document.querySelector(".mobile-mode");
-        const modal = document.querySelector(".modal-content");
-        let mw = "250px";
-        if (isMobile && modal) {
-            mw = (modal.offsetWidth * 0.4) + "px";
-        } else if (isMobile) {
-            mw = "50vw";
-        }
+        // 1. Calculate Target Position
+        // We use fixed positioning to escape any z-index stacking contexts
+        const rect = target.getBoundingClientRect();
+        const top = rect.bottom + 12; // 12px gap
+        const left = rect.left + (rect.width / 2);
 
+        // 2. Create Element
         el = document.createElement("div");
         el.id = id;
-        el.style.cssText = `position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:10px;background:var(--card-bg, #2a2a2a);padding:10px;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.3);z-index:2000;width:max-content;max-width:${mw};border:1px solid var(--primary-color, #90caf9);color:var(--text-color, #e0e0e0);text-align:left;font-size:0.9rem;white-space:normal;cursor:auto;`;
 
+        // determine width based on device
+        const isMobile = window.innerWidth <= 600;
+        const maxWidth = isMobile ? "80vw" : "250px";
+
+        el.style.cssText = `position:fixed; top:${top}px; left:${left}px; transform:translateX(-50%); margin:0; background:var(--card-bg, #2a2a2a); padding:10px; border-radius:8px; box-shadow:0 4px 15px rgba(0,0,0,0.5); z-index:9999; width:max-content; max-width:${maxWidth}; border:1px solid var(--primary-color, #90caf9); color:var(--text-color, #e0e0e0); text-align:left; font-size:0.9rem; white-space:normal; cursor:auto; line-height:1.4;`;
+
+        // 3. Arrow Element
         const arrow = document.createElement("div");
-        arrow.style.cssText = "position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);width:10px;height:10px;background:var(--card-bg, #2a2a2a);border-left:1px solid var(--primary-color, #90caf9);border-top:1px solid var(--primary-color, #90caf9);";
+        arrow.style.cssText = "position:absolute; top:-6px; left:50%; transform:translateX(-50%) rotate(45deg); width:10px; height:10px; background:var(--card-bg, #2a2a2a); border-left:1px solid var(--primary-color, #90caf9); border-top:1px solid var(--primary-color, #90caf9); box-sizing:border-box;";
         el.appendChild(arrow);
 
+        // 4. Content
         const content = document.createElement("div");
-        content.innerHTML = `<p style="margin:0;line-height:1.4;">${d}</p>`;
+        content.innerHTML = d;
         el.appendChild(content);
 
-        if (getComputedStyle(target).position === 'static') {
-            target.style.position = 'relative';
-        }
-        target.appendChild(el);
+        // 5. Append to Body
+        document.body.appendChild(el);
 
-        if (modal) {
-            const tr = el.getBoundingClientRect();
-            const mr = modal.getBoundingClientRect();
-            let off = 0;
-            if (tr.left < mr.left + 10) {
-                off = (mr.left + 10) - tr.left;
-            } else if (tr.right > mr.right - 10) {
-                off = (mr.right - 10) - tr.right;
-            }
-            if (off !== 0) {
-                el.style.transform = `translateX(calc(-50% + ${off}px))`;
-                arrow.style.transform = `translateX(calc(-50% - ${off}px)) rotate(45deg)`;
-            }
+        // 6. Boundary Detection & Shift
+        const tr = el.getBoundingClientRect();
+        const screenW = window.innerWidth;
+        let shiftX = 0;
+
+        // Pad with 10px from edges
+        if (tr.left < 10) {
+            shiftX = 10 - tr.left;
+        } else if (tr.right > screenW - 10) {
+            shiftX = (screenW - 10) - tr.right;
         }
 
+        if (shiftX !== 0) {
+            // Adjust popup and counter-adjust arrow
+            el.style.transform = `translateX(calc(-50% + ${shiftX}px))`;
+            arrow.style.transform = `translateX(calc(-50% - ${shiftX}px)) rotate(45deg)`;
+        }
+
+        // 7. Cleanup (Close on click outside OR Scroll)
+        // We close on scroll because fixed popup will detach from target
         const close = (e) => {
-            if (e.target !== target && !target.contains(e.target)) {
-                el.remove();
-                document.removeEventListener("click", close);
+            if (!el) return;
+            // If click is inside the popup, ignore? No, user might want to select text?
+            // Usually tooltips close on outside click.
+            const isClickInside = el.contains(e.target);
+            const isTarget = target.contains(e.target);
+
+            if (!isClickInside && !isTarget) {
+                cleanup();
             }
         };
-        setTimeout(() => document.addEventListener("click", close), 0);
+
+        const cleanup = () => {
+            if (el) el.remove();
+            el = null;
+            document.removeEventListener("click", close);
+            window.removeEventListener("scroll", cleanup, true);
+            window.removeEventListener("resize", cleanup);
+        };
+
+        setTimeout(() => {
+            document.addEventListener("click", close);
+            // Capture scroll on any element to close popup (as it would detach)
+            window.addEventListener("scroll", cleanup, true);
+            window.addEventListener("resize", cleanup);
+        }, 0);
     };
     // -------------------------------------
 
@@ -488,11 +515,9 @@
                                     box.style.boxSizing = 'border-box';
 
                                     if (group.여부 === '성공') {
-                                        box.style.backgroundColor = 'rgba(0, 100, 255, 0.15)';
-                                        box.style.border = '1px solid rgba(0, 100, 255, 0.3)';
+                                        box.classList.add('status-success');
                                     } else if (group.여부 === '실패') {
-                                        box.style.backgroundColor = 'rgba(255, 0, 0, 0.15)';
-                                        box.style.border = '1px solid rgba(255, 0, 0, 0.3)';
+                                        box.classList.add('status-fail');
                                     }
 
                                     const contentWrapper = document.createElement('div');
@@ -504,10 +529,11 @@
                                     if (group.여부 === '성공' || group.여부 === '실패') {
                                         const badge = document.createElement('div');
                                         badge.textContent = group.여부;
+                                        badge.className = 'status-badge'; // Use class for styling
                                         badge.style.fontSize = '0.8rem';
                                         badge.style.fontWeight = 'bold';
                                         badge.style.marginBottom = '0.25rem';
-                                        badge.style.color = group.여부 === '성공' ? '#90caf9' : '#ef5350';
+                                        // Color handled by CSS via parent .status-success/.status-fail
                                         contentWrapper.appendChild(badge);
                                     }
 

@@ -56,3 +56,51 @@ body.mobile-mode .custom-level-toggle {
     right: 20px;
     top: initial;
 }
+
+/* --- Dynamic Status Box Colors (Light/Dark Mode) --- */
+
+/* Default (Light Mode) */
+.generated-box.status-success {
+    background-color: rgba(74, 144, 226, 0.15) !important;
+    /* #4a90e2 */
+    border: 1px solid rgba(74, 144, 226, 0.3) !important;
+}
+
+.generated-box.status-success .status-badge {
+    color: #4a90e2;
+    /* Light Mode Dark Blue */
+}
+
+.generated-box.status-fail {
+    background-color: rgba(229, 57, 53, 0.15) !important;
+    /* #e53935 */
+    border: 1px solid rgba(229, 57, 53, 0.3) !important;
+}
+
+.generated-box.status-fail .status-badge {
+    color: #e53935;
+    /* Light Mode Dark Red */
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .generated-box.status-success {
+    background-color: rgba(144, 202, 249, 0.15) !important;
+    /* #90caf9 */
+    border: 1px solid rgba(144, 202, 249, 0.3) !important;
+}
+
+[data-theme="dark"] .generated-box.status-success .status-badge {
+    color: #90caf9;
+    /* Dark Mode Light Blue */
+}
+
+[data-theme="dark"] .generated-box.status-fail {
+    background-color: rgba(239, 83, 80, 0.15) !important;
+    /* #ef5350 */
+    border: 1px solid rgba(239, 83, 80, 0.3) !important;
+}
+
+[data-theme="dark"] .generated-box.status-fail .status-badge {
+    color: #ef5350;
+    /* Dark Mode Light Red */
+}

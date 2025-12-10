@@ -1322,4 +1322,12 @@
         border-color: #8a2be2;
         background-color: #f3e6ff;
     }
+
+    /* Flavor Tooltip Override for Light Mode */
+    .flavor-tooltip {
+        background: #ffffff;
+        color: #333333;
+        border: 1px solid #4a90e2;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
 }
