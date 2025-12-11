@@ -5352,7 +5352,24 @@
         "choice_A": [
           {
             "cond": "FIX",
-            "rewards": []
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "컨디션",
+                "value": "+1"
+              },
+              {
+                "type": "힘",
+                "value": "+5"
+              },
+              {
+                "type": "일반 잠재",
+                "value": "공격의 감각"
+              }
+            ]
           },
           {
             "cond": "Suc",
@@ -5387,7 +5404,16 @@
         "choice_A": [
           {
             "cond": "FIX",
-            "rewards": []
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+15"
+              },
+              {
+                "type": "집중",
+                "value": "+8"
+              }
+            ]
           },
           {
             "cond": "Suc",
@@ -5416,13 +5442,34 @@
       "stage_3": {
         "event_name": "오메가 손",
         "name": {
-          "choice_A": "",
-          "choice_B": ""
+          "choice_A": "지켜본다",
+          "choice_B": "오메가를 막는다."
         },
         "choice_A": [
           {
             "cond": "FIX",
-            "rewards": []
+            "rewards": [
+              {
+                "type": "스태미나",
+                "value": "+10"
+              },
+              {
+                "type": "힘",
+                "value": "+12"
+              },
+              {
+                "type": "집중",
+                "value": "+8"
+              },
+              {
+                "type": "잠재",
+                "value": "+30"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "스택 트리거"
+              }
+            ]
           },
           {
             "cond": "Suc",
@@ -5436,7 +5483,24 @@
         "choice_B": [
           {
             "cond": "FIX",
-            "rewards": []
+            "rewards": [
+              {
+                "type": "힘",
+                "value": "+12"
+              },
+              {
+                "type": "집중",
+                "value": "+8"
+              },
+              {
+                "type": "잠재",
+                "value": "+30"
+              },
+              {
+                "type": "특수 잠재",
+                "value": "스택 트리거"
+              }
+            ]
           },
           {
             "cond": "Suc",

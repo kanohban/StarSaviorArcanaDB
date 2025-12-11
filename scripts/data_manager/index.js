@@ -58,4 +58,18 @@ for (let i = 1; i < saviorSkills.length; i++) {
     savior.addSkill(skill);
 }
 
+// get_potentials
+const sheet_potentials = file.Sheets["Potentials"];
+const potentialsData = XLSX.utils.sheet_to_json(sheet_potentials, { header: 1 }).filter(e => e.length !== 0);
+
+const potentials = {};
+// Skip header row
+for (let i = 1; i < potentialsData.length; i++) {
+    const row = potentialsData[i];
+    if (row[0]) {
+        potentials[row[0]] = row[1] || "";
+    }
+}
+
 fs.writeFileSync("./data/savior.json", JSON.stringify(saviors, null, 2));
+fs.writeFileSync("./data/potentials.json", JSON.stringify(potentials, null, 2));
