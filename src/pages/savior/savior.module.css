@@ -7,14 +7,14 @@
 }
 
 .filter-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    
+    gap: 10px;
+
     width: 100%;
 }
 

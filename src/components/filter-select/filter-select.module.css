@@ -8,8 +8,8 @@
     align-items: center;
     gap: 10px;
 
-    min-width: 130px;
-    
+    min-width: 75px;
+
     background-color: var(--header-bg) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 20px;
@@ -33,16 +33,17 @@
     display: none;
 }
 
-.select-wrapper .title + .represent {
+.select-wrapper .title+.represent {
     width: auto;
 }
 
-.select-wrapper .title.disabled + .represent {
+.select-wrapper .title.disabled+.represent {
     width: 100%;
     text-align: center;
 }
 
-.select-wrapper .title, .select-wrapper .represent {
+.select-wrapper .title,
+.select-wrapper .represent {
     word-break: keep-all;
     white-space: nowrap;
 }
@@ -90,7 +91,7 @@
         padding: 8px 7px;
 
         flex: 1;
-        
+
         min-width: fit-content;
         height: 40px;
 

@@ -25,9 +25,11 @@ export default function FilterSelect({ id, list, selected, showName = true, cust
 
     return (
         <div className={styles["select-wrapper"]} onClick={() => setIsActive(!isActive)}>
-            <div className={`${styles["title"]} ${!showName || selected.value !== "all" ? `${styles["disabled"]}` : ""}`}>{name}</div>
-            <div className={`${styles["title"]} ${!showName || selected.value !== "all" ? `${styles["disabled"]}` : ""}`}>:</div>
-            <div className={styles["represent"]}>{selected.name}</div>
+            <div className={`${styles["title"]}`}>
+                {selected.value === "all" ? name : selected.name}
+            </div>
+            {/* Colon and represent removed for simplified view */}
+
             <div className={`${styles["list"]} ${isActive ? `${styles["active"]}` : ""}`}>
                 {list.map(element => {
                     return <div className={styles["element"]} onClick={() => dispatchFilter(element)} key={`${v4()}`}>
