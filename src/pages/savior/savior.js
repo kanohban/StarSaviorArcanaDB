@@ -27,18 +27,18 @@ export default function Savior() {
             <StarContainer />
             <Header title={"구원자"} />
             <div className={styles["savior-container"]}>
+                <SearchBox />
                 <div className={styles["filter-wrapper"]}>
                     <FilterSelect id={"rarity"} list={FILTERS.RARITY} selected={saviors.filter.rarity} />
                     <FilterSelect id={"attr"} list={FILTERS.ATTRIBUTE} selected={saviors.filter.attr} />
                     <FilterSelect id={"class"} list={FILTERS.CLASS} selected={saviors.filter.class} />
                     <FilterSelect id={"order"} list={SORT_LIST} showName={false} selected={saviors.filter.order} />
-                    <SearchBox />
                 </div>
                 {/* TODO : savior icons */}
                 <div className={styles["saviors"]}>
                     {saviors.list.map(savior => <PortraitWithName savior={savior} key={`${v4()}`}
-                        setIsActive={setIsActive}
-                        setSelected={setSelected} />)}
+                                                                setIsActive={setIsActive} 
+                                                                setSelected={setSelected} />)}
                 </div>
             </div>
             <ScrollUpButton />
@@ -46,7 +46,7 @@ export default function Savior() {
 
             <SaviorDescModal isActive={isActive} setIsActive={setIsActive}
 
-                selected={selected} />
+                            selected={selected} />
             <FullScreenModal savior={selected} />
         </div>
     );
