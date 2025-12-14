@@ -1,0 +1,38 @@
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+
+    font-size: 1rem;
+    color: var(--text-color, #333);
+
+    cursor: pointer;
+    transition: .3s;
+    z-index: 10;
+}
+
+[data-theme="dark"] .close-button {
+    color: #fff;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .close-button {
+        right: 10px;
+    }
+}

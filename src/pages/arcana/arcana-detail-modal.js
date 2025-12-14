@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./arcana.css";
 import { POTENTIAL, FLAVOR_TEXT, EVENT_REWARD_TYPE, EVENT_REWARDS_FLAG } from "../../constants";
 
+import ModalCloseButton from "../../components/buttons/modal-close-button/modal-close-button";
+
 export default function ArcanaDetailModal({ data, onClose, isFavorite, toggleFavorite }) {
     if (!data) return null;
 
@@ -84,7 +86,7 @@ export default function ArcanaDetailModal({ data, onClose, isFavorite, toggleFav
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
-                <button className="modal-close" onClick={onClose}>&times;</button>
+                <ModalCloseButton onClick={onClose} />
 
                 <div className="modal-body">
                     {/* Left: Image Section */}

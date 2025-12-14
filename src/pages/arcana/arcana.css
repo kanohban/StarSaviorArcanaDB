@@ -279,29 +279,7 @@ h3.card-title-text {
     }
 }
 
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    color: var(--text-color, #333);
-    cursor: pointer;
-    z-index: 20;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    transition: background 0.2s;
-}
 
-.modal-close:hover {
-    background: rgba(255, 255, 255, 0.8);
-}
 
 .modal-body {
     display: flex;

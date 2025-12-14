@@ -16,7 +16,7 @@
 
     transition: opacity 0.3s;
     opacity: 1;
-    z-index: 100;
+    z-index: 2000;
 }
 
 .modal.active {
@@ -25,13 +25,13 @@
 
 .window {
     position: relative;
-    
+
     display: flex;
 
     width: 100%;
     max-width: 1100px;
     height: 90vh;
-    
+
     background: var(--bg-color);
     border-radius: 16px;
 
@@ -63,46 +63,21 @@
     }
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 25px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: 30px;
-    height: 30px;
-    
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-
-    font-size: 1rem;
-    color: var(--text-color);
-
-    cursor: pointer;
-    transition: .3s;
-    z-index: 1;
-}
-
-.close-button:hover {
-    background-color: rgba(255, 0, 0, 0.5);
-}
 
 .nav-button {
     position: absolute;
     top: 50%;
 
     padding: 0;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     width: 100px;
     height: 100px;
-    
+
     background: transparent;
     border-radius: 50%;
     transition: background 0.3s;
