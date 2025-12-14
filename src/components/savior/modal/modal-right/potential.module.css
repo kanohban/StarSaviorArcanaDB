@@ -1,0 +1,66 @@
+.potential {
+    padding: 8px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    max-height: 35px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+
+    overflow: hidden;
+    transition: .5s;
+}
+
+.potential.active {
+    max-height: 100px;
+}
+
+.potential-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.level {
+    padding: 2px 6px;
+
+    background: #444;
+    border-radius: 4px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+.desc.keyword {
+    color: #ffd700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.desc.keyword:hover {
+    color: #fff;
+}
+
+.flavor-text {
+    margin-top: 10px;
+
+    width: 100%;
+    max-height: 0;
+
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.4;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.potential.active .flavor-text {
+    max-height: 100px;
+}

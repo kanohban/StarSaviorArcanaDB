@@ -1,0 +1,151 @@
+.modal-desc-right {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 60%;
+
+    overflow-y: scroll;
+}
+
+.savior-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.savior-infos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.savior-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.savior-info h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.badges {
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.badge {
+    padding: 4px 10px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.badge.sun {
+    border-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff6b6b;
+}
+
+.badge.moon {
+    color: #6b8cff;
+    border-color: #6b8cff;
+    background: rgba(107, 140, 255, 0.15);
+}
+
+.badge.star {
+    color: #6bff8c;
+    border-color: #6bff8c;
+    background: rgba(107, 255, 140, 0.15);
+}
+
+.badge.order {
+    color: #ffd700;
+    border-color: #ffd700;
+    background: rgba(255, 215, 0, 0.15);
+}
+
+.badge.chaos {
+    color: #ca8eff;
+    border-color: #ca8eff;
+    background: rgba(202, 142, 255, 0.15);
+}
+
+.savior-desc {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    word-break: keep-all;
+
+    opacity: 0.8;
+}
+
+.tabs {
+    padding-bottom: 10px;
+
+    display: flex;
+    gap: 10px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-button {
+    padding: 8px 16px;
+
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+
+    font-size: 1rem;
+    color: var(--text-color);
+
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+[data-theme="dark"] .tab-button {
+    background-color: var(--header-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+    color: #e0e0e0;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.tab-button.active {
+    background: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+
+    color: white;
+    font-weight: 700;
+
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .modal-desc-right {
+        padding: 20px;
+        
+        order: 1;
+
+        width: 100%;
+        height: auto;
+
+        overflow: visible;
+    }
+}

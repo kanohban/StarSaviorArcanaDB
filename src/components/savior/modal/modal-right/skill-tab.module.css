@@ -1,0 +1,23 @@
+.skill-tab {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+
+    animation: fadeIn 0.3s;
+}
+
+.skill-tab.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

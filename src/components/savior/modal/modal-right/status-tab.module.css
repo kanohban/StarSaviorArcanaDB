@@ -1,0 +1,163 @@
+.status-tab {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+
+    animation: fadeIn 0.3s;
+}
+
+.status-tab.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.group > h3 {
+    padding-left: 10px;
+
+    border-left: 4px solid var(--primary-color);
+
+    font-size: 1.1rem;
+    color: var(--text-highlight);
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-name {
+    width: 80px;
+
+    font-size: 0.95rem;
+    color: #888;
+}
+
+.stat-value {
+    width: 60px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: right;
+}
+
+.stat-rank { 
+    text-align: right;
+
+    width: 50px;
+
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.stat-bar-container {
+    position: relative;
+
+    margin: 0 15px;
+
+    flex: 1;
+
+    height: 12px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+.stat-bar {
+    width: 0;
+
+    height: 100%;
+
+    background: linear-gradient(90deg, var(--primary-color), #a04ce0);
+    border-radius: 6px;
+
+    transition: width 1s ease-out;
+}
+
+.stat-grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.stat-grids.journey {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stat-item {
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+}
+
+.journey-wrapper {
+    margin-bottom: 25px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.journey-wrapper .group {
+    flex: 1;
+}
+
+.stat-grids.journey .stat-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.stat-grids.journey .stat-item .stat-label {
+    width: auto;
+
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.stat-grids.journey .stat-item .stat-value {
+    width: auto;
+
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.potentials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

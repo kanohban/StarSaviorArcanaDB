@@ -1,0 +1,88 @@
+.savior {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+    overflow: visible;
+    transition: transform 0.2s;
+    box-shadow: none;
+}
+
+.savior .name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.savior:hover .name {
+    filter: brightness(1.2);
+}
+
+.portrait {
+    margin-bottom: 8px;
+
+    width: 80px;
+    height: 80px;
+
+    border: 3px solid transparent;
+    border-radius: 15px;
+
+    object-fit: cover;
+    transition: box-shadow 0.3s;
+}
+
+.portrait.sun {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+    
+}
+.portrait.moon {
+    border-color: #6b8cff;
+    box-shadow: 0 0 5px rgba(107, 140, 255, 0.5);
+}
+
+.portrait.star {
+    border-color: #6bff8c;
+    box-shadow: 0 0 5px rgba(107, 255, 140, 0.5);
+}
+
+.portrait.order {
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.portrait.chaos {
+    border-color: #d06bff;
+    box-shadow: 0 0 5px rgba(208, 107, 255, 0.5);
+}
+
+.savior:hover .portrait.sun {
+    box-shadow: 0 0 15px #ff6b6b;
+    transform: scale(1.1);
+}
+
+.savior:hover .portrait.moon {
+    box-shadow: 0 0 15px #6b8cff;
+    transform: scale(1.1);
+}
+
+.savior:hover .portrait.star {
+    box-shadow: 0 0 15px #6bff8c;
+    transform: scale(1.1);
+}
+
+.savior:hover .portrait.order {
+    box-shadow: 0 0 15px #ffd700;
+    transform: scale(1.1);
+}
+
+.savior:hover .portrait.chaos {
+    box-shadow: 0 0 15px #d06bff;
+    transform: scale(1.1);
+}

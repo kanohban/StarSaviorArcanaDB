@@ -1,0 +1,83 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+:root {
+  color-scheme: dark light;
+  
+  --primary-glow: #3b82f6;
+  --secondary-glow: #06b6d4;
+  --accent: #60a5fa;
+  --bg-deep: #0f172a;
+  --text-main: #f0f9ff;
+  --text-sub: #bae6fd;
+
+  /* header */
+  --header-bg: rgba(15, 23, 42, 0.95);
+  --header-border-color: #444;
+  --header-text-color: #fff;
+  --btn-hover-bg: rgba(255, 255, 255, 0.1);
+  --btn-border-color: #555;
+
+  /* journey */
+  --result-bg: #f9f9f9;
+
+  /* gacha */
+  --banner-bg: #2a2a2a;
+  --banner-active: #4a90e2;
+  --card-bg: #fff;
+  --border-color: #ddd;
+}
+
+[data-theme=dark] {
+  --primary-color: #7e86f8;
+  --bg-color: #1a1a1a;
+  --card-bg: #242424;
+  --text-color: rgba(255, 255, 255, .87);
+  --header-bg: #242424;
+  --input-bg: #2a2a2a;
+  --input-border: #444;
+
+  /* journey */
+  --result-bg: #2c2c2c;
+
+  /* gacha */
+  --card-bg: #1a1a1a;
+  --border-color: #444;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body,
+#app {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  background: none;
+
+  font-family: "Pretendard";
+  /* font-size: 16px;
+  font-weight: 400; */
+
+  outline: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}

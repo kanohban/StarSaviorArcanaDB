@@ -1,0 +1,17 @@
+{
+    "STATUS": [
+        { "name": "공격력", "value": "atk", "type": "number" },
+        { "name": "생명력", "value": "hp", "type": "number" },
+        { "name": "방어력", "value": "def", "type": "number" },
+        { "name": "속도", "value": "spd", "type": "number" },
+        { "name": "치명타 확률", "value": "crit_rate", "type": "percent" },
+        { "name": "치명타 피해", "value": "crit_dmg", "type": "percent" }
+    ],
+    "JOURNEY_STATUS": [
+        { "name": "힘", "value": "str" },
+        { "name": "체력", "value": "hp" },
+        { "name": "인내", "value": "end" },
+        { "name": "집중", "value": "focus" },
+        { "name": "보호", "value": "prot" }
+    ]
+}

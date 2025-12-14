@@ -1,0 +1,102 @@
+.modal-desc-left {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 40%;
+
+    background: rgba(0, 0, 0, 0.2);
+    
+    overflow-y: auto;
+}
+
+.illust-container img {
+    width: 100%;
+
+    border-radius: 12px;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.arcpoint-container > h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.1rem;
+    color: var(--text-highlight);
+}
+
+.arcpoint-container > h3 > .warning {
+    margin-left: 5px;
+
+    font-size: 0.8rem;
+    color: #ff6b6b;
+}
+
+.arcpoint-wrapper {
+    position: relative;
+    
+    width: 100%;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.arcpoint-wrapper img {
+    filter: blur(15px);
+
+    width: 100%;
+    transition: filter 0.3s;
+    pointer-events: none;
+}
+
+.arcpoint-wrapper.disabled img {
+    filter: blur(0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.3);
+
+    color: white;
+    font-weight: 700;
+
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.arcpoint-wrapper.disabled .overlay {
+    opacity: 0;
+}
+
+.overlay, .overlay span {
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .modal-desc-left {
+        padding: 20px;
+
+        order: 2;
+
+        width: 100%;
+
+        background: none;
+        border-top: 1px solid var(--border-color);
+        
+        overflow: visible;
+    }
+}

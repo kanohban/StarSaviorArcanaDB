@@ -1,0 +1,2531 @@
+[
+  {
+    "id": 0,
+    "name": "노 페인, 노 게인",
+    "char_name": "레이시",
+    "rarity": "SSR",
+    "img": "images/cards/노_페인__노_게인.png",
+    "main_stat": "힘",
+    "assists": ["공격력", "공용"],
+    "sp_potential": "날카로운 공세",
+    "unique_effect": {
+      "name": "인세수업",
+      "desc": "인연 포인트 60 이상일 때 지원 의뢰시 오래된 주화 획득량 상승 +3%"
+    },
+    "journey_start_stats": [
+      { "type": "힘", "level_35": 5, "level_50": 6 },
+      { "type": "인연", "level_35": 11, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "8.72%", "level_50": "9.92%" },
+      { "type": "컨디션 효과", "level_35": "9.50%", "level_50": "12.50%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" },
+      { "type": "감응 발생률", "level_35": "260", "level_50": "300" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 0,
+        "name": "동상이몽",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 5 }], [{ "type": 9, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 1,
+        "name": "하고 싶은 이야기",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 5 }],
+          [{ "type": 3, "value": 5 }],
+          [{ "type": 9, "value": 10 }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 2,
+        "name": "어두운 과거",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 5 }],
+          [{ "type": 9, "value": 10 }],
+          [{ "type": 15, "value": "날카로운 공세" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "누각 위, 유리달 맞이",
+    "char_name": "린",
+    "rarity": "SSR",
+    "img": "images/cards/누각_위__유리달_맞이.png",
+    "main_stat": "힘",
+    "assists": ["공격력", "공용"],
+    "sp_potential": "공격의 성흔",
+    "unique_effect": {
+      "name": "화조풍월",
+      "desc": "인연 포인트 70 이상일 때 훈련 시 추가 힘 능력치 획득 +1"
+    },
+    "journey_start_stats": [
+      { "type": "힘", "level_35": 2, "level_50": 3 },
+      { "type": "주화", "level_35": 17, "level_50": 20 },
+      { "type": "인연", "level_35": 16, "level_50": 19 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "15.44%", "level_50": "17.84%" },
+      { "type": "추가 잠재력", "level_35": "2", "level_50": "3" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "16.80%", "level_50": "19.80%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 3,
+        "name": "부끄럽지 않아요!",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 4, "value": 5 }],
+          [{ "type": 7, "value": 10 }],
+          [{ "type": 14, "value": "공격의 감각" }],
+          [{ "type": 10, "value": "공감" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 4,
+        "name": "만물이 지닌 가치",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "잠깐, 내가 먼저 확인해 볼게.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 4, "value": 25 }],
+                  [{ "type": 9, "value": -10 }],
+                  [{ "type": 16, "value": 17 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "...이상한 게 들어있지 않을까?",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 4, "value": 10 }],
+                  [{ "type": 7, "value": 18 }],
+                  [{ "type": 16, "value": 17 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "건강이 제일이에요",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 8 }],
+          [{ "type": 4, "value": 12 }],
+          [{ "type": 15, "value": "공격의 성흔" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "친구들과의 산책",
+    "char_name": "다나",
+    "rarity": "SSR",
+    "img": "images/cards/친구들과의_산책.png",
+    "main_stat": "힘",
+    "assists": ["치명타", "캐스터"],
+    "sp_potential": "긴급 주문 영창법",
+    "unique_effect": {
+      "name": "로로카",
+      "desc": "인연 포인트 50 이상일 때 감응 훈련 시 감응 훈련 발생 확률 상승 +150"
+    },
+    "journey_start_stats": [
+      { "type": "힘", "level_35": 9, "level_50": 10 },
+      { "type": "인연", "level_35": 9, "level_50": 11 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "15.44%", "level_50": "17.84%" },
+      { "type": "힘 훈련", "level_35": "11.00%", "level_50": "12.40%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "14.12%", "level_50": "16.82%" },
+      { "type": "감응 효과", "level_35": "2.00%", "level_50": "8.00%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 6,
+        "name": "드루이드의 재테크",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 7,
+        "name": "다나의 개인 농장",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 12 }], [{ "type": 1, "value": 8 }]],
+        "choices": []
+      },
+      {
+        "id": 8,
+        "name": "타파파",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 12 }],
+          [{ "type": 1, "value": 8 }],
+          [{ "type": 15, "value": "긴급 주문 영창법" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "키라만큼 귀여워!",
+    "char_name": "키라",
+    "rarity": "SSR",
+    "img": "images/cards/키라만큼_귀여워_.png",
+    "main_stat": "힘",
+    "assists": ["속도", "어쌔신"],
+    "sp_potential": "탄력 가속",
+    "unique_effect": {
+      "name": "혼자의 시간",
+      "desc": "인연 포인트 50 이상일 때 훈련 시 컨디션 효과 상승 +3%"
+    },
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 8, "level_50": 10 },
+      { "type": "인연", "level_35": 3, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "13.76%", "level_50": "15.86%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" },
+      { "type": "감응 발생률", "level_35": "375", "level_50": "450" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "3.50%", "level_50": "4.20%" }
+    ],
+    "events": [
+      {
+        "id": 9,
+        "name": "반짝 네컷",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 10 }],
+          [{ "type": 1, "value": 5 }],
+          [{ "type": 3, "value": 5 }],
+          [{ "type": 9, "value": 10 }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 10,
+        "name": "용족은 튼튼하니까!",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 10 }],
+          [{ "type": 9, "value": 10 }],
+          [{ "type": 7, "value": 20 }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 11,
+        "name": "들어올 땐 마음대로였겠지만...",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "도망친다.",
+            "has_fail": true,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 15, "value": "탄력 가속" }]]
+              },
+              {
+                "reward_flag": 1,
+                "descriptions": [
+                  [{ "type": 0, "value": 12 }],
+                  [{ "type": 3, "value": 8 }]
+                ]
+              },
+              {
+                "reward_flag": 2,
+                "descriptions": [
+                  [{ "type": 0, "value": 10 }],
+                  [{ "type": 9, "value": -10 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "운명을 받아들인다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 0, "value": 5 }],
+                  [{ "type": 15, "value": "탄력 가속" }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "하늘의 심판",
+    "char_name": "뮤리엘",
+    "rarity": "SSR",
+    "img": "images/cards/하늘의_심판.png",
+    "main_stat": "힘",
+    "assists": ["치명타 피해", "캐스터"],
+    "sp_potential": "표적 정렬 마법진",
+    "unique_effect": {
+      "name": "악마의 재능",
+      "desc": "인연 포인트 40 이상일 때 훈련 시 훈련 효과 상승 +9%"
+    },
+    "journey_start_stats": [
+      { "type": "힘", "level_35": 3, "level_50": 12 },
+      { "type": "인연", "level_35": 11, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "18.80%", "level_50": "21.80%" },
+      { "type": "훈련 출현", "level_35": "3.00%", "level_50": "3.50%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" },
+      { "type": "감응 발생률", "level_35": "260", "level_50": "300" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 12,
+        "name": "방종의 대가",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 13,
+        "name": "훼방 공작",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 10 }], [{ "type": 1, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 14,
+        "name": "신도 영입",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 10 }],
+          [{ "type": 1, "value": 5 }],
+          [{ "type": 2, "value": 5 }],
+          [{ "type": 15, "value": "표적 정렬 마법진" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "달 너머로",
+    "char_name": "루나",
+    "rarity": "SR",
+    "img": "images/cards/달_너머로.png",
+    "main_stat": "힘",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 5, "level_50": 5 },
+      { "type": "인연", "level_35": 7, "level_50": 7 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "15.92%", "level_50": "15.92%" },
+      { "type": "감응 발생률", "level_35": "250", "level_50": "250" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 15,
+        "name": "정의",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 3 }], [{ "type": 7, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 16,
+        "name": "무엇이든 물어보세요",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 12 }]],
+        "choices": []
+      },
+      {
+        "id": 17,
+        "name": "미래는 우리 손 안에",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 18 }], [{ "type": 7, "value": 5 }]],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "사냥감 고르기",
+    "char_name": "트리쉬",
+    "rarity": "SR",
+    "img": "images/cards/사냥감_고르기.png",
+    "main_stat": "힘",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [
+      { "type": "힘", "level_35": 2, "level_50": 2 },
+      { "type": "인연", "level_35": 7, "level_50": 7 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "18.80%", "level_50": "18.80%" },
+      { "type": "감응 발생률", "level_35": "210", "level_50": "210" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 18,
+        "name": "심판",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 3 }], [{ "type": 1, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 19,
+        "name": "구하러 온 거 아닙니다",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 8 }],
+          [{ "type": 14, "value": "공격의 감각" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 20,
+        "name": "프리쉬 특급 심부름센터",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "프레이의 의견에 동조한다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 0, "value": 18 }],
+                  [{ "type": 7, "value": 20 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "트리쉬의 의견에 동조한다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 0, "value": 8 }],
+                  [{ "type": 14, "value": "공격의 재능" }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "청소, 뜻밖의 손님",
+    "char_name": "클레어",
+    "rarity": "SR",
+    "img": "images/cards/청소__뜻밖의_손님.png",
+    "main_stat": "힘",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [
+      { "type": "힘", "level_35": 2, "level_50": 2 },
+      { "type": "잠재력", "level_35": 5, "level_50": 5 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" },
+      { "type": "컨디션 효과", "level_35": "4.54%", "level_50": "4.54%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "15.92%", "level_50": "15.92%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 21,
+        "name": "힘",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 3 }], [{ "type": 9, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 22,
+        "name": "깜짝 생일 파티",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 8 }], [{ "type": 3, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 23,
+        "name": "바이크 호그는 말이죠...",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 8 }],
+          [{ "type": 3, "value": 5 }],
+          [{ "type": 7, "value": "통찰의 솜씨" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "준비, 조준, 발사",
+    "char_name": "클라리사",
+    "rarity": "SR",
+    "img": "images/cards/준비__조준__발사.png",
+    "main_stat": "힘",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [{ "type": "힘", "level_35": 2, "level_50": 2 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "9.52%", "level_50": "9.52%" },
+      { "type": "컨디션 효과", "level_35": "2.46%", "level_50": "2.46%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" },
+      { "type": "감응 발생률", "level_35": "250", "level_50": "250" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 24,
+        "name": "악마",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 25,
+        "name": "사냥꾼의 자존심",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 8 }], [{ "type": 3, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 26,
+        "name": "허니 트랩",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 8 }],
+          [{ "type": 3, "value": 5 }],
+          [{ "type": 9, "value": 15 }],
+          [{ "type": 14, "value": "속도의 재능" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "공녀, 왕좌에 오르다",
+    "char_name": "프레이",
+    "rarity": "SSR",
+    "img": "images/cards/공녀__왕좌에_오르다.png",
+    "main_stat": "체력",
+    "assists": ["특수 효과", "서포터"],
+    "sp_potential": "별빛 은총",
+    "unique_effect": {
+      "name": "든든한 보급",
+      "desc": "인연 포인트 50 이상일 때 훈련 시 컨디션 효과 상승 3%"
+    },
+    "journey_start_stats": [
+      { "type": "체력", "level_35": 5, "level_50": 6 },
+      { "type": "인연", "level_35": 4, "level_50": 16 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "17.12%", "level_50": "19.82%" },
+      { "type": "훈련 실패감소", "level_35": "6.16%", "level_50": "7.60%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "3.50%", "level_50": "4.20%" }
+    ],
+    "events": [
+      {
+        "id": 27,
+        "name": "머리사냥",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 10 }], [{ "type": 2, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 28,
+        "name": "프레스마",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 10 }],
+          [{ "type": 2, "value": 5 }],
+          [{ "type": 3, "value": 5 }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 29,
+        "name": "그 물은 좋은 물이다",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 12 }],
+          [{ "type": 2, "value": 8 }],
+          [{ "type": 15, "value": "별빛 은총" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "누구보다 프로페셔널",
+    "char_name": "베라",
+    "rarity": "SSR",
+    "img": "images/cards/누구보다_프로페셔널.png",
+    "main_stat": "체력",
+    "assists": ["특수 효과", "서포터"],
+    "sp_potential": "별빛 은총",
+    "unique_effect": {
+      "name": "경력직 배달부",
+      "desc": "인연 포인트 60 이상일 때 감응 훈련 시 감응 훈련 발생 상승 +130"
+    },
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 11, "level_50": 14 },
+      { "type": "인연", "level_35": 11, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.04%", "level_50": "7.94%" },
+      { "type": "컨디션 효과", "level_35": "3.00%", "level_50": "12.00%" },
+      { "type": "추가 체력", "level_35": "1", "level_50": "2" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "16.80%", "level_50": "19.80%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 30,
+        "name": "파이어와 불나방",
+        "has_choice": false,
+        "rewards": [[{ "type": 2, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 31,
+        "name": "베라실드 21",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 32,
+        "name": "전부 경험담입니다.",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 12 }],
+          [{ "type": 2, "value": 8 }],
+          [{ "type": 9, "value": 10 }],
+          [{ "type": 15, "value": "별빛 은총" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "어느 한 기사의 맹세",
+    "char_name": "샤를",
+    "rarity": "SSR",
+    "img": "images/cards/어느_한_기사의_맹세.png",
+    "main_stat": "체력",
+    "assists": ["속도", "공용"],
+    "sp_potential": "속도의 성흔",
+    "unique_effect": {
+      "name": "기사단장의 인망",
+      "desc": "인연 포인트 30 이상일 때 감응 훈련 시 감응 훈련 발생 상승 +180"
+    },
+    "journey_start_stats": [
+      { "type": "체력", "level_35": 7, "level_50": 9 },
+      { "type": "인연", "level_35": 11, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "17.12%", "level_50": "19.82%" },
+      { "type": "훈련 출현", "level_35": "3.50%", "level_50": "4.50%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "3.50%", "level_50": "4.20%" }
+    ],
+    "events": [
+      {
+        "id": 33,
+        "name": "눈 감으면 코 베이는",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "뛰어가는 샤를을 부른다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 1, "value": 5 }],
+                  [{ "type": 9, "value": 15 }],
+                  [{ "type": 16, "value": 15 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "샤를이 돌아오기를 기다린다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 1, "value": 15 }],
+                  [{ "type": 16, "value": 15 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "모나스티르의 검",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 12 }], [{ "type": 2, "value": 8 }]],
+        "choices": []
+      },
+      {
+        "id": 35,
+        "name": "용감히 도전하라",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 12 }],
+          [{ "type": 2, "value": 8 }],
+          [{ "type": 15, "value": "속도의 성흔" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "조용한 휴식 시간",
+    "char_name": "에밀리",
+    "rarity": "SSR",
+    "img": "images/cards/조용한_휴식_시간.png",
+    "main_stat": "체력",
+    "assists": ["특수 효과", "디펜더"],
+    "sp_potential": "신중한 전술",
+    "unique_effect": {
+      "name": "전투 대비",
+      "desc": "인연 포인트 70 이상일 때 훈련 시 훈련 효과 상승 +7%"
+    },
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 13, "level_50": 16 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "10.40%", "level_50": "11.90%" },
+      { "type": "컨디션 효과", "level_35": "3%", "level_50": "3.70%" },
+      { "type": "훈련 실패감소", "level_35": "3.00%", "level_50": "12.00%" },
+      { "type": "추가 잠재력", "level_35": "2", "level_50": "3" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 36,
+        "name": "비상 사태?!",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 10 }],
+          [{ "type": 7, "value": 5 }],
+          [{ "type": 14, "value": "보호의 감각" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 37,
+        "name": "아무도 모르게...?",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 15 }],
+          [{ "type": 7, "value": 10 }],
+          [{ "type": 14, "value": "생명의 감각" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 38,
+        "name": "암호문",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 15 }],
+          [{ "type": 7, "value": 15 }],
+          [{ "type": 15, "value": "신중한 전술" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "여정 시작",
+    "char_name": "아세라",
+    "rarity": "SR",
+    "img": "images/cards/여정_시작.png",
+    "main_stat": "체력",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" },
+      { "type": "컨디션 효과", "level_35": "2.46%", "level_50": "2.46%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "18.80%", "level_50": "18.80%" },
+      { "type": "감응 발생률", "level_35": "210", "level_50": "210" }
+    ],
+    "support_quest_effects": [
+      { "type": "의뢰 성공률", "level_35": "2.90%", "level_50": "2.90%" }
+    ],
+    "events": [
+      {
+        "id": 39,
+        "name": "전차",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 3 }], [{ "type": 4, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 40,
+        "name": "연극 관람",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 3 }], [{ "type": 7, "value": 20 }]],
+        "choices": []
+      },
+      {
+        "id": 41,
+        "name": "요리 교실",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 12 }],
+          [{ "type": 7, "value": 10 }],
+          [{ "type": 14, "value": "생명의 감각" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "폭룡의 습격",
+    "char_name": "스칼렛",
+    "rarity": "SR",
+    "img": "images/cards/폭룡의_습격.png",
+    "main_stat": "체력",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "11.40%", "level_50": "11.40%" },
+      { "type": "컨디션 효과", "level_35": "2.46%", "level_50": "2.46%" },
+      { "type": "훈련 실패감소", "level_35": "3.10%", "level_50": "3.10%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "15.92%", "level_50": "15.92%" },
+      { "type": "감응 발생률", "level_35": "175", "level_50": "175" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 42,
+        "name": "운명",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 3 }], [{ "type": 7, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 43,
+        "name": "날개를 활짝 펴고",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "응원할게 스칼렛! 기대하고 있어!",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 1, "value": 8 }],
+                  [{ "type": 7, "value": 10 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "위험해 스칼렛...!",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 1, "value": 3 }],
+                  [{ "type": 9, "value": -10 }],
+                  [{ "type": 14, "value": "생명의 감각" }],
+                  [{ "type": 1, "value": -5 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "먹을 줄 아는 사람",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "스칼렛을 응원한다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 1, "value": 12 }],
+                  [{ "type": 7, "value": 15 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "샤를을 응원한다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 8, "value": -1 }],
+                  [{ "type": 1, "value": 3 }],
+                  [{ "type": 10, "value": "공감" }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "환몽의 나비",
+    "char_name": "세이라",
+    "rarity": "SR",
+    "img": "images/cards/환몽의_나비.png",
+    "main_stat": "체력",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [{ "type": "인연", "level_35": 7, "level_50": 7 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "9.52%", "level_50": "9.52%" },
+      { "type": "컨디션 효과", "level_35": "4.54%", "level_50": "4.54%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" },
+      { "type": "감응 발생률", "level_35": "175", "level_50": "175" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 45,
+        "name": "여제",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 3 }], [{ "type": 7, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 46,
+        "name": "가위",
+        "has_choice": false,
+        "rewards": [[{ "type": 9, "value": 10 }], [{ "type": 8, "value": 1 }]],
+        "choices": []
+      },
+      {
+        "id": 47,
+        "name": "꿈보다 해몽",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 9, "value": 15 }],
+          [{ "type": 14, "value": "생명의 감각" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "본 투 비 와일드",
+    "char_name": "할리",
+    "rarity": "SSR",
+    "img": "images/cards/본_투_비_와일드.png",
+    "main_stat": "인내",
+    "assists": ["강인도", "공용"],
+    "sp_potential": "두 번째 심장",
+    "unique_effect": {
+      "name": "사나이의 혼",
+      "desc": "인연 포인트 40 이상일 때 훈련 시 추가 인내 능력치 획득 +1"
+    },
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 7, "level_50": 8 },
+      { "type": "인연", "level_35": 11, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "10.40%", "level_50": "11.90%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "27.52%", "level_50": "31.72%" },
+      { "type": "감응 발생률", "level_35": "325", "level_50": "400" },
+      { "type": "감응 효과", "level_35": "5.00%", "level_50": "6.50%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 48,
+        "name": "사나이의 승부!",
+        "has_choice": false,
+        "rewards": [[{ "type": 2, "value": 5 }], [{ "type": 7, "value": 15 }]],
+        "choices": []
+      },
+      {
+        "id": 49,
+        "name": "사나이의 배포?",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 2, "value": 10 }],
+          [{ "type": 7, "value": 15 }],
+          [{ "type": 14, "value": "방어의 솜씨" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 50,
+        "name": "사나이의 안목",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 2, "value": 10 }],
+          [{ "type": 7, "value": 20 }],
+          [{ "type": 15, "value": "두 번째 심장" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "언더커버 캅",
+    "char_name": "안나",
+    "rarity": "SSR",
+    "img": "images/cards/언더커버_캅.png",
+    "main_stat": "인내",
+    "assists": ["강인도", "공용"],
+    "sp_potential": "두 번째 심장",
+    "unique_effect": {
+      "name": "상시 순찰",
+      "desc": "인연 포인트 50 이상일 때 지원 의뢰 시 오래된 주화 획득량 상승 +5%"
+    },
+    "journey_start_stats": [],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "10.40%", "level_50": "11.90%" },
+      { "type": "컨디션 효과", "level_35": "5.90%", "level_50": "8.30%" },
+      { "type": "추가 인내", "level_35": "1", "level_50": "2" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" },
+      { "type": "감응 발생률", "level_35": "225", "level_50": "260" }
+    ],
+    "support_quest_effects": [
+      { "type": "의뢰 성공률", "level_35": "3.40%", "level_50": "3.80%" }
+    ],
+    "events": [
+      {
+        "id": 51,
+        "name": "블루 앤 바이커",
+        "has_choice": false,
+        "rewards": [[{ "type": 2, "value": 5 }], [{ "type": 9, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 52,
+        "name": "블루 앤 부띠끄",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "원하는대로 해준다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 2, "value": 15 }],
+                  [{ "type": 9, "value": -10 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "존엄을 지킨다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 7, "value": 20 }],
+                  [{ "type": 9, "value": -10 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "블루 버서스 버니",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 2, "value": 15 }],
+          [{ "type": 7, "value": 10 }],
+          [{ "type": 15, "value": "두 번째 심장" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "하늘의 시련",
+    "char_name": "엘리사",
+    "rarity": "SSR",
+    "img": "images/cards/하늘의_시련.png",
+    "main_stat": "인내",
+    "assists": ["방어력", "공용"],
+    "sp_potential": "감각적인 수비",
+    "unique_effect": {
+      "name": "팔랑귀",
+      "desc": "인연 포인트 60 이상일 때 훈련 시 컨디션 효과 상승 3%"
+    },
+    "journey_start_stats": [
+      { "type": "인내", "level_35": 7, "level_50": 9 },
+      { "type": "잠재력", "level_35": 9, "level_50": 16 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "10.40%", "level_50": "11.90%" },
+      { "type": "추가 잠재력", "level_35": "100%", "level_50": "2" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "19.48%", "level_50": "22.78%" },
+      { "type": "감응 발생률", "level_35": "275", "level_50": "350" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 54,
+        "name": "첫사랑 얘기 해주세요",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "아이들이 좋아하는 이야기를 해줘.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 2, "value": 15 }],
+                  [{ "type": 16, "value": 15 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "단호하게 수업을 해봐.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 2, "value": 5 }],
+                  [{ "type": 9, "value": 25 }],
+                  [{ "type": 14, "value": "방어의 감각" }],
+                  [{ "type": 10, "value": "번아웃" }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "도를 아십니까",
+        "has_choice": false,
+        "rewards": [[{ "type": 1, "value": 5 }], [{ "type": 2, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 56,
+        "name": "볼트 헌터",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 5 }],
+          [{ "type": 1, "value": 5 }],
+          [{ "type": 2, "value": 10 }],
+          [{ "type": 15, "value": "감각적인 수비" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "고요한 증오",
+    "char_name": "에데",
+    "rarity": "SR",
+    "img": "images/cards/고요한_증오.png",
+    "main_stat": "인내",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [{ "type": "잠재력", "level_35": 5, "level_50": 5 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "9.52%", "level_50": "9.52%" },
+      { "type": "컨디션 효과", "level_35": "2.46%", "level_50": "2.46%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" },
+      { "type": "감응 발생률", "level_35": "250", "level_50": "250" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 57,
+        "name": "교황",
+        "has_choice": false,
+        "rewards": [[{ "type": 2, "value": 3 }], [{ "type": 7, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 58,
+        "name": "필요 없어!",
+        "has_choice": false,
+        "rewards": [[{ "type": 2, "value": 12 }], [{ "type": 9, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 59,
+        "name": "포상입니다",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 2, "value": 18 }],
+          [{ "type": 9, "value": 15 }],
+          [{ "type": 14, "value": "방어의 솜씨" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "래빗 타운",
+    "char_name": "마르실",
+    "rarity": "SR",
+    "img": "images/cards/래빗_타운.png",
+    "main_stat": "인내",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [{ "type": "인내", "level_35": 3, "level_50": 3 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" },
+      { "type": "감응 효과", "level_35": "4.20%", "level_50": "4.20%" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "3.20%", "level_50": "3.20%" }
+    ],
+    "events": [
+      {
+        "id": 60,
+        "name": "절제",
+        "has_choice": false,
+        "rewards": [[{ "type": 2, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 61,
+        "name": "변종 토끼 덫",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "멈춰, 클라리사...!",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 2, "value": 5 }],
+                  [{ "type": 9, "value": 10 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "토끼 흉내를 내는 마수가 돌아다닌대!",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 2, "value": 5 }],
+                  [{ "type": 8, "value": 1 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "글러먹게 만드는 공허체",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "그런게 있을 리 없어.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 14, "value": "방어의 감각" }]]
+              }
+            ]
+          },
+          {
+            "name": "무, 무시무시한 이야기네...",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 9, "value": 10 }],
+                  [{ "type": 8, "value": 1 }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "메이드 바이 페트라",
+    "char_name": "페트라",
+    "rarity": "SSR",
+    "img": "images/cards/메이드_바이_페트라.png",
+    "main_stat": "집중",
+    "assists": ["치명타 확률", "공용"],
+    "sp_potential": "통찰의 성흔",
+    "unique_effect": {
+      "name": "사업가의 인맥",
+      "desc": "인연 포인트 60 이상일 때 감응 훈련 시 감응 훈련 발생 상승 +130"
+    },
+    "journey_start_stats": [
+      { "type": "집중", "level_35": 5, "level_50": 6 },
+      { "type": "잠재력", "level_35": 9, "level_50": 12 },
+      { "type": "인연", "level_35": 9, "level_50": 11 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "12.08%", "level_50": "13.88%" },
+      { "type": "컨디션 효과", "level_35": "7.60%", "level_50": "10.30%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "19.48%", "level_50": "22.78%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 63,
+        "name": "비 오는 날",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 10 }],
+          [{ "type": 1, "value": 10 }],
+          [{ "type": 14, "value": "집중의 감각" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 64,
+        "name": "대표의 고충",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "이슬을 머금은 장미빛...?",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 0, "value": 5 }],
+                  [{ "type": 1, "value": 5 }],
+                  [{ "type": 3, "value": 12 }],
+                  [{ "type": 9, "value": -10 }],
+                  [{ "type": 14, "value": "공격의 감각" }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "탱글탱글한 자몽의 오렌지빛?",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 9, "value": 10 }]]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "페트라의 사이즈 이론",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 0, "value": 8 }],
+          [{ "type": 1, "value": 8 }],
+          [{ "type": 3, "value": 15 }],
+          [{ "type": 9, "value": 10 }],
+          [{ "type": 15, "value": "통찰의 성흔" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "별을 보며 꿈을",
+    "char_name": "나루",
+    "rarity": "SSR",
+    "img": "images/cards/별을_보며_꿈을.png",
+    "main_stat": "집중",
+    "assists": ["치명타 확률", "공용"],
+    "sp_potential": "통찰의 성흔",
+    "unique_effect": {
+      "name": "완전 몰입",
+      "desc": "인연 포인트 60 이상일 때 훈련 시 추가 집중 능력치 획득 +1"
+    },
+    "journey_start_stats": [{ "type": "인연", "level_35": 12, "level_50": 15 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.04%", "level_50": "7.94%" },
+      { "type": "컨디션 효과", "level_35": "5.90%", "level_50": "8.30%" },
+      { "type": "훈련 출현", "level_35": "7.04%", "level_50": "7.94%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "16.80%", "level_50": "19.80%" },
+      { "type": "감응 발생률", "level_35": "225", "level_50": "260" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 66,
+        "name": "하지만 빨랐어요!",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 67,
+        "name": "엘리트 페이스예요!",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 10 }], [{ "type": 8, "value": 1 }]],
+        "choices": []
+      },
+      {
+        "id": 68,
+        "name": "한수 가르쳐 드리죠!",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 3, "value": 10 }],
+          [{ "type": 9, "value": 10 }],
+          [{ "type": 15, "value": "통찰의 성흔" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "보이지 않는 곳",
+    "char_name": "세레스",
+    "rarity": "SSR",
+    "img": "images/cards/보이지_않는_곳.png",
+    "main_stat": "집중",
+    "assists": ["특수 효과", "공용"],
+    "sp_potential": "응급 처치",
+    "unique_effect": {
+      "name": "이독 제독",
+      "desc": "인연 포인트 50 이상일 때 훈련 시 추가 집중 능력치 획득 +1"
+    },
+    "journey_start_stats": [
+      { "type": "주화", "level_35": 17, "level_50": 20 },
+      { "type": "인연", "level_35": 9, "level_50": 11 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "8.72%", "level_50": "9.92%" },
+      { "type": "추가 잠재력", "level_35": "300%", "level_50": "4" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "22.16%", "level_50": "25.76%" },
+      { "type": "감응 발생률", "level_35": "275", "level_50": "350" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 69,
+        "name": "힘을 원하는가",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 15 }]],
+        "choices": []
+      },
+      {
+        "id": 70,
+        "name": "기준의 차이",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 8 }],
+          [{ "type": 3, "value": 15 }],
+          [{ "type": 14, "value": "집중의 감각" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 71,
+        "name": "심각한 훈련 중독입니다",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 3, "value": 20 }],
+          [{ "type": 15, "value": "응급 처치" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "진실은 언제나 하나겠지요?",
+    "char_name": "릴리",
+    "rarity": "SSR",
+    "img": "images/cards/진실은_언제나_하나겠지요_.png",
+    "main_stat": "집중",
+    "assists": ["공격력", "캐스터"],
+    "sp_potential": "결연한 각오",
+    "unique_effect": {
+      "name": "소설탐독",
+      "desc": "인연 포인트 50 이상일 때 훈련 시 컨디션 효과 상승 4%"
+    },
+    "journey_start_stats": [{ "type": "인연", "level_35": 11, "level_50": 12 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "13.76%", "level_50": "15.86%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "22.16%", "level_50": "25.76%" },
+      { "type": "감응 발생률", "level_35": "325", "level_50": "400" },
+      { "type": "추가 집중", "level_35": "1", "level_50": "4" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "4.20%", "level_50": "5.00%" }
+    ],
+    "events": [
+      {
+        "id": 72,
+        "name": "성물 도난 사건",
+        "has_choice": false,
+        "rewards": [[{ "type": 0, "value": 8 }], [{ "type": 3, "value": 12 }]],
+        "choices": []
+      },
+      {
+        "id": 73,
+        "name": "도넛 추리",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "릴리는 잘못한 거 없어.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 10, "value": "눈썰미" }]]
+              }
+            ]
+          },
+          {
+            "name": "역시 조금 짖궂었어.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 9, "value": -15 }],
+                  [{ "type": 14, "value": "집중의 솜씨" }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "람파디스의 일상",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 3, "value": 15 }],
+          [{ "type": 15, "value": "결연한 각오" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "고양이는 웃지 않는다",
+    "char_name": "스마일",
+    "rarity": "SR",
+    "img": "images/cards/고양이는_웃지_않는다.png",
+    "main_stat": "집중",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [{ "type": "집중", "level_35": 2, "level_50": 2 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "11.40%", "level_50": "11.40%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "15.92%", "level_50": "15.92%" },
+      { "type": "감응 발생률", "level_35": "175", "level_50": "175" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "3.20%", "level_50": "3.20%" }
+    ],
+    "events": [
+      {
+        "id": 75,
+        "name": "마술사",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 76,
+        "name": "종의 진화",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "조심스럽게 머리를 쓰다듬어봐.",
+            "has_fail": true,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 3, "value": 8 }],
+                  [{ "type": 16, "value": 15 }]
+                ]
+              },
+              {
+                "reward_flag": 1,
+                "descriptions": [[{ "type": 8, "value": 1 }]]
+              },
+              {
+                "reward_flag": 2,
+                "descriptions": [[{ "type": 9, "value": -10 }]]
+              }
+            ]
+          },
+          {
+            "name": "지금이야! 아세라처럼 배를 만져!",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 3, "value": 8 }],
+                  [{ "type": 9, "value": 5 }],
+                  [{ "type": 16, "value": 15 }]
+                ]
+              },
+              {
+                "reward_flag": 1,
+                "descriptions": [[{ "type": 4, "value": 5 }]]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "웃음 조사",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 12 }], [{ "type": 9, "value": 10 }]],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "뒷 마무리",
+    "char_name": "루그",
+    "rarity": "SR",
+    "img": "images/cards/뒷_마무리.png",
+    "main_stat": "집중",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 8, "level_50": 8 },
+      { "type": "인연", "level_35": 7, "level_50": 7 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" },
+      { "type": "컨디션 효과", "level_35": "3.50%", "level_50": "3.50%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 78,
+        "name": "운명",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 3 }], [{ "type": 9, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 79,
+        "name": "합동 안전 캠페인",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 8 }], [{ "type": 7, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 80,
+        "name": "체중은 숫자",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 3, "value": 12 }],
+          [{ "type": 14, "value": "집중의 감각" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "만족스러운 개화",
+    "char_name": "리디아",
+    "rarity": "SR",
+    "img": "images/cards/만족스러운_개화.png",
+    "main_stat": "집중",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [{ "type": "인연", "level_35": 9, "level_50": 9 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "11.40%", "level_50": "11.40%" },
+      { "type": "컨디션 효과", "level_35": "2.46%", "level_50": "2.46%" },
+      { "type": "훈련 실패감소", "level_35": "3.10%", "level_50": "3.10%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 81,
+        "name": "별",
+        "has_choice": false,
+        "rewards": [[{ "type": 3, "value": 3 }], [{ "type": 0, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 82,
+        "name": "동족의 냄새",
+        "has_choice": false,
+        "rewards": [[{ "type": 4, "value": 8 }], [{ "type": 9, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 83,
+        "name": "망상의 자격 조건",
+        "has_choice": false,
+        "rewards": [[{ "type": 2, "value": 12 }], [{ "type": 9, "value": 10 }]],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "만족스러운 식사",
+    "char_name": "베스타",
+    "rarity": "SSR",
+    "img": "images/cards/만족스러운_식사.png",
+    "main_stat": "보호",
+    "assists": ["강인도", "디펜더"],
+    "sp_potential": "강인한 의지",
+    "unique_effect": {
+      "name": "모범 대원",
+      "desc": "인연 포인트 60 이상일 때 지원 의뢰 시 오래된 주화 획득량 상승 +5%"
+    },
+    "journey_start_stats": [{ "type": "인연", "level_35": 12, "level_50": 15 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "8.72%", "level_50": "9.92%" },
+      { "type": "컨디션 효과", "level_35": "5.90%", "level_50": "8.30%" },
+      { "type": "추가 보호", "level_35": "1", "level_50": "2" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" },
+      { "type": "감응 발생률", "level_35": "105", "level_50": "420" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 84,
+        "name": "눈높이가 다르다",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 3, "value": 5 }],
+          [{ "type": 9, "value": 10 }],
+          [{ "type": 7, "value": 10 }],
+          [{ "type": 14, "value": "보호의 감각" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 85,
+        "name": "이 업계에서는 보물입니다",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "책을 열어본다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 9, "value": 10 }]]
+              }
+            ]
+          },
+          {
+            "name": "베스타에게 양보한다.",
+            "has_fail": true,
+            "rewards": [
+              { "reward_flag": 0, "descriptions": [] },
+              {
+                "reward_flag": 1,
+                "descriptions": [
+                  [{ "type": 1, "value": 8 }],
+                  [{ "type": 3, "value": 8 }],
+                  [{ "type": 4, "value": 12 }]
+                ]
+              },
+              {
+                "reward_flag": 2,
+                "descriptions": [
+                  [{ "type": 4, "value": 15 }],
+                  [{ "type": 9, "value": -10 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "베스타의 전술 시간",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "베스타를 막는다.",
+            "has_fail": true,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 15, "value": "강인한 의지" }]]
+              },
+              {
+                "reward_flag": 1,
+                "descriptions": [
+                  [{ "type": 1, "value": 8 }],
+                  [{ "type": 3, "value": 8 }],
+                  [{ "type": 4, "value": 15 }]
+                ]
+              },
+              {
+                "reward_flag": 2,
+                "descriptions": [[{ "type": 9, "value": -20 }]]
+              }
+            ]
+          },
+          {
+            "name": "그냥 지켜본다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 4, "value": 15 }],
+                  [{ "type": 15, "value": "강인한 의지" }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "유리창 너머의 밤 풍경",
+    "char_name": "카르멘",
+    "rarity": "SSR",
+    "img": "images/cards/유리창_너머의_밤_풍경.png",
+    "main_stat": "보호",
+    "assists": ["특수 효과", "구원자"],
+    "sp_potential": "여유로운 응수",
+    "unique_effect": {
+      "name": "비밀 레시피 수프",
+      "desc": "인연 포인트 60 이상일 때 훈련 시 컨디션 효과 상승 5%"
+    },
+    "journey_start_stats": [
+      { "type": "보호", "level_35": 9, "level_50": 10 },
+      { "type": "주화", "level_35": 12, "level_50": 14 },
+      { "type": "인연", "level_35": 8, "level_50": 9 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "12.08%", "level_50": "13.88%" },
+      { "type": "훈련 실패감소", "level_35": "2%", "level_50": "8.00%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "22.16%", "level_50": "25.76%" },
+      { "type": "감응 효과", "level_35": "6.00%", "level_50": "7.50%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 87,
+        "name": "누구를 위해 수프는 끓는가",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "그럼 한 그릇 줄래?",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 4, "value": 5 }],
+                  [{ "type": 10, "value": "자신감" }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "민간인용으로 충분한 것 같아...",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 4, "value": 5 }],
+                  [{ "type": 8, "value": 1 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "name": "새우의 처세술",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "알았어, 최대한 이상하게 써볼게",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 2, "value": 8 }],
+                  [{ "type": 4, "value": 12 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "더 좋은 생각이 있는데...",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 4, "value": 10 }],
+                  [{ "type": 8, "value": 1 }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "name": "동료의 흔적",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "의미가 있는 물건이라면, 내가 사줄게",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 4, "value": 5 }],
+                  [{ "type": 8, "value": 1 }],
+                  [{ "type": 15, "value": "여유로운 응수" }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "뒤늦게 후회하기 보다는 마음이 가는대로 하는게 좋아",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 2, "value": 8 }],
+                  [{ "type": 4, "value": 12 }],
+                  [{ "type": 15, "value": "여유로운 응수" }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "튀김 명인",
+    "char_name": "타냐",
+    "rarity": "SSR",
+    "img": "images/cards/튀김_명인.png",
+    "main_stat": "보호",
+    "assists": ["특수 효과", "구원자"],
+    "sp_potential": "튀김 파티",
+    "unique_effect": {
+      "name": "단골 손님",
+      "desc": "인연 포인트 40 이상일 때 감응 훈련 시 감응 훈련 발생 상승 +170"
+    },
+    "journey_start_stats": [
+      { "type": "보호", "level_35": 7, "level_50": 9 },
+      { "type": "인연", "level_35": 11, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "8.72%", "level_50": "9.92%" },
+      { "type": "컨디션 효과", "level_35": "5.90%", "level_50": "8.30%" },
+      { "type": "추가 잠재력", "level_35": "2", "level_50": "3" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "24.84%", "level_50": "28.74%" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "1.50%", "level_50": "6.00%" }
+    ],
+    "events": [
+      {
+        "id": 90,
+        "name": "선로 공사. 응.",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 4, "value": 10 }],
+          [{ "type": 14, "value": "보호의 감각" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 91,
+        "name": "심야 튀김. 응.",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 4, "value": 10 }],
+          [{ "type": 8, "value": 1 }],
+          [{ "type": 14, "value": "보호의 솜씨" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 92,
+        "name": "채소 싫어. 응.",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 2, "value": 8 }],
+          [{ "type": 4, "value": 12 }],
+          [{ "type": 15, "value": "튀김 파티" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "달콤, 푹신, 쿠울...",
+    "char_name": "세르팡",
+    "rarity": "SR",
+    "img": "images/cards/달콤__푹신__쿠울___.png",
+    "main_stat": "보호",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 5, "level_50": 5 },
+      { "type": "인연", "level_35": 9, "level_50": 9 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" },
+      { "type": "컨디션 효과", "level_35": "4.54%", "level_50": "4.54%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 93,
+        "name": "태양",
+        "has_choice": false,
+        "rewards": [[{ "type": 4, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 94,
+        "name": "완벽한 배게",
+        "has_choice": false,
+        "rewards": [[{ "type": 4, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 95,
+        "name": "태생의 비밀",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 4, "value": 12 }],
+          [{ "type": 7, "value": 10 }],
+          [{ "type": 14, "value": "보호의 솜씨" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "대화 종료",
+    "char_name": "로베르타",
+    "rarity": "SR",
+    "img": "images/cards/대화_종료.png",
+    "main_stat": "보호",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [{ "type": "인연", "level_35": 7, "level_50": 7 }],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "7.64%", "level_50": "7.64%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "13.04%", "level_50": "13.04%" },
+      { "type": "감응 발생률", "level_35": "210", "level_50": "210" }
+    ],
+    "support_quest_effects": [
+      { "type": "주화 획득량", "level_35": "4.70%", "level_50": "4.70%" }
+    ],
+    "events": [
+      {
+        "id": 96,
+        "name": "연인",
+        "has_choice": false,
+        "rewards": [[{ "type": 4, "value": 3 }], [{ "type": 9, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 97,
+        "name": "그 사건의 뒷이야기",
+        "has_choice": false,
+        "rewards": [[{ "type": 4, "value": 8 }], [{ "type": 7, "value": 5 }]],
+        "choices": []
+      },
+      {
+        "id": 98,
+        "name": "전설의 검",
+        "has_choice": false,
+        "rewards": [[{ "type": 4, "value": 15 }], [{ "type": 7, "value": 10 }]],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "품위 재단",
+    "char_name": "에핀델",
+    "rarity": "SR",
+    "img": "images/cards/품위_재단.png",
+    "main_stat": "보호",
+    "assists": [],
+    "unique_effect": null,
+    "journey_start_stats": [],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "9.52%", "level_50": "9.52%" },
+      { "type": "컨디션 효과", "level_35": "2.46%", "level_50": "2.46%" },
+      { "type": "훈련 출현", "level_35": "2.50%", "level_50": "2.50%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "18.80%", "level_50": "18.80%" },
+      { "type": "감응 발생률", "level_35": "175", "level_50": "175" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 99,
+        "name": "황제",
+        "has_choice": false,
+        "rewards": [[{ "type": 4, "value": 3 }], [{ "type": 2, "value": 3 }]],
+        "choices": []
+      },
+      {
+        "id": 100,
+        "name": "교양의 증명",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 4, "value": 3 }],
+          [{ "type": 9, "value": 5 }],
+          [{ "type": 8, "value": 1 }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 101,
+        "name": "개와 매의 상관관계",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 4, "value": 3 }],
+          [{ "type": 9, "value": 5 }],
+          [{ "type": 7, "value": 15 }],
+          [{ "type": 14, "value": "보호의 솜씨" }]
+        ],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "대단하고 엄청난 바니걸",
+    "char_name": "스칼렛",
+    "rarity": "SSR",
+    "img": "images/cards/대단하고_엄청난_바니걸.png",
+    "main_stat": "힘",
+    "assists": ["효과 적중", "구원자"],
+    "sp_potential": "준비됐노라!",
+    "unique_effect": {
+      "name": "드높은 자존감",
+      "desc": "인연 포인트 50 이상일 때 훈련 시 컨디션 효과 상승 +5%"
+    },
+    "journey_start_stats": [
+      { "type": "잠재력", "level_35": 8, "level_50": 10 },
+      { "type": "인연", "level_35": 10, "level_50": 12 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "13.76%", "level_50": "15.86%" },
+      { "type": "힘 훈련", "level_35": "3.00%", "level_50": "12.00%" },
+      { "type": "컨디션 효과", "level_35": "9.50%", "level_50": "12.50%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "16.80%", "level_50": "19.80%" },
+      { "type": "감응 발생률", "level_35": "260", "level_50": "300" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 102,
+        "name": "날개를 활짝 펴고",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "응원할게 스칼렛! 기대하고 있어!",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 0, "value": 10 }]]
+              }
+            ]
+          },
+          {
+            "name": "위험해 스칼렛...!",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 9, "value": 15 }],
+                  [{ "type": 10, "value": "근육 부상" }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "name": "먹을 줄 아는 사람",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "스칼렛을 응원한다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 0, "value": 15 }],
+                  [{ "type": 14, "value": "공격의 솜씨" }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "샤를을 응원한다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 9, "value": 20 }],
+                  [{ "type": 10, "value": "과식" }]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "name": "인기가 많아지는 옷",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "같이 설득해보러 갈까?",
+            "has_fail": true,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [[{ "type": 15, "value": "준비됐노라!" }]]
+              },
+              {
+                "reward_flag": 1,
+                "descriptions": [[{ "type": 0, "value": 20 }]]
+              },
+              {
+                "reward_flag": 2,
+                "descriptions": [
+                  [{ "type": 0, "value": 10 }],
+                  [{ "type": 9, "value": -10 }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "혼자가 편할 수도 있지 않나?",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 9, "value": 10 }],
+                  [{ "type": 14, "value": "공격의 재능" }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "완벽한 바니걸",
+    "char_name": "바니 클레어",
+    "rarity": "SSR",
+    "img": "images/cards/완벽한_바니걸.png",
+    "main_stat": "체력",
+    "assists": ["체력", "공용"],
+    "sp_potential": "날카로운 성장",
+    "unique_effect": {
+      "name": "완벽한 일처리",
+      "desc": "인연 포인트 40 이상일 때 지원 의뢰 시 오래된 주화 획득량 상승"
+    },
+    "journey_start_stats": [
+      { "type": "체력", "level_35": 6, "level_50": 7 },
+      { "type": "인연", "level_35": 8, "level_50": 9 }
+    ],
+    "training_effects": [
+      { "type": "훈련 효과", "level_35": "17.12%", "level_50": "19.82%" },
+      { "type": "컨디션 효과", "level_35": "5.10%", "level_50": "6.08%" }
+    ],
+    "telepathy_effects": [
+      { "type": "초감응 효과", "level_35": "27.52%", "level_50": "31.72%" },
+      { "type": "감응 발생률", "level_35": "225", "level_50": "260" }
+    ],
+    "support_quest_effects": [],
+    "events": [
+      {
+        "id": 105,
+        "name": "깜짝 생일 파티",
+        "has_choice": false,
+        "rewards": [
+          [{ "type": 1, "value": 15 }],
+          [{ "type": 14, "value": "생명의 솜씨" }]
+        ],
+        "choices": []
+      },
+      {
+        "id": 106,
+        "name": "바이크 호그는 말이죠...",
+        "has_choice": false,
+        "rewards": [[{ "type": 9, "value": 10 }], [{ "type": 7, "value": 10 }]],
+        "choices": []
+      },
+      {
+        "id": 107,
+        "name": "토끼 옆에 토끼 옆에 토끼",
+        "has_choice": true,
+        "rewards": [],
+        "choices": [
+          {
+            "name": "솔직히 털어놓는다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 9, "value": -10 }],
+                  [
+                    { "type": 0, "value": 5 },
+                    { "type": 0, "value": 10 }
+                  ],
+                  [
+                    { "type": 1, "value": 5 },
+                    { "type": 1, "value": 10 }
+                  ],
+                  [{ "type": 7, "value": 15 }],
+                  [{ "type": 15, "value": "날카로운 성장" }]
+                ]
+              }
+            ]
+          },
+          {
+            "name": "적당히 얼버무린다.",
+            "has_fail": false,
+            "rewards": [
+              {
+                "reward_flag": 0,
+                "descriptions": [
+                  [{ "type": 9, "value": 10 }],
+                  [{ "type": 7, "value": 10 }],
+                  [{ "type": 14, "value": "생명의 재능" }]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

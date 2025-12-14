@@ -1,15 +1,27 @@
 {
   "version": "6.2.0",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.1",
+    "hangul-js": "^0.2.6",
     "prettier": "^3.7.4",
+    "react-redux": "^9.2.0",
+    "uuid": "^13.0.0",
     "xlsx": "^0.18.5"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "deploy": "git push origin gh-pages",
     "data:export": "node scripts/data_manager.js export",
     "data:import": "node scripts/data_manager.js import"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@vitejs/plugin-react": "^5.1.2",
+    "gh-pages": "^6.3.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.10.1",
+    "vite": "^7.2.7"
   }
 }

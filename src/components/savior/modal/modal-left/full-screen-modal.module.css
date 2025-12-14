@@ -1,0 +1,42 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 20px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    transition: opacity 0.3s;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 100;
+    backdrop-filter: 15px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal * {
+    pointer-events: none;
+}
+
+.modal img {
+    width: 100%;
+}
+
+.modal .hint {
+    margin-top: 15px;
+
+    font-size: 0.9rem;
+    color: #aaa;
+}

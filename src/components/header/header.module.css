@@ -1,0 +1,135 @@
+:root {
+    --header-height: 90px;
+    --header-padding: 0 1rem;
+    --header-max-width: 1200px;
+
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --header-border-color: #e0e0e0;
+    --header-text-color: #333;
+    --btn-size: 40px;
+    --btn-font-size: 1.2rem;
+    --btn-hover-bg: rgba(0, 0, 0, 0.05);
+    --btn-border-color: #ddd;
+}
+
+[data-theme="dark"] {
+    --header-bg: rgba(15, 23, 42, 0.95);
+    --header-border-color: #444;
+    --header-text-color: #fff;
+    --btn-hover-bg: rgba(255, 255, 255, 0.1);
+    --btn-border-color: #555;
+}
+
+#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border-color, #333);
+
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.header {
+    position: relative;
+    margin: 0 auto;
+    padding: var(--header-padding);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: var(--header-max-width);
+    height: var(--header-height);
+}
+
+.header-left,
+.header-right,
+.toggle-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.hamburger-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-btn {
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--btn-size);
+    height: var(--btn-size);
+
+    background: transparent;
+    border: 1px solid var(--btn-border-color);
+    border-radius: 50%;
+
+    color: var(--header-text-color);
+    /* Ensure text color is set on button */
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.header-btn span,
+.header-btn i {
+    font-size: var(--btn-font-size);
+    color: inherit;
+    /* Inherit from button */
+}
+
+.header-btn:hover {
+    background-color: var(--btn-hover-bg);
+    border-color: var(--primary-color, #4a90e2);
+
+    transform: scale(1.05);
+}
+
+.header>.title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--header-text-color);
+    text-align: center;
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: 120%;
+    left: 0;
+
+    padding: 0.5rem;
+
+    display: none;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+
+    min-width: 180px;
+
+    background-color: var(--header-bg);
+    border: 1px solid var(--header-border-color);
+    border-radius: 8px;
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.nav-dropdown.active {
+    display: flex;
+}

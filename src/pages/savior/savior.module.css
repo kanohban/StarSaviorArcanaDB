@@ -1,0 +1,37 @@
+.savior-container {
+    margin: 0 auto;
+    padding: 20px;
+
+    width: 100%;
+    min-height: 80vh;
+}
+
+.filter-wrapper {
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+    width: 100%;
+}
+
+.saviors {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .filter-wrapper {
+        margin-bottom: 20px;
+
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,623 @@
+/* Gacha Page Styles */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --banner-bg: #2a2a2a;
+    --banner-active: #4a90e2;
+    --card-bg: #1a1a1a;
+    --border-color: #444;
+}
+
+/* Light mode support */
+html[data-theme="light"] {
+    --card-bg: #fff;
+    --border-color: #ddd;
+}
+
+html[data-theme="light"] .stats-section {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #ddd;
+}
+
+html[data-theme="light"] .stat-label {
+    color: #555;
+}
+
+html[data-theme="light"] .stat-value {
+    color: #222;
+}
+
+.gacha-container {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* Force children to stretch */
+    gap: 1rem;
+    /* Reduced gap */
+}
+
+/* Banner Section */
+.banner-section {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    /* Reduced vertical spacing */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.banner-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    /* Tighter gap */
+    margin-bottom: 0;
+    /* No bottom margin */
+    flex-wrap: nowrap;
+    /* Prevent wrapping essentially */
+    width: 100%;
+    overflow-x: auto;
+    /* Allow scroll if screen is tiny */
+}
+
+/* Mobile: Align tabs to start to prevent clipping when centered */
+@media (max-width: 768px) {
+    .banner-tabs {
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.banner-tab {
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    /* Prevent text wrap inside button */
+}
+
+.banner-tab:hover {
+    border-color: var(--banner-active);
+    color: var(--banner-active);
+}
+
+.banner-tab.active {
+    background: var(--banner-active);
+    color: white;
+    border-color: var(--banner-active);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+/* Control Section */
+.control-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+}
+
+.gacha-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.3s;
+    /* color: white; Removed default color to let gradients handle it */
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gacha-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gacha-btn:active {
+    transform: translateY(1px);
+}
+
+.btn-single {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.4);
+    color: white;
+}
+
+.btn-multi {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    /* Gold/Orange */
+    box-shadow: 0 4px 10px rgba(253, 160, 133, 0.4);
+    color: #444;
+    /* Dark text for light button */
+}
+
+/* Result Grid - Common Styles */
+.result-grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    min-height: 300px;
+    margin: 0 auto;
+    max-width: 750px;
+    /* User Request: Cap width */
+}
+
+/* Stats Section */
+.stats-section {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    /* Transparent matches result-grid */
+    border-radius: 20px;
+    width: 100%;
+    /* Max width handled by media queries */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    border: none;
+    /* No border */
+}
+
+.stats-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.2rem;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.stat-value.ssr {
+    color: #ffd700;
+    /* Gold */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.stat-value.pickup {
+    color: #ff6b6b;
+    /* Pickup Color */
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+.btn-reset {
+    padding: 8px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #c0392b;
+}
+
+/* [CONFIG] LANDSCAPE MODE (가로가 더 길 때) */
+@media (orientation: landscape) {
+
+    .result-grid,
+    .stats-section {
+        /* 배열: 2행 5열 고정 (5 Columns) */
+        grid-template-columns: repeat(5, 1fr);
+
+        /* 크기: 가로의 40% */
+        width: 40vw;
+        /* [CONFIG] 위 값을 조절하여 가로 모드 크기 변경 가능 (예: 50vw, 800px) */
+        max-width: 750px;
+    }
+}
+
+/* [CONFIG] PORTRAIT MODE (세로가 더 길 때) */
+@media (orientation: portrait) {
+
+    .gacha-container {
+        padding: 0.5rem;
+    }
+
+    .result-grid,
+    .stats-section {
+        /* 배열: 5행 2열 고정 -> 2행 5열 (5 Columns)로 변경 요청됨 */
+        grid-template-columns: repeat(5, 1fr);
+
+        /* 크기: 부모 컨테이너 너비에 맞춤 (패딩 고려) */
+        width: 100%;
+        max-width: none;
+
+        /* 모바일 최적화: 내부 여백과 간격 축소 */
+        padding: 8px;
+        gap: 4px;
+    }
+
+    .stats-section {
+        gap: 0.5rem;
+    }
+
+    .stats-info {
+        gap: 1rem;
+    }
+}
+
+/* Placeholder Alignment */
+.placeholder-text {
+    grid-column: 1 / -1;
+    /* Span all columns */
+    width: 100%;
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+    /* Remove top margin so it can center via flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Fill available height */
+    flex: 1;
+    /* Take up space */
+}
+
+/* Gacha Card Style */
+.gacha-card {
+    /* Width handled by Grid */
+    width: 100%;
+
+
+
+    aspect-ratio: 3/8;
+    /* 2x height ratio */
+    border-radius: 12px;
+    position: relative;
+
+    /* Variable for background to support Light Mode */
+    background-color: var(--card-bg);
+
+    overflow: hidden;
+    /* Allowing glow to spill out - CHANGED to hidden to fix sizing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 3px solid transparent;
+    min-width: 0;
+    /* Critical for Grid to respect width */
+}
+
+/* FORCE DARK BG for Arcana Cards (User Request) */
+.gacha-card.is-arcana {
+    background-color: #1a1a1a !important;
+    color: white !important;
+    /* border-color: #444; REMOVED to allow Rarity border to take precedence */
+}
+
+.gacha-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.gacha-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    z-index: 1;
+
+    /* Optimal Anti-aliasing */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+    transform: scale(1.15) translateZ(0);
+    transform-origin: center center;
+    backface-visibility: hidden;
+}
+
+.gacha-card-name {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    backdrop-filter: blur(2px);
+}
+
+.gacha-fallback-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #aaa;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    word-break: keep-all;
+    z-index: 0;
+}
+
+/* Rarity Styles (Border + Glow) */
+/* Using increased specificity .gacha-card.rarity-X to override any defaults */
+
+/* SSR: Gold/Rainbow */
+.gacha-card.rarity-SSR {
+    border-color: #ffd700;
+    box-shadow: 0 0 15px #ffd700, inset 0 0 10px #ffd700;
+    animation: pulse-gold 2s infinite;
+}
+
+/* SR: Purple/Silver */
+.gacha-card.rarity-SR {
+    border-color: #a020f0;
+    /* Purple */
+    box-shadow: 0 0 10px #a020f0;
+}
+
+/* R: Blue/Bronze */
+.gacha-card.rarity-R {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px #4a90e2;
+}
+
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 15px #ffd700, inset 0 0 5px #ffd700;
+    }
+
+    50% {
+        box-shadow: 0 0 25px #ffeb3b, inset 0 0 15px #ffeb3b;
+    }
+
+    100% {
+        box-shadow: 0 0 15px #ffd700, inset 0 0 5px #ffd700;
+    }
+}
+
+/* Mobile Responsive logic is now handled by Orientation queries above */
+
+/* --- New Styles Migrated from Mockup --- */
+
+/* Tab & Header Spacing Refinements */
+.banner-tabs {
+    justify-content: center !important;
+    margin-bottom: 5px !important;
+}
+
+.gacha-container .banner-section {
+    padding-bottom: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+/* Sub Tabs (Standard/Pickup) */
+.sub-tabs-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 3px;
+    width: 100%;
+}
+
+.sub-tabs {
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-radius: 25px;
+    border: 1px solid #444;
+}
+
+.sub-tab {
+    padding: 6px 22px;
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.sub-tab:hover {
+    color: #ddd;
+}
+
+.sub-tab.active {
+    background: var(--primary-color, #a29bfe);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Targeting Controls */
+.target-controls {
+    background: rgba(30, 30, 40, 0.8);
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+    border: 1px solid #555;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.target-selectors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.target-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+}
+
+.target-group label {
+    white-space: nowrap;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.target-select {
+    padding: 8px;
+    background: #222;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+    min-width: 0;
+    text-overflow: ellipsis;
+}
+
+.target-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.btn-target {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.btn-target:active {
+    transform: scale(0.98);
+}
+
+#btn-target-start {
+    background: #00b894;
+    color: white;
+}
+
+#btn-target-stop {
+    background: #d63031;
+    color: white;
+}
+
+#btn-target-reset {
+    background: #636e72;
+    color: white;
+}
+
+.btn-target:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#target-status {
+    color: #fdcb6e;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 8px;
+    min-height: 1.4em;
+}
+
+/* Drop Log Styles */
+.drop-log-container {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.drop-log-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.drop-item {
+    background: #222;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #555;
+}
+
+.drop-item.ssr {
+    color: #ffd700;
+    border-color: #ffd700;
+}
+
+.drop-item.pickup {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.hidden {
+    display: none !important;
+}

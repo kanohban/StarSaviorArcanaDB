@@ -1,0 +1,32 @@
+{
+    "RARITY": [
+        { "value": "all", "name": "전체" },
+        { "value": "SR", "name": "SR" },
+        { "value": "SSR", "name": "SSR" }
+    ],
+    "ATTRIBUTE": [
+        { "value": "all", "name": "전체" },
+        { "value": "태양", "name": "태양" },
+        { "value": "달", "name": "달" },
+        { "value": "별", "name": "별" },
+        { "value": "질서", "name": "질서" },
+        { "value": "혼돈", "name": "혼돈" }
+    ],
+    "CLASS": [
+        { "value": "all", "name": "전체" },
+        { "value": "스트라이커", "name": "스트라이커" },
+        { "value": "어쌔신", "name": "어쌔신" },
+        { "value": "레인저", "name": "레인저" },
+        { "value": "캐스터", "name": "캐스터" },
+        { "value": "디펜더", "name": "디펜더" },
+        { "value": "서포터", "name": "서포터" }
+    ],
+    "STATUS": [
+        { "value": "all", "name": "전체" },
+        { "value": "힘", "name": "힘" },
+        { "value": "체력", "name": "체력" },
+        { "value": "인내", "name": "인내" },
+        { "value": "집중", "name": "집중" },
+        { "value": "보호", "name": "보호" }
+    ]
+}

@@ -1,0 +1,35 @@
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    width: 100%;
+}
+
+#savior-search {
+    padding: 0.8rem 1.5rem;
+    
+    width: 100%;
+    max-width: 600px;
+
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    background: var(--input-bg);
+
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+    .search-box {
+        margin-bottom: 10px;
+    }
+
+    #savior-search {
+        padding: 0.7rem 1.5rem;
+
+        border-width: 1px;
+
+        font-size: 1rem;
+    }
+}

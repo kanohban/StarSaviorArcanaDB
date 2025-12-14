@@ -1,0 +1,27 @@
+.scroll-up-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--primary-color);
+
+    font-size: 1rem;
+    color: var(--bg-color);
+
+    transition: .3s;
+    cursor: pointer;
+}
+
+.scroll-up-button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-0.15rem);
+}

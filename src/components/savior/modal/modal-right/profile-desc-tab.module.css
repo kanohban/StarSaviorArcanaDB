@@ -1,0 +1,45 @@
+.profile {
+    padding: 20px;
+    
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile.active {
+    display: flex;
+}
+
+.profile > div {
+    padding-bottom: 8px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.profile > div strong {
+    color: var(--primary-color);
+}

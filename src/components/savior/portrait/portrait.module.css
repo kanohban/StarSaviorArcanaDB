@@ -1,0 +1,37 @@
+.portrait {
+    margin-bottom: 8px;
+
+    width: 80px;
+    height: 80px;
+
+    border: 3px solid transparent;
+    border-radius: 15px;
+
+    object-fit: cover;
+    transition: box-shadow 0.3s;
+}
+
+.portrait.sun {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+    
+}
+.portrait.moon {
+    border-color: #6b8cff;
+    box-shadow: 0 0 5px rgba(107, 140, 255, 0.5);
+}
+
+.portrait.star {
+    border-color: #6bff8c;
+    box-shadow: 0 0 5px rgba(107, 255, 140, 0.5);
+}
+
+.portrait.order {
+    border-color: #ffd700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.portrait.chaos {
+    border-color: #d06bff;
+    box-shadow: 0 0 5px rgba(208, 107, 255, 0.5);
+}

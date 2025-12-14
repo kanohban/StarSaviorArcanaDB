@@ -1,0 +1,5 @@
+[
+    { "value": "basic", "name": "기본 정렬" },
+    { "value": "asc", "name": "이름(오름차순)" },
+    { "value": "desc", "name": "이름(내림차순)" }
+]
