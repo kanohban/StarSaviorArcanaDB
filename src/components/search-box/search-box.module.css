@@ -8,9 +8,11 @@
 
 #savior-search {
     padding: 0.8rem 1.5rem;
-    
+
     width: 100%;
     max-width: 600px;
+    height: 48px;
+    box-sizing: border-box;
 
     border: 2px solid var(--border-color);
     border-radius: 50px;

@@ -91,7 +91,6 @@ export default function Arcana() {
             <Header title={"아르카나"} />
 
             <div className="filter-wrapper">
-                <SearchBox value={query} customOnChange={setQuery} />
                 <FilterSelect
                     id="rarity"
                     list={FILTERS.RARITY}
@@ -104,6 +103,7 @@ export default function Arcana() {
                     selected={filters.type}
                     customOnChange={handleFilterChange}
                 />
+                <SearchBox value={query} customOnChange={setQuery} className="arcana-search-box" />
             </div>
 
             <div className="arcana-grid">

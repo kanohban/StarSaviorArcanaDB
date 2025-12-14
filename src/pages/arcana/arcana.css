@@ -12,11 +12,17 @@
 
 .filter-wrapper {
     display: flex;
-    gap: 1rem;
+    gap: 4px;
     margin-bottom: 2rem;
     z-index: 10;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.arcana-search-box {
+    margin-bottom: 0 !important;
 }
 
 .arcana-grid {
