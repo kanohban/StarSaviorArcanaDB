@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스타 세이비어 DB</title>
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/container.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGG707QJHS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QGG707QJHS');
+    </script>
+    <link rel="icon" type="image/png" href="/public/images/index/index_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/container.css" />
     <script src="https://kit.fontawesome.com/7b0e390c97.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div id="app"></div>
-    <script src="../dist/index.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
