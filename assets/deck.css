@@ -522,3 +522,165 @@
     color: var(--text-highlight);
     font-size: 1.5rem;
 }
+
+/* --- NEW CARD LAYOUT OVERRIDES (Same as Arcana Page) --- */
+.card-item {
+    position: relative !important;
+    border: none !important;
+    height: auto !important;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    /* Ensure rounded corners clip content */
+}
+
+/* Image Wrapper */
+.card-image-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: auto !important;
+    border-radius: 8px;
+    /* Match card radius */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Content Overlay at Bottom */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 15px 15px 15px !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+    box-sizing: border-box;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Typography in Overlay */
+.card-content h3.card-name {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2px !important;
+    font-size: 1.1rem !important;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.character-name {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.85rem !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Rarity Badge to Top Left */
+.card-header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0 !important;
+    z-index: 5;
+    width: auto !important;
+}
+
+.rarity-badge {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    /* Reset any conflicting styles if needed */
+    position: static !important;
+    /* Since it's inside absolute header */
+    display: inline-block;
+}
+
+/* Stat Tag (Category Icon) at Top Right */
+.stat-tag {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 5;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+/* Hide old .card-info if any residue remains, logic replaced content with .card-content */
+.card-info {
+    display: none !important;
+}
+
+/* Hide Type Badge from List View (we use Icon now) */
+.card-item .type-badge {
+    display: none !important;
+}
+
+/* --- Deck Slot Specific Overrides for Badges --- */
+.deck-slot .rarity-badge {
+    position: absolute !important;
+    top: 5px;
+    left: 5px;
+    right: auto !important;
+    /* Fix stretch issue */
+    z-index: 5;
+    margin: 0;
+    padding: 2px 4px !important;
+}
+
+/* Use stat-tag logic for deck slots too if we change JS, 
+   but currently it uses .type-badge. Let's position both just in case. */
+.deck-slot .type-badge {
+    position: absolute !important;
+    top: 5px;
+    right: 5px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    /* fallback */
+    border: none;
+}
+
+/* If we switch to stat-tag in JS for deck slots */
+.deck-slot .stat-tag {
+    position: absolute !important;
+    top: 2px;
+    right: 5px;
+    z-index: 5;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+}
+
+/* Ensure Image Fills Slot */
+.deck-slot img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}

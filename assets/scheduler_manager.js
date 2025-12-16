@@ -134,6 +134,9 @@ const SchedulerManager = {
             this.dom.deckNav.style.display = 'flex';
             window.ScheduleViewManager.toggleView(false);
 
+            // Re-show and update counters for Grid View
+            this.updateCounters();
+
             // 2. Restore Card Scroll
             setTimeout(() => {
                 window.scrollTo(0, this.data.scrollState.card || 0);
@@ -165,9 +168,54 @@ const SchedulerManager = {
         }
     },
 
+    updateCounters() {
+        const deck = this.data.decks[this.data.currentDeckIndex] || [];
+        const countersEl = document.getElementById('scheduler-counters');
+        if (countersEl) countersEl.style.display = 'flex';
+
+        const cntArcana = document.getElementById('cnt-arcana');
+        const cntGoal = document.getElementById('cnt-goal');
+
+        // Arcana: Use Schedule Logic (Remaining Arcana in Schedule)
+        // If ScheduleViewManager is available, ask it. Otherwise default to 0 or logic?
+        // Default to deck length if not available is WRONG based on user request ("existing method")
+        // But if ScheduleViewManager isn't initialized fully, we might show 0.
+        if (cntArcana) {
+            if (window.ScheduleViewManager && typeof window.ScheduleViewManager.getRemainingArcana === 'function') {
+                cntArcana.innerText = window.ScheduleViewManager.getRemainingArcana();
+            } else {
+                // Fallback (or keep existing text if we don't want to overwrite with wrong data)
+                // cntArcana.innerText = deck.length; // Don't do this anymore
+            }
+        }
+
+        // Calculate Goal: (Deck Size * 3) - Sum of Completed Stages
+        const totalGoal = deck.length * 3;
+        let completedGoal = 0;
+
+        deck.forEach(cardId => {
+            // Find max checked stage for this card
+            const stages = ['1', '2', '3'];
+            let maxStage = 0;
+            stages.forEach((stage, idx) => {
+                const key = `${this.data.currentDeckIndex}_${cardId}_${stage}`;
+                if (this.data.checks[key]) {
+                    maxStage = idx + 1; // 1-based stage
+                }
+            });
+            completedGoal += maxStage;
+        });
+
+        const remainingGoal = totalGoal - completedGoal;
+        if (cntGoal) cntGoal.innerText = remainingGoal;
+    },
+
     render() {
         const deck = this.data.decks[this.data.currentDeckIndex] || [];
         this.dom.deckIndex.innerText = this.data.currentDeckIndex + 1;
+
+        // Update Counters (Arcana Count & Goal)
+        this.updateCounters();
 
         // Render Cards
         this.dom.grid.innerHTML = '';
@@ -224,9 +272,15 @@ const SchedulerManager = {
                 eventsHtml = '<div style="color:#666; font-size:0.9rem;">이벤트 데이터 없음</div>';
             }
 
+            // Image Path Handling (PNG -> WebP)
+            let imgPath = card.img || '';
+            if (imgPath.endsWith('.png')) {
+                imgPath = imgPath.replace('.png', '.webp');
+            }
+
             cardEl.innerHTML = `
                 <div class="scheduler-card-header">
-                    <img src="${card.img}" alt="${card.name}">
+                    <img src="${imgPath}" alt="${card.name}">
                     <div class="scheduler-card-info">
                         <div class="scheduler-card-name">${card.name}</div>
                         <div class="scheduler-card-type">${card.rare} | ${typeStr}</div>

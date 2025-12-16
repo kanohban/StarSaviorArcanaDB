@@ -169,9 +169,14 @@ const SchedulerSearchManager = {
                 potentialDesc = this.state.potentialsData[card.고유잠재.이름] || '-';
             }
 
+            let imgPath = card.이미지 || '';
+            if (imgPath.endsWith('.png')) {
+                imgPath = imgPath.replace('.png', '.webp');
+            }
+
             html = `
                 <div class="modal-card-header">
-                    <img src="${card.이미지}" alt="${card.이름}" class="modal-card-img" onerror="this.style.display='none'">
+                    <img src="${imgPath}" alt="${card.이름}" class="modal-card-img" onerror="this.style.display='none'">
                     <div class="modal-card-info">
                         <h2>${card.이름}</h2>
                         <div class="modal-card-meta">

@@ -286,7 +286,7 @@ function renderResults(results) {
 
         if (foundArcana || isGenericArcana || item.origin === 'card' || (!isSaviorBanner && !item.origin)) {
             const formattedName = isGenericArcana ? '아르카나' : formatArcanaImageName(item.이름);
-            imgPath = `./images/cards/${formattedName}.png`;
+            imgPath = `./images/cards/${formattedName}.webp`;
             isArcana = true;
         } else {
             imgPath = `./images/illust/${item.이름}.webp`;

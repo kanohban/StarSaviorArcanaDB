@@ -168,18 +168,10 @@ const SaviorManager = {
             if (sortType === 'name-asc') return a.name.localeCompare(b.name, 'ko');
             if (sortType === 'name-desc') return b.name.localeCompare(a.name, 'ko');
 
-            // Default Sort: Rank -> Attr -> Class -> Name
-            const rA = rankOrder[a.rank] || 99;
-            const rB = rankOrder[b.rank] || 99;
-            if (rA !== rB) return rA - rB;
-
+            // Default Sort: Attr -> Name
             const aA = attrOrder[a.attr] || 99;
             const aB = attrOrder[b.attr] || 99;
             if (aA !== aB) return aA - aB;
-
-            const cA = classOrder[a.class] || 99;
-            const cB = classOrder[b.class] || 99;
-            if (cA !== cB) return cA - cB;
 
             return a.name.localeCompare(b.name, 'ko');
         });

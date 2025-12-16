@@ -265,7 +265,7 @@
         const btn = document.createElement('button');
         btn.className = 'favorite-btn';
         btn.title = '즐겨찾기';
-        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>';
 
         // Dynamic Click Handler
         btn.addEventListener('click', (e) => {
@@ -323,6 +323,8 @@
           contentObserver.disconnect();
           try {
             scanAndApplyFavorites();
+            updateStatTags(); // NEW: Replace tags with images
+            updateCardLayout(); // NEW: Restructure layout
           } finally {
             const root = document.getElementById('root');
             if (root) contentObserver.observe(root, observerConfig);
@@ -333,6 +335,49 @@
       const root = document.getElementById('root');
       if (root) {
         contentObserver.observe(root, observerConfig);
+      }
+
+      // NEW: Function to restructure dom for overlay
+      function updateCardLayout() {
+        const cards = document.querySelectorAll('.card-item');
+        cards.forEach(card => {
+          const content = card.querySelector('.card-content');
+          if (content) {
+            const header = content.querySelector('.card-header');
+            // Only move if it is still inside content
+            if (header && header.parentElement === content) {
+              card.appendChild(header);
+            }
+          }
+          // Move stat-tag if it exists anywhere inside card but not as direct child
+          const statTag = card.querySelector('.stat-tag');
+          if (statTag && statTag.parentElement !== card) {
+            card.appendChild(statTag);
+          }
+        });
+      }
+
+      // NEW: Function to replace text tags with images
+      function updateStatTags() {
+        const tags = document.querySelectorAll('.stat-tag');
+        const iconMap = {
+          '힘': '힘.png',
+          '체력': '체력.png',
+          '인내': '인내.png',
+          '집중': '집중.png',
+          '보호': '보호.png',
+        };
+
+        tags.forEach(tag => {
+          const text = tag.textContent.trim();
+          if (iconMap[text]) {
+            // Check if already replaced to avoid duplicate imgs (though innerHTML set handles it)
+            if (!tag.querySelector('img')) {
+              tag.innerHTML = `<img src="./images/etc_icon/${iconMap[text]}" alt="${text}" class="stat-icon-img">`;
+              tag.classList.add('has-icon');
+            }
+          }
+        });
       }
 
       // Initialize Footer
@@ -459,7 +504,199 @@
       display: none !important;
     }
 
+    /* Overlay Category Badge */
+    .stat-tag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 5;
+      /* Adjusted for Icon */
+      background-color: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+    }
+
+    .stat-tag.has-icon {
+      /* Optional: Ensure container size matches icon if needed */
+      width: 32px;
+      /* Approx badge size */
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-icon-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+      /* Make it pop */
+    }
+
     /* Hide Legacy Footer inside React Root */
+    #root .app-footer,
+    #root footer {
+      display: none !important;
+    }
+
+    /* --- NEW CARD LAYOUT OVERRIDES --- */
+    .card-item {
+      position: relative !important;
+      border: none !important;
+      /* Clean look */
+      height: auto !important;
+      /* Let image dictate height */
+      aspect-ratio: 2/3;
+    }
+
+    /* Make Image Wrapper Fill Card */
+    .card-image-wrapper {
+      width: 100% !important;
+      height: 100% !important;
+      aspect-ratio: auto !important;
+      border-radius: 12px;
+    }
+
+    .card-image-wrapper img {
+      border-radius: 12px;
+    }
+
+    /* Content Overlay at Bottom */
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 50px 15px 15px 15px !important;
+      /* More top padding for gradient fade */
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 60%, transparent 100%);
+      box-sizing: border-box;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      z-index: 2;
+      pointer-events: none;
+      /* Let clicks pass through if needed, but safe for text */
+    }
+
+    /* Allow interaction with favorite button inside content */
+    .favorite-btn {
+      pointer-events: auto;
+      bottom: 15px !important;
+      right: 15px !important;
+      background-color: transparent !important;
+      /* Clean look */
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .favorite-btn svg {
+      fill: rgba(255, 255, 255, 0.5) !important;
+      width: 28px !important;
+      /* Slightly larger for star */
+      height: 28px !important;
+    }
+
+    .favorite-btn.active svg {
+      fill: #ffd700 !important;
+      /* Gold */
+      filter: drop-shadow(0 0 5px #ffd700);
+    }
+
+    .favorite-btn:hover svg {
+      transform: scale(1.2);
+      fill: white !important;
+    }
+
+    /* Rarity Badge to Top Left */
+    .card-header {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      margin: 0 !important;
+      z-index: 5;
+      width: auto !important;
+    }
+
+    .rarity-badge {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* Text Adjustments for Overlay */
+    /* Hide Rarity Badge from original flow if header structure needs it, 
+       but since we moved .card-header absolute, it moves the whole block. 
+       We need to make sure h3 (Title) isn't in .card-header or handled separately.
+       Wait, index.css structure has .card-header containing rarity-badge AND nothing else?
+       Checking index.css: .card-header { justify-content: space-between ... }
+       Ah, usually it's separate. Let's see structure in search_manager.js renderResults...
+       Actually renderResults in search_manager.js creates simple divs.
+       But arcana.html uses React build (DrY0adZU.js). 
+       Assuming structure matches index-DBwFzK5i.css:
+       .card-item > .card-image-wrapper
+       .card-item > .card-content > .card-header > .rarity-badge (maybe)
+       .card-item > .card-content > h3
+       .card-item > .card-content > .character-name
+       
+       If .card-header is IN .card-content, moving .card-header absolute top:10px works relative to .card-item?
+       No, .card-content is absolute bottom:0.
+       So .card-header inside .card-content would be relative to .card-content.
+       We need .card-header to BREAK OUT of .card-content to go to top-left.
+       
+       Solution: We cannot easily move DOM elements with CSS only.
+       However, if .card-item is relative, and .card-header is absolute...
+       We can set .card-header { position: absolute; top: -[height_of_image + padding]; } ? No.
+       
+       Better approach:
+       If .card-header is inside .card-content, we can style .card-header to be absolute top:0 left:0 OF THE CARD-ITEM
+       by referencing the grand-parent? No, CSS can't do that.
+       BUT, if .card-content is width 100% height 100% (transparent), it could work.
+       OR, we just accept we might need JS to move it if structure forces it.
+       
+       Let's try a trick:
+       Set .card-content { position: static; } -> No, then it pushes image.
+       Set .card-content { display: contents; } ? Then children are direct children of grid/flex? NO.
+       
+       Wait, look at .card-item structure in index.css again. 
+       .card-content is a flex column.
+       
+       If I cannot move DOM, I might need a MutationObserver script update to move .rarity-badge 
+       OUT of .card-content and into .card-item directly.
+       
+       Let's check if I can just assume the React structure puts .card-header inside .card-content. 
+       Most likely yes.
+       
+       I will add a script to move .card-header or .rarity-badge to being a direct child of .card-item
+       so I can position it at Top-Left independently.
+       
+       For now, let's inject the CSS assuming I will move the element via script.
+    */
+
+    /* Text Styling */
+    .card-content h3 {
+      color: white !important;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      margin-bottom: 2px !important;
+      font-size: 1.1rem !important;
+      width: calc(100% - 40px);
+      /* Space for fav button */
+    }
+
+    .character-name {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 0.85rem !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Ensure Stat Tag (Category) is still correctly placed */
+    .stat-tag {
+      top: 5px !important;
+      right: 10px !important;
+      left: auto !important;
+      /* Reset left */
+    }
+
     #root .app-footer,
     #root footer {
       display: none !important;

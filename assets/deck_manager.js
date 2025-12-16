@@ -173,10 +173,33 @@ const DeckManager = {
                 const card = this.data.cards.find(c => c.id === cardId);
                 if (card) {
                     slot.classList.add('filled');
+
+                    // Image Path Handling (PNG -> WebP)
+                    let imgPath = card.img || '';
+                    if (imgPath.endsWith('.png')) {
+                        imgPath = imgPath.replace('.png', '.webp');
+                    }
+
+                    // Map Stat Type to Icon for Deck Slot
+                    const statIconMap = {
+                        '힘': '힘.png',
+                        '체력': '체력.png',
+                        '인내': '인내.png',
+                        '집중': '집중.png',
+                        '보호': '보호.png',
+                        '태양': '태양.png',
+                        '달': '달.png',
+                        '별': '별.png',
+                        '질서': '질서.png',
+                        '혼돈': '혼돈.png'
+                    };
+                    const statType = card.type ? card.type.t_train : '';
+                    const statIcon = statIconMap[statType] ? `<img src="./images/etc_icon/${statIconMap[statType]}" alt="${statType}" class="stat-icon-img">` : statType;
+
                     slot.innerHTML = `
                         <div class="rarity-badge ${card.rare}">${card.rare}</div>
-                        <div class="type-badge">${card.type.t_train}</div>
-                        <img src="${card.img}" alt="${card.name}">
+                        <div class="stat-tag">${statIcon}</div>
+                        <img src="${imgPath}" alt="${card.name}">
                         <div class="remove-overlay">제거</div>
                     `;
                     slot.onclick = () => this.removeFromDeck(cardId);
@@ -305,13 +328,46 @@ const DeckManager = {
                 }
             }
 
+            // Image Path Handling (PNG -> WebP)
+            let imgPath = card.img || '';
+            if (imgPath.endsWith('.png')) {
+                imgPath = imgPath.replace('.png', '.webp');
+            }
+
+            // Map Stat Type to Icon
+            const statIconMap = {
+                '힘': '힘.png',
+                '체력': '체력.png',
+                '인내': '인내.png',
+                '집중': '집중.png',
+                '보호': '보호.png',
+                '태양': '태양.png',
+                '달': '달.png',
+                '별': '별.png',
+                '질서': '질서.png',
+                '혼돈': '혼돈.png'
+            };
+            const statType = card.type ? card.type.t_train : '';
+            const statIcon = statIconMap[statType] ? `<img src="./images/etc_icon/${statIconMap[statType]}" alt="${statType}" class="stat-icon-img">` : statType;
+
             el.innerHTML = `
-                <div class="rarity-badge ${card.rare}">${card.rare}</div>
-                <div class="type-badge">${card.type.t_train}</div>
-                <img src="${card.img}" class="card-image" loading="lazy">
-                <div class="card-info">
-                    <div class="card-name">${card.name}</div>
-                    <div class="card-type">${typeStr}</div>
+                ${/* 1. Header (Rarity) - Absolute Top Left */ ''}
+                <div class="card-header">
+                    <div class="rarity-badge ${card.rare}">${card.rare}</div>
+                </div>
+
+                ${/* 2. Stat Tag (Category) - Absolute Top Right */ ''}
+                <div class="stat-tag ${statIconMap[statType] ? 'has-icon' : ''}">${statIcon}</div>
+
+                ${/* 3. Image Wrapper */ ''}
+                <div class="card-image-wrapper">
+                    <img src="${imgPath}" class="card-image" loading="lazy" alt="${card.name}">
+                </div>
+
+                ${/* 4. Content Overlay - Absolute Bottom */ ''}
+                <div class="card-content">
+                    <h3 class="card-name">${card.name}</h3>
+                    <div class="character-name">${card.char || ''}</div>
                 </div>
             `;
             el.onclick = () => this.addToDeck(card.id);

@@ -230,13 +230,18 @@ class ScheduleViewManager {
             }
         });
 
+        // Calculate Remaining Arcana (Schedule Logic)
         const remArcana = this.totalArcana - completedArcana;
-        const remGoal = this.totalGoal - completedGoal;
+
+        // Goal uses Deck Logic (handled by SchedulerManager), so we don't update it here.
+        // const remGoal = this.totalGoal - completedGoal; 
 
         const arcanaEl = document.getElementById('cnt-arcana');
-        const goalEl = document.getElementById('cnt-goal');
+        // const goalEl = document.getElementById('cnt-goal');
+
         if (arcanaEl) arcanaEl.innerText = remArcana;
-        if (goalEl) goalEl.innerText = remGoal;
+        // if (goalEl) goalEl.innerText = remGoal;
+
 
         // Snapshot current accordion state (indices of active periods)
         const activeIndices = new Set();
@@ -379,6 +384,19 @@ class ScheduleViewManager {
         });
     }
 
+    getRemainingArcana() {
+        if (!this.flatTurns) return 0;
+        let completed = 0;
+        this.flatTurns.forEach((turn, index) => {
+            if (index <= this.state.currentTurnIndex) {
+                turn.events.forEach(ev => {
+                    if (ev.type.includes('아르카나')) completed++;
+                });
+            }
+        });
+        return this.totalArcana - completed;
+    }
+
     renderGroupedEvents(container, events) {
         const randomGroups = {};
         const normalEvents = [];
@@ -464,13 +482,15 @@ class ScheduleViewManager {
 
                 displayTags.forEach(tag => {
                     let typeClass = this.getTypeClass(tag);
-                    extraBadgesHtml += `<span class="event-type-badge ${typeClass}" style="font-size:0.7rem; padding:1px 4px; margin-right:4px;">${tag}</span>`;
+                    let displayTag = tag.replace('목표', '골');
+                    extraBadgesHtml += `<span class="event-type-badge ${typeClass}" style="font-size:0.7rem; padding:1px 4px; margin-right:4px;">${displayTag}</span>`;
                 });
             }
             badge.innerHTML = `${extraBadgesHtml}<span class="event-content">${ev.content}</span>`;
         } else {
+            let displayType = ev.type.replace(/목표/g, '골');
             badge.innerHTML = `
-                <span class="event-type-badge ${typeClass}">${ev.type}</span>
+                <span class="event-type-badge ${typeClass}">${displayType}</span>
                 <span class="event-content">${ev.content}</span>
             `;
         }
