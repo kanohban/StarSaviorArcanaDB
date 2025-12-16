@@ -69,10 +69,10 @@ class Savior {
         this.journey_status.focus = info[14];
         this.journey_status.prot = info[15];
 
-        for(let i = 0; i < 3; i++) {
+        for (let i = 0; i < 3; i++) {
             const value = info[i + 16];
-            
-            if(value !== undefined) {
+
+            if (value !== undefined) {
                 this.potentials.push({
                     level: i === 0 ? 3 : i === 1 ? 6 : 10,
                     value: value
@@ -84,24 +84,24 @@ class Savior {
     addSkill = (skill) => {
         this.skills.push(skill);
     }
-    
+
     static test = (data) => {
         const { SKILL_TYPE, ACTIVE_SKILL_EFFECT_TYPE, PASSIVE_SKILL_EFFECT_TYPE } = require("../constants.js");
-        
+
         console.log(data.name);
-        for(let i = 0; i < data.skills.length; i++) {
+        for (let i = 0; i < data.skills.length; i++) {
             const skill = data.skills[i];
 
             console.log(skill.name);
 
-            if(skill.type === 0 ) {
-                for(let j = 0; j < skill.levels.length; j++) {
+            if (skill.type === 0) {
+                for (let j = 0; j < skill.levels.length; j++) {
                     const levelInfo = skill.levels[j];
                     console.log(`스킬레벨 : ${levelInfo.level}`);
                     console.log(`스킬설명 : ${levelInfo.desc.map(e => PASSIVE_SKILL_EFFECT_TYPE[e.type].replace("{value}", e.value).replace("{char}", data.name)).join(" ")}`);
                 }
             } else {
-                for(let j = 0; j < skill.levels.length; j++) {
+                for (let j = 0; j < skill.levels.length; j++) {
                     const levelInfo = skill.levels[j];
                     console.log(`스킬레벨 : ${levelInfo.level} / 스킬설명 : ${ACTIVE_SKILL_EFFECT_TYPE[levelInfo.type].replace("{value}", levelInfo.value)}`);
                 }
@@ -140,7 +140,7 @@ class Skill {
     isPassive = () => this.type === 0;
 
     setPassiveLevels = (info) => {
-        for(let i = 0; i < info.length; i++) {
+        for (let i = 0; i < info.length; i++) {
             const levelInfo = info[i];
 
             const passive = {
@@ -153,7 +153,7 @@ class Skill {
                 value: levelInfo[4]
             });
 
-            if(levelInfo[5] !== undefined) {
+            if (levelInfo[5] !== undefined) {
                 passive.desc.push({
                     type: levelInfo[5],
                     value: levelInfo[6]
@@ -166,7 +166,7 @@ class Skill {
 
     setActiveLevels = (info) => {
         let level = 1;
-        for(let i = 2; i < info.length; i += 2) {
+        for (let i = 2; i < info.length; i += 2) {
             this.levels.push({
                 level: level++,
                 type: info[i],

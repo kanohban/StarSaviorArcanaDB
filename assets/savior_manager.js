@@ -480,7 +480,15 @@ const SaviorManager = {
 
     renderLevelRow: function (skill, lvl, charName) {
         let text = "";
-        if (skill.type === 0 && lvl.desc) { // Passive
+
+        // Use pre-resolved text from data if available
+        if (skill.type === 0 && lvl.resolvedDesc && Array.isArray(lvl.resolvedDesc)) {
+            text = lvl.resolvedDesc.join(" ");
+        } else if (skill.type !== 0 && lvl.resolvedDesc) {
+            text = lvl.resolvedDesc;
+        }
+        // Fallback to legacy generation
+        else if (skill.type === 0 && lvl.desc) { // Passive
             text = lvl.desc.map(d => {
                 let t = this.PASSIVE_SKILL_EFFECT_TYPE[d.type] || "";
                 return t.replace("{value}", d.value).replace("{char}", charName);
