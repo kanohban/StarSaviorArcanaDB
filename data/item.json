@@ -943,6 +943,7 @@
     "cost": 30,
     "obt_place": 0,
     "req_journey_id": 20,
+    "req_journey_name": "리세트의 행운",
     "effects": [],
     "flavor_text": "지점 홍보를 위해 리세트가 고안한 상품권. 가지고 있으면 특별한 이벤트에 참여할 수 있을지도 모른다.",
     "refund_poten": 8,
@@ -958,6 +959,7 @@
     "cost": 50,
     "obt_place": 0,
     "req_journey_id": 35,
+    "req_journey_name": "오늘의 날씨 – 열대야",
     "effects": [],
     "flavor_text": "한 연금술사가 최근에 만들었다는 고가의 시제품. 저장된 마력을 소모해서 시원한 바람을 일으킨다.",
     "refund_poten": 8,
@@ -973,6 +975,7 @@
     "cost": 50,
     "obt_place": 0,
     "req_journey_id": 32,
+    "req_journey_name": "오늘의 날씨 – 폭설",
     "effects": [],
     "flavor_text": "쇳가루의 산화를 유도해 열을 일으키는 소모품. 추운 지역을 여행할 사람에게는 강력 추천.",
     "refund_poten": 8,
@@ -988,6 +991,7 @@
     "cost": 50,
     "obt_place": "0,1,2,3",
     "req_journey_id": 14,
+    "req_journey_name": "훈련 실패",
     "effects": [
       {
         "type": 12,
