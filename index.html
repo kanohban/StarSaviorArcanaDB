@@ -297,6 +297,10 @@
             animation: fadeUp 0.6s ease-out 0.7s backwards;
         }
 
+        .menu-card:nth-child(7) {
+            animation: fadeUp 0.6s ease-out 0.8s backwards;
+        }
+
         /* --- Responsive --- */
         @media (max-width: 1024px) {
             .logo-icon {
@@ -313,7 +317,8 @@
             }
 
             .menu-grid {
-                gap: 0.5rem;
+                column-gap: 0.1rem;
+                row-gap: 0.1rem;
                 margin-bottom: 0.5rem;
                 max-width: 100%;
             }
@@ -444,6 +449,11 @@
             <a href="gacha.html" class="menu-card">
                 <img src="images/index/search.png" alt="SEARCH" class="card-icon">
                 <h3 class="card-title">가챠</h3>
+            </a>
+
+            <a href="item.html" class="menu-card">
+                <img src="images/index/search.png" alt="ITEM" class="card-icon">
+                <h3 class="card-title">아이템 Beta</h3>
             </a>
         </nav>
 

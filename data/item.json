@@ -1,0 +1,1678 @@
+[
+  {
+    "id": 1,
+    "name": "특제 벌꿀 사탕",
+    "rarity": 4,
+    "tag": 0,
+    "image": "ICON_ITEM_NORMAL_HONEY_CANDY",
+    "cost": 40,
+    "obt_place": 3,
+    "effects": [
+      {
+        "type": 4,
+        "value": 20
+      },
+      {
+        "type": 1,
+        "value": 5
+      }
+    ],
+    "flavor_text": "아이들 사이에서 인기몰이 중인 사탕. 모나스티르에서 생산된 벌꿀만 사용해서 만들어진다."
+  },
+  {
+    "id": 2,
+    "name": "특별 모리안 쿠키슈",
+    "rarity": 4,
+    "tag": 0,
+    "image": "ICON_ITEM_NORMAL_MORIAN_COOKIE",
+    "cost": 40,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": 3,
+        "value": 20
+      },
+      {
+        "type": 0,
+        "value": 5
+      }
+    ],
+    "flavor_text": "특별하게 엄선한 달콤함을 가진 모리안 열매와 생크림을 조합한 간식. 한 입 베어 물면 바사간 식감에서 헤어나올 수 없다."
+  },
+  {
+    "id": 3,
+    "name": "에너지 음료",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_202002",
+    "cost": 20,
+    "obt_place": 1,
+    "effects": [
+      {
+        "type": 7,
+        "value": 20
+      },
+      {
+        "type": 2,
+        "value": 5
+      }
+    ],
+    "flavor_text": "아가논의 탐사꾼들 즐겨 마시는 에너지 음료. 칙술루브 홀의 동력원이라고 해도 과언이 아니다."
+  },
+  {
+    "id": 4,
+    "name": "칼라이드 사과",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_APPLE",
+    "cost": 30,
+    "obt_place": 3,
+    "effects": [
+      {
+        "type": 1,
+        "value": 9
+      }
+    ],
+    "flavor_text": "칼라이드에서만 자라는 특별한 사과. 상큼하고 시원한 맛이 특징이다."
+  },
+  {
+    "id": 5,
+    "name": "비프 파스타",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_BEEF_PASTA_1",
+    "cost": 20,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 0,
+        "value": 4
+      }
+    ],
+    "flavor_text": "NOA에서 흔히 맛볼 수 있는 비프 파스타. 특별한 레시피 같은건 없지만 평범하게 맛있다."
+  },
+  {
+    "id": 6,
+    "name": "고급 비프 파스타",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_BEEF_PASTA_2",
+    "cost": 40,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 0,
+        "value": 12
+      }
+    ],
+    "flavor_text": "고급 레스토랑에서 즐길 수 있는 특별한 비프 파스타. 엄선된 재료와 특별한 레시피로 만들어졌다."
+  },
+  {
+    "id": 7,
+    "name": "로열 비프 파스타 세트",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_BEEF_PASTA_3",
+    "cost": 80,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 0,
+        "value": 36
+      }
+    ],
+    "flavor_text": "메인과 함께 달콤한 음료가 제공되는 비프 파스타 세트요리. 다이닝 이벤트에서만 제공되어 특별한 날이 아니면 먹기 힘들다."
+  },
+  {
+    "id": 8,
+    "name": "비프 스테이크",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_BEEF_STEAK",
+    "cost": 30,
+    "obt_place": "0,1",
+    "effects": [
+      {
+        "type": 2,
+        "value": 5
+      },
+      {
+        "type": 3,
+        "value": 5
+      }
+    ],
+    "flavor_text": "어디서나 맛볼 수 있는 비프 스테이크 특별하진 않아도 늘 믿고 먹을 수 있는 맛이다."
+  },
+  {
+    "id": 9,
+    "name": "치킨 스테이크",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_CHICKEN_STEAK",
+    "cost": 30,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 2,
+        "value": 5
+      },
+      {
+        "type": 4,
+        "value": 5
+      }
+    ],
+    "flavor_text": "어디서나 맛볼 수 있는 치킨 스테이크 특별하진 않아도 늘 믿고 먹을 수 있는 맛이다."
+  },
+  {
+    "id": 10,
+    "name": "모닝 커피",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_COFFEE",
+    "cost": 20,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 7,
+        "value": 20
+      }
+    ],
+    "flavor_text": "하루를 깨우는 따뜻한 모닝 커피. 좋은 아침은 이 한 잔에서 시작된다."
+  },
+  {
+    "id": 11,
+    "name": "크림 파스타",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_CREAM_PASTA_1",
+    "cost": 20,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 1,
+        "value": 4
+      }
+    ],
+    "flavor_text": "NOA에서 흔히 맛볼 수 있는 비프 파스타. 특별한 레시피 같은건 없지만 평범하게 맛있다."
+  },
+  {
+    "id": 12,
+    "name": "고급 크림 파스타",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_CREAM_PASTA_2",
+    "cost": 40,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 1,
+        "value": 12
+      }
+    ],
+    "flavor_text": "고급 레스토랑에서 즐길 수 있는 특별한 크림 파스타. 엄선된 재료와 특별한 레시피로 만들어졌다."
+  },
+  {
+    "id": 13,
+    "name": "로열 크림 파스타 세트",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_CREAM_PASTA_3",
+    "cost": 80,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 1,
+        "value": 36
+      }
+    ],
+    "flavor_text": "메인과 함께 달콤한 음료가 제공되는 크림 파스타 세트요리. 다이닝 이벤트에서만 제공되어 특별한 날이 아니면 먹기 힘들다."
+  },
+  {
+    "id": 14,
+    "name": "평범한 도넛",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_DONUT",
+    "cost": 15,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 9,
+        "value": 10
+      }
+    ],
+    "flavor_text": "흔히 맛볼 수 있는 평범한 도넛. 대량으로 만들어져 퀄리티는 뛰어나지 않지만 평범하게 맛있다."
+  },
+  {
+    "id": 15,
+    "name": "노점 붕어빵",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_FISH_BREAD",
+    "cost": 30,
+    "effects": [
+      {
+        "type": 9,
+        "value": 5
+      },
+      {
+        "type": 1,
+        "value": 5
+      }
+    ],
+    "flavor_text": "칼라이드 온천 노점에서 흔히 볼 수 있는 붕어빵. 매서운 추위 속, 한 입의 따뜻함은 더없이 특별하다."
+  },
+  {
+    "id": 16,
+    "name": "신선한 우유",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_FRESH_MILK",
+    "cost": 30,
+    "obt_place": "0,1",
+    "effects": [
+      {
+        "type": 8,
+        "value": 2
+      }
+    ],
+    "flavor_text": "밀크 앤 모어가 자랑하는 신선한 우유. 신선한 우유와 함께하는 아침은 더욱 특별하다."
+  },
+  {
+    "id": 17,
+    "name": "과일 샐러드",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_FRUIT_SALAD_1",
+    "cost": 20,
+    "obt_place": "1,2,3",
+    "effects": [
+      {
+        "type": 3,
+        "value": 6
+      }
+    ],
+    "flavor_text": "조식으로 나오는 과일 샐러드. 내용물은 잘 모르겠지만 건강해지는 기분이 든다."
+  },
+  {
+    "id": 18,
+    "name": "고급 과일 샐러드",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_FRUIT_SALAD_2",
+    "cost": 40,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": 3,
+        "value": 18
+      }
+    ],
+    "flavor_text": "호텔 서비스에 포함된 특별한 과일 샐러드. 정성스럽게 선택한 신선한 재료와 특제 드레싱으로 유명하다."
+  },
+  {
+    "id": 19,
+    "name": "로열 과일 샐러드 세트",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_FRUIT_SALAD_3",
+    "cost": 60,
+    "obt_place": "1,2,3",
+    "effects": [
+      {
+        "type": 3,
+        "value": 36
+      }
+    ],
+    "flavor_text": "메인과 함께 건강식 음료가 제공되는 과일 샐러드 세트요리. 다이닝 이벤트에서만 제공되어 특별한 날이 아니면 먹기 힘들다."
+  },
+  {
+    "id": 20,
+    "name": "노점 아이스크림",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_ICECREAM_CONE",
+    "cost": 30,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": 9,
+        "value": 5
+      },
+      {
+        "type": 0,
+        "value": 5
+      }
+    ],
+    "flavor_text": "플로라 해변 노점에서 흔히 볼 수 있는 아이스크림. 뜨거운 햇살 아래, 한 입의 시원함은 더없이 특별하다."
+  },
+  {
+    "id": 21,
+    "name": "마녀 스프",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_KARMEN_SPECIAL_SOUP",
+    "cost": 50,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": "0,1,2",
+        "value": "16,32,48"
+      }
+    ],
+    "flavor_text": "끔찍한 마녀가 즐겨먹었다던 스프 요리...라는 소문이 있지만, 맛은 평범한 스프다."
+  },
+  {
+    "id": 22,
+    "name": "고기 튀김",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_MEAT_FRIED_1",
+    "cost": 20,
+    "obt_place": "0,1",
+    "effects": [
+      {
+        "type": 2,
+        "value": 4
+      }
+    ],
+    "flavor_text": "노점상에서 흔히 맛볼 수 있는 고기 튀김. 정체를 알 수 없는 고기가 들어있지만 평범하게 맛있다."
+  },
+  {
+    "id": 23,
+    "name": "고급 고기 튀김",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_MEAT_FRIED_2",
+    "cost": 40,
+    "obt_place": 1,
+    "effects": [
+      {
+        "type": 2,
+        "value": 12
+      }
+    ],
+    "flavor_text": "캔들 라이트 디너에서 제공되는 특별한 고기튀김. 황금빛 튀김옷과 신선한 재료가 품격을 높여준다."
+  },
+  {
+    "id": 24,
+    "name": "로열 고기 튀김 세트",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_MEAT_FRIED_3",
+    "cost": 80,
+    "obt_place": 1,
+    "effects": [
+      {
+        "type": 2,
+        "value": 36
+      }
+    ],
+    "flavor_text": "메인과 함께 시원한 음료가 제공되는 고기 튀김 세트요리. 다이닝 이벤트에서만 제공되어 특별한 날이 아니면 먹기 힘들다."
+  },
+  {
+    "id": 25,
+    "name": "탐사꾼 고기 스튜",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_MEAT_STEW",
+    "cost": 30,
+    "obt_place": 1,
+    "effects": [
+      {
+        "type": 0,
+        "value": 8
+      },
+      {
+        "type": 2,
+        "value": 4
+      }
+    ],
+    "flavor_text": "고단한 탐사꾼들의 피로를 녹이는 따뜻한 고기 스튜. 지친 날일수록, 그 따뜻함이 더 깊이 스며든다."
+  },
+  {
+    "id": 26,
+    "name": "평범한 우유",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_MILK",
+    "cost": 30,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 8,
+        "value": 1
+      }
+    ],
+    "flavor_text": "흔히 맛볼 수 있는 우유. 대량으로 만들어져 퀄리티는 뛰어나지 않지만 평범하게 맛있다."
+  },
+  {
+    "id": 27,
+    "name": "심연 튀김",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_MIX_FRIED",
+    "cost": 50,
+    "obt_place": "1,2,3",
+    "effects": [
+      {
+        "type": "0,1",
+        "value": "12,24,36"
+      }
+    ],
+    "flavor_text": "심연에서 건져올린 무언가로 만든 튀김요리... 라는 소문이 있지만, 대부분은 새우 튀김이다."
+  },
+  {
+    "id": 28,
+    "name": "플로라 오렌지",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_ORANGE",
+    "cost": 30,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": 0,
+        "value": 9
+      }
+    ],
+    "flavor_text": "플로라의 특산물인 신선한 오렌지. 따뜻한 기후 덕분에 당도가 높고 맛이 풍부하다."
+  },
+  {
+    "id": 29,
+    "name": "특별한 오렌지 주스",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_ORANGE_JUICE",
+    "cost": 50,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": 0,
+        "value": 25
+      }
+    ],
+    "flavor_text": "플로라의 오렌지로 만든 특별한 오렌지 주스. 맛과 건강을 모두 챙긴 인기 음료다."
+  },
+  {
+    "id": 30,
+    "name": "특제 파르페",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_PARFAIT",
+    "cost": 60,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": 9,
+        "value": 15
+      },
+      {
+        "type": 0,
+        "value": 15
+      }
+    ],
+    "flavor_text": "플로라를 찾은 관광객이라면 한 번쯤 맛봐야할 특제 파르페. 해수욕과 함께 즐기면 그 달콤함이 배가 된다."
+  },
+  {
+    "id": 31,
+    "name": "푹신한 케이크",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_SOFT_CAKE",
+    "cost": 30,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 7,
+        "value": 30
+      }
+    ],
+    "flavor_text": "스트릿 베이커스와 푹신한 케이크. 하루 한정 수량으로 준비되기 때문에 이른 아침부터 긴 줄이 늘어선다."
+  },
+  {
+    "id": 32,
+    "name": "칼라이드 딸기",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_STRAWBERRY",
+    "cost": 50,
+    "obt_place": 3,
+    "effects": [
+      {
+        "type": 1,
+        "value": 18
+      }
+    ],
+    "flavor_text": "칼라이드 산 중턱의 바람을 맞고 자란 야생 딸기. 쉽게 얻을 수는 없지만, 한 번 맛보면 누구든 그 가치를 안다."
+  },
+  {
+    "id": 33,
+    "name": "미라클 시트러스",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_STREGA_JUICE_2",
+    "cost": 80,
+    "obt_place": "0,1",
+    "effects": [
+      {
+        "type": 10,
+        "value": "새콤한 여운 상태 획득"
+      }
+    ],
+    "flavor_text": "카페 스트레가의 인기 음료. 훈련 중 보호 효율이 크게 오를지도 모른다."
+  },
+  {
+    "id": 34,
+    "name": "펌킨 나이트",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_STREGA_JUICE_7",
+    "cost": 80,
+    "obt_place": "0,1",
+    "effects": [
+      {
+        "type": 10,
+        "value": "풍부한 여운 상태 획득"
+      }
+    ],
+    "flavor_text": "카페 스트레가의 인기 음료. 훈련 중 인내 효율이 크게 오를지도 모른다."
+  },
+  {
+    "id": 35,
+    "name": "평범한 케이크",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_SWEET_CAKE",
+    "cost": 15,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 7,
+        "value": 10
+      }
+    ],
+    "flavor_text": "흔히 맛볼 수 있는 케이크. 대량으로 만들어져 퀄리티는 뛰어나지 않지만 평범하게 맛있다."
+  },
+  {
+    "id": 36,
+    "name": "달콤한 도넛",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_SWEET_DONUT",
+    "cost": 30,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 9,
+        "value": 30
+      }
+    ],
+    "flavor_text": "카페 스트레가에서 판매하는 달콤한 도넛. 커피와 함께 즐기면 하루가 더욱 기분 좋게 시작된다."
+  },
+  {
+    "id": 37,
+    "name": "특제 타코야끼",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_TAKOYAKI",
+    "cost": 60,
+    "obt_place": 3,
+    "effects": [
+      {
+        "type": 9,
+        "value": 15
+      },
+      {
+        "type": 1,
+        "value": 15
+      }
+    ],
+    "flavor_text": "칼라이드를 찾은 관광객이라면 한 번쯤 맛봐야 할 특제 타코야끼. 따뜻한 온천욕과 함께라면, 더없이 완벽한 조합!"
+  },
+  {
+    "id": 38,
+    "name": "종합 영양제",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_TONIC_PILL",
+    "cost": 20,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 11,
+        "value": "모든 해로운 여정 상태 해제"
+      }
+    ],
+    "flavor_text": "작게 정제된 알약 형태의 영양제. 물 없이도 씹어 먹을 수 있어 언제 어디서나 간편하게 복용할 수 있다."
+  },
+  {
+    "id": 39,
+    "name": "야채 튀김",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_VEGETABLE_FRIED_1",
+    "cost": 30,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 3,
+        "value": 4
+      },
+      {
+        "type": 4,
+        "value": 4
+      }
+    ],
+    "flavor_text": "노점상에서 흔히 맛볼 수 있는 야채 튀김. 정체를 알 수 없는 야채가 들어있지만 평범하게 맛있다."
+  },
+  {
+    "id": 40,
+    "name": "고급 야채 튀김",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_VEGETABLE_FRIED_2",
+    "cost": 40,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 3,
+        "value": 8
+      },
+      {
+        "type": 4,
+        "value": 8
+      }
+    ],
+    "flavor_text": "캔들 라이트 디너에서 제공되는 특별한 야채 튀김. 황금빛 튀김옷과 신선한 재료가 품격을 높여준다."
+  },
+  {
+    "id": 41,
+    "name": "로열 야채 튀김 세트",
+    "rarity": 5,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_VEGETABLE_FRIED_3",
+    "cost": 60,
+    "obt_place": 0,
+    "effects": [
+      {
+        "type": 3,
+        "value": 16
+      },
+      {
+        "type": 4,
+        "value": 16
+      }
+    ],
+    "flavor_text": "메인과 함게 시원한 음료가 제공되는 야채 튀김 세트요리. 다이닝 이벤트에서만 제공되어 특별한 날이 아니면 먹기 힘들다."
+  },
+  {
+    "id": 42,
+    "name": "야채 샐러드",
+    "rarity": 3,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_VEGETABLE_SALAD_1",
+    "cost": 20,
+    "obt_place": 1,
+    "effects": [
+      {
+        "type": 4,
+        "value": 6
+      }
+    ],
+    "flavor_text": "조식으로 나오는 야채 샐러드. 내용물은 잘 모르겠지만 건강해지는 기분이 든다."
+  },
+  {
+    "id": 43,
+    "name": "고급 야채 샐러드",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_VEGETABLE_SALAD_2",
+    "cost": 40,
+    "obt_place": 1,
+    "effects": [
+      {
+        "type": 4,
+        "value": 18
+      }
+    ],
+    "flavor_text": "호텔 서비스에 포함된 특별한 야채 샐러드. 정성스럽게 선택한 신선한 재료와 특제 드레싱으로 유명하다."
+  },
+  {
+    "id": 44,
+    "name": "탐사꾼 야채 스튜",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_VEGETABLE_SOUP",
+    "cost": 30,
+    "obt_place": 1,
+    "effects": [
+      {
+        "type": 1,
+        "value": 8
+      },
+      {
+        "type": 2,
+        "value": 4
+      }
+    ],
+    "flavor_text": "고단한 탐사꾼들의 피로를 녹이는 따뜻한 야채 스튜. 지친 날일수록, 그 따뜻함이 더 깊이 스며든다."
+  },
+  {
+    "id": 45,
+    "name": "플로라 수박",
+    "rarity": 4,
+    "tag": 0,
+    "image": "JOURNEY_ITEM_WATERMELON",
+    "cost": 50,
+    "obt_place": 2,
+    "effects": [
+      {
+        "type": 0,
+        "value": 18
+      }
+    ],
+    "flavor_text": "달달한 맛이 일품인 플로라의 수박. 해변에서 즐기는 한입은 더없이 상쾌하다."
+  },
+  {
+    "id": 46,
+    "name": "인내 훈련의 금서",
+    "rarity": 5,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_ENDURANCE",
+    "cost": 60,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "인내 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "인내 훈련을 능가하는 특훈의 수단이 기록되어 있다는 서적. 전 대륙 서점에서 절찬리에 판매 중이라고 한다."
+  },
+  {
+    "id": 47,
+    "name": "인내 훈련의 비법서",
+    "rarity": 4,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_ENDURANCE",
+    "cost": 30,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "인내 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "인내 훈련을 마스터하기 위한 비법이 총망라된 최신 비법서. 캔들 스퀘어 선임 메이드들의 엄격한 검수를 거쳐 출간되었다고 한다."
+  },
+  {
+    "id": 48,
+    "name": "집중 훈련의 금서",
+    "rarity": 5,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_FOCUS",
+    "cost": 60,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "집중 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "집중 훈련을 능가하는 특훈의 수단이 기록되어 있다는 서적. 전 대륙 서점에서 절찬리에 판매 중이라고 한다."
+  },
+  {
+    "id": 49,
+    "name": "집중 훈련의 비법서",
+    "rarity": 4,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_FOCUS",
+    "cost": 30,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "집중 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "집중 훈련을 마스터하기 위한 비법이 총망라된 최신 비법서. 캔들 스퀘어 선임 메이드들의 엄격한 검수를 거쳐 출간되었다고 한다."
+  },
+  {
+    "id": 50,
+    "name": "체력 훈련의 금서",
+    "rarity": 5,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_HEALTH",
+    "cost": 60,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "체력 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "체력 훈련을 능가하는 특훈의 수단이 기록되어 있다는 서적. 전 대륙 서점에서 절찬리에 판매 중이라고 한다."
+  },
+  {
+    "id": 51,
+    "name": "체력 훈련의 비법서",
+    "rarity": 4,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_HEALTH",
+    "cost": 30,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "체력 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "체력 훈련을 마스터하기 위한 비법이 총망라된 최신 비법서. 캔들 스퀘어 선임 메이드들의 엄격한 검수를 거쳐 출간되었다고 한다."
+  },
+  {
+    "id": 52,
+    "name": "힘 훈련의 금서",
+    "rarity": 5,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_POWER",
+    "cost": 60,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "힘 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "힘 훈련을 능가하는 특훈의 수단이 기록되어 있다는 서적. 전 대륙 서점에서 절찬리에 판매 중이라고 한다."
+  },
+  {
+    "id": 53,
+    "name": "힘 훈련의 비법서",
+    "rarity": 4,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_POWER",
+    "cost": 30,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "힘 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "힘 훈련을 마스터하기 위한 비법이 총망라된 최신 비법서. 캔들 스퀘어 선임 메이드들의 엄격한 검수를 거쳐 출간되었다고 한다."
+  },
+  {
+    "id": 54,
+    "name": "보호 훈련의 금서",
+    "rarity": 5,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_PROTECT",
+    "cost": 60,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "보호 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "보호 훈련을 능가하는 특훈의 수단이 기록되어 있다는 서적. 전 대륙 서점에서 절찬리에 판매 중이라고 한다."
+  },
+  {
+    "id": 55,
+    "name": "보호 훈련의 비법서",
+    "rarity": 4,
+    "tag": 1,
+    "image": "JOURNEY_ITEM_TRAINING_EXP_BOOK_PROTECT",
+    "cost": 30,
+    "obt_place": "0,1,2,3",
+    "effects": [
+      {
+        "type": 0,
+        "value": "보호 훈련 경험치 증가"
+      }
+    ],
+    "flavor_text": "보호 훈련을 마스터하기 위한 비법이 총망라된 최신 비법서. 캔들 스퀘어 선임 메이드들의 엄격한 검수를 거쳐 출간되었다고 한다."
+  },
+  {
+    "id": 56,
+    "name": "리세트의 추첨권",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_LOTTERY_TICKET",
+    "cost": 30,
+    "obt_place": 0,
+    "req_journey_id": 20,
+    "effects": [],
+    "flavor_text": "지점 홍보를 위해 리세트가 고안한 상품권. 가지고 있으면 특별한 이벤트에 참여할 수 있을지도 모른다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "턴 시작 시 자신의 치명타 확률이 3%씩 증가합니다. 최대 10회 중첩됩니다."
+  },
+  {
+    "id": 57,
+    "name": "휴대용 선풍기",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_PORTABLE_FAN",
+    "cost": 50,
+    "obt_place": 0,
+    "req_journey_id": 35,
+    "effects": [],
+    "flavor_text": "한 연금술사가 최근에 만들었다는 고가의 시제품. 저장된 마력을 소모해서 시원한 바람을 일으킨다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "턴 시작 시 자신의 피해량이 1%씩 증가합니다. 최대 5회 중첩됩니다."
+  },
+  {
+    "id": 58,
+    "name": "손난로",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_PORTABLE_HEATPACK",
+    "cost": 50,
+    "obt_place": 0,
+    "req_journey_id": 32,
+    "effects": [],
+    "flavor_text": "쇳가루의 산화를 유도해 열을 일으키는 소모품. 추운 지역을 여행할 사람에게는 강력 추천.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "턴 시작 시 자신이 받는 피해량이 1%씩 감소합니다. 최대 5회 중첩됩니다."
+  },
+  {
+    "id": 59,
+    "name": "활력 포션",
+    "rarity": 4,
+    "tag": 3,
+    "image": "JOURNEY_ITEM_TONIC_DRINK",
+    "cost": 50,
+    "obt_place": "0,1,2,3",
+    "req_journey_id": 14,
+    "effects": [
+      {
+        "type": 12,
+        "value": "특정 이벤트에서 사용 가능"
+      }
+    ],
+    "flavor_text": "기분 전환과 의욕 회복에 효과적인 상쾌한 맛의 음료. 실수로 주저앉은 날에도, 다시 일어설 힘을 준다."
+  },
+  {
+    "id": 60,
+    "name": "강격의 메달",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_POWER_MEDAL",
+    "obt_place": 4,
+    "obt_journey_name": "구명의 선물",
+    "effects": [],
+    "refund_poten": 4,
+    "target": 2,
+    "effect_desc": "최초 전투 시작시 자신의 치명타 피해가 10% 증가합니다."
+  },
+  {
+    "id": 61,
+    "name": "기교의 메달",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_TECHNIQUE_MEDAL",
+    "obt_place": 4,
+    "obt_journey_name": "구명의 선물",
+    "effects": [],
+    "flavor_text": "큰 업적을 세운 구원자에게 NOA가 수여하는 훈장. 교묘하게 공허체들을 함정에 빠뜨렸던 구원자들을 기리는 도안이다.",
+    "refund_poten": 4,
+    "target": 2,
+    "effect_desc": "최초 전투 시작시 자신의 치명타 확률이 5% 증가합니다."
+  },
+  {
+    "id": 62,
+    "name": "지혜의 메달",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_WISDOM_MEDAL",
+    "obt_place": 4,
+    "obt_journey_name": "구명의 선물",
+    "effects": [],
+    "flavor_text": "큰 업적을 세운 구원자에게 NOA가 수여하는 훈장. 재빠르게 공허체의 수장을 쓰러뜨렸던 구원자들을 기리는 도안이다.",
+    "refund_poten": 4,
+    "target": 2,
+    "effect_desc": "최초 전투 시작 시 자신의 효과 저항이 10% 증가합니다."
+  },
+  {
+    "id": 63,
+    "name": "용맹의 메달",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_VALOR_MEDAL",
+    "obt_place": 4,
+    "obt_journey_name": "구명의 선물",
+    "effects": [],
+    "flavor_text": "큰 업적을 세운 구원자에게 NOA가 수여하는 훈장. 처절하게 공허체에 맞서 싸운 구원자들을 기리는 도안이다.",
+    "refund_poten": 4,
+    "target": 2,
+    "effect_desc": "최초 전투 시작 시 자신의 공격력이 5% 증가합니다."
+  },
+  {
+    "id": 64,
+    "name": "평온의 메달",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_CALM_MEDAL",
+    "obt_place": 4,
+    "obt_journey_name": "구명의 선물",
+    "effects": [],
+    "refund_poten": 4,
+    "target": 2,
+    "effect_desc": "최초 전투 시작 시 자신의 최대 생명력이 5% 증가합니다."
+  },
+  {
+    "id": 65,
+    "name": "간파의 메달",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_DETECTION_MEDAL",
+    "obt_place": 4,
+    "obt_journey_name": "구명의 선물",
+    "effects": [],
+    "refund_poten": 4,
+    "target": 2,
+    "effect_desc": "최초 전투 시작 시 자신의 효과 적중이 10% 증가합니다."
+  },
+  {
+    "id": 66,
+    "name": "균형의 천칭",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_BALANCE_SCALE",
+    "obt_place": 4,
+    "obt_journey_name": "기초 평가전 준비",
+    "effects": [],
+    "flavor_text": "균형을 맞추는 데 필요한 물체를 요구하는 천칭.",
+    "refund_poten": 12,
+    "target": 1,
+    "effect_desc": "타격 후 받는 피해량이 3%씩 감소하고 피격시 주는 피해량이 3%씩 증가합니다. 각각 최대 10회 중첩합니다."
+  },
+  {
+    "id": 67,
+    "name": "성가신 뻐꾸기 시계",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_CUCKOO_CLOCK",
+    "obt_place": 4,
+    "obt_journey_name": "기초 평가전 준비",
+    "effects": [],
+    "flavor_text": "듣는 사람이 싫어할 만한 시간만 알려주는 시계",
+    "refund_poten": 12,
+    "target": 1,
+    "effect_desc": "기본기 타격 후 대상에게 100% 확률로 2턴 간 중독을 발생시킵니다. 중독은 자신의 치대 생명력에비례해 피해량이 증가합니다."
+  },
+  {
+    "id": 68,
+    "name": "폭신폭신 인형 친구",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_DOLL_FRIEND",
+    "obt_place": 4,
+    "obt_journey_name": "기초 평가전 준비",
+    "effects": [],
+    "flavor_text": "위기의 순간마다 어린 친구를 구해 준 낡은 인형",
+    "refund_poten": 12,
+    "target": 1,
+    "effect_desc": "기본기 사용 후 자신에게 1턴 간 보호막을 발생시킵니다. 보호막은 자신의 공격력에 비례해 증가합니다."
+  },
+  {
+    "id": 69,
+    "name": "별빛 공훈 휘장",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MEDAL_MONASTIR_GOLD",
+    "obt_place": 4,
+    "obt_journey_id": 38,
+    "obt_journey_name": "탈영병 토벌 의뢰",
+    "effects": [],
+    "flavor_text": "모나스티르의 별빛 공훈 휘장. 전투에서 최고의 공적을 남긴 기사에게 수여된다.",
+    "refund_poten": 12,
+    "target": 1,
+    "effect_desc": "궁극기 사용 시 자신의 효과 적중과 효과 저항이 5% 씩 증가합니다. 최대 5회 중첩합니다."
+  },
+  {
+    "id": 70,
+    "name": "금빛 공훈 휘장",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MEDAL_MONASTIR_STAR_LIGHT",
+    "obt_place": 4,
+    "obt_journey_id": 38,
+    "obt_journey_name": "탈영병 토벌 의뢰",
+    "effects": [],
+    "flavor_text": "모나스티르의 금빛 공훈 휘장. 전투에서 뛰어난 공적을 남긴 기사에게 수여된다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "턴 시작 시 자신의 치명타 확률이 5%씩 증가합니다. 최대 5회 중첩합니다."
+  },
+  {
+    "id": 71,
+    "name": "카페 스트레가 쿠폰",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_STREGA_COUPON",
+    "obt_place": 4,
+    "obt_journey_id": 36,
+    "obt_journey_name": "약탈자 토벌 의뢰",
+    "effects": [],
+    "flavor_text": "카페 스트레가에서 사용할 수 있는 쿠폰. 달콤한 휴식이 필요한 순간을 위한 완벽한 선택!",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "궁극기 사용 후 노바 포스를 추가로 2 획득합니다. 전투 중 1회만 발생합니다."
+  },
+  {
+    "id": 72,
+    "name": "리세트의 저금통",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_SHOP_GIRL_COIN_BANK",
+    "obt_place": 4,
+    "obt_journey_id": 19,
+    "obt_journey_name": "리세트의 우울",
+    "effects": [],
+    "flavor_text": "리세트의 희망으로 가득찼던 돼지 저금통. 꿈을 향해 함께 나아가는 날랜 파트너다.",
+    "refund_poten": 12,
+    "target": 3,
+    "effect_desc": "턴 시작 시 자신의 속도가 2%씩 증가합니다. 최대 5회 중첩합니다."
+  },
+  {
+    "id": 73,
+    "name": "달빛 립밤 샘플",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MOON_LIGHT_LIP_BALM",
+    "obt_place": 4,
+    "obt_journey_id": 21,
+    "obt_journey_name": "리세트의 유혹",
+    "effects": [],
+    "flavor_text": "포근하고 따뜻한 느낌을 주는 립밤. 달빛 크림을 구매할 떄 함께 받은 사은품이다.",
+    "refund_poten": 4,
+    "target": 1,
+    "effect_desc": "궁극기 사용 시 자신의 효과 적중이 10% 증가합니다. 전투 중 1회만 발생합니다."
+  },
+  {
+    "id": 74,
+    "name": "달빛 향수 샘플",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MOON_LIGHT_PERFUME",
+    "obt_place": 4,
+    "obt_journey_id": 21,
+    "obt_journey_name": "리세트의 유혹",
+    "effects": [],
+    "flavor_text": "포근하고 따뜻한 느낌을 주는 향수. 달빛 크림을 구매할 때 함께받은 사은품이다.",
+    "refund_poten": 4,
+    "target": 1,
+    "effect_desc": "궁극기 사용 시 자신의 효과 저항이 10% 증가합니다. 전투 중 1회만 발생합니다."
+  },
+  {
+    "id": 75,
+    "name": "달빛 에센스 샘플",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MOON_LIGHT_ESSENCE",
+    "obt_place": 4,
+    "obt_journey_id": 21,
+    "obt_journey_name": "리세트의 유혹",
+    "effects": [],
+    "flavor_text": "포근하고 따뜻한 느낌을 주는 에센스. 달빛 크림을 구매할 때 함께받은 사은품이다.",
+    "refund_poten": 4,
+    "target": 1,
+    "effect_desc": "궁극기 사용 시 자신의 효과 적중과 효과 저항이 10% 증가합니다. 전투 중 1회만 발생합니다."
+  },
+  {
+    "id": 76,
+    "name": "고풍스러운 열쇠",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_OLD_FAHIONED_KEY",
+    "obt_place": 4,
+    "obt_journey_id": 18,
+    "obt_journey_name": "리세트의 휴가",
+    "req_journey_id": 19,
+    "req_journey_name": "리세트의 우울",
+    "effects": [],
+    "flavor_text": "NOA 시내에서 습득한 고풍스러운 열쇠. 작지만 생각보다 무겁다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "최초 전투 시작 시 자신의 속도가 5% 증가합니다."
+  },
+  {
+    "id": 77,
+    "name": "임전무퇴",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_GOING_DOWN_SWINGING",
+    "obt_place": 4,
+    "obt_journey_name": "모범의 선물",
+    "effects": [],
+    "flavor_text": "폭정에 맞서 백성들의 편에서 싸운 사제들의 투구.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "피격 후 자신의 생명력이 20% 이하로 떨어지지 않습니다. 전투 중 1회만 발생합니다."
+  },
+  {
+    "id": 78,
+    "name": "이중 뿔피리",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_DOUBLE_HORN",
+    "obt_place": 4,
+    "obt_journey_name": "모범의 선물, 여정의 선물",
+    "effects": [],
+    "flavor_text": "먼 옛날 구름을 흔들어 비와 천둥을 불렀다고 전해지는 제의용 악기.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "공격이 아닌 스킬 사용 후 적 전체에게 자신의 최대 생명력에 비례한 연쇄 피해를 발생시킵니다."
+  },
+  {
+    "id": 79,
+    "name": "정체불명의 유물",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_UNIDENTIFIED_ARTIFACT",
+    "obt_place": 4,
+    "obt_journey_id": 22,
+    "obt_journey_name": "미궁 탐사",
+    "req_journey_id": "10,11",
+    "req_journey_name": "교단의 제안,간단한 테스트",
+    "effects": [],
+    "flavor_text": "무너진 유적 잔해에서 나온 다이얼 형태의 유물. 무엇에 쓰이는 물건인건지는 알 수 없다.",
+    "refund_poten": 4,
+    "target": 1,
+    "effect_desc": "턴 시작 시 자신의 효과 저항이 5%씩 증가합니다. 최대 3회 중첩합니다."
+  },
+  {
+    "id": 80,
+    "name": "비치발리볼 우승 트로피",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_BEACH_VOLLEYBALL_WINNING_TROPHY",
+    "obt_place": 4,
+    "obt_journey_name": "비치발리볼 대회 결승전 승리",
+    "effects": [],
+    "flavor_text": "플로라의 비치발리볼 대회 우승 트로피. 영광의 우승자에게 지급되는 트로피.",
+    "refund_poten": 12,
+    "target": 3,
+    "effect_desc": "최초 전투 시작 시 자신의 효과 적중이 15% 증가합니다."
+  },
+  {
+    "id": 81,
+    "name": "스트릿 베이커스 굿즈Ⅰ",
+    "rarity": 3,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MASCOT_NORMAL",
+    "obt_place": 4,
+    "obt_journey_id": 37,
+    "obt_journey_name": "슬라임 토벌 의뢰",
+    "effects": [],
+    "flavor_text": "스트릿 베이커스와 물개사장 시리즈의 콜라보 굿즈. 일정 금액 이상을 구매하면 받을 수 있다.",
+    "refund_poten": 4,
+    "target": 1,
+    "effect_desc": "턴 시작 시 자신의 치명타 확률이 5%씩 증가합니다. 최대 3회 중첩합니다."
+  },
+  {
+    "id": 82,
+    "name": "스트릿 베이커스 굿즈Ⅱ",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MASCOT_LMITED",
+    "obt_place": 4,
+    "obt_journey_id": 37,
+    "obt_journey_name": "슬라임 토벌 의뢰",
+    "effects": [],
+    "flavor_text": "스트릿 베이커스와 물개사장 시리즈의 콜라보 굿즈. 일정 확률로 뽑을 수 있는 희귀 아이템.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "피격 후 자신의 효과 저항이 5%씩 증가합니다. 최대 3회 중첩합니다."
+  },
+  {
+    "id": 83,
+    "name": "스트릿 베이커스 굿즈Ⅲ",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_MASCOT_FIRST_EDITION",
+    "obt_place": 4,
+    "obt_journey_id": 37,
+    "obt_journey_name": "슬라임 토벌 의뢰",
+    "effects": [],
+    "flavor_text": "스트릿 베이커스와 물개사장 시리즈의 콜라보 굿즈. 단 하나밖에 생산되지 않은 초 희귀 아이템.",
+    "refund_poten": 12,
+    "target": 1,
+    "effect_desc": "타격 후 자신의 효과 적중이 5%씩 증가합니다. 최대 3회 중첩합니다."
+  },
+  {
+    "id": 84,
+    "name": "빈 약병",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_EMPTY_BOTTLE",
+    "obt_place": 4,
+    "obt_journey_id": 8,
+    "obt_journey_name": "시작형 강화제",
+    "effects": [],
+    "flavor_text": "연금술사들이 특수한 용액을 보관하기 위해 만든 병. 보관을 소홀히 하면 사고로 이어질 수도 있다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "전투 시작 시 자신에게 2턴 간 무작위 강화 효과를 발생시킵니다. 자신의 최대 생명력에 비례해 증가합니다. (무작위 강화효과 : 보호막 / 효과 적중 증가 / 효과 저항 증가)"
+  },
+  {
+    "id": 85,
+    "name": "석상의 꽃",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_STATUE_FLOWER",
+    "obt_place": 4,
+    "obt_journey_id": 12,
+    "obt_journey_name": "신비한 석상",
+    "req_journey_id": 16,
+    "req_journey_name": "꽃에 숨겨진 힘",
+    "effects": [],
+    "flavor_text": "외딴 곳의 석상에게서 얻은 꽃. 소박한 만듦새와 다르게 쥐고 있으면 신기한 향기가 주위를 맴돈다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "최초 전투 시작 시 자신의 최대 생명력이 10% 증가하고 공격력이 10% 감소합니다."
+  },
+  {
+    "id": 86,
+    "name": "석상의 칼",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_STATUE_SWORD",
+    "obt_place": 4,
+    "obt_journey_id": 12,
+    "obt_journey_name": "신비한 석상",
+    "req_journey_id": 15,
+    "req_journey_name": "칼에 숨겨진 힘",
+    "effects": [],
+    "flavor_text": "외딴 곳의 석상에게서 얻은 칼. 투박한 만듦새와 다르게 쥐고 있으면 무엇이든 벨 수 있을 것 같다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "최초 전투 시작 시 자신의 공격력이 10% 증가하고 최대 생명력이 10% 감소합니다."
+  },
+  {
+    "id": 87,
+    "name": "특전 포스터",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_FIRST_POSTER",
+    "obt_place": 4,
+    "obt_journey_id": 0,
+    "obt_journey_name": "여가 시간",
+    "req_journey_id": 1,
+    "req_journey_name": "수집가가 온다",
+    "effects": [],
+    "flavor_text": "열세 번째 공허체 13의 상영 첫 주에 배포한 포스터. 시리즈에 개근한 조연의 충격적인 결말을 폭로하고 있다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "최초 전투 시작 시 자신의 속도가 5% 증가합니다."
+  },
+  {
+    "id": 88,
+    "name": "놓칠 수 없는 기회",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_CHANCE_KATANA",
+    "obt_place": 4,
+    "obt_journey_name": "여정의 선물",
+    "effects": [],
+    "flavor_text": "가족의 복수를 이루었던 어느 무사의 칼날. 그 날끝이 마지막으로 향한 곳은 주인의 심장이었다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "적 처치 시 노바 포스를 4 획득하고 추가 턴이 발생합니다."
+  },
+  {
+    "id": 89,
+    "name": "메아리치는 축복",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_ECHO_BLESS",
+    "obt_place": 4,
+    "obt_journey_name": "여정의 선물",
+    "effects": [],
+    "flavor_text": "병자들을 치료해 주고 다니던 순례자의 지팡이.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "기본기 타격 후 현재 생명력 비율이 가장 낮은 대상에게 자신의 최대 생명력에 비례한 연쇄 피해를 발생 시킵니다."
+  },
+  {
+    "id": 90,
+    "name": "일찍 일어난 새",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_TRIPLE_BULLET",
+    "obt_place": 4,
+    "obt_journey_name": "여정의 선물",
+    "effects": [],
+    "flavor_text": "어느 암살자가 사용했다는 고풍스러운 권총. 탄환 한 발로 역사를 뒤집은 전설이 깃들어 있다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "적 처치 시 궁극기 쿨타임을 초기화 시킵니다. 3턴에 1번만 발생합니다."
+  },
+  {
+    "id": 91,
+    "name": "기사회생 구급약",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_FIRST_AID_KIT",
+    "obt_place": 4,
+    "obt_journey_name": "여정의 선물, 모범의 선물",
+    "effects": [],
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "피격 후 자신의 생명력이 30% 이하이면 자신에게 2턴 간 지속 회복을 발생시킵니다. 회복량은 자신의 공격력에 비례해 증가합니다. 5턴에 1번만 발생합니다."
+  },
+  {
+    "id": 92,
+    "name": "수상한 상자",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_STRANGE_BOX",
+    "obt_place": 4,
+    "obt_journey_name": "우연한 발견",
+    "req_journey_id": 4,
+    "req_journey_name": "교단의 분실물",
+    "effects": [],
+    "flavor_text": "흙 속에서 발견한 오래된 상자. 매우 정교한 잠금 장치로 봉인되어 있어서, 무엇이 들어있을지 궁금하게 만든다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "턴 시작 시 자신의 효과 적중과 효과 저항이 3%씩 증가합니다. 최대 5회 중첩됩니다."
+  },
+  {
+    "id": 93,
+    "name": "굶주린 광대 가면",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_PIERROT_MASK",
+    "obt_place": 4,
+    "obt_journey_name": "친절의 선물",
+    "effects": [],
+    "flavor_text": "평생 웃는 법을 알지 못했던 광대의 가면. 바라보고만 있어도 폭소를 연발하게 한다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "스킬 사용 후 무작위 적에게 기본기를 발동합니다. 3턴에 1번만 발생합니다."
+  },
+  {
+    "id": 94,
+    "name": "기사의 영광",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_KNIGHT_GLORY",
+    "obt_place": 4,
+    "obt_journey_name": "친절의 선물",
+    "effects": [],
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "공격이 아닌 궁극기 사용 후 최대 생명력이 가장 높은 적에게 100% 확률로 3턴 간 중독을 발생시킵니다. 기본기 사용 후 중독 상태인 적 전체에게 자신의 최대 생명력에 비례한 연쇄 피해를 발생시킵니다. 중독은 자신의 최대 생명력에 비례해 피해량이 증가합니다."
+  },
+  {
+    "id": 95,
+    "name": "춤추는 톱날",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_DANCING_SAW",
+    "obt_place": 4,
+    "obt_journey_name": "친절의 선물",
+    "effects": [],
+    "flavor_text": "어떤 무용수의 망집이 깃들었다는 오싹한 물건.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "치명타 발생 시 적 전체에게 100%확률로 1턴 간 출혈을 발생시킵니다. 출혈은 자신의 공격력에 비례해 피해량이 증가합니다."
+  },
+  {
+    "id": 96,
+    "name": "경호용 자동인형",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_AUTOMATIC_DOLL",
+    "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
+    "effects": [],
+    "refund_poten": 8,
+    "target": 2,
+    "effect_desc": "15턴 이전에 턴 종료 시 자신에게 1턴 간 보호막을 발생시킵니다. 보호막은 자신의 최대 생명력에 비례해 증가합니다."
+  },
+  {
+    "id": 97,
+    "name": "부끄럼쟁이",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_SHY_PERSON",
+    "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
+    "effects": [],
+    "refund_poten": 8,
+    "target": 2,
+    "effect_desc": "최초 전투 시작 시 자신에게 2턴 간 효과 저항 증가를 발생시킵니다."
+  },
+  {
+    "id": 98,
+    "name": "빨간 구두",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_RED_SHOES",
+    "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
+    "effects": [],
+    "flavor_text": "피를 먹을수록 스텝이 빨라지는 새빨간 무용 구두.",
+    "refund_poten": 12,
+    "target": 2,
+    "effect_desc": "치명타 피격 후 자신의 행동 게이지를 30% 증가시킵니다."
+  },
+  {
+    "id": 99,
+    "name": "영구 회전 장치",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_ROTATING_DEVICE",
+    "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
+    "effects": [],
+    "flavor_text": "누군가 멈추지 않으면 끝없이 돌아가는 장난감.",
+    "refund_poten": 12,
+    "target": 2,
+    "effect_desc": "스킬 사용 후 자신의 속도가 3%씩 증가합니다. 최대 5회 중첩합니다."
+  },
+  {
+    "id": 100,
+    "name": "결의에 찬 결투 장갑",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_DUEL_GLOVE",
+    "obt_place": 4,
+    "obt_journey_name": "모범의 선물",
+    "effects": [],
+    "flavor_text": "카노푸스의 결투 마지막 상연에 사용된 소품.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "피격 후 자신의 생명력이 50% 이상이면 적 전체에게 100% 확률로 1턴 간 도발을 발생시키고 자신에게 1턴 간 보호막을 발생시킵니다. 보호막은 자신의 공격력에 비례해 증가합니다."
+  },
+  {
+    "id": 101,
+    "name": "기사의 명예",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_KNIGHT_HONOR",
+    "obt_place": 4,
+    "obt_journey_name": "모범의 선물",
+    "effects": [],
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "피격 후 자신의 강인도가 격파되었다면 자신에게 3턴 간 보호막을 발생시킵니다. 보호막은 자신의 공격력에 비례해 증가합니다."
+  },
+  {
+    "id": 102,
+    "name": "독살스러운 파수꾼",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_POISONOUS_GUARD",
+    "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
+    "effects": [],
+    "flavor_text": "병을 쫓기 위해 맹독성 개구리를 본떠 만든 유물.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "특수기 사용 후 공격력이 가장 높은 적에게 100% 확률로 2턴 간 중독을 발생시킵니다. 기본기 사용 후 적이 중독 상태이면 자신의 행동 게이지를 30% 증가시킵니다. 중독은 자신의 최대 생명력에 비례해 피해량이 증가합니다."
+  },
+  {
+    "id": 103,
+    "name": "만족도 설문지",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_SURVEY_PAPER",
+    "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
+    "effects": []
+  },
+  {
+    "id": 104,
+    "name": "아담한 오아시스",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_UTILITY_JACKET",
+    "obt_place": 4,
+    "obt_journey_id": 1,
+    "obt_journey_name": "수집가가 온다",
+    "effects": []
+  },
+  {
+    "id": 105,
+    "name": "강철꽃",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_STEEL_FLOWER",
+    "obt_place": 4,
+    "effects": [],
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "공격이 아닌 스킬 사용 후 자신에게 과충전(해제불가)을 발생시킵니다. 기본기 사용 후 자신이 과충전(해제불가) 상태이면 과충전(해제불가)을 해제시키고 적에게 자신의 최대 생명력에 비례한 연쇄 피해를 발생시킵니다."
+  },
+  {
+    "id": 106,
+    "name": "드루이드의 하프",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_DRUID_HARP",
+    "obt_place": 4,
+    "effects": [],
+    "flavor_text": "연주하는 동안 연주자를 덩굴로 감싸 지켜 준다는 하프.",
+    "refund_poten": 8,
+    "target": 2,
+    "effect_desc": "스킬 사용 후 자신의 방어력이 3%씩 증가합니다. 최대 5회 중첩합니다."
+  },
+  {
+    "id": 107,
+    "name": "눈이번쩍",
+    "rarity": 4,
+    "tag": 2,
+    "obt_place": 4,
+    "effects": [],
+    "refund_poten": 8,
+    "target": 2,
+    "effect_desc": "최초 전투 시작 시 자신에게 2턴 간 효과 적중 증가를 발생시킵니다."
+  }
+]

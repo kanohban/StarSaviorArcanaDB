@@ -262,10 +262,8 @@ html {
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    /* More gap */
-    padding: 0.8rem;
-    /* More padding */
+    gap: 0.5rem;
+    padding: 0.6rem;
     text-decoration: none;
     color: var(--header-text-color);
     border-radius: 6px;
@@ -273,7 +271,6 @@ html {
     font-size: 0.95rem;
     cursor: pointer;
     white-space: nowrap;
-    /* Prevent wrapping */
 }
 
 .nav-item:hover {

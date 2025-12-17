@@ -10,6 +10,13 @@
             "left": [
                 {
                     "type": "button",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
+                    "action": "navigate",
+                    "target": "arcana.html"
+                },
+                {
+                    "type": "button",
                     "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "구원자",
                     "action": "navigate",
@@ -42,6 +49,13 @@
                     "title": "가챠",
                     "action": "navigate",
                     "target": "gacha.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아이템 Beta",
+                    "action": "navigate",
+                    "target": "item.html"
                 }
             ],
             "right": [
@@ -72,6 +86,13 @@
                 },
                 {
                     "type": "button",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "여정",
+                    "action": "navigate",
+                    "target": "journey.html"
+                },
+                {
+                    "type": "button",
                     "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "덱 구성",
                     "action": "navigate",
@@ -90,6 +111,13 @@
                     "title": "가챠",
                     "action": "navigate",
                     "target": "gacha.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아이템 Beta",
+                    "action": "navigate",
+                    "target": "item.html"
                 }
             ],
             "right": [
@@ -127,6 +155,13 @@
                 },
                 {
                     "type": "button",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
+                    "action": "navigate",
+                    "target": "deck.html"
+                },
+                {
+                    "type": "button",
                     "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "스케줄러",
                     "action": "navigate",
@@ -138,6 +173,13 @@
                     "title": "가챠",
                     "action": "navigate",
                     "target": "gacha.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아이템 Beta",
+                    "action": "navigate",
+                    "target": "item.html"
                 }
             ],
             "right": [
@@ -161,10 +203,10 @@
                 },
                 {
                     "type": "button",
-                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
-                    "title": "덱 구성",
+                    "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "구원자",
                     "action": "navigate",
-                    "target": "deck.html"
+                    "target": "savior.html"
                 },
                 {
                     "type": "button",
@@ -172,6 +214,13 @@
                     "title": "여정",
                     "action": "navigate",
                     "target": "journey.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
+                    "action": "navigate",
+                    "target": "deck.html"
                 },
                 {
                     "type": "button",
@@ -186,6 +235,13 @@
                     "title": "가챠",
                     "action": "navigate",
                     "target": "gacha.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아이템 Beta",
+                    "action": "navigate",
+                    "target": "item.html"
                 }
             ],
             "right": [
@@ -234,6 +290,20 @@
                     "title": "스케줄러",
                     "action": "navigate",
                     "target": "scheduler.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "가챠",
+                    "action": "navigate",
+                    "target": "gacha.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아이템 Beta",
+                    "action": "navigate",
+                    "target": "item.html"
                 }
             ],
             "right": [
@@ -278,10 +348,86 @@
                 },
                 {
                     "type": "button",
+                    "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "스케줄러",
+                    "action": "navigate",
+                    "target": "scheduler.html"
+                },
+                {
+                    "type": "button",
                     "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
                     "title": "가챠",
                     "action": "navigate",
                     "target": "gacha.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아이템 Beta",
+                    "action": "navigate",
+                    "target": "item.html"
+                }
+            ],
+            "right": [
+                {
+                    "type": "theme-toggle"
+                },
+                {
+                    "type": "view-toggle"
+                }
+            ]
+        },
+        "item": {
+            "title": "아이템 Beta",
+            "left": [
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/arcana.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아르카나",
+                    "action": "navigate",
+                    "target": "arcana.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/savior.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "구원자",
+                    "action": "navigate",
+                    "target": "savior.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/journey.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "여정",
+                    "action": "navigate",
+                    "target": "journey.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/deck.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "덱 구성",
+                    "action": "navigate",
+                    "target": "deck.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/schedule.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "스케줄러",
+                    "action": "navigate",
+                    "target": "scheduler.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "가챠",
+                    "action": "navigate",
+                    "target": "gacha.html"
+                },
+                {
+                    "type": "button",
+                    "icon": "<img src='images/index/search.png' style='width: 100%; height: 100%; object-fit: contain;'>",
+                    "title": "아이템 Beta",
+                    "action": "navigate",
+                    "target": "item.html"
                 }
             ],
             "right": [
