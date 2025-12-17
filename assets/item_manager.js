@@ -53,7 +53,7 @@ const ItemManager = {
 
     loadData: async function () {
         try {
-            const response = await fetch('./data/item.json');
+            const response = await fetch(`./data/item.json?v=${new Date().getTime()}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             this.data = await response.json();
             console.log(`Loaded ${this.data.length} items.`);

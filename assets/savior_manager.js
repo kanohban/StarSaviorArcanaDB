@@ -27,9 +27,9 @@ const SaviorManager = {
         try {
             console.log('Fetching savior data...');
             const [saviorRes, flavorRes, potentialRes] = await Promise.all([
-                fetch('./data/savior.json'),
-                fetch('./data/flavor_text.json'),
-                fetch('./data/potentials.json')
+                fetch(`./data/savior.json?v=${new Date().getTime()}`),
+                fetch(`./data/flavor_text.json?v=${new Date().getTime()}`),
+                fetch(`./data/potentials.json?v=${new Date().getTime()}`)
             ]);
 
             if (!saviorRes.ok) throw new Error(`Savior Data HTTP error! status: ${saviorRes.status}`);
