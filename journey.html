@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>?��? ?�이비어 DB - ?�정</title>
+    <title>스타 세이비어 DB - 여정</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGG707QJHS"></script>
     <script>
@@ -310,26 +310,26 @@
                 <div class="search-area-wrapper">
                     <div class="search-input-wrapper">
                         <input type="text" id="journey-search" class="search-input"
-                            placeholder="?�합 검??(카드, ?�벤?? 보상 ??..." autocomplete="off">
+                            placeholder="통합 검색 (카드, 이벤트, 보상 등)..." autocomplete="off">
                     </div>
                     <div class="search-filters-inline">
                         <label class="filter-checkbox">
-                            <input type="checkbox" id="filter-card" checked> <span>?�르카나</span>
+                            <input type="checkbox" id="filter-card" checked> <span>아르카나</span>
                         </label>
                         <label class="filter-checkbox">
-                            <input type="checkbox" id="filter-journey" checked> <span>?�정 ?�벤??/span>
+                            <input type="checkbox" id="filter-journey" checked> <span>여정 이벤트</span>
                         </label>
                     </div>
                 </div>
 
                 <div class="tab-nav">
-                    <button class="tab-btn active" data-tab="journey" onclick="switchTab('journey')">?�정</button>
-                    <button class="tab-btn" data-tab="resette" onclick="switchTab('resette')">리세??/button>
-                    <button class="tab-btn" data-tab="subjugation" onclick="switchTab('subjugation')">?�벌</button>
-                    <button class="tab-btn" data-tab="aganon" onclick="switchTab('aganon')">?��???/button>
-                    <button class="tab-btn" data-tab="flora" onclick="switchTab('flora')">?�로??/button>
-                    <button class="tab-btn" data-tab="kalide" onclick="switchTab('kalide')">칼라?�드</button>
-                    <button class="tab-btn" data-tab="weather" onclick="switchTab('weather')">?�씨</button>
+                    <button class="tab-btn active" data-tab="journey" onclick="switchTab('journey')">여정</button>
+                    <button class="tab-btn" data-tab="resette" onclick="switchTab('resette')">리세트</button>
+                    <button class="tab-btn" data-tab="subjugation" onclick="switchTab('subjugation')">토벌</button>
+                    <button class="tab-btn" data-tab="aganon" onclick="switchTab('aganon')">아가논</button>
+                    <button class="tab-btn" data-tab="flora" onclick="switchTab('flora')">플로라</button>
+                    <button class="tab-btn" data-tab="kalide" onclick="switchTab('kalide')">칼라이드</button>
+                    <button class="tab-btn" data-tab="weather" onclick="switchTab('weather')">날씨</button>
                 </div>
             </div>
         </header>
@@ -356,11 +356,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="./assets/header_manager.js?v=6.5.0"></script>
+    <script src="./assets/header_manager.js?v=6.4.0"></script>
     <script src="./assets/footer_manager.js"></script>
-    <script src="./assets/hangul_utils.js?v=6.5.0"></script>
+    <script src="./assets/hangul_utils.js?v=6.4.0"></script>
     <!-- Import Search Service -->
-    <script src="./assets/search_service.js?v=6.5.0"></script>
+    <script src="./assets/search_service.js?v=6.4.0"></script>
 
     <script>
         let allData = {}; // Original Journey Data (grouped)
@@ -408,7 +408,7 @@
                 render(); // Initial Tab Render
             } catch (error) {
                 console.error('Failed to load data:', error);
-                document.getElementById('content-area').innerHTML = `<div style="text-align:center;color:red;">?�이??로드 ?�패: ${error.message}</div>`;
+                document.getElementById('content-area').innerHTML = `<div style="text-align:center;color:red;">데이터 로드 실패: ${error.message}</div>`;
             }
         }
 
@@ -431,10 +431,10 @@
 
             const data = allData[currentTab] || [];
             if (data.length === 0) {
-                container.innerHTML = '<div style="text-align:center; padding:20px;">?�이?��? ?�습?�다.</div>';
+                container.innerHTML = '<div style="text-align:center; padding:20px;">데이터가 없습니다.</div>';
                 return;
             }
-            renderEvents(data, `�?${data.length}개의 ?�벤?��? ?�습?�다.`);
+            renderEvents(data, `총 ${data.length}개의 이벤트가 있습니다.`);
         }
 
         // Original Journey Render Helper
@@ -469,8 +469,8 @@
                                     ${choice.condition ? `<span class="meta-pill value-condition" style="font-size:0.8rem; padding:2px 10px; margin-left: 10px; flex-shrink: 0;">${choice.condition}</span>` : ''}
                                 </div>
                                 <div class="choice-results">
-                                    ${choice.result_positive ? `<div class="result-positive"><span class="result-label">?�공:</span> ${choice.result_positive}</div>` : ''}
-                                    ${choice.result_negative ? `<div class="result-negative"><span class="result-label">?�패:</span> ${choice.result_negative}</div>` : ''}
+                                    ${choice.result_positive ? `<div class="result-positive"><span class="result-label">성공:</span> ${choice.result_positive}</div>` : ''}
+                                    ${choice.result_negative ? `<div class="result-negative"><span class="result-label">실패:</span> ${choice.result_negative}</div>` : ''}
                                     ${choice.result ? `<div class="result-common">${choice.result}</div>` : ''}
                                 </div>
                             </li>
@@ -528,7 +528,7 @@
             searchResultsGrid.innerHTML = '';
 
             if (results.length === 0) {
-                searchResultsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:20px;">검??결과가 ?�습?�다.</div>';
+                searchResultsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding:20px;">검색 결과가 없습니다.</div>';
                 return;
             }
 
@@ -540,7 +540,7 @@
                 wrapper.className = 'result-card-container';
 
                 // Unified Generic Card for Grid
-                const badgeText = item.type === 'card' ? '?�르카나' : '?�정 ?�벤??;
+                const badgeText = item.type === 'card' ? '아르카나' : '여정 이벤트';
 
                 // Unified styling: "result-card" class provides base, inline style ensures consistency
                 // Note: We use .result-card for both to ensure they look same (rounded box).
@@ -610,80 +610,80 @@
                 const card = item.data || item;
 
                 let typeStr = '';
-                if (card.?�?? {
-                    if (card.?�어??=== 'SSR') {
-                        typeStr = `${card.?�???�련 || ''} / ${card.?�??보조1 || ''} / ${card.?�??보조2 || ''}`;
+                if (card.타입) {
+                    if (card.레어도 === 'SSR') {
+                        typeStr = `${card.타입.훈련 || ''} / ${card.타입.보조1 || ''} / ${card.타입.보조2 || ''}`;
                     } else {
-                        typeStr = card.?�???�련 || '';
+                        typeStr = card.타입.훈련 || '';
                     }
                 }
 
                 let potentialDesc = '-';
-                if (card.고유?�재 && card.고유?�재.?�름 && potentialsData) {
-                    potentialDesc = potentialsData[card.고유?�재.?�름] || '-';
+                if (card.고유잠재 && card.고유잠재.이름 && potentialsData) {
+                    potentialDesc = potentialsData[card.고유잠재.이름] || '-';
                 }
 
                 html = `
                     <div class="modal-card-header">
-                        <img src="${card.?��?지}" alt="${card.?�름}" class="modal-card-img" onerror="this.style.display='none'">
+                        <img src="${card.이미지}" alt="${card.이름}" class="modal-card-img" onerror="this.style.display='none'">
                         <div class="modal-card-info">
-                            <h2>${card.?�름}</h2>
+                            <h2>${card.이름}</h2>
                             <div class="modal-card-meta">
-                                <span class="badge badge-rarity">${card.?�어??</span>
+                                <span class="badge badge-rarity">${card.레어도}</span>
                                 <span class="badge badge-type">${typeStr}</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="modal-section">
-                        <h3>고유 ?�과: ${card.고유?�과?.?�름 || '-'}</h3>
-                        <p>${card.고유?�과?.?�명 || '-'}</p>
+                        <h3>고유 효과: ${card.고유효과?.이름 || '-'}</h3>
+                        <p>${card.고유효과?.설명 || '-'}</p>
                     </div>
 
                     <div class="modal-section">
-                        <h3>고유 ?�재: ${card.고유?�재?.?�름 || '-'}</h3>
+                        <h3>고유 잠재: ${card.고유잠재?.이름 || '-'}</h3>
                         <p>${potentialDesc}</p>
                     </div>
                 `;
 
                 // --- Events Section (Full Render) ---
-                if (card.?�벤?? {
-                    html += `<div class="modal-section"><h3>?�정 ?�벤??/h3>`;
+                if (card.이벤트) {
+                    html += `<div class="modal-section"><h3>여정 이벤트</h3>`;
 
-                    ['1?�계', '2?�계', '3?�계'].forEach((stageKey, index) => {
-                        const stage = card.?�벤??stageKey];
+                    ['1단계', '2단계', '3단계'].forEach((stageKey, index) => {
+                        const stage = card.이벤트[stageKey];
                         if (stage) {
-                            const eventName = (card.?�벤???�름 && card.?�벤???�름[index]) ? card.?�벤???�름[index] : stageKey;
+                            const eventName = (card.이벤트.이름 && card.이벤트.이름[index]) ? card.이벤트.이름[index] : stageKey;
                             html += `
                                 <div class="stage-block">
                                     <h4>${eventName}</h4>
                                     <div class="stage-choices">
                             `;
 
-                            const hasB = stage['?�택지B'] && stage['?�택지B'].length > 0 && stage['?�택지B'][0].?�득 && stage['?�택지B'][0].?�득.length > 0;
+                            const hasB = stage['선택지B'] && stage['선택지B'].length > 0 && stage['선택지B'][0].획득 && stage['선택지B'][0].획득.length > 0;
 
-                            ['?�택지A', '?�택지B'].forEach(choiceKey => {
-                                const choiceName = stage.?�름_?�택지?.[choiceKey] || (choiceKey === '?�택지A' ? 'A' : 'B');
+                            ['선택지A', '선택지B'].forEach(choiceKey => {
+                                const choiceName = stage.이름_선택지?.[choiceKey] || (choiceKey === '선택지A' ? 'A' : 'B');
                                 const choices = stage[choiceKey];
 
-                                if (choices && choices.length > 0 && choices[0].?�득 && choices[0].?�득.length > 0) {
+                                if (choices && choices.length > 0 && choices[0].획득 && choices[0].획득.length > 0) {
                                     html += `<div class="choice-column">`;
 
-                                    if (choiceKey === '?�택지B' || hasB) {
+                                    if (choiceKey === '선택지B' || hasB) {
                                         html += `<div class="choice-header">${choiceName}</div>`;
                                     }
 
                                     html += `<div class="choice-rewards">`;
 
                                     choices.forEach(group => {
-                                        if (group.?�득 && group.?�득.length > 0) {
-                                            html += `<div class="reward-group ${group.?��? === '?�공' ? 'success' : (group.?��? === '?�패' ? 'fail' : '')}">`;
-                                            if (group.?��? !== '고정') html += `<div class="reward-badge">${group.?��?}</div>`;
+                                        if (group.획득 && group.획득.length > 0) {
+                                            html += `<div class="reward-group ${group.여부 === '성공' ? 'success' : (group.여부 === '실패' ? 'fail' : '')}">`;
+                                            if (group.여부 !== '고정') html += `<div class="reward-badge">${group.여부}</div>`;
 
-                                            group.?�득.forEach(item => {
+                                            group.획득.forEach(item => {
                                                 html += `<div class="reward-item">
-                                                    <span class="reward-type">${item.?�??</span>
-                                                    <span class="reward-value">${item.?�치}</span>
+                                                    <span class="reward-type">${item.타입}</span>
+                                                    <span class="reward-value">${item.수치}</span>
                                                 </div>`;
                                             });
                                             html += `</div>`;
