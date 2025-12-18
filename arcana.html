@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>스타 세이비어 DB - 아르카나</title>
+  <title>?��? ?�이비어 DB - ?�르카나</title>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGG707QJHS"></script>
   <script>
@@ -17,19 +17,19 @@
   <link rel="icon" type="image/png" href="./images/index/index_icon.png">
   <script type="module" crossorigin src="./assets/index-DrY0adZU.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-DBwFzK5i.css">
-  <link rel="stylesheet" href="./assets/header.css?v=6.4.0">
-  <link rel="stylesheet" href="./assets/modal.css?v=6.4.0">
+  <link rel="stylesheet" href="./assets/header.css?v=6.5.0">
+  <link rel="stylesheet" href="./assets/modal.css?v=6.5.0">
 </head>
 
 <body>
   <div id="root"></div>
   <footer id="footer-container"></footer>
 
-  <script src="./assets/header_manager.js?v=6.4.0"></script>
-  <script src="./assets/footer_manager.js?v=6.4.0"></script>
-  <script src="./assets/modal_manager.js?v=6.4.0"></script>
-  <script src="./assets/hangul_utils.js?v=6.4.0"></script>
-  <script src="./assets/search_service.js?v=6.4.0"></script>
+  <script src="./assets/header_manager.js?v=6.5.0"></script>
+  <script src="./assets/footer_manager.js?v=6.5.0"></script>
+  <script src="./assets/modal_manager.js?v=6.5.0"></script>
+  <script src="./assets/hangul_utils.js?v=6.5.0"></script>
+  <script src="./assets/search_service.js?v=6.5.0"></script>
   <script>
     (function () {
       // 1. Initialize State from LocalStorage
@@ -102,7 +102,7 @@
         customInput.id = 'custom-search-input';
         customInput.classList.remove('handled-custom-search');
         customInput.value = '';
-        customInput.placeholder = '카드 이름, 속성, 효과 검색...';
+        customInput.placeholder = '카드 ?�름, ?�성, ?�과 검??..';
 
         // Hide Original (Keep it in DOM for React)
         originalInput.style.display = 'none';
@@ -175,8 +175,8 @@
       function modifyFilters() {
         const options = document.querySelectorAll('option');
         options.forEach(opt => {
-          if (opt.textContent === '모든 등급') opt.textContent = '등급';
-          if (opt.textContent === '모든 타입') opt.textContent = '타입';
+          if (opt.textContent === '모든 ?�급') opt.textContent = '?�급';
+          if (opt.textContent === '모든 ?�??) opt.textContent = '?�??;
         });
 
         // Inject Star Filter Button if not exists
@@ -187,7 +187,7 @@
           // Use header-btn class for consistent design
           starBtn.className = 'header-btn fav-filter-btn';
           starBtn.title = '즐겨찾기 모아보기';
-          starBtn.innerHTML = '★'; // Star Icon
+          starBtn.innerHTML = '??; // Star Icon
 
           // Load saved filter state
           const isFilterActive = localStorage.getItem('fav_filter_active') === 'true';
@@ -361,9 +361,9 @@
       function updateStatTags() {
         const tags = document.querySelectorAll('.stat-tag');
         const iconMap = {
-          '힘': '힘.png',
+          '??: '??png',
           '체력': '체력.png',
-          '인내': '인내.png',
+          '?�내': '?�내.png',
           '집중': '집중.png',
           '보호': '보호.png',
         };

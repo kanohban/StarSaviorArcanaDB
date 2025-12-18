@@ -165,6 +165,7 @@ class Skill {
     }
 
     setActiveLevels = (info) => {
+        if (!info) return;
         let level = 1;
         for (let i = 2; i < info.length; i += 2) {
             this.levels.push({

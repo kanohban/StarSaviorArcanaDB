@@ -3,25 +3,17 @@ const fs = require("fs");
 const path = require("path");
 const { Item } = require("./classes/item");
 
-// Try to read from game_data.xlsx first, if item sheet not found, try 아이템 DB.xlsx (for development flexibility)
+// Try to read from game_data.xlsx
 let file;
 let sheetName = "item";
 const gameDataPath = "./import/game_data.xlsx";
-const itemDbPath = "./import/아이템 DB.xlsx";
 
 try {
     if (fs.existsSync(gameDataPath)) {
         file = XLSX.readFile(gameDataPath);
-        if (!file.Sheets[sheetName]) {
-            console.log(`Sheet '${sheetName}' not found in ${gameDataPath}. Checking ${itemDbPath}...`);
-            if (fs.existsSync(itemDbPath)) {
-                file = XLSX.readFile(itemDbPath);
-                sheetName = "아이템"; // The sheet name in the other file is Korean
-            }
-        }
-    } else if (fs.existsSync(itemDbPath)) {
-        file = XLSX.readFile(itemDbPath);
-        sheetName = "아이템";
+    } else {
+        console.error(`File not found: ${gameDataPath}`);
+        process.exit(1);
     }
 } catch (e) {
     console.error("Error loading Excel file:", e);
