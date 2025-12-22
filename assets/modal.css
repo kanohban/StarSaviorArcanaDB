@@ -50,12 +50,26 @@
     }
 }
 
-body.mobile-mode .custom-level-toggle {
+/* Hide legacy level button immediately to prevent flicker */
+.modal-content .theme-toggle,
+.modal-content-body .theme-toggle {
+    display: none !important;
+}
+
+
+/* Increase spacing between character name and Type section */
+.modal-content .character-name,
+.modal-card-info .character-name {
+    margin-bottom: 0.5rem !important;
+    display: block;
+}
+
+/* body.mobile-mode .custom-level-toggle {
     top: auto !important;
     bottom: 20px;
     right: 20px;
     top: initial;
-}
+} */
 
 /* --- Dynamic Status Box Colors (Light/Dark Mode) --- */
 

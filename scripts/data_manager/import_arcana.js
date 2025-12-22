@@ -86,10 +86,11 @@ const importArcana = async () => {
     };
 
     for (const statRow of statsData) {
-        const id = statRow.id;
+        const id = Number(statRow.id); // Force Number type
         if (!id) continue;
 
-        const eventRow = eventData.find(e => e.id === id);
+        const eventRow = eventData.find(e => e.id == id); // Loose equality just in case, or strict if both are numbers now.
+
 
         // --- 1. cards.json (Korean) ---
         const cardKr = {

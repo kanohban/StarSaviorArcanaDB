@@ -8,14 +8,21 @@ const DeckManager = {
         level: 35 // Default Level
     },
 
+    // debugLog removed
+
     async init() {
-        await this.fetchData();
-        this.loadDecks(); // Load saved decks
-        this.cacheDOM();
-        this.bindEvents();
-        this.renderDeck();
-        this.renderCardList();
-        this.renderSummary();
+        console.log('DeckManager: Init');
+        try {
+            await this.fetchData();
+            this.loadDecks();
+            this.cacheDOM();
+            this.bindEvents();
+            this.renderDeck();
+            this.renderCardList();
+            this.renderSummary();
+        } catch (e) {
+            console.error(`DeckManager ERROR: ${e.message}`);
+        }
     },
 
     cacheDOM() {
@@ -59,13 +66,22 @@ const DeckManager = {
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
-                if (Array.isArray(parsed) && parsed.length === 5) {
+                if (Array.isArray(parsed) && parsed.length === 5 && parsed.every(d => Array.isArray(d))) {
                     this.data.decks = parsed;
+                } else {
+                    console.warn('loadDecks: Invalid structure. Resetting.');
+                    this.resetDecks();
                 }
             } catch (e) {
-                console.error('Failed to load decks', e);
+                console.error('loadDecks: Parse Error. Resetting.');
+                this.resetDecks();
             }
         }
+    },
+
+    resetDecks() {
+        this.data.decks = [[], [], [], [], []];
+        localStorage.setItem('saved_decks', JSON.stringify(this.data.decks));
     },
 
     saveDecks() {
@@ -82,27 +98,23 @@ const DeckManager = {
     },
 
     async fetchData() {
+        const listEl = document.getElementById('card-list');
+        if (listEl) listEl.innerHTML = '<div class="loading-message">데이터 불러오는 중...</div>';
         try {
-            const [cardsRes, potentialsRes, configRes] = await Promise.all([
-                fetch('./data/cards_stats.json'), // Changed from cards.json to cards_stats.json? Or cards.json?
-                // Wait, script separates them into cards_stats.json and cards_event.json.
-                // But DeckManager usually needs ONE merged object if possible, 
-                // OR we need to load cards_event.json too if we want event search.
-                // Let's assume we load both and merge for search logic.
+            const [cardsRes, eventsRes, potentialsRes, configRes] = await Promise.all([
+                fetch('./data/cards_stats.json'),
+                fetch('./data/cards_event.json').catch(() => ({ ok: false })),
                 fetch('./data/potentials.json'),
                 fetch('./data/stat_config.json')
             ]);
 
-            // cards_stats.json
+            if (!cardsRes.ok) throw new Error(`Cards Stats 404: ${cardsRes.status}`);
             const stats = await cardsRes.json();
 
-            // We need event data for search text generation
-            // Try loading events
             let events = [];
-            try {
-                const evRes = await fetch('./data/cards_event.json');
-                if (evRes.ok) events = await evRes.json();
-            } catch (e) { console.warn('Events load failed', e); }
+            if (eventsRes.ok) {
+                events = await eventsRes.json();
+            }
 
             // Merge events into stats
             this.data.cards = stats.map(c => {
@@ -113,22 +125,11 @@ const DeckManager = {
 
             this.data.potentials = await potentialsRes.json();
             this.data.statConfig = await configRes.json();
+
         } catch (error) {
-            console.error('Failed to fetch data:', error);
-            // Fallback config if fetch fails
-            this.data.statConfig = {
-                globalTypes: {
-                    Integer: ['힘', '체력', '인내', '집중', '보호', '인연', '주화'],
-                    Percentage: ['주화 획득량', '훈련 효과', '컨디션 효과'],
-                    String: []
-                },
-                categoryTypes: {
-                    Percentage: ['초감응 효과', '감응 효과'],
-                    Integer: ['감응 발생률', '추가 잠재력'],
-                    String: []
-                },
-                unclassified: { Integer: [], Percentage: [], String: [] }
-            };
+            console.error(`fetchData ERROR: ${error.message}`);
+            if (listEl) listEl.innerHTML = `<div class="error-message">데이터 로드 실패: ${error.message}</div>`;
+            throw error; // Propagate error to stop init
         }
     },
 
@@ -215,7 +216,15 @@ const DeckManager = {
         this.dom.cardList.innerHTML = '';
 
         const q = query.toLowerCase();
-        const currentDeck = this.data.decks[this.data.currentDeckIndex];
+        const currentDeck = this.data.decks[this.data.currentDeckIndex] || [];
+
+        if (!Array.isArray(currentDeck)) {
+            // critical log removed
+            this.resetDecks();
+            // currentDeck is now a new array from resetDecks? No, resetDecks updates this.data.decks
+            // we need to re-fetch it
+            return; // Retry on next render or just stop to avoid crash
+        }
 
         // 1. Filter
         const filteredCards = this.data.cards.filter(card => {
@@ -223,7 +232,13 @@ const DeckManager = {
             if (currentDeck.includes(card.id)) return false;
 
             // Filter out cards with missing or undefined images
-            if (!card.img || card.img === 'undefined' || card.img === '') return false;
+            if (!card.img || card.img === 'undefined') {
+                // console.warn('DeckManager: Card filtered out due to missing image', card.name);
+                // return false; 
+                // Wait, if it's missing image, we might still want to show it if it's valid data?
+                // But original code filtered it. Let's just be less strict about 'undefined' string.
+                if (card.img === 'undefined') return false;
+            }
 
             if (!q) return true;
 
@@ -315,6 +330,9 @@ const DeckManager = {
         });
 
         // 3. Render
+        if (filteredCards.length === 0) {
+            // log removed
+        }
         filteredCards.forEach(card => {
             const el = document.createElement('div');
             el.className = 'card-item';

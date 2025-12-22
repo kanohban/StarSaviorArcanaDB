@@ -48,7 +48,8 @@ const ItemManager = {
         console.log('Initializing ItemManager...');
         await this.loadData();
         this.bindEvents();
-        this.renderGrid();
+        this.bindEvents();
+        this.applyFilters(); // Apply default filter/sort on init
     },
 
     loadData: async function () {
@@ -130,6 +131,23 @@ const ItemManager = {
             result.sort((a, b) => (b.rarity || 0) - (a.rarity || 0));
         } else if (sortVal === 'rarity-asc') {
             result.sort((a, b) => (a.rarity || 0) - (b.rarity || 0));
+        } else if (sortVal === 'default') {
+            // Recommendation 2: Type Grouping + Rarity Descending
+            // Tag Priority: 부적(2) -> 요리(0) -> 서적(1) -> 귀중품(3) -> Others
+            const tagPriority = { 2: 0, 0: 1, 1: 2, 3: 3 };
+
+            result.sort((a, b) => {
+                const tagA = tagPriority[a.tag] !== undefined ? tagPriority[a.tag] : 99;
+                const tagB = tagPriority[b.tag] !== undefined ? tagPriority[b.tag] : 99;
+
+                if (tagA !== tagB) return tagA - tagB;
+
+                // Then Rarity Descending
+                if ((b.rarity || 0) !== (a.rarity || 0)) return (b.rarity || 0) - (a.rarity || 0);
+
+                // Finally Name Ascending for stability
+                return a.name.localeCompare(b.name, 'ko');
+            });
         }
         // Default: usually keep original order (ID order)
 

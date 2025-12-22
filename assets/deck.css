@@ -684,3 +684,69 @@
     object-fit: cover;
     z-index: 1;
 }
+
+/* --- New Layout Styles --- */
+.card-list-section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    min-height: 500px;
+    /* Ensure visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-selection-header {
+    width: 100%;
+    max-width: 1400px;
+    /* Align with Arcana page max-width */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Override card-grid to be fully responsive and wider */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    /* Arcana style */
+    gap: 15px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Increase max-width for Search Bar in the new layout */
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Ensure Deck Container (top part) doesn't constrain the bottom */
+.deck-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Remove bottom margin if needed */
+}
+
+/* Adjust card item aspect ratio/size if needed to match Arcana exactly */
+.card-item {
+    aspect-ratio: 2/3;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on mobile like Arcana */
+        gap: 8px;
+    }
+
+    .card-list-section {
+        padding: 10px;
+    }
+}

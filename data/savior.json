@@ -9624,5 +9624,302 @@
         ]
       }
     ]
+  },
+  {
+    "id": 34,
+    "name": "아세라(왈츠)",
+    "rank": "SSR",
+    "attr": "질서",
+    "class": "서포터",
+    "atk_type": "참격",
+    "inst": {
+      "birth": 45769,
+      "height": 166,
+      "origin": "NOA",
+      "team": "보이저 구원단",
+      "cv_ko": "김채린",
+      "cv_jp": "타카모리 나츠미",
+      "desc": "정말로 오랜만에 귀족들의 사교 모임에 모습을 드러낸 스트라니스가의 영애. 들리던 소문과 달리 우아하고 기품 넘치는 모습이, 모든 이의 시선을 한 눈에 사로잡는다."
+    },
+    "status": {
+      "atk": "?",
+      "hp": "?",
+      "def": "?",
+      "spd": "?",
+      "crit_rate": "?",
+      "crit_dmg": "?",
+      "eff_rate": "?",
+      "eff_resist": "?",
+      "acc": "?"
+    },
+    "journey_status": {
+      "str": "?",
+      "hp": "?",
+      "end": "?",
+      "focus": "?",
+      "prot": "?"
+    },
+    "potentials": [
+      {
+        "level": 3,
+        "value": "?"
+      },
+      {
+        "level": 6,
+        "value": "?"
+      },
+      {
+        "level": 10,
+        "value": "?"
+      }
+    ],
+    "skills": [
+      {
+        "id": 133,
+        "name": "뤼니송",
+        "type": 0,
+        "atk_type": "참격",
+        "desc": "아세라의 최대 생명력이 15% 증가합니다. 아세라가 벨 라므를 사용 후 현재 생명력 비율이 가장 낮은 아군의 생명력을 회복시킵니다. 자신에게 부여된 통찰 스택에 비례하여 협공 확률이 20%씩 증가하며 최대 5개까지 적용됩니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "desc": [
+              {
+                "type": 2,
+                "value": 5
+              },
+              {
+                "type": 30,
+                "value": 10
+              }
+            ]
+          },
+          {
+            "level": 3,
+            "desc": [
+              {
+                "type": 2,
+                "value": 10
+              },
+              {
+                "type": 30,
+                "value": 15
+              }
+            ]
+          },
+          {
+            "level": 4,
+            "desc": [
+              {
+                "type": 2,
+                "value": 15
+              },
+              {
+                "type": 30,
+                "value": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 134,
+        "name": "벨 라므",
+        "type": 1,
+        "atk_type": "참격",
+        "target": "적 단일",
+        "break": 0,
+        "nova": 0,
+        "desc": "적에게 달려가 크게 올려 벱니다. 자신에게 통찰 스택을 1개 부여합니다. 피해량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가하고 타격 후 아군 전체의 약화 효과를 1개 제거합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 6,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 8,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 1
+          },
+          {
+            "level": 10,
+            "type": 1,
+            "value": 2
+          }
+        ]
+      },
+      {
+        "id": 135,
+        "name": "발 도레",
+        "type": 2,
+        "atk_type": "참격",
+        "target": "적단일",
+        "cooltime": 3,
+        "break": 1,
+        "nova": 1,
+        "desc": "빛을 뿜어내며 검기를 발산하여 적을 공격합니다. 아군 전체의 생명력을 회복시킵니다. 자신에게 2턴 간 별빛 소망(해제불가)을 발생시키고 통찰 스택을 1개 부여합니다. 피해량과 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "타격 시 일시적으로 자신의 강인도 고정 피해가 1 증가합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 1,
+            "value": 2
+          },
+          {
+            "level": 5,
+            "type": 1,
+            "value": 3
+          },
+          {
+            "level": 6,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 7,
+            "type": 1,
+            "value": 5
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 5
+          },
+          {
+            "level": 9,
+            "type": 1,
+            "value": 5
+          },
+          {
+            "level": 10,
+            "type": 2,
+            "value": 5
+          }
+        ]
+      },
+      {
+        "id": 136,
+        "name": "루미에르 소넷",
+        "type": 3,
+        "target": "아군 전체",
+        "cooltime": 4,
+        "nova": 1,
+        "desc": "레드 카펫을 걸어 나오며 아군을 환영합니다. 아군 전체의 생명력을 회복시키고 약화 효과를 2개 해제한 후 자신을 제외한 아군 전체의 행동 게이지를 15% 증가시킵니다. 회복량은 자신의 최대 생명력에 비례해 증가합니다.",
+        "nova_desc": "스킬 사용 후 자신의 강인도를 1 회복합니다.",
+        "levels": [
+          {
+            "level": 1,
+            "type": 0,
+            "value": 0
+          },
+          {
+            "level": 2,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 3,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 4,
+            "type": 2,
+            "value": 1
+          },
+          {
+            "level": 5,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 6,
+            "type": 4,
+            "value": 1
+          },
+          {
+            "level": 7,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 8,
+            "type": 2,
+            "value": 2
+          },
+          {
+            "level": 9,
+            "type": 2,
+            "value": 3
+          },
+          {
+            "level": 10,
+            "type": 2,
+            "value": 3
+          }
+        ]
+      }
+    ]
   }
 ]

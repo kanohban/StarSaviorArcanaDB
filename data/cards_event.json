@@ -5513,5 +5513,115 @@
         ]
       }
     }
+  },
+  {
+    "id": 38,
+    "events": {
+      "stage_1": {
+        "event_name": "연극 관람",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ]
+      },
+      "stage_2": {
+        "event_name": "요리 교실",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ]
+      },
+      "stage_3": {
+        "event_name": "업계의 유명인사",
+        "name": {
+          "choice_A": "",
+          "choice_B": ""
+        },
+        "choice_A": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ],
+        "choice_B": [
+          {
+            "cond": "FIX",
+            "rewards": []
+          },
+          {
+            "cond": "Suc",
+            "rewards": []
+          },
+          {
+            "cond": "Fail",
+            "rewards": []
+          }
+        ]
+      }
+    }
   }
 ]

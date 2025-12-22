@@ -4,7 +4,7 @@
     "name": "노 페인, 노 게인",
     "char": "레이시",
     "rare": "SSR",
-    "img": "images/cards/노_페인__노_게인.png",
+    "img": "images/cards/노_페인__노_게인.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "공격력",
@@ -60,7 +60,7 @@
     "name": "누각 위, 유리달 맞이",
     "char": "린",
     "rare": "SSR",
-    "img": "images/cards/누각_위__유리달_맞이.png",
+    "img": "images/cards/누각_위__유리달_맞이.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "공격력",
@@ -116,7 +116,7 @@
     "name": "친구들과의 산책",
     "char": "다나",
     "rare": "SSR",
-    "img": "images/cards/친구들과의_산책.png",
+    "img": "images/cards/친구들과의_산책.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "치명타",
@@ -172,7 +172,7 @@
     "name": "키라만큼 귀여워!",
     "char": "키라",
     "rare": "SSR",
-    "img": "images/cards/키라만큼_귀여워_.png",
+    "img": "images/cards/키라만큼_귀여워_.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "속도",
@@ -229,7 +229,7 @@
     "name": "하늘의 심판",
     "char": "뮤리엘",
     "rare": "SSR",
-    "img": "images/cards/하늘의_심판.png",
+    "img": "images/cards/하늘의_심판.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "치명타 피해",
@@ -285,7 +285,7 @@
     "name": "달 너머로",
     "char": "루나",
     "rare": "SR",
-    "img": "images/cards/달_너머로.png",
+    "img": "images/cards/달_너머로.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "",
@@ -336,7 +336,7 @@
     "name": "사냥감 고르기",
     "char": "트리쉬",
     "rare": "SR",
-    "img": "images/cards/사냥감_고르기.png",
+    "img": "images/cards/사냥감_고르기.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "",
@@ -387,7 +387,7 @@
     "name": "청소, 뜻밖의 손님",
     "char": "클레어",
     "rare": "SR",
-    "img": "images/cards/청소__뜻밖의_손님.png",
+    "img": "images/cards/청소__뜻밖의_손님.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "",
@@ -438,7 +438,7 @@
     "name": "준비, 조준, 발사",
     "char": "클라리사",
     "rare": "SR",
-    "img": "images/cards/준비__조준__발사.png",
+    "img": "images/cards/준비__조준__발사.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "",
@@ -489,7 +489,7 @@
     "name": "공녀, 왕좌에 오르다",
     "char": "프레이",
     "rare": "SSR",
-    "img": "images/cards/공녀__왕좌에_오르다.png",
+    "img": "images/cards/공녀__왕좌에_오르다.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "특수 효과",
@@ -546,7 +546,7 @@
     "name": "누구보다 프로페셔널",
     "char": "베라",
     "rare": "SSR",
-    "img": "images/cards/누구보다_프로페셔널.png",
+    "img": "images/cards/누구보다_프로페셔널.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "특수 효과",
@@ -602,7 +602,7 @@
     "name": "어느 한 기사의 맹세",
     "char": "샤를",
     "rare": "SSR",
-    "img": "images/cards/어느_한_기사의_맹세.png",
+    "img": "images/cards/어느_한_기사의_맹세.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "속도",
@@ -659,7 +659,7 @@
     "name": "조용한 휴식 시간",
     "char": "에밀리",
     "rare": "SSR",
-    "img": "images/cards/조용한_휴식_시간.png",
+    "img": "images/cards/조용한_휴식_시간.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "특수 효과",
@@ -715,7 +715,7 @@
     "name": "여정 시작",
     "char": "아세라",
     "rare": "SR",
-    "img": "images/cards/여정_시작.png",
+    "img": "images/cards/여정_시작.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "",
@@ -766,7 +766,7 @@
     "name": "폭룡의 습격",
     "char": "스칼렛",
     "rare": "SR",
-    "img": "images/cards/폭룡의_습격.png",
+    "img": "images/cards/폭룡의_습격.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "",
@@ -816,7 +816,7 @@
     "name": "환몽의 나비",
     "char": "세이라",
     "rare": "SR",
-    "img": "images/cards/환몽의_나비.png",
+    "img": "images/cards/환몽의_나비.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "",
@@ -867,7 +867,7 @@
     "name": "본 투 비 와일드",
     "char": "할리",
     "rare": "SSR",
-    "img": "images/cards/본_투_비_와일드.png",
+    "img": "images/cards/본_투_비_와일드.webp",
     "type": {
       "t_train": "인내",
       "t_sup_1": "강인도",
@@ -923,7 +923,7 @@
     "name": "언더커버 캅",
     "char": "안나",
     "rare": "SSR",
-    "img": "images/cards/언더커버_캅.png",
+    "img": "images/cards/언더커버_캅.webp",
     "type": {
       "t_train": "인내",
       "t_sup_1": "강인도",
@@ -979,7 +979,7 @@
     "name": "하늘의 시련",
     "char": "엘리사",
     "rare": "SSR",
-    "img": "images/cards/하늘의_시련.png",
+    "img": "images/cards/하늘의_시련.webp",
     "type": {
       "t_train": "인내",
       "t_sup_1": "방어력",
@@ -1035,7 +1035,7 @@
     "name": "고요한 증오",
     "char": "에데",
     "rare": "SR",
-    "img": "images/cards/고요한_증오.png",
+    "img": "images/cards/고요한_증오.webp",
     "type": {
       "t_train": "인내",
       "t_sup_1": "",
@@ -1086,7 +1086,7 @@
     "name": "래빗 타운",
     "char": "마르실",
     "rare": "SR",
-    "img": "images/cards/래빗_타운.png",
+    "img": "images/cards/래빗_타운.webp",
     "type": {
       "t_train": "인내",
       "t_sup_1": "",
@@ -1138,7 +1138,7 @@
     "name": "메이드 바이 페트라",
     "char": "페트라",
     "rare": "SSR",
-    "img": "images/cards/메이드_바이_페트라.png",
+    "img": "images/cards/메이드_바이_페트라.webp",
     "type": {
       "t_train": "집중",
       "t_sup_1": "치명타 확률",
@@ -1194,7 +1194,7 @@
     "name": "별을 보며 꿈을",
     "char": "나루",
     "rare": "SSR",
-    "img": "images/cards/별을_보며_꿈을.png",
+    "img": "images/cards/별을_보며_꿈을.webp",
     "type": {
       "t_train": "집중",
       "t_sup_1": "치명타 확률",
@@ -1250,7 +1250,7 @@
     "name": "보이지 않는 곳",
     "char": "세레스",
     "rare": "SSR",
-    "img": "images/cards/보이지_않는_곳.png",
+    "img": "images/cards/보이지_않는_곳.webp",
     "type": {
       "t_train": "집중",
       "t_sup_1": "특수 효과",
@@ -1306,7 +1306,7 @@
     "name": "진실은 언제나 하나겠지요?",
     "char": "릴리",
     "rare": "SSR",
-    "img": "images/cards/진실은_언제나_하나겠지요_.png",
+    "img": "images/cards/진실은_언제나_하나겠지요_.webp",
     "type": {
       "t_train": "집중",
       "t_sup_1": "공격력",
@@ -1363,7 +1363,7 @@
     "name": "고양이는 웃지 않는다",
     "char": "스마일",
     "rare": "SR",
-    "img": "images/cards/고양이는_웃지_않는다.png",
+    "img": "images/cards/고양이는_웃지_않는다.webp",
     "type": {
       "t_train": "집중",
       "t_sup_1": "",
@@ -1415,7 +1415,7 @@
     "name": "뒷 마무리",
     "char": "루그",
     "rare": "SR",
-    "img": "images/cards/뒷_마무리.png",
+    "img": "images/cards/뒷_마무리.webp",
     "type": {
       "t_train": "집중",
       "t_sup_1": "",
@@ -1466,7 +1466,7 @@
     "name": "만족스러운 개화",
     "char": "리디아",
     "rare": "SR",
-    "img": "images/cards/만족스러운_개화.png",
+    "img": "images/cards/만족스러운_개화.webp",
     "type": {
       "t_train": "집중",
       "t_sup_1": "",
@@ -1517,7 +1517,7 @@
     "name": "만족스러운 식사",
     "char": "베스타",
     "rare": "SSR",
-    "img": "images/cards/만족스러운_식사.png",
+    "img": "images/cards/만족스러운_식사.webp",
     "type": {
       "t_train": "보호",
       "t_sup_1": "강인도",
@@ -1573,7 +1573,7 @@
     "name": "유리창 너머의 밤 풍경",
     "char": "카르멘",
     "rare": "SSR",
-    "img": "images/cards/유리창_너머의_밤_풍경.png",
+    "img": "images/cards/유리창_너머의_밤_풍경.webp",
     "type": {
       "t_train": "보호",
       "t_sup_1": "특수 효과",
@@ -1634,7 +1634,7 @@
     "name": "튀김 명인",
     "char": "타냐",
     "rare": "SSR",
-    "img": "images/cards/튀김_명인.png",
+    "img": "images/cards/튀김_명인.webp",
     "type": {
       "t_train": "보호",
       "t_sup_1": "특수 효과",
@@ -1696,7 +1696,7 @@
     "name": "달콤, 푹신, 쿠울...",
     "char": "세르팡",
     "rare": "SR",
-    "img": "images/cards/달콤__푹신__쿠울___.png",
+    "img": "images/cards/달콤__푹신__쿠울___.webp",
     "type": {
       "t_train": "보호",
       "t_sup_1": "",
@@ -1747,7 +1747,7 @@
     "name": "대화 종료",
     "char": "로베르타",
     "rare": "SR",
-    "img": "images/cards/대화_종료.png",
+    "img": "images/cards/대화_종료.webp",
     "type": {
       "t_train": "보호",
       "t_sup_1": "",
@@ -1799,7 +1799,7 @@
     "name": "품위 재단",
     "char": "에핀델",
     "rare": "SR",
-    "img": "images/cards/품위_재단.png",
+    "img": "images/cards/품위_재단.webp",
     "type": {
       "t_train": "보호",
       "t_sup_1": "",
@@ -1847,9 +1847,9 @@
   {
     "id": 35,
     "name": "대단하고 엄청난 바니걸",
-    "char": "스칼렛",
+    "char": "스칼렛(바니걸)",
     "rare": "SSR",
-    "img": "images/cards/대단하고_엄청난_바니걸.png",
+    "img": "images/cards/대단하고_엄청난_바니걸.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "효과 적중",
@@ -1908,9 +1908,9 @@
   {
     "id": 36,
     "name": "완벽한 바니걸",
-    "char": "바니 클레어",
+    "char": "클레어(바니)",
     "rare": "SSR",
-    "img": "images/cards/완벽한_바니걸.png",
+    "img": "images/cards/완벽한_바니걸.webp",
     "type": {
       "t_train": "체력",
       "t_sup_1": "체력",
@@ -1966,7 +1966,7 @@
     "name": "허수의 개척자",
     "char": "오메가",
     "rare": "SSR",
-    "img": "images/cards/허수의_개척자.png",
+    "img": "images/cards/허수의_개척자.webp",
     "type": {
       "t_train": "힘",
       "t_sup_1": "특수효과",
@@ -2014,6 +2014,62 @@
         "type": "감응 효과",
         "v35": "+6.00%",
         "v50": "+7.50%"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "스트라니스의 영애",
+    "char": "아세라(왈츠)",
+    "rare": "SSR",
+    "img": "images/cards/스트라니스의_영애.webp",
+    "type": {
+      "t_train": "체력",
+      "t_sup_1": "생명력",
+      "t_sup_2": "공용"
+    },
+    "u_pot": {
+      "name": "생명의 성흔"
+    },
+    "u_eff": {
+      "name": "한 걸음 더",
+      "desc": "인연 포인트 30 이상일 때 훈련 시 추가 체력 능력치 획득 +1"
+    },
+    "support": [],
+    "jrn": [
+      {
+        "type": "잠재력",
+        "v35": "+10",
+        "v50": "+10"
+      },
+      {
+        "type": "인연",
+        "v35": "+15",
+        "v50": "+15"
+      }
+    ],
+    "trn": [
+      {
+        "type": "훈련 효과",
+        "v35": "+17.84%",
+        "v50": "+17.84%"
+      },
+      {
+        "type": "훈련 출현",
+        "v35": "+8.50%",
+        "v50": "+8.50%"
+      }
+    ],
+    "sns": [
+      {
+        "type": "초감응 효과",
+        "v35": "+25.76%",
+        "v50": "+25.76%"
+      },
+      {
+        "type": "감응 발생률",
+        "v35": "+500",
+        "v50": "+500"
       }
     ]
   }

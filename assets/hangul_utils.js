@@ -29,6 +29,7 @@ const HangulUtils = (function () {
     }
 
     function decomposeQuery(query) {
+        if (!query) return '';
         let result = '';
         for (let char of query) {
             if (JAMO_MAP[char]) {
@@ -74,6 +75,7 @@ const HangulUtils = (function () {
     }
 
     function isMatch(target, query) {
+        if (!target || !query) return false;
         // Optimization: Cache regex if query hasn't changed? 
         // For now, just generate it. It's fast enough for short queries.
         const matcher = createFuzzyMatcher(query);

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Fetch</title>
+</head>
+
+<body>
+    <h1>Debug Fetch Results</h1>
+    <div id="output">Running...</div>
+    <script>
+        async function run() {
+            const output = document.getElementById('output');
+            const append = (msg) => output.innerHTML += `<div>${msg}</div>`;
+
+            output.innerHTML = '';
+
+            try {
+                append('Fetching cards_stats.json...');
+                const start = performance.now();
+                const res = await fetch('./data/cards_stats.json');
+                const text = await res.text();
+                append(`cards_stats.json: ${res.status} ${res.statusText} (${text.length} bytes) - ${(performance.now() - start).toFixed(2)}ms`);
+                try {
+                    JSON.parse(text);
+                    append('cards_stats.json valid JSON');
+                } catch (e) {
+                    append('cards_stats.json INVALID JSON: ' + e.message);
+                }
+
+                append('Fetching cards_event.json...');
+                const res2 = await fetch('./data/cards_event.json');
+                const text2 = await res2.text();
+                append(`cards_event.json: ${res2.status} ${res2.statusText} (${text2.length} bytes)`);
+                try {
+                    JSON.parse(text2);
+                    append('cards_event.json valid JSON');
+                } catch (e) {
+                    append('cards_event.json INVALID JSON: ' + e.message);
+                }
+
+                append('Fetching potentials.json...');
+                const res3 = await fetch('./data/potentials.json');
+                const text3 = await res3.text();
+                append(`potentials.json: ${res3.status} ${res3.statusText}`);
+
+            } catch (err) {
+                append('Error: ' + err.message);
+            }
+        }
+        run();
+    </script>
+    <hr>
+    <h3>Script Load Test</h3>
+    <div id="script-status">Loading scripts...</div>
+    <script src="./assets/hangul_utils.js?v=debug_test"></script>
+    <script src="./assets/scheduler_manager.js?v=debug_test"></script>
+    <script src="./assets/deck_manager.js?v=debug_test"></script>
+    <script>
+        setTimeout(() => {
+            const status = document.getElementById('script-status');
+            let msg = '';
+            msg += 'HangulUtils: ' + (window.HangulUtils ? 'OK' : 'MISSING') + '<br>';
+            msg += 'SchedulerManager: ' + (window.SchedulerManager ? 'OK' : 'MISSING') + '<br>';
+            msg += 'DeckManager: ' + (window.DeckManager ? 'OK' : 'MISSING') + '<br>';
+            status.innerHTML = msg;
+        }, 1000);
+    </script>
+</body>
+
+</html>

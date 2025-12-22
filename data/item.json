@@ -356,8 +356,7 @@
     "obt_place": 2,
     "effects": [
       {
-        "type": "0,1,2",
-        "value": "16,32,48"
+        "type": 5
       }
     ],
     "flavor_text": "끔찍한 마녀가 즐겨먹었다던 스프 요리...라는 소문이 있지만, 맛은 평범한 스프다."
@@ -456,8 +455,7 @@
     "obt_place": "1,2,3",
     "effects": [
       {
-        "type": "0,1",
-        "value": "12,24,36"
+        "type": 5
       }
     ],
     "flavor_text": "심연에서 건져올린 무언가로 만든 튀김요리... 라는 소문이 있지만, 대부분은 새우 튀김이다."
@@ -1009,6 +1007,7 @@
     "obt_place": 4,
     "obt_journey_name": "구명의 선물",
     "effects": [],
+    "flavor_text": "큰 업적을 세운 구원자에게 NOA가 수여하는 훈장. 당당하게 공허체의 포위를 돌파했던 구원자들을 기리는 도안이다.",
     "refund_poten": 4,
     "target": 2,
     "effect_desc": "최초 전투 시작시 자신의 치명타 피해가 10% 증가합니다."
@@ -1064,6 +1063,7 @@
     "obt_place": 4,
     "obt_journey_name": "구명의 선물",
     "effects": [],
+    "flavor_text": "큰 업적을 세운 구원자에게 NOA가 수여하는 훈장. 침착하게 위기를 넘긴 구원자들을 기리는 도안이다.",
     "refund_poten": 4,
     "target": 2,
     "effect_desc": "최초 전투 시작 시 자신의 최대 생명력이 5% 증가합니다."
@@ -1077,6 +1077,7 @@
     "obt_place": 4,
     "obt_journey_name": "구명의 선물",
     "effects": [],
+    "flavor_text": "큰 업적을 세운 구원자에게 NOA가 수여하는 훈장. 끈질기게 역전의 기회를 기다렸던 구원자들을 기리는 도안이다.",
     "refund_poten": 4,
     "target": 2,
     "effect_desc": "최초 전투 시작 시 자신의 효과 적중이 10% 증가합니다."
@@ -1559,7 +1560,7 @@
     "rarity": 5,
     "tag": 2,
     "image": "JOURNEY_ITEM_RED_SHOES",
-    "obt_place": 4,
+    "obt_place": 2,
     "obt_journey_name": "행복의 선물",
     "effects": [],
     "flavor_text": "피를 먹을수록 스텝이 빨라지는 새빨간 무용 구두.",
@@ -1573,7 +1574,7 @@
     "rarity": 5,
     "tag": 2,
     "image": "JOURNEY_ITEM_ROTATING_DEVICE",
-    "obt_place": 4,
+    "obt_place": 2,
     "obt_journey_name": "행복의 선물",
     "effects": [],
     "flavor_text": "누군가 멈추지 않으면 끝없이 돌아가는 장난감.",
@@ -1651,6 +1652,7 @@
     "image": "JOURNEY_ITEM_STEEL_FLOWER",
     "obt_place": 4,
     "effects": [],
+    "flavor_text": "금속으로 이루어진 희귀 식물. 소리를 먹고 자란다고 전해진다.",
     "refund_poten": 8,
     "target": 1,
     "effect_desc": "공격이 아닌 스킬 사용 후 자신에게 과충전(해제불가)을 발생시킵니다. 기본기 사용 후 자신이 과충전(해제불가) 상태이면 과충전(해제불가)을 해제시키고 적에게 자신의 최대 생명력에 비례한 연쇄 피해를 발생시킵니다."
@@ -1662,6 +1664,7 @@
     "tag": 2,
     "image": "JOURNEY_ITEM_DRUID_HARP",
     "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
     "effects": [],
     "flavor_text": "연주하는 동안 연주자를 덩굴로 감싸 지켜 준다는 하프.",
     "refund_poten": 8,
@@ -1670,13 +1673,92 @@
   },
   {
     "id": 107,
-    "name": "눈이번쩍",
+    "name": "눈이 번쩍",
     "rarity": 4,
     "tag": 2,
+    "image": "JOURNEY_ITEM_WIDE_EYED",
     "obt_place": 4,
+    "obt_journey_name": "행복의 선물",
     "effects": [],
+    "flavor_text": "천재 과학자가 만든 발명품. 단기적인 집중력 향상에 도움이 된다.",
     "refund_poten": 8,
     "target": 2,
     "effect_desc": "최초 전투 시작 시 자신에게 2턴 간 효과 적중 증가를 발생시킵니다."
+  },
+  {
+    "id": 108,
+    "name": "빚쟁이의 전략",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_CREDITOR_STRATEGY",
+    "obt_place": 4,
+    "effects": []
+  },
+  {
+    "id": 109,
+    "name": "관상용 흡혈식물",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_ORNAMENTAL_DRAIN_PLANT",
+    "obt_place": 4,
+    "obt_journey_name": "여정의 선물, 모범의 선물",
+    "effects": [],
+    "flavor_text": "밀림에서만 서식한다는 귀여운 흡혈식물.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "기본기 사용 후 자신의 생명력을 회복합니다. 회복량은 자신의 공격력에 비례해 증가합니다. 3턴에 1번만 발생합니다."
+  },
+  {
+    "id": 110,
+    "name": "비어 있는 새장",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_EMPTY_CAGE",
+    "obt_place": 4,
+    "obt_journey_name": "친절의 선물, 모범의 선물",
+    "effects": [],
+    "flavor_text": "유독가스를 경고해 주던 새의 새장. 여전히 지저귀는 소리가 들린다.",
+    "refund_poten": 8,
+    "target": 1,
+    "effect_desc": "공격이 아닌 스킬 사용 후 적 전체에게 100% 확률로 2턴 간 중독을 발생시킵니다. 기본기 사용 후 적이 중독 상태이면 적에게 자신의 최대 생명력에 비례한 연쇄 피해를 발생시킵니다. 중독은 자신의 최대 생명력에 비례해 피해량이 증가합니다."
+  },
+  {
+    "id": 111,
+    "name": "장식용 유리검",
+    "rarity": 4,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_GLASS_SWORD",
+    "obt_place": 3,
+    "effects": [],
+    "refund_poten": 8,
+    "target": 2,
+    "effect_desc": "최초 전투 시작 시 자신에게 2턴 간 공격력 증가를 발생시킵니다."
+  },
+  {
+    "id": 112,
+    "name": "사냥꾼의 오래된 소총",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_OLD_RIFLE",
+    "obt_place": 3,
+    "effects": [],
+    "flavor_text": "어떤 마수든 3발 안에 사냥할 수 있었다는 어느 마수 사냥꾼의 사냥총.",
+    "refund_poten": 12,
+    "target": 2,
+    "effect_desc": "치명타 발생 시 자신의 방어력 관통이 10%씩 증가합니다. 최대 3회 중첩합니다."
+  },
+  {
+    "id": 113,
+    "name": "연작의 딥펜",
+    "rarity": 5,
+    "tag": 2,
+    "image": "JOURNEY_ITEM_SERIES_OF_PEN",
+    "obt_place": 4,
+    "obt_journey_name": "모범의 선물",
+    "effects": [],
+    "flavor_text": "신문소설의 최장 연재 기록을 세운 작가의 펜.",
+    "refund_poten": 12,
+    "target": 1,
+    "effect_desc": "피격 후 자신의 행동 게이지를 5% 증가시킵니다. 3회 피격 시 적 전체에게 자신의 공격력에 비례한 연쇄 피해를 발생시킵니다."
   }
 ]

@@ -49,6 +49,21 @@ for (let i = 1; i < itemData.length; i++) {
     try {
         const item = new Item(itemData[i]);
 
+        // Fix broken images (Korean placeholders -> Real filenames)
+        const imageFixes = {
+            "약": "JOURNEY_ITEM_WIDE_EYED",
+            "부츠": "JOURNEY_ITEM_CREDITOR_STRATEGY",
+            "꽃괴물": "JOURNEY_ITEM_ORNAMENTAL_DRAIN_PLANT",
+            "새장": "JOURNEY_ITEM_EMPTY_CAGE",
+            "유리검": "JOURNEY_ITEM_GLASS_SWORD",
+            "소총": "JOURNEY_ITEM_OLD_RIFLE",
+            "잉크": "JOURNEY_ITEM_SERIES_OF_PEN"
+        };
+        if (imageFixes[item.image]) {
+            console.log(`Fixed image for ${item.name}: ${item.image} -> ${imageFixes[item.image]}`);
+            item.image = imageFixes[item.image];
+        }
+
         // Fix missing req_journey_name if id exists
         if (!item.req_journey_name && item.req_journey_id !== undefined) {
             const ids = String(item.req_journey_id).split(',').map(s => s.trim());

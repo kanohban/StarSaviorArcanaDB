@@ -71,10 +71,26 @@
 
     // --- INJECT CUSTOM LEVEL TOGGLE ---
     function injectLevelToggle(modalContent) {
-        const oldBtn = modalContent.querySelector('.theme-toggle');
+        // Try to find old button by class or by text content
+        let oldBtn = modalContent.querySelector('.theme-toggle');
+
+        if (!oldBtn) {
+            // Aggressive search for any button containing "Lv" or "Level" or stats keywords
+            const allBtns = Array.from(modalContent.querySelectorAll('button'));
+            oldBtn = allBtns.find(b => {
+                const txt = b.textContent.trim();
+                return (txt.includes('Lv') || txt.includes('Level') || txt.includes('35') || txt.includes('50')) && !b.classList.contains('level-btn');
+            });
+        }
 
         // Hide old button if it exists (it acts as state source)
-        if (oldBtn) oldBtn.style.display = 'none';
+        // Hide old button if it exists (it acts as state source)
+        if (oldBtn) {
+            // We do NOT remove it, as we need to click it programmatically to trigger React updates.
+            // CSS handles the hiding (display: none !important).
+            oldBtn.style.display = 'none'; // Duplicate safety
+            oldBtn.classList.add('hidden-by-manager');
+        }
 
         // Check if already injected
         if (modalContent.querySelector('.custom-level-toggle')) return;
@@ -85,7 +101,7 @@
 
         // Position it below the close button
         toggleContainer.style.position = 'absolute';
-        toggleContainer.style.top = '65px';
+        toggleContainer.style.top = '60px';
         toggleContainer.style.right = '20px';
         toggleContainer.style.zIndex = '20';
 
@@ -110,6 +126,9 @@
             currentLevel = '35';
         }
 
+        // Initialize global state
+        window.currentLevel = currentLevel;
+
         if (currentLevel === '35') btn35.classList.add('active');
         else btn50.classList.add('active');
 
@@ -119,14 +138,20 @@
                 btn35.classList.add('active');
                 btn50.classList.remove('active');
 
-                // Sync Old Button if needed
-                if (oldBtn && oldBtn.textContent.includes('50')) oldBtn.click();
+                // Sync Old Button if needed (find it again as it might be new reference)
+                const freshOldBtn = modalContent.querySelector('.theme-toggle') ||
+                    Array.from(modalContent.querySelectorAll('button:not(.level-btn)')).find(b => b.textContent.includes('Lv.50'));
+
+                if (freshOldBtn && freshOldBtn.textContent.includes('50')) freshOldBtn.click();
             } else {
                 btn35.classList.remove('active');
                 btn50.classList.add('active');
 
                 // Sync Old Button if needed
-                if (oldBtn && oldBtn.textContent.includes('35')) oldBtn.click();
+                const freshOldBtn = modalContent.querySelector('.theme-toggle') ||
+                    Array.from(modalContent.querySelectorAll('button:not(.level-btn)')).find(b => b.textContent.includes('Lv.35'));
+
+                if (freshOldBtn && freshOldBtn.textContent.includes('35')) freshOldBtn.click();
             }
 
             window.currentLevel = newLevel;

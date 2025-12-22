@@ -9,18 +9,24 @@ const SchedulerManager = {
 
     storageKey: 'scheduler_state',
 
+    // debugLog removed
+
     async init() {
-        await this.fetchData();
-        this.loadDecks();
-        this.loadChecks();
-        this.cacheDOM();
-        this.bindEvents();
-        this.render();
-        // Removed explicit ScheduleViewManager.init() call here to avoid double init, 
-        // as it is called in scheduler.html
-        // if (window.ScheduleViewManager) {
-        //     window.ScheduleViewManager.init();
-        // }
+        console.log('SchedulerManager: Initializing...');
+        const grid = document.getElementById('scheduler-grid');
+        if (grid) grid.innerHTML = '<div class="loading-message">데이터 로딩 중...</div>';
+
+        try {
+            await this.fetchData(grid);
+            this.loadDecks();
+            this.loadChecks();
+            this.cacheDOM();
+            this.bindEvents();
+            this.render();
+        } catch (e) {
+            console.error('SchedulerManager Init Failed:', e);
+            if (grid) grid.innerHTML = `<div class="loading-message error">초기화 오류: ${e.message}</div>`;
+        }
     },
 
     cacheDOM() {
@@ -50,13 +56,22 @@ const SchedulerManager = {
         if (saved) {
             try {
                 const parsed = JSON.parse(saved);
-                if (Array.isArray(parsed) && parsed.length === 5) {
+                if (Array.isArray(parsed) && parsed.length === 5 && parsed.every(d => Array.isArray(d))) {
                     this.data.decks = parsed;
+                } else {
+                    console.warn('loadDecks: Invalid structure. Resetting.');
+                    this.resetDecks();
                 }
             } catch (e) {
-                console.error('Failed to load decks', e);
+                console.error('loadDecks: Parse Error. Resetting.');
+                this.resetDecks();
             }
         }
+    },
+
+    resetDecks() {
+        this.data.decks = [[], [], [], [], []];
+        localStorage.setItem('saved_decks', JSON.stringify(this.data.decks));
     },
 
     loadChecks() {
@@ -151,9 +166,14 @@ const SchedulerManager = {
                 fetch('./data/cards_event.json')
             ]);
 
+            if (!statsRes.ok) throw new Error(`Stats 404: ${statsRes.status}`);
+
             const stats = await statsRes.json();
+
             let events = [];
-            if (eventsRes.ok) events = await eventsRes.json();
+            if (eventsRes.ok) {
+                events = await eventsRes.json();
+            }
 
             // Merge
             this.data.cards = stats.map(c => {
@@ -163,8 +183,9 @@ const SchedulerManager = {
             });
 
         } catch (error) {
-            console.error('Failed to fetch data:', error);
-            document.getElementById('scheduler-grid').innerHTML = '<div class="loading-message">데이터 로드 실패</div>';
+            console.error(`SchedulerManager ERROR: ${error.message}`);
+            document.getElementById('scheduler-grid').innerHTML = `<div class="loading-message error">데이터 로드 실패: ${error.message}</div>`;
+            throw error;
         }
     },
 
@@ -211,19 +232,20 @@ const SchedulerManager = {
     },
 
     render() {
+        // render log removed
         const deck = this.data.decks[this.data.currentDeckIndex] || [];
         this.dom.deckIndex.innerText = this.data.currentDeckIndex + 1;
 
-        // Update Counters (Arcana Count & Goal)
         this.updateCounters();
-
-        // Render Cards
         this.dom.grid.innerHTML = '';
 
         if (deck.length === 0) {
+            // empty deck log removed
             this.dom.grid.innerHTML = '<div class="empty-deck-message">설정된 카드가 없습니다.<br>덱 빌더에서 카드를 추가해주세요.</div>';
             return;
         }
+
+        // render count log removed
 
         deck.forEach((cardId, cardIndex) => {
             const card = this.data.cards.find(c => c.id === cardId);
