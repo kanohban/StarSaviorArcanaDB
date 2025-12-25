@@ -308,7 +308,7 @@
           "text": "2. 강력한 힘으로 충격을 가한다.",
           "condition": "정체불명의 유물",
           "result": "",
-          "result_positive": "힘 +10, 보호 +10 or 체력 +10, 보호 +10",
+          "result_positive": "힘 +10 or 체력 +10 or 인내 +10, 보호 +10",
           "result_negative": "없음"
         },
         {

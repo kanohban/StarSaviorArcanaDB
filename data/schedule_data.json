@@ -264,10 +264,6 @@
         "events": [
           {
             "type": "고정",
-            "content": "미궁 탐사"
-          },
-          {
-            "type": "고정",
             "content": "날씨"
           }
         ]
@@ -277,8 +273,8 @@
         "dateInfo": "7월 하순",
         "events": [
           {
-            "type": "기타",
-            "content": "-"
+            "type": "고정",
+            "content": "미궁 탐사"
           }
         ]
       },
@@ -287,8 +283,8 @@
         "dateInfo": "8월 초순",
         "events": [
           {
-            "type": "고정",
-            "content": "습격"
+            "type": "기타",
+            "content": "-"
           }
         ]
       },
@@ -296,6 +292,10 @@
         "turnInfo": "20턴",
         "dateInfo": "8월 중순",
         "events": [
+          {
+            "type": "고정",
+            "content": "습격"
+          },
           {
             "type": "고정",
             "content": "구명의 선물 - 유물 선택, 잠재력 +7"
@@ -686,6 +686,10 @@
           {
             "type": "확률,랜덤",
             "content": "꽃에 숨겨진 힘"
+          },
+          {
+            "type": "확률,랜덤",
+            "content": "완성형 강화제"
           },
           {
             "type": "고정",

@@ -1,5 +1,5 @@
 {
-  "version": "6.5.2",
+  "version": "6.5.3",
   "dependencies": {
     "prettier": "^3.7.4",
     "xlsx": "^0.18.5"
