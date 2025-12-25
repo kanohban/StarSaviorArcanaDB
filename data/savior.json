@@ -9627,7 +9627,7 @@
   },
   {
     "id": 34,
-    "name": "아세라(왈츠)",
+    "name": "아세라(드레스)",
     "rank": "SSR",
     "attr": "질서",
     "class": "서포터",
@@ -9642,35 +9642,35 @@
       "desc": "정말로 오랜만에 귀족들의 사교 모임에 모습을 드러낸 스트라니스가의 영애. 들리던 소문과 달리 우아하고 기품 넘치는 모습이, 모든 이의 시선을 한 눈에 사로잡는다."
     },
     "status": {
-      "atk": "?",
-      "hp": "?",
-      "def": "?",
-      "spd": "?",
-      "crit_rate": "?",
-      "crit_dmg": "?",
-      "eff_rate": "?",
-      "eff_resist": "?",
-      "acc": "?"
+      "atk": 3941,
+      "hp": 28368,
+      "def": 2002,
+      "spd": 104,
+      "crit_rate": 0.05,
+      "crit_dmg": 0.5,
+      "eff_rate": 1,
+      "eff_resist": 0,
+      "acc": 1
     },
     "journey_status": {
-      "str": "?",
-      "hp": "?",
-      "end": "?",
-      "focus": "?",
-      "prot": "?"
+      "str": 10,
+      "hp": 180,
+      "end": 150,
+      "focus": 10,
+      "prot": 10
     },
     "potentials": [
       {
         "level": 3,
-        "value": "?"
+        "value": "생명의 감각"
       },
       {
         "level": 6,
-        "value": "?"
+        "value": "방어의 감각"
       },
       {
         "level": 10,
-        "value": "?"
+        "value": "속도의 솜씨"
       }
     ],
     "skills": [
