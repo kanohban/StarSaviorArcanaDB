@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[124],{124:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_BATTLE_BOSS_02.0b21009cc40dab6a81f7.mp3"}}]);

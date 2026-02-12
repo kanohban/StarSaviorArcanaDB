@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[9663],{9663:(s,a,b)=>{s.exports=b.p+"static/media/MUSIC_SHOP_APOCALYPSE.9b8575703bbd592b94a7.mp3"}}]);

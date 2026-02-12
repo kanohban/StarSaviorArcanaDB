@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[7015],{7015:(a,s,e)=>{a.exports=e.p+"static/media/MUSIC_CANDLE_NOA.4efb01d95a6a8ca03a71.mp3"}}]);

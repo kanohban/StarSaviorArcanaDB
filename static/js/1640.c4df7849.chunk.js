@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[1640],{1640:(s,a,d)=>{s.exports=d.p+"static/media/MUSIC_GUILD.bd9d576b9d2937805dc1.mp3"}}]);

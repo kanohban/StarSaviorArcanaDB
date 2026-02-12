@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[4015],{4015:(s,a,c)=>{s.exports=c.p+"static/media/MUSIC_CUTSCENE_12.7c10a0b435ac47fc3282.mp3"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[3671],{3671:(s,a,b)=>{s.exports=b.p+"static/media/MUSIC_NOA.2e92bfb22ff5b8fa9bbd.mp3"}}]);

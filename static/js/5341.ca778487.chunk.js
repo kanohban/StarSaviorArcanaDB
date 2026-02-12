@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[5341],{5341:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_BATTLE_MOTIVATOR.336f14c94e54204d057b.mp3"}}]);
