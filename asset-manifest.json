@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/StarSaviorArcanaDB/static/css/main.28e4ae2f.css",
-    "main.js": "/StarSaviorArcanaDB/static/js/main.23de1029.js",
+    "main.css": "/StarSaviorArcanaDB/static/css/main.b1e67f22.css",
+    "main.js": "/StarSaviorArcanaDB/static/js/main.501a322a.js",
     "index.html": "/StarSaviorArcanaDB/index.html",
-    "main.28e4ae2f.css.map": "/StarSaviorArcanaDB/static/css/main.28e4ae2f.css.map",
-    "main.23de1029.js.map": "/StarSaviorArcanaDB/static/js/main.23de1029.js.map"
+    "main.b1e67f22.css.map": "/StarSaviorArcanaDB/static/css/main.b1e67f22.css.map",
+    "main.501a322a.js.map": "/StarSaviorArcanaDB/static/js/main.501a322a.js.map"
   },
   "entrypoints": [
-    "static/css/main.28e4ae2f.css",
-    "static/js/main.23de1029.js"
+    "static/css/main.b1e67f22.css",
+    "static/js/main.501a322a.js"
   ]
 }
