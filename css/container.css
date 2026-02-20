@@ -1,4 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css");
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
 
 :root {
     color-scheme: dark light;
@@ -198,7 +201,8 @@ li {
     border-radius: 50%;
     background-color: white;
 
-    font-size: 1rem;
+    font-size: 12px;
+    font-weight: 700;
     color: var(--text-color);
 
     cursor: pointer;
@@ -209,6 +213,10 @@ li {
 .window .close-button:hover {
     background-color: rgba(255, 0, 0, 0.5);
     color: var(--text-color);
+}
+
+.window .close-button i {
+    display: flex;
 }
 
 .window .level-buttons {
