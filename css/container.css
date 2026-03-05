@@ -334,7 +334,7 @@ li {
 
         border-radius: 0;
 
-        /* overflow-y: scroll; */
+        overflow-y: scroll;
     }
 
     .modal.fit .window {
