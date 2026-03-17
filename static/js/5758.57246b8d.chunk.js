@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[5758],{5758:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_BATTLE_CUBE_PALACE.c7fdedc8a00b3d0511d2.mp3"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[2629],{2629:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_CANDLE_AGANON.a37224186bd347264e0d.mp3"}}]);

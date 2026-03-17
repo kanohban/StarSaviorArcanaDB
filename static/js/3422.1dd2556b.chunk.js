@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[3422],{3422:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_JOURNEY_TRAINING.7f1134b3256866fc38bd.mp3"}}]);

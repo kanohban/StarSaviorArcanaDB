@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[8251],{8251:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_CANDLE_FLORA.3f2085dd17968cde0a53.mp3"}}]);

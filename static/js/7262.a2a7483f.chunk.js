@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[7262],{7262:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_CUBE_PALACE_LOBBY.6a3499b6ed02e482f637.mp3"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[1298],{1298:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_CLOISTER.f659908c1a69bc846be1.mp3"}}]);
