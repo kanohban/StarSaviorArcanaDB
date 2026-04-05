@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/StarSaviorArcanaDB/static/css/main.f7fef485.css",
-    "main.js": "/StarSaviorArcanaDB/static/js/main.94e43ba5.js",
+    "main.js": "/StarSaviorArcanaDB/static/js/main.c085ebef.js",
     "static/js/4822.2644cfc0.chunk.js": "/StarSaviorArcanaDB/static/js/4822.2644cfc0.chunk.js",
     "static/js/3485.b239538e.chunk.js": "/StarSaviorArcanaDB/static/js/3485.b239538e.chunk.js",
     "static/js/7628.8c00ad3a.chunk.js": "/StarSaviorArcanaDB/static/js/7628.8c00ad3a.chunk.js",
@@ -130,10 +130,10 @@
     "static/media/MUSIC_SUCCESSION.mp3": "/StarSaviorArcanaDB/static/media/MUSIC_SUCCESSION.825da97b23deaac64bf0.mp3",
     "index.html": "/StarSaviorArcanaDB/index.html",
     "main.f7fef485.css.map": "/StarSaviorArcanaDB/static/css/main.f7fef485.css.map",
-    "main.94e43ba5.js.map": "/StarSaviorArcanaDB/static/js/main.94e43ba5.js.map"
+    "main.c085ebef.js.map": "/StarSaviorArcanaDB/static/js/main.c085ebef.js.map"
   },
   "entrypoints": [
     "static/css/main.f7fef485.css",
-    "static/js/main.94e43ba5.js"
+    "static/js/main.c085ebef.js"
   ]
 }
