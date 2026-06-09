@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[4355],{4355:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_SHOP_CASH.4ab2be816332d4b55676.mp3"}}]);

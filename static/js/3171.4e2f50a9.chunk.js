@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[3171],{3171:(a,s,e)=>{a.exports=e.p+"static/media/MUSIC_STARLINK.2a8b8baf81ed9b31ceba.mp3"}}]);

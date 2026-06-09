@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[8716],{8716:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_JOURNEY_FAST_01.cfd0341188eadbb383ac.mp3"}}]);

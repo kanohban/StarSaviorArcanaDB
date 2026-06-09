@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[1730],{1730:(a,s,e)=>{a.exports=e.p+"static/media/MUSIC_SUCCESSION.825da97b23deaac64bf0.mp3"}}]);

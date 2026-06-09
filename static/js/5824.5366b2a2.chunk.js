@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[5824],{5824:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_GILLE.fa95ae4833c986ef4bc3.mp3"}}]);

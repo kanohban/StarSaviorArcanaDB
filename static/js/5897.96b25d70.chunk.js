@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[5897],{5897:(s,a,e)=>{s.exports=e.p+"static/media/MUSIC_BATTLE_NORMAL_01.9ea94cd6e0ae14504602.mp3"}}]);

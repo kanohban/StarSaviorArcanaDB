@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkstar_savior_db=self.webpackChunkstar_savior_db||[]).push([[9768],{9768:(s,a,d)=>{s.exports=d.p+"static/media/MUSIC_MONASTIR.4ebc2d58badd20279ddc.mp3"}}]);
